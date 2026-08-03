@@ -1,13 +1,18 @@
 import type { Locale } from "@/i18n/routing";
 import type { MedicalCategory } from "@prisma/client";
+import { formatRegionLabel } from "@/lib/regions";
 
-type LocalizedHospital = {
+export type LocalizedHospital = {
   id: string;
   slug: string;
   name: string;
   description: string;
-  city: string;
-  district: string | null;
+  provinceKey: string;
+  cityKey: string | null;
+  districtKey: string;
+  regionLabel: string;
+  primaryCategory: MedicalCategory;
+  categories: MedicalCategory[];
   featured: boolean;
   coverImage: string | null;
   procedures: {
@@ -19,31 +24,36 @@ type LocalizedHospital = {
   }[];
 };
 
-export function localizeHospital(
-  hospital: {
+type HospitalRecord = {
+  id: string;
+  slug: string;
+  nameKo: string;
+  nameEn: string;
+  nameId: string;
+  descriptionKo: string;
+  descriptionEn: string;
+  descriptionId: string;
+  provinceKey: string;
+  cityKey: string | null;
+  districtKey: string;
+  primaryCategory: MedicalCategory;
+  featured: boolean;
+  coverImage: string | null;
+  procedures: {
     id: string;
-    slug: string;
+    category: MedicalCategory;
     nameKo: string;
     nameEn: string;
     nameId: string;
-    descriptionKo: string;
-    descriptionEn: string;
-    descriptionId: string;
-    city: string;
-    district: string | null;
-    featured: boolean;
-    coverImage: string | null;
-    procedures: {
-      id: string;
-      category: MedicalCategory;
-      nameKo: string;
-      nameEn: string;
-      nameId: string;
-      priceFrom: number | null;
-      durationMin: number | null;
-    }[];
-  },
+    priceFrom: number | null;
+    durationMin: number | null;
+  }[];
+};
+
+export function localizeHospital(
+  hospital: HospitalRecord,
   locale: Locale,
+  regionT: (key: string) => string,
 ): LocalizedHospital {
   const name =
     locale === "ko"
@@ -58,27 +68,37 @@ export function localizeHospital(
         ? hospital.descriptionId
         : hospital.descriptionEn;
 
+  const procedures = hospital.procedures.map((p) => ({
+    id: p.id,
+    category: p.category,
+    name:
+      locale === "ko"
+        ? p.nameKo
+        : locale === "id"
+          ? p.nameId
+          : p.nameEn,
+    priceFrom: p.priceFrom,
+    durationMin: p.durationMin,
+  }));
+
+  const categories = [
+    ...new Set(procedures.map((p) => p.category)),
+  ] as MedicalCategory[];
+
   return {
     id: hospital.id,
     slug: hospital.slug,
     name,
     description,
-    city: hospital.city,
-    district: hospital.district,
+    provinceKey: hospital.provinceKey,
+    cityKey: hospital.cityKey,
+    districtKey: hospital.districtKey,
+    regionLabel: formatRegionLabel(hospital, regionT),
+    primaryCategory: hospital.primaryCategory,
+    categories,
     featured: hospital.featured,
     coverImage: hospital.coverImage,
-    procedures: hospital.procedures.map((p) => ({
-      id: p.id,
-      category: p.category,
-      name:
-        locale === "ko"
-          ? p.nameKo
-          : locale === "id"
-            ? p.nameId
-            : p.nameEn,
-      priceFrom: p.priceFrom,
-      durationMin: p.durationMin,
-    })),
+    procedures,
   };
 }
 

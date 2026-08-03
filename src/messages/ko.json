@@ -127,10 +127,22 @@
   },
   "hospitals": {
     "title": "검증된 제휴 병원",
-    "subtitle": "성형외과 · 피부과 · 한방",
+    "subtitle": "지역(도·시·구)과 진료과(성형·피부·한방·치과)별로 Beautiro 제휴 병원을 확인하세요.",
     "from": "부터",
     "viewAll": "전체 병원",
-    "filterHint": "검색 결과",
+    "filterTitle": "병원 찾기",
+    "filterCategory": "진료과",
+    "filterProvince": "시·도",
+    "filterDistrict": "시·군·구",
+    "filterAll": "전체",
+    "filterAllRegions": "전국",
+    "filterAllDistricts": "전체 구",
+    "clearFilters": "필터 초기화",
+    "filterHint": "적용된 필터",
+    "partnerCount": "제휴 병원 {count}곳",
+    "resultCount": "{count}곳 표시",
+    "regionSectionLabel": "지역",
+    "regionHospitalCount": "제휴 {count}곳",
     "empty": "조건에 맞는 병원이 없습니다.",
     "whatsappConsult": "WhatsApp 상담",
     "viewEvent": "이벤트 상세보기",
@@ -139,6 +151,20 @@
       "DERMATOLOGY": "피부과",
       "ORIENTAL": "한방",
       "DENTAL": "치과"
+    },
+    "regions": {
+      "provinces": {
+        "incheon": "인천광역시",
+        "gyeonggi": "경기도"
+      },
+      "cities": {
+        "ansan": "안산시"
+      },
+      "districts": {
+        "bupyeong": "부평구",
+        "namdong": "남동구",
+        "sangnok": "상록구"
+      }
     }
   },
   "event": {

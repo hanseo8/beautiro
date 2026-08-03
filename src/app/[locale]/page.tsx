@@ -30,20 +30,23 @@ export default async function HomePage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("home.faq");
+  const tHospitals = await getTranslations("hospitals");
   const loc = locale as Locale;
 
   const hospitals = await prisma.hospital.findMany({
     include: { procedures: true },
   });
 
+  const regionT = (key: string) => tHospitals(key);
+
   const cards: PopularCard[] = hospitals
     .flatMap((h, hi) => {
-      const item = localizeHospital(h, loc);
+      const item = localizeHospital(h, loc, regionT);
       return item.procedures.map((p, pi) => ({
         procedureId: p.id,
         title: p.name,
         hospitalName: item.name,
-        location: [item.city, item.district].filter(Boolean).join(" "),
+        location: item.regionLabel,
         priceFrom: p.priceFrom ?? 500000,
         category: p.category,
         discountPercent: [49, 45, 42, 38, 35, 40][(hi + pi) % 6],

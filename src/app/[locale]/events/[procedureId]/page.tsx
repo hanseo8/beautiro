@@ -28,6 +28,7 @@ export default async function EventDetailPage({ params }: Props) {
   setRequestLocale(locale);
   const t = await getTranslations("event");
   const tCat = await getTranslations("hospitals.categories");
+  const tHospitals = await getTranslations("hospitals");
   const loc = locale as Locale;
 
   const procedure = await prisma.procedure.findUnique({
@@ -40,6 +41,7 @@ export default async function EventDetailPage({ params }: Props) {
   const hospital = localizeHospital(
     { ...procedure.hospital, procedures: [] },
     loc,
+    (key) => tHospitals(key),
   );
   const procName =
     loc === "ko"
@@ -127,8 +129,7 @@ export default async function EventDetailPage({ params }: Props) {
               <p className="mt-2 font-semibold">{hospital.name}</p>
               <p className="mt-1 flex items-center gap-1 text-sm text-beautiro-muted">
                 <MapPin size={14} />
-                {hospital.city}
-                {hospital.district ? ` · ${hospital.district}` : ""}
+                {hospital.regionLabel}
               </p>
               <Link
                 href="/hospitals"

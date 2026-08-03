@@ -14,6 +14,7 @@ export default async function BookPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("book");
+  const tHospitals = await getTranslations("hospitals");
   const loc = locale as Locale;
 
   const hospitals = await prisma.hospital.findMany({
@@ -21,7 +22,7 @@ export default async function BookPage({ params }: Props) {
   });
 
   const procedures = hospitals.flatMap((h) => {
-    const item = localizeHospital(h, loc);
+    const item = localizeHospital(h, loc, (key) => tHospitals(key));
     return item.procedures.map((p) => ({
       id: p.id,
       name: p.name,

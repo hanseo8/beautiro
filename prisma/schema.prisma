@@ -29,21 +29,23 @@ enum ServiceType {
 }
 
 model Hospital {
-  id            String      @id @default(cuid())
-  slug          String      @unique
-  nameKo        String
-  nameEn        String
-  nameId        String
-  descriptionKo String
-  descriptionEn String
-  descriptionId String
-  city          String      @default("Seoul")
-  district      String?
-  coverImage    String?
-  featured      Boolean     @default(false)
-  procedures    Procedure[]
-  createdAt     DateTime    @default(now())
-  updatedAt     DateTime    @updatedAt
+  id              String          @id @default(cuid())
+  slug            String          @unique
+  nameKo          String
+  nameEn          String
+  nameId          String
+  descriptionKo   String
+  descriptionEn   String
+  descriptionId   String
+  provinceKey     String          @default("incheon")
+  cityKey         String?
+  districtKey     String          @default("bupyeong")
+  primaryCategory MedicalCategory @default(PLASTIC)
+  coverImage      String?
+  featured        Boolean         @default(false)
+  procedures      Procedure[]
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
 }
 
 model Procedure {

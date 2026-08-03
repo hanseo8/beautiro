@@ -127,10 +127,22 @@
   },
   "hospitals": {
     "title": "Verified partner hospitals",
-    "subtitle": "Plastic surgery, dermatology, oriental medicine",
+    "subtitle": "Browse Beautiro partners by region (province, city, district) and specialty.",
     "from": "From",
     "viewAll": "All hospitals",
-    "filterHint": "Results for",
+    "filterTitle": "Find a hospital",
+    "filterCategory": "Specialty",
+    "filterProvince": "Province / metro",
+    "filterDistrict": "City / district",
+    "filterAll": "All",
+    "filterAllRegions": "Nationwide",
+    "filterAllDistricts": "All districts",
+    "clearFilters": "Clear filters",
+    "filterHint": "Active filters",
+    "partnerCount": "{count} partner hospitals",
+    "resultCount": "Showing {count}",
+    "regionSectionLabel": "Region",
+    "regionHospitalCount": "{count} partners",
     "empty": "No hospitals match your filters.",
     "whatsappConsult": "WhatsApp consult",
     "viewEvent": "View event details",
@@ -139,6 +151,20 @@
       "DERMATOLOGY": "Dermatology",
       "ORIENTAL": "Oriental medicine",
       "DENTAL": "Dental"
+    },
+    "regions": {
+      "provinces": {
+        "incheon": "Incheon Metropolitan City",
+        "gyeonggi": "Gyeonggi Province"
+      },
+      "cities": {
+        "ansan": "Ansan City"
+      },
+      "districts": {
+        "bupyeong": "Bupyeong-gu",
+        "namdong": "Namdong-gu",
+        "sangnok": "Sangnok-gu"
+      }
     }
   },
   "event": {

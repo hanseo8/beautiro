@@ -127,10 +127,22 @@
   },
   "hospitals": {
     "title": "Rumah sakit mitra terverifikasi",
-    "subtitle": "Bedah plastik, kulit, dan pengobatan oriental",
+    "subtitle": "Telusuri mitra Beautiro berdasarkan wilayah (provinsi, kota, distrik) dan spesialisasi.",
     "from": "Mulai",
     "viewAll": "Semua rumah sakit",
-    "filterHint": "Hasil untuk",
+    "filterTitle": "Cari rumah sakit",
+    "filterCategory": "Spesialisasi",
+    "filterProvince": "Provinsi / kota",
+    "filterDistrict": "Kota / distrik",
+    "filterAll": "Semua",
+    "filterAllRegions": "Seluruh wilayah",
+    "filterAllDistricts": "Semua distrik",
+    "clearFilters": "Hapus filter",
+    "filterHint": "Filter aktif",
+    "partnerCount": "{count} rumah sakit mitra",
+    "resultCount": "Menampilkan {count}",
+    "regionSectionLabel": "Wilayah",
+    "regionHospitalCount": "{count} mitra",
     "empty": "Tidak ada rumah sakit yang cocok.",
     "whatsappConsult": "Konsultasi WhatsApp",
     "viewEvent": "Detail event",
@@ -139,6 +151,20 @@
       "DERMATOLOGY": "Kulit",
       "ORIENTAL": "Pengobatan oriental",
       "DENTAL": "Gigi"
+    },
+    "regions": {
+      "provinces": {
+        "incheon": "Kota Metropolitan Incheon",
+        "gyeonggi": "Provinsi Gyeonggi"
+      },
+      "cities": {
+        "ansan": "Kota Ansan"
+      },
+      "districts": {
+        "bupyeong": "Bupyeong-gu",
+        "namdong": "Namdong-gu",
+        "sangnok": "Sangnok-gu"
+      }
     }
   },
   "event": {
