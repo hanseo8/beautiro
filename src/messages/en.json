@@ -178,21 +178,12 @@
   "event": {
     "breadcrumbHome": "Home",
     "breadcrumbEvents": "Events",
-    "eventLabel": "Beautiro event",
-    "aboutTitle": "About this treatment",
-    "hospitalTitle": "Clinic",
-    "moreHospitals": "Browse more partners",
-    "reviews": "reviews",
-    "priceNote": "Final price confirmed after consultation.",
-    "whatsappCta": "Consult on WhatsApp",
-    "bookCta": "Apply online",
+    "discountBadge": "Partner extra discount",
+    "summary": "An extra discount event for treatments and packages at this Beautiro partner clinic.",
+    "inquiryNote": "Discount rates, inclusions, and schedules vary by clinic. Message us on WhatsApp for personalized details.",
+    "whatsappCta": "Ask about the discount",
     "responseHint": "Typical reply within 24h · ID / EN / KO",
-    "includes": [
-      "Beautiro Mate medical interpretation",
-      "Beautiro Van transfer planning (optional)",
-      "Beautiro Pay FX & payment guide",
-      "Partner clinic booking support"
-    ]
+    "moreHospitals": "Browse more partners"
   },
   "book": {
     "title": "Request consultation",

@@ -178,21 +178,12 @@
   "event": {
     "breadcrumbHome": "Beranda",
     "breadcrumbEvents": "Event",
-    "eventLabel": "Event Beautiro",
-    "aboutTitle": "Tentang perawatan",
-    "hospitalTitle": "Klinik",
-    "moreHospitals": "Lihat mitra lain",
-    "reviews": "ulasan",
-    "priceNote": "Harga final setelah konsultasi.",
-    "whatsappCta": "Konsultasi via WhatsApp",
-    "bookCta": "Ajukan online",
+    "discountBadge": "Diskon tambahan mitra",
+    "summary": "Event diskon tambahan untuk perawatan dan paket di klinik mitra Beautiro ini.",
+    "inquiryNote": "Besar diskon, isi paket, dan jadwal berbeda tiap klinik. Hubungi kami via WhatsApp untuk info lengkap.",
+    "whatsappCta": "Tanya syarat diskon",
     "responseHint": "Balasan biasanya <24 jam · ID / EN / KO",
-    "includes": [
-      "Penerjemahan medis Beautiro Mate",
-      "Perencanaan Beautiro Van (opsional)",
-      "Panduan Beautiro Pay",
-      "Dukungan booking klinik mitra"
-    ]
+    "moreHospitals": "Lihat mitra lain"
   },
   "book": {
     "title": "Ajukan konsultasi",

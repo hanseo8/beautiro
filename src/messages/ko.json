@@ -178,21 +178,12 @@
   "event": {
     "breadcrumbHome": "홈",
     "breadcrumbEvents": "이벤트",
-    "eventLabel": "Beautiro 이벤트",
-    "aboutTitle": "시술 안내",
-    "hospitalTitle": "시술 병원",
-    "moreHospitals": "다른 제휴 병원 보기",
-    "reviews": "리뷰",
-    "priceNote": "표시 가격은 상담 후 확정될 수 있습니다.",
-    "whatsappCta": "WhatsApp으로 상담하기",
-    "bookCta": "온라인 상담 신청",
-    "responseHint": "평균 응답 24시간 이내 · 인니어/영어/한국어",
-    "includes": [
-      "Beautiro Mate 메디컬 통역 연계",
-      "Beautiro Van 이동 상담 (선택)",
-      "Beautiro Pay 환전·결제 가이드",
-      "제휴 병원 사전 예약 지원"
-    ]
+    "discountBadge": "제휴 병원 추가 할인",
+    "summary": "Beautiro 제휴 병원에서 진행하는 시술·패키지 추가 할인 이벤트입니다.",
+    "inquiryNote": "할인율·구성·일정은 병원별로 다릅니다. WhatsApp으로 문의해 주시면 맞춤 안내해 드립니다.",
+    "whatsappCta": "할인 조건 문의하기",
+    "responseHint": "평균 24시간 이내 응답 · 인니어/영어/한국어",
+    "moreHospitals": "다른 제휴 병원 보기"
   },
   "book": {
     "title": "상담 신청",
