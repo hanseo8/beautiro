@@ -38,7 +38,7 @@ export function HeroCarousel() {
           sizes="(max-width: 1080px) 100vw, 1080px"
           className="transition-transform duration-700"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0f172a]/75 via-[#0f172a]/50 to-[#2563eb]/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0f172a]/75 via-[#0f172a]/50 to-[#1a5f5f]/45" />
         <div className="relative px-8 py-12 text-white sm:px-12 sm:py-16">
           <p className="text-sm font-medium text-white/90">{slide.subtitle}</p>
           <h2 className="mt-3 max-w-md text-2xl font-bold leading-snug tracking-tight sm:text-3xl">
@@ -46,7 +46,7 @@ export function HeroCarousel() {
           </h2>
           <Link
             href={slide.href}
-            className="mt-8 inline-flex rounded-xl bg-white px-5 py-2.5 text-sm font-bold text-beautiro-primary-deep hover:bg-white/95"
+            className="mt-8 inline-flex rounded-xl bg-white px-5 py-2.5 text-sm font-bold text-beautiro-primary hover:bg-white/95"
           >
             {slide.cta}
           </Link>

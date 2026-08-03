@@ -29,7 +29,7 @@ export function SiteFooter() {
       <div className="container-babitalk py-10">
         <div className="flex flex-col gap-6 md:flex-row md:justify-between">
           <div>
-            <p className="font-brand text-xl font-bold text-beautiro-primary-deep">Beautiro</p>
+            <p className="font-brand text-xl font-bold text-beautiro-primary">Beautiro</p>
             <p className="mt-2 max-w-sm text-sm leading-relaxed text-beautiro-muted">
               {t("tagline")}
             </p>

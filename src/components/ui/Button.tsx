@@ -8,7 +8,7 @@ const variants = {
   primary: `${base} bg-beautiro-primary px-5 py-2.5 text-white hover:bg-beautiro-primary-hover`,
   secondary: `${base} border border-beautiro-border bg-white px-5 py-2.5 text-beautiro-charcoal hover:bg-beautiro-surface`,
   ghost: `${base} rounded-lg px-2 py-1 font-medium text-beautiro-muted hover:text-beautiro-charcoal`,
-  pill: `${base} rounded-full bg-beautiro-accent-soft px-4 py-2 text-beautiro-primary-deep hover:bg-beautiro-primary/10`,
+  pill: `${base} rounded-full bg-beautiro-accent-soft px-4 py-2 text-beautiro-primary hover:bg-beautiro-primary/10`,
 };
 
 export function Button({

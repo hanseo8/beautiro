@@ -27,23 +27,23 @@ const categoryStyle: Record<
 > = {
   PLASTIC: {
     label: "PLASTIC",
-    gradient: "from-[#4a90d9] to-[#2563eb]",
+    gradient: "from-[#1a5f5f] to-[#0f4545]",
     badge: "bg-beautiro-primary-deep",
   },
   DERMATOLOGY: {
     label: "SKIN",
-    gradient: "from-[#7cb9e8] to-[#4a90d9]",
+    gradient: "from-[#2d7a7a] to-[#1a5f5f]",
     badge: "bg-beautiro-primary",
   },
   ORIENTAL: {
     label: "WELLNESS",
-    gradient: "from-[#5ba4d9] to-[#3b82f6]",
+    gradient: "from-[#3d8a7a] to-[#144d4d]",
     badge: "bg-beautiro-ice",
   },
   DENTAL: {
     label: "DENTAL",
-    gradient: "from-[#60a5fa] to-[#3b82f6]",
-    badge: "bg-beautiro-primary",
+    gradient: "from-[#1a5f5f] to-[#2d7a7a]",
+    badge: "bg-beautiro-gold",
   },
 };
 
@@ -93,7 +93,7 @@ export async function PopularEventSection({
 
           return (
             <li key={card.procedureId}>
-              <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-beautiro-border bg-white shadow-[0_1px_2px_rgba(0,0,0,0.04)] transition-all hover:border-beautiro-primary/30 hover:shadow-[0_8px_30px_rgba(74,144,217,0.12)]">
+              <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-beautiro-border bg-white shadow-[0_1px_2px_rgba(0,0,0,0.04)] transition-all hover:border-beautiro-primary/30 hover:shadow-[0_8px_30px_rgba(26,95,95,0.12)]">
                 <Link
                   href={`/events/${card.procedureId}`}
                   className="block overflow-hidden"

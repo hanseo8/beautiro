@@ -1,80 +1,77 @@
 import type { MedicalCategory } from "@prisma/client";
 
-/** Unsplash CDN helper */
-function u(id: string, w = 1200) {
-  return `https://images.unsplash.com/${id}?w=${w}&q=80&auto=format&fit=crop`;
-}
-
-/** Wikimedia Commons thumb helper */
-function wiki(file: string, w = 1280) {
-  const parts = file.split("/");
-  const name = parts[parts.length - 1]!;
-  return `https://upload.wikimedia.org/wikipedia/commons/thumb/${file}/${w}px-${name}`;
+/** Wikimedia Commons — verified real photos (CC / public domain). */
+function wiki(path: string, w = 1280) {
+  const name = path.split("/").pop()!;
+  return `https://upload.wikimedia.org/wikipedia/commons/thumb/${path}/${w}px-${name}`;
 }
 
 /**
  * Korea-verified photography mapped to slide / hospital context.
- * Sources: Wikimedia Commons (CC) + Unsplash (location-tagged Seoul/Incheon).
+ * Sources: Wikimedia Commons only (no stock/AI-looking Unsplash).
  */
 export const KOREA_IMAGES = {
-  /** 인천공항 터미널 — VIP 픽업·공항 도착 */
-  incheonAirport:
-    wiki("7/70/Incheon_International_Airport_Terminal_1_Arrival.jpg"),
+  /** Slide 1 — 인천공항 1터미널 도착층 (VIP 픽업) */
+  incheonAirportArrival: wiki(
+    "7/70/Incheon_International_Airport_Terminal_1_Arrival.jpg",
+  ),
 
-  /** 서울 의료·미용 거리 — 메디컬 통역·상담 */
-  seoulMedicalDistrict: u("photo-1538485399081-7191377e8241"),
+  /** Slide 2 — 서울아산병원 캠퍼스 (성형·피부·의료 전문) */
+  asanMedicalCenter: wiki("e/e0/Asan_Medical_Center.jpg"),
 
-  /** 한국 원화 — Beautiro Pay 환전·결제 */
-  koreanWon: wiki("8/84/Currency_South_Korea.jpg"),
+  /** Slide 3 — 대한민국 원·동전 (Beautiro Pay 환전·결제) */
+  koreanCurrency: wiki("5/52/Currency_South_Korea.jpg"),
 
-  /** 북촌 한옥 + 서울 스카이라인 — 한의원·한방 */
-  bukchonHanok: u("photo-1677107129789-3b0241fb727a", 800),
+  /** 성형외과 — 순천향대학교 서울병원 */
+  soonchunhyangSeoulHospital: wiki(
+    "e/e6/Soonchunhyang_University_Seoul_Hospital.png",
+    960,
+  ),
 
-  /** 인천 송도 국제도시 — 한방병원·인천 제휴 */
-  incheonSongdo:
-    wiki(
-      "f/f4/South_Korea%2C_Incheon%2C_Songdo%2C_the_Prugio_Central_Park_Towers%2C_Sharp_First_World_Towers%2C_and_Sheraton_Hotel.jpg",
-      800,
-    ),
+  /** 피부·치과 — 건국대학교병원 */
+  konkukUniversityHospital: wiki(
+    "7/77/Konkuk_University_Hospital_20241102_003.jpg",
+    960,
+  ),
 
-  /** 서울 야경 고층빌딩 — 성형외과·의료관광 */
-  seoulNightSkyline: u("photo-1532649097480-b67d52743b69", 800),
+  /** 한의원 — 서울한방진흥센터 보제원 */
+  seoulKMediCenter: wiki("9/98/Seoul_K-Medi_Center.jpg", 960),
 
-  /** 서울 도심 고층빌딩 — 성형·리프팅 클리닉 */
-  seoulHighRise: u("photo-1554310603-d39d43033735", 800),
+  /** 한방병원 — 한약재 (전통 한의학) */
+  hanyakTraditionalMedicine: wiki(
+    "d/d3/Hanyak_(traditional_Korean_medicine).jpg",
+    960,
+  ),
 
-  /** 서울 남산 전망 — 피부과·시술 케어 */
-  seoulNamsan: u("photo-1747683203882-25ba3f153a15", 800),
-
-  /** 서울 도심 거리 — 치과·안산(수도권) */
-  seoulCityStreet: u("photo-1517154421773-0529f29ea451", 800),
-
-  /** 경복궁 한옥 — 한방·웰니스 */
-  gyeongbokgung: u("photo-1761500997474-fd6446e2abaa", 800),
+  /** 인천 송도 — 인천 제휴 병원 지역 */
+  incheonSongdo: wiki(
+    "f/f8/South_Korea%2C_Incheon%2C_Songdo%2C_the_Prugio_Central_Park_Towers%2C_Sharp_First_World_Towers%2C_and_Sheraton_Hotel.jpg",
+    960,
+  ),
 } as const;
 
-/** Hero carousel — matches ko.json slide order */
+/** Hero carousel — must match ko.json slide order */
 export const heroSlideImages = [
-  KOREA_IMAGES.incheonAirport,
-  KOREA_IMAGES.seoulMedicalDistrict,
-  KOREA_IMAGES.koreanWon,
+  KOREA_IMAGES.incheonAirportArrival,
+  KOREA_IMAGES.asanMedicalCenter,
+  KOREA_IMAGES.koreanCurrency,
 ] as const;
 
 export const hospitalCoverImages: Record<string, string> = {
-  "arena-oriental-clinic": KOREA_IMAGES.bukchonHanok,
-  "arena-oriental-hospital": KOREA_IMAGES.incheonSongdo,
-  "seran-plastic": KOREA_IMAGES.seoulNightSkyline,
-  "seran-plus-plastic": KOREA_IMAGES.seoulHighRise,
-  "seran-dermatology": KOREA_IMAGES.seoulNamsan,
-  "seran-dental": KOREA_IMAGES.seoulCityStreet,
-  "seoul-central-dental": KOREA_IMAGES.seoulCityStreet,
+  "arena-oriental-clinic": KOREA_IMAGES.seoulKMediCenter,
+  "arena-oriental-hospital": KOREA_IMAGES.hanyakTraditionalMedicine,
+  "seran-plastic": KOREA_IMAGES.soonchunhyangSeoulHospital,
+  "seran-plus-plastic": KOREA_IMAGES.asanMedicalCenter,
+  "seran-dermatology": KOREA_IMAGES.konkukUniversityHospital,
+  "seran-dental": KOREA_IMAGES.konkukUniversityHospital,
+  "seoul-central-dental": KOREA_IMAGES.konkukUniversityHospital,
 };
 
 export const categoryFallbackImages: Record<MedicalCategory, string> = {
-  PLASTIC: KOREA_IMAGES.seoulNightSkyline,
-  DERMATOLOGY: KOREA_IMAGES.seoulNamsan,
-  ORIENTAL: KOREA_IMAGES.gyeongbokgung,
-  DENTAL: KOREA_IMAGES.seoulCityStreet,
+  PLASTIC: KOREA_IMAGES.soonchunhyangSeoulHospital,
+  DERMATOLOGY: KOREA_IMAGES.konkukUniversityHospital,
+  ORIENTAL: KOREA_IMAGES.seoulKMediCenter,
+  DENTAL: KOREA_IMAGES.konkukUniversityHospital,
 };
 
 export function resolveHospitalImage(
@@ -82,5 +79,9 @@ export function resolveHospitalImage(
   category: MedicalCategory,
   coverImage?: string | null,
 ): string {
-  return coverImage ?? hospitalCoverImages[slug] ?? categoryFallbackImages[category];
+  return (
+    coverImage ??
+    hospitalCoverImages[slug] ??
+    categoryFallbackImages[category]
+  );
 }

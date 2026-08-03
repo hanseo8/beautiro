@@ -18,7 +18,7 @@ export function SiteHeader() {
       <div className="container-babitalk flex h-[52px] items-center justify-between gap-4">
         <Link
           href="/"
-          className="font-brand text-2xl font-bold tracking-tight text-beautiro-primary-deep"
+          className="font-brand text-2xl font-bold tracking-tight text-beautiro-primary"
         >
           Beautiro
         </Link>

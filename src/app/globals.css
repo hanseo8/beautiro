@@ -2,27 +2,27 @@
 @import "pretendard/dist/web/variable/pretendardvariable.css";
 
 /*
-  Beautiro — B) Bright clinical health (white + soft blue)
+  Beautiro — A) Premium clinic (deep teal + champagne gold)
 */
 :root {
   --background: #ffffff;
   --foreground: #0f172a;
   --beautiro-charcoal: #0f172a;
   --beautiro-charcoal-hover: #1e293b;
-  --beautiro-muted: #64748b;
-  --beautiro-muted-light: #94a3b8;
-  --beautiro-border: #e2e8f0;
-  --beautiro-surface: #f8fafc;
-  --beautiro-surface-blue: #eff6ff;
-  --beautiro-primary: #4a90d9;
-  --beautiro-primary-hover: #3b7fc4;
-  --beautiro-primary-deep: #2563eb;
-  --beautiro-accent: #4a90d9;
-  --beautiro-accent-hover: #3b7fc4;
-  --beautiro-accent-soft: #eff6ff;
-  --beautiro-sky: #7cb9e8;
-  --beautiro-ice: #5ba4d9;
-  --beautiro-gold: #f59e0b;
+  --beautiro-muted: #5c6b68;
+  --beautiro-muted-light: #8a9693;
+  --beautiro-border: #e0e8e6;
+  --beautiro-surface: #f4f8f7;
+  --beautiro-surface-blue: #eef4f3;
+  --beautiro-primary: #1a5f5f;
+  --beautiro-primary-hover: #144d4d;
+  --beautiro-primary-deep: #0f4545;
+  --beautiro-accent: #c4a962;
+  --beautiro-accent-hover: #b8984f;
+  --beautiro-accent-soft: #f4f8f7;
+  --beautiro-sky: #2d7a7a;
+  --beautiro-ice: #3d8a7a;
+  --beautiro-gold: #c4a962;
   --beautiro-glass: rgba(255, 255, 255, 0.94);
 }
 

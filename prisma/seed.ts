@@ -23,7 +23,7 @@ async function main() {
         "Klinik oriental mitra di Incheon. Perawatan konstitusi, diet, dan nyeri dengan koordinator VIP ASEAN.",
       city: "Incheon",
       district: "Namdong",
-      coverImage: KOREA_IMAGES.bukchonHanok,
+      coverImage: KOREA_IMAGES.seoulKMediCenter,
       featured: true,
       procedures: [
         {
@@ -57,7 +57,7 @@ async function main() {
         "Rumah sakit oriental mitra di Incheon. Perawatan integratif rawat inap dengan dukungan Van & Mate.",
       city: "Incheon",
       district: "Namdong",
-      coverImage: KOREA_IMAGES.incheonSongdo,
+      coverImage: KOREA_IMAGES.hanyakTraditionalMedicine,
       featured: true,
       procedures: [
         {
@@ -82,7 +82,7 @@ async function main() {
         "Seran Plastic Surgery di Incheon. Konsultasi VIP untuk mata, hidung, dan kontur wajah.",
       city: "Incheon",
       district: "Bupyeong",
-      coverImage: KOREA_IMAGES.seoulNightSkyline,
+      coverImage: KOREA_IMAGES.soonchunhyangSeoulHospital,
       featured: true,
       procedures: [
         {
@@ -116,7 +116,7 @@ async function main() {
         "Seran Plus di Incheon. Konsultasi khusus untuk lifting, sedot lemak, dan kontur tubuh.",
       city: "Incheon",
       district: "Bupyeong",
-      coverImage: KOREA_IMAGES.seoulHighRise,
+      coverImage: KOREA_IMAGES.asanMedicalCenter,
       featured: true,
       procedures: [
         {
@@ -141,7 +141,7 @@ async function main() {
         "Seran Dermatology di Incheon. Paket premium laser, Botox, dan filler.",
       city: "Incheon",
       district: "Bupyeong",
-      coverImage: KOREA_IMAGES.seoulNamsan,
+      coverImage: KOREA_IMAGES.konkukUniversityHospital,
       featured: true,
       procedures: [
         {
@@ -174,7 +174,7 @@ async function main() {
         "Seran Dental di Incheon. Implan dan estetika gigi dengan pendamping penerjemah.",
       city: "Incheon",
       district: "Bupyeong",
-      coverImage: KOREA_IMAGES.seoulCityStreet,
+      coverImage: KOREA_IMAGES.konkukUniversityHospital,
       featured: false,
       procedures: [
         {
@@ -199,7 +199,7 @@ async function main() {
         "Seoul Central Dental di Ansan. Ortodonti, estetika, dan perawatan umum dengan pickup VIP.",
       city: "Ansan",
       district: "Sangnok-gu",
-      coverImage: KOREA_IMAGES.seoulCityStreet,
+      coverImage: KOREA_IMAGES.konkukUniversityHospital,
       featured: false,
       procedures: [
         {
