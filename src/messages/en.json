@@ -1,0 +1,413 @@
+{
+  "meta": {
+    "title": "Beautiro — Premium Medical Care in Korea",
+    "description": "VIP one-stop medical tourism: private transport, medical interpreters, and FX benefits."
+  },
+  "nav": {
+    "home": "Home",
+    "events": "Events",
+    "hospitals": "Hospitals",
+    "book": "Consultation",
+    "faq": "FAQ",
+    "cta": "Start consultation",
+    "login": "Log in / Sign up",
+    "whatsapp": "WhatsApp"
+  },
+  "common": {
+    "whatsappFloat": "WhatsApp chat"
+  },
+  "home": {
+    "search": {
+      "placeholder": "Search procedures, clinics, areas",
+      "popularLabel": "Popular searches",
+      "tags": ["Eyelid", "Lifting", "Botox", "Oriental diet", "Gangnam", "VIP pickup"]
+    },
+    "carousel": {
+      "slides": [
+        {
+          "title": "SEA VIP medical travel with Beautiro Van",
+          "subtitle": "Airport to clinic",
+          "cta": "View packages",
+          "href": "/book",
+          "tone": "sky"
+        },
+        {
+          "title": "Beautiro Mate medical interpreters",
+          "subtitle": "Plastic · Skin · Oriental",
+          "cta": "Request consult",
+          "href": "/book",
+          "tone": "blue"
+        },
+        {
+          "title": "Beautiro Pay FX & payments",
+          "subtitle": "Secure settlement guide",
+          "cta": "Learn more",
+          "href": "/#faq",
+          "tone": "ice"
+        }
+      ]
+    },
+    "categories": {
+      "plasticTitle": "Plastic surgery events",
+      "careTitle": "Treatments & care",
+      "more": "See more",
+      "plastic": ["Eyes", "Nose", "Contouring", "Breast", "Liposuction", "Lifting"],
+      "care": ["Botox", "Filler", "Laser", "Ultherapy", "Oriental diet", "Wellness"]
+    },
+    "popular": {
+      "badge": "Trending",
+      "title": "Popular events right now",
+      "viewAll": "View all",
+      "discount": "Up to",
+      "consultWhatsApp": "WhatsApp consult",
+      "bookOnline": "Apply online",
+      "packageHint": "Van · Mate · Pay packages available"
+    },
+    "trust": {
+      "items": [
+        { "title": "Verified partners", "desc": "Curated plastic, skin & oriental clinics" },
+        { "title": "24h concierge", "desc": "WhatsApp-first support" },
+        { "title": "Medical interpreters", "desc": "Beautiro Mate specialists" },
+        { "title": "VIP mobility", "desc": "Beautiro Van private pickup" }
+      ]
+    },
+    "app": {
+      "title": "Easier with the Beautiro app",
+      "description": "Bookings, schedule, and your Mate contact in one place. (Coming soon)",
+      "qrHint": "Scan QR · Download app"
+    },
+    "faq": {
+      "title": "FAQ",
+      "items": [
+        {
+          "q": "Is Beautiro a hospital?",
+          "a": "We connect you with verified partners and VIP care services."
+        },
+        {
+          "q": "Which languages are supported?",
+          "a": "Indonesian, English, and Korean for consults and medical interpretation."
+        },
+        {
+          "q": "How does payment work?",
+          "a": "After confirmation, Beautiro Pay guides you securely."
+        }
+      ]
+    }
+  },
+  "hero": {
+    "badge": "VIP Medical Tourism Korea",
+    "title": "Premium medical care, seamlessly",
+    "subtitle": "From airport to clinic — private van, specialist medical interpreters, and FX support in one platform.",
+    "primaryCta": "Request consultation",
+    "secondaryCta": "Browse partner hospitals",
+    "concierge": "Concierge within 24 hours",
+    "visualCaption": "Seoul · South Korea"
+  },
+  "services": {
+    "title": "Three core services",
+    "subtitle": "Mobility, companionship, and payments — composed for a calm medical journey.",
+    "van": {
+      "title": "Beautiro Van",
+      "desc": "Airport, hospital, and hotel transfers with privacy after your procedure."
+    },
+    "mate": {
+      "title": "Beautiro Mate",
+      "desc": "Specialist medical interpreters — from consultation through medication guidance."
+    },
+    "pay": {
+      "title": "Beautiro Pay",
+      "desc": "Preferential rates and secure payment guidance through trusted partners."
+    }
+  },
+  "steps": {
+    "title": "Just 3 steps",
+    "step1": "Request consultation",
+    "step2": "Confirm schedule",
+    "step3": "Choose services"
+  },
+  "hospitals": {
+    "title": "Verified partner hospitals",
+    "subtitle": "Plastic surgery, dermatology, oriental medicine",
+    "from": "From",
+    "viewAll": "All hospitals",
+    "filterHint": "Results for",
+    "empty": "No hospitals match your filters.",
+    "whatsappConsult": "WhatsApp consult",
+    "viewEvent": "View event details",
+    "categories": {
+      "PLASTIC": "Plastic surgery",
+      "DERMATOLOGY": "Dermatology",
+      "ORIENTAL": "Oriental medicine",
+      "DENTAL": "Dental"
+    }
+  },
+  "event": {
+    "breadcrumbHome": "Home",
+    "breadcrumbEvents": "Events",
+    "eventLabel": "Beautiro event",
+    "aboutTitle": "About this treatment",
+    "hospitalTitle": "Clinic",
+    "moreHospitals": "Browse more partners",
+    "reviews": "reviews",
+    "priceNote": "Final price confirmed after consultation.",
+    "whatsappCta": "Consult on WhatsApp",
+    "bookCta": "Apply online",
+    "responseHint": "Typical reply within 24h · ID / EN / KO",
+    "includes": [
+      "Beautiro Mate medical interpretation",
+      "Beautiro Van transfer planning (optional)",
+      "Beautiro Pay FX & payment guide",
+      "Partner clinic booking support"
+    ]
+  },
+  "book": {
+    "title": "Request consultation",
+    "asideTitle": "Your journey, one team",
+    "asideHint": "Every request is reviewed by our concierge — typically within 24 hours.",
+    "stepLabel": "Step {current} of {total}",
+    "step1Title": "Choose treatment",
+    "step2Title": "Schedule & contact",
+    "step3Title": "Add-on services",
+    "preview": "Summary",
+    "selectProcedure": "Select a procedure (optional)",
+    "noProcedure": "Not sure yet — general consultation",
+    "name": "Full name",
+    "email": "Email",
+    "phone": "WhatsApp / phone",
+    "arrival": "Arrival date (optional)",
+    "preferred": "Preferred consultation date",
+    "notes": "Notes (optional)",
+    "van": "Beautiro Van",
+    "interpreter": "Beautiro Mate",
+    "fx": "Beautiro Pay",
+    "back": "Back",
+    "next": "Next",
+    "submit": "Submit request",
+    "submitting": "Sending…",
+    "successTitle": "Request received",
+    "successBody": "The Beautiro team will contact you within 24 hours to confirm your schedule.",
+    "reference": "Reference",
+    "another": "Submit another"
+  },
+  "faq": {
+    "title": "FAQ",
+    "items": [
+      {
+        "q": "Is Beautiro a hospital?",
+        "a": "No. We connect you with verified partner hospitals and supporting services."
+      },
+      {
+        "q": "Which languages are supported?",
+        "a": "Indonesian, English, and Korean for consultation and medical interpretation."
+      },
+      {
+        "q": "How does payment work?",
+        "a": "After your schedule is confirmed, our team guides you through deposit and payment securely."
+      }
+    ]
+  },
+  "terms": {
+    "metaTitle": "Terms of Service",
+    "title": "Terms of Service",
+    "effectiveDate": "Effective: August 4, 2026",
+    "intro": "These Terms govern the use of the Beautiro medical tourism concierge service (the \"Service\") operated by Beautiro Co., Ltd. (주)뷰티로 (the \"Company\").",
+    "contactNote": "Questions about these Terms: Beautiro customer care (WhatsApp) or privacy@beautiro.com",
+    "sections": [
+      {
+        "title": "1. Purpose",
+        "paragraphs": [
+          "These Terms set forth the conditions and procedures for using online consultation, booking facilitation, transport, interpretation, and related medical tourism information services provided by the Company."
+        ]
+      },
+      {
+        "title": "2. Definitions",
+        "paragraphs": [
+          "\"User\" means any member or non-member who uses the Service under these Terms.",
+          "\"Partner clinic\" means a hospital, clinic, or medical provider that delivers medical services under a separate agreement with the Company.",
+          "\"Concierge services\" means support such as consultation intake, scheduling, transport, interpretation, and payment guidance during medical travel."
+        ]
+      },
+      {
+        "title": "3. Posting and amendment",
+        "paragraphs": [
+          "The Company posts these Terms on the Service.",
+          "The Company may amend these Terms within the scope permitted by applicable law and will announce the effective date and reasons in advance.",
+          "Continued use after the effective date constitutes acceptance of the amended Terms."
+        ]
+      },
+      {
+        "title": "4. Services provided",
+        "paragraphs": [
+          "The Company provides medical tourism information, consultation and booking intake, partner clinic matching, and concierge support.",
+          "The Company does not perform medical acts; diagnosis, treatment, and procedures are the responsibility of partner clinics.",
+          "The Service may be temporarily suspended due to maintenance, force majeure, or technical issues."
+        ]
+      },
+      {
+        "title": "5. User obligations",
+        "paragraphs": [
+          "Users must not provide false information or misuse another person's identity.",
+          "Users must comply with applicable laws, these Terms, and service notices.",
+          "Users must accurately disclose health conditions and travel requirements (passport, visa, etc.) when booking."
+        ]
+      },
+      {
+        "title": "6. Company obligations",
+        "paragraphs": [
+          "The Company strives to provide the Service in a stable and continuous manner.",
+          "The Company protects personal data in accordance with its Privacy Policy.",
+          "The Company will address legitimate complaints without undue delay."
+        ]
+      },
+      {
+        "title": "7. Booking and cancellation",
+        "paragraphs": [
+          "Consultations and bookings are accepted via the website, WhatsApp, and other channels provided by the Company.",
+          "Confirmation, schedule, and fees depend on partner clinic policies and mutual agreement.",
+          "Cancellation, changes, and refunds follow partner clinic rules and package notices; the Company acts as facilitator."
+        ]
+      },
+      {
+        "title": "8. Fees and payment",
+        "paragraphs": [
+          "Fees for services, procedures, and add-ons are based on prior notice.",
+          "Payment methods, currency, exchange rates, and fees follow individual guidance and applicable law.",
+          "The Company will not charge fees without prior user consent."
+        ]
+      },
+      {
+        "title": "9. Disclaimer",
+        "paragraphs": [
+          "The Company is not liable for medical outcomes, efficacy, or side effects of partner clinics.",
+          "The Company is not liable for damages beyond reasonable control, including natural disasters, war, or partner disruptions.",
+          "Medical and pricing information on the Service is for reference; partner clinics provide final confirmation."
+        ]
+      },
+      {
+        "title": "10. Intellectual property",
+        "paragraphs": [
+          "Content, logos, and designs on the Service belong to the Company or rightful owners.",
+          "Users may not copy, distribute, or commercially use such materials without prior written consent."
+        ]
+      },
+      {
+        "title": "11. Dispute resolution",
+        "paragraphs": [
+          "Disputes shall first be resolved through good-faith negotiation.",
+          "If unresolved, disputes shall be governed by applicable law; courts at the Company's principal place of business shall have jurisdiction."
+        ]
+      },
+      {
+        "title": "Supplementary provisions",
+        "paragraphs": [
+          "These Terms take effect on August 4, 2026."
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "metaTitle": "Privacy Policy",
+    "title": "Privacy Policy",
+    "effectiveDate": "Effective: August 4, 2026",
+    "intro": "Beautiro Co., Ltd. (주)뷰티로 (the \"Company\") values your privacy and complies with applicable data protection laws.",
+    "contactNote": "Privacy inquiries: privacy@beautiro.com · Beautiro customer care (WhatsApp)",
+    "sections": [
+      {
+        "title": "1. Personal data collected",
+        "paragraphs": [
+          "The Company may collect the following data to provide the Service.",
+          "Required: name, contact (phone/WhatsApp), email, consultation/booking details, preferred dates",
+          "Optional: nationality, language preference, passport/visa information, transport/interpreter requests",
+          "Automatic: access logs, IP address, cookies, device information, usage records"
+        ]
+      },
+      {
+        "title": "2. Purposes of use",
+        "paragraphs": [
+          "Medical tourism consultation, booking, and scheduling",
+          "Partner clinic matching and concierge services (transport, interpretation, payment guidance)",
+          "Customer support, complaints, and notices",
+          "Service improvement, analytics, and fraud prevention",
+          "Compliance with legal obligations"
+        ]
+      },
+      {
+        "title": "3. Retention period",
+        "paragraphs": [
+          "Data is deleted without delay when the purpose is fulfilled.",
+          "Where required by law, data may be retained for the statutory period.",
+          "Examples: contract records 5 years, complaints 3 years, access logs 3 months where applicable."
+        ]
+      },
+      {
+        "title": "4. Third-party provision",
+        "paragraphs": [
+          "The Company does not provide personal data to third parties without consent, except as required by law.",
+          "With consent, data may be shared with partner clinics and transport/interpreter partners as needed to fulfill bookings.",
+          "Recipients, purposes, items, and retention periods are disclosed in advance."
+        ]
+      },
+      {
+        "title": "5. Processing delegation",
+        "paragraphs": [
+          "The Company may delegate tasks to specialized vendors (e.g., hosting, messaging, payment).",
+          "Delegates and tasks are disclosed in this Policy and managed under applicable law."
+        ]
+      },
+      {
+        "title": "6. Your rights",
+        "paragraphs": [
+          "You may request access, correction, deletion, or restriction of your personal data.",
+          "Contact privacy@beautiro.com or customer care; the Company will respond without undue delay.",
+          "Legal representatives may exercise rights where permitted by law."
+        ]
+      },
+      {
+        "title": "7. Cookies",
+        "paragraphs": [
+          "The Company may use cookies to improve the Service.",
+          "You may refuse cookies via browser settings; some features may be limited."
+        ]
+      },
+      {
+        "title": "8. Security measures",
+        "paragraphs": [
+          "The Company implements technical and organizational safeguards such as access control, encryption, and security programs.",
+          "Staff with data access are minimized and trained regularly."
+        ]
+      },
+      {
+        "title": "9. Privacy officer",
+        "paragraphs": [
+          "Privacy officer: Beautiro Co., Ltd. (주)뷰티로",
+          "Email: privacy@beautiro.com",
+          "Customer care: Beautiro WhatsApp channel"
+        ]
+      },
+      {
+        "title": "10. Policy changes",
+        "paragraphs": [
+          "Material changes will be announced with the effective date and reasons.",
+          "The updated Policy takes effect on the announced date."
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "SEA VIP premium medical tourism, one stop",
+    "whatsappCta": "WhatsApp customer care",
+    "whatsappHours": "Daily 09:00–22:00 (KST) · Indonesian / English / Korean",
+    "badgePrivacy": "Privacy",
+    "badgePartner": "Verified partners",
+    "contact": "Contact us on WhatsApp",
+    "company": "Beautiro Co., Ltd. (주)뷰티로 · Medical tourism concierge · Registration details pending",
+    "rights": "© Beautiro Co., Ltd. Medical information is for reference only, not a diagnosis.",
+    "links": [
+      { "label": "Terms", "href": "/terms" },
+      { "label": "Privacy", "href": "/privacy" },
+      { "label": "Partners", "href": "/book" },
+      { "label": "Support", "href": "/book" }
+    ]
+  },
+  "language": "Language"
+}

@@ -1,0 +1,412 @@
+{
+  "meta": {
+    "title": "Beautiro — Perawatan Medis Premium Korea",
+    "description": "Platform one-stop medical tourism VIP: van pribadi, penerjemah medis, dan keuntungan kurs."
+  },
+  "nav": {
+    "home": "Beranda",
+    "events": "Event",
+    "hospitals": "Rumah Sakit",
+    "book": "Konsultasi",
+    "faq": "FAQ",
+    "cta": "Mulai Konsultasi",
+    "login": "Masuk / Daftar",
+    "whatsapp": "WhatsApp"
+  },
+  "common": {
+    "whatsappFloat": "Chat WhatsApp"
+  },
+  "home": {
+    "search": {
+      "placeholder": "Cari prosedur, klinik, area",
+      "popularLabel": "Pencarian populer",
+      "tags": ["Kelopak mata", "Lifting", "Botox", "Diet oriental", "Gangnam", "VIP pickup"]
+    },
+    "carousel": {
+      "slides": [
+        {
+          "title": "Medical travel VIP ASEAN dengan Beautiro Van",
+          "subtitle": "Bandara ke klinik",
+          "cta": "Lihat paket",
+          "href": "/book",
+          "tone": "sky"
+        },
+        {
+          "title": "Beautiro Mate penerjemah medis",
+          "subtitle": "Plastik · Kulit · Oriental",
+          "cta": "Ajukan konsultasi",
+          "href": "/book",
+          "tone": "blue"
+        },
+        {
+          "title": "Beautiro Pay kurs & pembayaran",
+          "subtitle": "Panduan aman",
+          "cta": "Selengkapnya",
+          "href": "/#faq",
+          "tone": "ice"
+        }
+      ]
+    },
+    "categories": {
+      "plasticTitle": "Event bedah plastik",
+      "careTitle": "Perawatan & wellness",
+      "more": "Lihat lainnya",
+      "plastic": ["Mata", "Hidung", "Kontur", "Payudara", "Sedot lemak", "Lifting"],
+      "care": ["Botox", "Filler", "Laser", "Ultherapy", "Diet oriental", "Wellness"]
+    },
+    "popular": {
+      "badge": "Sedang tren",
+      "title": "Event populer saat ini",
+      "viewAll": "Lihat semua",
+      "discount": "Diskon hingga",
+      "consultWhatsApp": "Konsultasi WhatsApp",
+      "bookOnline": "Ajukan online",
+      "packageHint": "Paket Van · Mate · Pay tersedia"
+    },
+    "trust": {
+      "items": [
+        { "title": "Mitra terverifikasi", "desc": "Klinik plastik, kulit & oriental" },
+        { "title": "Concierge 24 jam", "desc": "Prioritas WhatsApp" },
+        { "title": "Penerjemah medis", "desc": "Spesialis Beautiro Mate" },
+        { "title": "Mobilitas VIP", "desc": "Pickup Beautiro Van" }
+      ]
+    },
+    "app": {
+      "title": "Lebih mudah dengan aplikasi Beautiro",
+      "description": "Booking, jadwal, dan kontak Mate dalam satu tempat. (Segera)",
+      "qrHint": "Pindai QR · Unduh aplikasi"
+    },
+    "faq": {
+      "title": "Pertanyaan umum",
+      "items": [
+        {
+          "q": "Apakah Beautiro rumah sakit?",
+          "a": "Kami menghubungkan Anda dengan mitra terverifikasi dan layanan VIP."
+        },
+        {
+          "q": "Bahasa apa yang didukung?",
+          "a": "Bahasa Indonesia, Inggris, dan Korea."
+        },
+        {
+          "q": "Bagaimana pembayaran?",
+          "a": "Setelah konfirmasi, Beautiro Pay memandu Anda dengan aman."
+        }
+      ]
+    }
+  },
+  "hero": {
+    "badge": "VIP Medical Tourism Korea",
+    "title": "Perawatan medis premium, tanpa repot",
+    "subtitle": "Dari bandara hingga rumah sakit — van pribadi, penerjemah medis spesialis, dan dukungan kurs dalam satu platform.",
+    "primaryCta": "Ajukan konsultasi",
+    "secondaryCta": "Lihat rumah sakit mitra",
+    "concierge": "Concierge dalam 24 jam",
+    "visualCaption": "Seoul · Korea Selatan"
+  },
+  "services": {
+    "title": "Tiga layanan inti",
+    "subtitle": "Mobilitas, pendampingan, dan pembayaran — dirancang untuk perjalanan medis yang tenang.",
+    "van": {
+      "title": "Beautiro Van",
+      "desc": "Antar-jemput bandara, rumah sakit, dan hotel dengan privasi penuh setelah prosedur."
+    },
+    "mate": {
+      "title": "Beautiro Mate",
+      "desc": "Penerjemah medis spesialis — dari konsultasi hingga instruksi obat, dengan ketenangan penuh."
+    },
+    "pay": {
+      "title": "Beautiro Pay",
+      "desc": "Kurs preferensial dan panduan pembayaran aman melalui jaringan mitra terpercaya."
+    }
+  },
+  "steps": {
+    "title": "Hanya 3 langkah",
+    "step1": "Ajukan konsultasi",
+    "step2": "Konfirmasi jadwal",
+    "step3": "Pilih layanan"
+  },
+  "hospitals": {
+    "title": "Rumah sakit mitra terverifikasi",
+    "subtitle": "Bedah plastik, kulit, dan pengobatan oriental",
+    "from": "Mulai",
+    "viewAll": "Semua rumah sakit",
+    "filterHint": "Hasil untuk",
+    "empty": "Tidak ada rumah sakit yang cocok.",
+    "whatsappConsult": "Konsultasi WhatsApp",
+    "viewEvent": "Detail event",
+    "categories": {
+      "PLASTIC": "Bedah plastik",
+      "DERMATOLOGY": "Kulit",
+      "ORIENTAL": "Pengobatan oriental",
+      "DENTAL": "Gigi"
+    }
+  },
+  "event": {
+    "breadcrumbHome": "Beranda",
+    "breadcrumbEvents": "Event",
+    "eventLabel": "Event Beautiro",
+    "aboutTitle": "Tentang perawatan",
+    "hospitalTitle": "Klinik",
+    "moreHospitals": "Lihat mitra lain",
+    "reviews": "ulasan",
+    "priceNote": "Harga final setelah konsultasi.",
+    "whatsappCta": "Konsultasi via WhatsApp",
+    "bookCta": "Ajukan online",
+    "responseHint": "Balasan biasanya <24 jam · ID / EN / KO",
+    "includes": [
+      "Penerjemahan medis Beautiro Mate",
+      "Perencanaan Beautiro Van (opsional)",
+      "Panduan Beautiro Pay",
+      "Dukungan booking klinik mitra"
+    ]
+  },
+  "book": {
+    "title": "Ajukan konsultasi",
+    "asideTitle": "Perjalanan Anda, satu tim",
+    "asideHint": "Setiap permintaan ditinjau concierge kami — biasanya dalam 24 jam.",
+    "stepLabel": "Langkah {current} dari {total}",
+    "step1Title": "Pilih perawatan",
+    "step2Title": "Jadwal & kontak",
+    "step3Title": "Layanan tambahan",
+    "preview": "Ringkasan",
+    "selectProcedure": "Pilih prosedur (opsional)",
+    "noProcedure": "Belum yakin — konsultasi umum",
+    "name": "Nama lengkap",
+    "email": "Email",
+    "phone": "WhatsApp / telepon",
+    "arrival": "Tanggal kedatangan (opsional)",
+    "preferred": "Tanggal konsultasi yang diinginkan",
+    "notes": "Catatan (opsional)",
+    "van": "Beautiro Van",
+    "interpreter": "Beautiro Mate",
+    "fx": "Beautiro Pay",
+    "back": "Kembali",
+    "next": "Lanjut",
+    "submit": "Kirim permintaan",
+    "submitting": "Mengirim…",
+    "successTitle": "Permintaan diterima",
+    "successBody": "Tim Beautiro akan menghubungi Anda dalam 24 jam untuk konfirmasi jadwal.",
+    "reference": "Nomor referensi",
+    "another": "Ajukan lagi"
+  },
+  "faq": {
+    "title": "Pertanyaan umum",
+    "items": [
+      {
+        "q": "Apakah Beautiro adalah rumah sakit?",
+        "a": "Tidak. Kami adalah platform yang menghubungkan Anda dengan rumah sakit mitra terverifikasi dan layanan pendukung."
+      },
+      {
+        "q": "Bahasa apa yang didukung?",
+        "a": "Bahasa Indonesia, Inggris, dan Korea untuk konsultasi dan penerjemahan medis."
+      },
+      {
+        "q": "Bagaimana cara pembayaran?",
+        "a": "Setelah jadwal dikonfirmasi, tim kami memandu deposit dan pembayaran dengan aman."
+      }
+    ]
+  },
+  "terms": {
+    "metaTitle": "Syarat Layanan",
+    "title": "Syarat Layanan",
+    "effectiveDate": "Berlaku: 4 Agustus 2026",
+    "intro": "Syarat ini mengatur penggunaan layanan concierge medical tourism Beautiro (\"Layanan\") yang dioperasikan oleh Beautiro Co., Ltd. (주)뷰티로 (\"Perusahaan\").",
+    "contactNote": "Pertanyaan: layanan pelanggan Beautiro (WhatsApp) atau privacy@beautiro.com",
+    "sections": [
+      {
+        "title": "1. Tujuan",
+        "paragraphs": [
+          "Syarat ini mengatur ketentuan penggunaan konsultasi online, pemesanan, transportasi, interpretasi, dan layanan informasi medical tourism yang disediakan Perusahaan."
+        ]
+      },
+      {
+        "title": "2. Definisi",
+        "paragraphs": [
+          "\"Pengguna\" adalah anggota atau non-anggota yang menggunakan Layanan.",
+          "\"Klinik mitra\" adalah rumah sakit/klinik yang memberikan layanan medis berdasarkan perjanjian terpisah dengan Perusahaan.",
+          "\"Layanan concierge\" meliputi dukungan konsultasi, penjadwalan, transportasi, interpretasi, dan panduan pembayaran."
+        ]
+      },
+      {
+        "title": "3. Pemberitahuan dan perubahan",
+        "paragraphs": [
+          "Perusahaan menampilkan Syarat ini di Layanan.",
+          "Perusahaan dapat mengubah Syarat sesuai hukum yang berlaku dan akan mengumumkan tanggal berlaku serta alasan sebelumnya.",
+          "Penggunaan berkelanjutan setelah tanggal berlaku dianggap sebagai persetujuan."
+        ]
+      },
+      {
+        "title": "4. Layanan",
+        "paragraphs": [
+          "Perusahaan menyediakan informasi medical tourism, konsultasi/pemesanan, penghubung klinik mitra, dan dukungan concierge.",
+          "Perusahaan tidak melakukan tindakan medis; diagnosis dan perawatan menjadi tanggung jawab klinik mitra.",
+          "Layanan dapat ditangguhkan sementara karena pemeliharaan atau force majeure."
+        ]
+      },
+      {
+        "title": "5. Kewajiban pengguna",
+        "paragraphs": [
+          "Pengguna tidak boleh memberikan informasi palsu atau menyalahgunakan identitas orang lain.",
+          "Pengguna harus mematuhi hukum, Syarat ini, dan pemberitahuan layanan.",
+          "Pengguna harus mengungkapkan kondisi kesehatan dan persyaratan perjalanan secara akurat saat memesan."
+        ]
+      },
+      {
+        "title": "6. Kewajiban perusahaan",
+        "paragraphs": [
+          "Perusahaan berupaya menyediakan Layanan secara stabil dan berkelanjutan.",
+          "Perusahaan melindungi data pribadi sesuai Kebijakan Privasi.",
+          "Perusahaan akan menangani keluhan yang sah tanpa penundaan yang tidak wajar."
+        ]
+      },
+      {
+        "title": "7. Pemesanan dan pembatalan",
+        "paragraphs": [
+          "Konsultasi dan pemesanan diterima melalui situs web, WhatsApp, dan saluran lain dari Perusahaan.",
+          "Konfirmasi, jadwal, dan biaya mengikuti kebijakan klinik mitra dan kesepakatan bersama.",
+          "Pembatalan, perubahan, dan pengembalian dana mengikuti aturan klinik mitra; Perusahaan berperan sebagai fasilitator."
+        ]
+      },
+      {
+        "title": "8. Biaya dan pembayaran",
+        "paragraphs": [
+          "Biaya layanan, prosedur, dan add-on berdasarkan pemberitahuan sebelumnya.",
+          "Metode pembayaran, mata uang, dan biaya mengikuti panduan individual dan hukum yang berlaku.",
+          "Perusahaan tidak menagih biaya tanpa persetujuan pengguna sebelumnya."
+        ]
+      },
+      {
+        "title": "9. Penafian",
+        "paragraphs": [
+          "Perusahaan tidak bertanggung jawab atas hasil medis, efikasi, atau efek samping dari klinik mitra.",
+          "Perusahaan tidak bertanggung jawab atas kerugian di luar kendali wajar.",
+          "Informasi medis dan harga di Layanan bersifat referensi; konfirmasi akhir dari klinik mitra."
+        ]
+      },
+      {
+        "title": "10. Hak kekayaan intelektual",
+        "paragraphs": [
+          "Konten, logo, dan desain pada Layanan milik Perusahaan atau pemegang hak yang sah.",
+          "Pengguna tidak boleh menyalin atau menggunakan secara komersial tanpa izin tertulis."
+        ]
+      },
+      {
+        "title": "11. Penyelesaian sengketa",
+        "paragraphs": [
+          "Sengketa diselesaikan melalui negosiasi terlebih dahulu.",
+          "Jika tidak tercapai, hukum yang berlaku dan pengadilan di domisili Perusahaan berlaku."
+        ]
+      },
+      {
+        "title": "Ketentuan tambahan",
+        "paragraphs": [
+          "Syarat ini berlaku mulai 4 Agustus 2026."
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "metaTitle": "Kebijakan Privasi",
+    "title": "Kebijakan Privasi",
+    "effectiveDate": "Berlaku: 4 Agustus 2026",
+    "intro": "Beautiro Co., Ltd. (주)뷰티로 menghargai privasi Anda dan mematuhi hukum perlindungan data yang berlaku.",
+    "contactNote": "Pertanyaan privasi: privacy@beautiro.com · Layanan pelanggan Beautiro (WhatsApp)",
+    "sections": [
+      {
+        "title": "1. Data yang dikumpulkan",
+        "paragraphs": [
+          "Perusahaan dapat mengumpulkan data berikut untuk menyediakan Layanan.",
+          "Wajib: nama, kontak (telepon/WhatsApp), email, detail konsultasi/pemesanan, tanggal yang diinginkan",
+          "Opsional: kewarganegaraan, bahasa, informasi paspor/visa, permintaan transportasi/penerjemah",
+          "Otomatis: log akses, alamat IP, cookie, informasi perangkat, riwayat penggunaan"
+        ]
+      },
+      {
+        "title": "2. Tujuan penggunaan",
+        "paragraphs": [
+          "Konsultasi dan pemesanan medical tourism",
+          "Penghubungan klinik mitra dan layanan concierge",
+          "Dukungan pelanggan dan pemberitahuan",
+          "Peningkatan layanan, analitik, pencegahan penyalahgunaan",
+          "Kepatuhan hukum"
+        ]
+      },
+      {
+        "title": "3. Masa penyimpanan",
+        "paragraphs": [
+          "Data dihapus setelah tujuan tercapai.",
+          "Jika diwajibkan hukum, data disimpan sesuai periode yang ditetapkan.",
+          "Contoh: catatan kontrak 5 tahun, keluhan 3 tahun, log akses 3 bulan jika berlaku."
+        ]
+      },
+      {
+        "title": "4. Pemberian kepada pihak ketiga",
+        "paragraphs": [
+          "Perusahaan tidak memberikan data kepada pihak ketiga tanpa persetujuan, kecuali diwajibkan hukum.",
+          "Dengan persetujuan, data dapat dibagikan kepada klinik mitra dan mitra transportasi/penerjemah sesuai kebutuhan pemesanan.",
+          "Penerima, tujuan, item, dan masa penyimpanan diinformasikan sebelumnya."
+        ]
+      },
+      {
+        "title": "5. Penyerahan pemrosesan",
+        "paragraphs": [
+          "Perusahaan dapat menyerahkan tugas kepada vendor (hosting, pesan, pembayaran).",
+          "Vendor dan tugas diungkapkan dalam Kebijakan ini dan dikelola sesuai hukum."
+        ]
+      },
+      {
+        "title": "6. Hak Anda",
+        "paragraphs": [
+          "Anda dapat meminta akses, koreksi, penghapusan, atau pembatasan data pribadi.",
+          "Hubungi privacy@beautiro.com atau layanan pelanggan; Perusahaan akan merespons tanpa penundaan yang tidak wajar."
+        ]
+      },
+      {
+        "title": "7. Cookie",
+        "paragraphs": [
+          "Perusahaan dapat menggunakan cookie untuk meningkatkan Layanan.",
+          "Anda dapat menolak cookie melalui pengaturan browser; beberapa fitur mungkin terbatas."
+        ]
+      },
+      {
+        "title": "8. Keamanan",
+        "paragraphs": [
+          "Perusahaan menerapkan kontrol akses, enkripsi, dan langkah keamanan lainnya.",
+          "Personel dengan akses data diminimalkan dan dilatih secara berkala."
+        ]
+      },
+      {
+        "title": "9. Petugas privasi",
+        "paragraphs": [
+          "Petugas privasi: Beautiro Co., Ltd. (주)뷰티로",
+          "Email: privacy@beautiro.com",
+          "Layanan pelanggan: saluran WhatsApp Beautiro"
+        ]
+      },
+      {
+        "title": "10. Perubahan kebijakan",
+        "paragraphs": [
+          "Perubahan material akan diumumkan dengan tanggal berlaku dan alasan.",
+          "Kebijakan yang diperbarui berlaku pada tanggal yang diumumkan."
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Medical tourism premium VIP ASEAN, satu atap",
+    "whatsappCta": "Layanan pelanggan WhatsApp",
+    "whatsappHours": "Setiap hari 09:00–22:00 (KST) · ID / EN / KO",
+    "badgePrivacy": "Privasi",
+    "badgePartner": "Mitra terverifikasi",
+    "contact": "Hubungi kami via WhatsApp",
+    "company": "Beautiro Co., Ltd. (주)뷰티로 · Concierge medical tourism · Info bisnis menyusul",
+    "rights": "© Beautiro Co., Ltd. (주)뷰티로. Informasi medis bersifat informatif, bukan diagnosis.",
+    "links": [
+      { "label": "Syarat", "href": "/terms" },
+      { "label": "Privasi", "href": "/privacy" },
+      { "label": "Mitra", "href": "/book" },
+      { "label": "Bantuan", "href": "/book" }
+    ]
+  },
+  "language": "Bahasa"
+}

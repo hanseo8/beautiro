@@ -1,0 +1,84 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum MedicalCategory {
+  PLASTIC
+  DERMATOLOGY
+  ORIENTAL
+  DENTAL
+}
+
+enum BookingStatus {
+  PENDING
+  CONFIRMED
+  IN_PROGRESS
+  COMPLETED
+  CANCELLED
+}
+
+enum ServiceType {
+  VAN
+  INTERPRETER
+  FX_CARE
+}
+
+model Hospital {
+  id            String      @id @default(cuid())
+  slug          String      @unique
+  nameKo        String
+  nameEn        String
+  nameId        String
+  descriptionKo String
+  descriptionEn String
+  descriptionId String
+  city          String      @default("Seoul")
+  district      String?
+  coverImage    String?
+  featured      Boolean     @default(false)
+  procedures    Procedure[]
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+}
+
+model Procedure {
+  id          String          @id @default(cuid())
+  hospitalId  String
+  hospital    Hospital        @relation(fields: [hospitalId], references: [id], onDelete: Cascade)
+  category    MedicalCategory
+  nameKo      String
+  nameEn      String
+  nameId      String
+  priceFrom   Int?
+  durationMin Int?
+  bookings    Booking[]
+}
+
+model Booking {
+  id            String           @id @default(cuid())
+  status        BookingStatus    @default(PENDING)
+  locale        String
+  guestName     String
+  guestEmail    String
+  guestPhone    String
+  arrivalDate   DateTime?
+  preferredDate DateTime?
+  notes         String?
+  procedureId   String?
+  procedure     Procedure?       @relation(fields: [procedureId], references: [id])
+  services      BookingService[]
+  createdAt     DateTime         @default(now())
+  updatedAt     DateTime         @updatedAt
+}
+
+model BookingService {
+  id        String      @id @default(cuid())
+  bookingId String
+  booking   Booking     @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+  type      ServiceType
+}

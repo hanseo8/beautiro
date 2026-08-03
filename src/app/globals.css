@@ -1,0 +1,156 @@
+@import "tailwindcss";
+@import "pretendard/dist/web/variable/pretendardvariable.css";
+
+/*
+  Beautiro — B) Bright clinical health (white + soft blue)
+*/
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --beautiro-charcoal: #0f172a;
+  --beautiro-charcoal-hover: #1e293b;
+  --beautiro-muted: #64748b;
+  --beautiro-muted-light: #94a3b8;
+  --beautiro-border: #e2e8f0;
+  --beautiro-surface: #f8fafc;
+  --beautiro-surface-blue: #eff6ff;
+  --beautiro-primary: #4a90d9;
+  --beautiro-primary-hover: #3b7fc4;
+  --beautiro-primary-deep: #2563eb;
+  --beautiro-accent: #4a90d9;
+  --beautiro-accent-hover: #3b7fc4;
+  --beautiro-accent-soft: #eff6ff;
+  --beautiro-sky: #7cb9e8;
+  --beautiro-ice: #5ba4d9;
+  --beautiro-gold: #f59e0b;
+  --beautiro-glass: rgba(255, 255, 255, 0.94);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-beautiro-charcoal: var(--beautiro-charcoal);
+  --color-beautiro-charcoal-hover: var(--beautiro-charcoal-hover);
+  --color-beautiro-muted: var(--beautiro-muted);
+  --color-beautiro-muted-light: var(--beautiro-muted-light);
+  --color-beautiro-border: var(--beautiro-border);
+  --color-beautiro-surface: var(--beautiro-surface);
+  --color-beautiro-surface-blue: var(--beautiro-surface-blue);
+  --color-beautiro-primary: var(--beautiro-primary);
+  --color-beautiro-primary-hover: var(--beautiro-primary-hover);
+  --color-beautiro-primary-deep: var(--beautiro-primary-deep);
+  --color-beautiro-accent: var(--beautiro-accent);
+  --color-beautiro-accent-hover: var(--beautiro-accent-hover);
+  --color-beautiro-accent-soft: var(--beautiro-accent-soft);
+  --color-beautiro-sky: var(--beautiro-sky);
+  --color-beautiro-ice: var(--beautiro-ice);
+  --color-beautiro-coral: var(--beautiro-sky);
+  --color-beautiro-sage: var(--beautiro-ice);
+  --color-beautiro-gold: var(--beautiro-gold);
+  --font-sans: var(--font-outfit), system-ui, sans-serif;
+  --font-brand: var(--font-outfit), system-ui, sans-serif;
+  --font-korean: "Pretendard Variable", var(--font-outfit), system-ui, sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  line-height: 1.55;
+  text-rendering: optimizeLegibility;
+}
+
+html[lang="ko"] body {
+  font-family: var(--font-korean);
+  line-height: 1.6;
+  word-break: keep-all;
+  font-variation-settings: "wght" 450;
+}
+
+html[lang="ko"] h1,
+html[lang="ko"] h2,
+html[lang="ko"] h3,
+html[lang="ko"] h4 {
+  letter-spacing: -0.02em;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--beautiro-primary) 28%, white);
+}
+
+.container-babitalk {
+  width: 100%;
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+/* Typography utilities */
+@layer utilities {
+  .font-brand {
+    font-family: var(--font-brand);
+  }
+
+  .text-label {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .text-label-wide {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  .text-step-num {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+  }
+
+  .text-caption {
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+  }
+
+  .text-section-title {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+  }
+
+  .text-card-title {
+    font-size: 1rem;
+    line-height: 1.375rem;
+    font-weight: 700;
+  }
+
+  .text-price {
+    font-variant-numeric: tabular-nums;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+  }
+
+  .text-price-lg {
+    font-size: 1.875rem;
+    line-height: 1.1;
+    font-variant-numeric: tabular-nums;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+}
+
+html[lang="ko"] .text-card-title {
+  min-height: 2.5rem;
+}
