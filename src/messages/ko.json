@@ -131,12 +131,17 @@
     "from": "부터",
     "viewAll": "전체 병원",
     "filterTitle": "병원 찾기",
+    "searchLabel": "키워드 검색",
+    "searchPlaceholder": "병원명, 시술, 지역 검색",
     "filterCategory": "진료과",
     "filterProvince": "시·도",
     "filterDistrict": "시·군·구",
-    "filterAll": "전체",
+    "filterAll": "전체 진료과",
     "filterAllRegions": "전국",
-    "filterAllDistricts": "전체 구",
+    "filterAllDistricts": "전체 구·군",
+    "selectProvinceFirst": "시·도를 먼저 선택하세요",
+    "applyFilters": "검색하기",
+    "activeFilters": "적용 중",
     "clearFilters": "필터 초기화",
     "filterHint": "적용된 필터",
     "partnerCount": "제휴 병원 {count}곳",
@@ -161,9 +166,12 @@
         "ansan": "안산시"
       },
       "districts": {
-        "bupyeong": "부평구",
+        "yeonsu": "연수구",
         "namdong": "남동구",
         "sangnok": "상록구"
+      },
+      "neighborhoods": {
+        "guwol": "구월동"
       }
     }
   },

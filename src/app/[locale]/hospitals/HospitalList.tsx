@@ -173,13 +173,14 @@ export function HospitalList({
   );
 
   return (
-    <div className="mt-8 space-y-10">
+    <div className="space-y-10">
       {sortedGroups.map(([key, groupItems]) => {
         const sample = groupItems[0]!;
         const title = formatRegionSectionTitle(
           sample.provinceKey,
           sample.cityKey,
           sample.districtKey,
+          sample.neighborhoodKey,
           (k) => t(k),
         );
         const sortedHospitals = [...groupItems].sort((a, b) => {

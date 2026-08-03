@@ -1,9 +1,9 @@
-import type { Locale } from "@/i18n/routing";
 import type { MedicalCategory } from "@prisma/client";
 
 export const PROVINCE_KEYS = ["incheon", "gyeonggi"] as const;
 export const CITY_KEYS = ["ansan"] as const;
-export const DISTRICT_KEYS = ["bupyeong", "namdong", "sangnok"] as const;
+export const DISTRICT_KEYS = ["yeonsu", "namdong", "sangnok"] as const;
+export const NEIGHBORHOOD_KEYS = ["guwol"] as const;
 export const MEDICAL_CATEGORIES = [
   "PLASTIC",
   "DERMATOLOGY",
@@ -14,11 +14,13 @@ export const MEDICAL_CATEGORIES = [
 export type ProvinceKey = (typeof PROVINCE_KEYS)[number];
 export type CityKey = (typeof CITY_KEYS)[number];
 export type DistrictKey = (typeof DISTRICT_KEYS)[number];
+export type NeighborhoodKey = (typeof NEIGHBORHOOD_KEYS)[number];
 
 type RegionHospital = {
   provinceKey: string;
   cityKey: string | null;
   districtKey: string;
+  neighborhoodKey?: string | null;
 };
 
 const PROVINCE_ORDER: Record<ProvinceKey, number> = {
@@ -27,8 +29,8 @@ const PROVINCE_ORDER: Record<ProvinceKey, number> = {
 };
 
 const DISTRICT_ORDER: Record<DistrictKey, number> = {
-  bupyeong: 0,
-  namdong: 1,
+  namdong: 0,
+  yeonsu: 1,
   sangnok: 2,
 };
 
@@ -44,6 +46,10 @@ export function isDistrictKey(value: string): value is DistrictKey {
   return (DISTRICT_KEYS as readonly string[]).includes(value);
 }
 
+export function isNeighborhoodKey(value: string): value is NeighborhoodKey {
+  return (NEIGHBORHOOD_KEYS as readonly string[]).includes(value);
+}
+
 export function formatRegionLabel(
   hospital: RegionHospital,
   t: (key: string) => string,
@@ -52,6 +58,9 @@ export function formatRegionLabel(
     t(`regions.provinces.${hospital.provinceKey}`),
     hospital.cityKey ? t(`regions.cities.${hospital.cityKey}`) : null,
     t(`regions.districts.${hospital.districtKey}`),
+    hospital.neighborhoodKey
+      ? t(`regions.neighborhoods.${hospital.neighborhoodKey}`)
+      : null,
   ].filter(Boolean);
   return parts.join(" · ");
 }
@@ -60,13 +69,17 @@ export function formatRegionSectionTitle(
   provinceKey: string,
   cityKey: string | null,
   districtKey: string,
+  neighborhoodKey: string | null | undefined,
   t: (key: string) => string,
 ): string {
-  return formatRegionLabel({ provinceKey, cityKey, districtKey }, t);
+  return formatRegionLabel(
+    { provinceKey, cityKey, districtKey, neighborhoodKey },
+    t,
+  );
 }
 
 export function regionGroupKey(hospital: RegionHospital): string {
-  return `${hospital.provinceKey}:${hospital.cityKey ?? ""}:${hospital.districtKey}`;
+  return `${hospital.provinceKey}:${hospital.cityKey ?? ""}:${hospital.districtKey}:${hospital.neighborhoodKey ?? ""}`;
 }
 
 export function compareRegionGroup(a: RegionHospital, b: RegionHospital): number {
@@ -88,11 +101,15 @@ export function compareRegionGroup(a: RegionHospital, b: RegionHospital): number
   const db =
     DISTRICT_ORDER[b.districtKey as DistrictKey] ??
     Number.MAX_SAFE_INTEGER;
-  return da - db;
+  if (da !== db) return da - db;
+
+  const na = a.neighborhoodKey ?? "";
+  const nb = b.neighborhoodKey ?? "";
+  return na.localeCompare(nb);
 }
 
 export function districtsForProvince(provinceKey: ProvinceKey): DistrictKey[] {
-  if (provinceKey === "incheon") return ["bupyeong", "namdong"];
+  if (provinceKey === "incheon") return ["namdong", "yeonsu"];
   return ["sangnok"];
 }
 

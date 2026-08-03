@@ -10,6 +10,7 @@ export type LocalizedHospital = {
   provinceKey: string;
   cityKey: string | null;
   districtKey: string;
+  neighborhoodKey: string | null;
   regionLabel: string;
   primaryCategory: MedicalCategory;
   categories: MedicalCategory[];
@@ -36,6 +37,7 @@ type HospitalRecord = {
   provinceKey: string;
   cityKey: string | null;
   districtKey: string;
+  neighborhoodKey: string | null;
   primaryCategory: MedicalCategory;
   featured: boolean;
   coverImage: string | null;
@@ -93,6 +95,7 @@ export function localizeHospital(
     provinceKey: hospital.provinceKey,
     cityKey: hospital.cityKey,
     districtKey: hospital.districtKey,
+    neighborhoodKey: hospital.neighborhoodKey,
     regionLabel: formatRegionLabel(hospital, regionT),
     primaryCategory: hospital.primaryCategory,
     categories,

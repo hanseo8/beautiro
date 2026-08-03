@@ -39,7 +39,8 @@ model Hospital {
   descriptionId   String
   provinceKey     String          @default("incheon")
   cityKey         String?
-  districtKey     String          @default("bupyeong")
+  districtKey     String          @default("namdong")
+  neighborhoodKey String?
   primaryCategory MedicalCategory @default(PLASTIC)
   coverImage      String?
   featured        Boolean         @default(false)

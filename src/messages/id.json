@@ -131,12 +131,17 @@
     "from": "Mulai",
     "viewAll": "Semua rumah sakit",
     "filterTitle": "Cari rumah sakit",
+    "searchLabel": "Kata kunci",
+    "searchPlaceholder": "Nama rumah sakit, perawatan, atau area",
     "filterCategory": "Spesialisasi",
     "filterProvince": "Provinsi / kota",
-    "filterDistrict": "Kota / distrik",
-    "filterAll": "Semua",
+    "filterDistrict": "Distrik",
+    "filterAll": "Semua spesialisasi",
     "filterAllRegions": "Seluruh wilayah",
     "filterAllDistricts": "Semua distrik",
+    "selectProvinceFirst": "Pilih provinsi terlebih dahulu",
+    "applyFilters": "Cari",
+    "activeFilters": "Aktif",
     "clearFilters": "Hapus filter",
     "filterHint": "Filter aktif",
     "partnerCount": "{count} rumah sakit mitra",
@@ -161,9 +166,12 @@
         "ansan": "Kota Ansan"
       },
       "districts": {
-        "bupyeong": "Bupyeong-gu",
+        "yeonsu": "Yeonsu-gu",
         "namdong": "Namdong-gu",
         "sangnok": "Sangnok-gu"
+      },
+      "neighborhoods": {
+        "guwol": "Guwol-dong"
       }
     }
   },

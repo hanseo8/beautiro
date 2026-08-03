@@ -131,12 +131,17 @@
     "from": "From",
     "viewAll": "All hospitals",
     "filterTitle": "Find a hospital",
+    "searchLabel": "Keyword",
+    "searchPlaceholder": "Hospital, treatment, or area",
     "filterCategory": "Specialty",
     "filterProvince": "Province / metro",
-    "filterDistrict": "City / district",
-    "filterAll": "All",
+    "filterDistrict": "District",
+    "filterAll": "All specialties",
     "filterAllRegions": "Nationwide",
     "filterAllDistricts": "All districts",
+    "selectProvinceFirst": "Select a province first",
+    "applyFilters": "Search",
+    "activeFilters": "Active",
     "clearFilters": "Clear filters",
     "filterHint": "Active filters",
     "partnerCount": "{count} partner hospitals",
@@ -161,9 +166,12 @@
         "ansan": "Ansan City"
       },
       "districts": {
-        "bupyeong": "Bupyeong-gu",
+        "yeonsu": "Yeonsu-gu",
         "namdong": "Namdong-gu",
         "sangnok": "Sangnok-gu"
+      },
+      "neighborhoods": {
+        "guwol": "Guwol-dong"
       }
     }
   },
