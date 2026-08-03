@@ -5,6 +5,7 @@ import { HomeSearch } from "@/components/home/HomeSearch";
 import { TrustStrip } from "@/components/home/TrustStrip";
 import { HeroCarousel } from "@/components/home/HeroCarousel";
 import { CategoryPanels } from "@/components/home/CategoryPanels";
+import { ServicesSection } from "@/components/home/ServicesSection";
 import {
   PopularEventSection,
   type PopularCard,
@@ -61,6 +62,7 @@ export default async function HomePage({ params }: Props) {
       <TrustStrip />
       <div className="container-babitalk space-y-14 pt-10">
         <HeroCarousel />
+        <ServicesSection />
         <CategoryPanels />
         <PopularEventSection cards={cards} locale={loc} />
         <AppPromoBanner />

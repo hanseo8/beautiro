@@ -11,7 +11,25 @@
     "faq": "FAQ",
     "cta": "Mulai Konsultasi",
     "login": "Masuk / Daftar",
-    "whatsapp": "WhatsApp"
+    "whatsapp": "WhatsApp",
+    "menuOpen": "Buka menu",
+    "menuClose": "Tutup menu",
+    "menuMain": "Menu utama",
+    "menuAccount": "Akun",
+    "servicesTitle": "Layanan concierge medis",
+    "servicesVan": "Transport medis pribadi",
+    "servicesMate": "Pendamping penerjemah medis",
+    "servicesPay": "Pembayaran & kurs medis",
+    "reservations": "Riwayat reservasi",
+    "mypage": "Akun saya"
+  },
+  "bottomNav": {
+    "ariaLabel": "Navigasi bawah",
+    "home": "Beranda",
+    "search": "Prosedur",
+    "concierge": "Concierge",
+    "bookings": "Reservasi",
+    "mypage": "Saya"
   },
   "common": {
     "whatsappFloat": "Chat WhatsApp"
@@ -25,24 +43,24 @@
     "carousel": {
       "slides": [
         {
-          "title": "Medical travel VIP ASEAN dengan Beautiro Van",
-          "subtitle": "Bandara ke klinik",
-          "cta": "Lihat paket",
+          "title": "Medical travel premium dengan concierge khusus",
+          "subtitle": "Dari pickup bandara hingga pendampingan klinik",
+          "cta": "Ajukan konsultasi",
           "href": "/book",
           "tone": "sky"
         },
         {
-          "title": "Beautiro Mate penerjemah medis",
-          "subtitle": "Plastik · Kulit · Oriental",
-          "cta": "Ajukan konsultasi",
-          "href": "/book",
+          "title": "Pendamping penerjemah medis profesional",
+          "subtitle": "Plastik · Kulit · Oriental · Gigi",
+          "cta": "Lihat layanan",
+          "href": "/#services",
           "tone": "blue"
         },
         {
-          "title": "Beautiro Pay kurs & pembayaran",
-          "subtitle": "Panduan aman",
+          "title": "Dukungan pembayaran & kurs medis",
+          "subtitle": "Panduan penyelesaian yang aman",
           "cta": "Selengkapnya",
-          "href": "/#faq",
+          "href": "/#services",
           "tone": "ice"
         }
       ]
@@ -65,11 +83,13 @@
       "inquire": "Tanya"
     },
     "trust": {
+      "badge": "Medical Concierge",
+      "title": "Kerangka perawatan medis profesional",
       "items": [
-        { "title": "Mitra terverifikasi", "desc": "Klinik plastik, kulit & oriental" },
-        { "title": "Concierge 24 jam", "desc": "Prioritas WhatsApp" },
-        { "title": "Penerjemah medis", "desc": "Spesialis Beautiro Mate" },
-        { "title": "Mobilitas VIP", "desc": "Pickup Beautiro Van" }
+        { "title": "Institusi mitra terverifikasi", "desc": "Jaringan rumah sakit spesialis plastik, kulit, oriental & gigi" },
+        { "title": "Concierge khusus 24 jam", "desc": "Pusat concierge medis 24 jam" },
+        { "title": "Penerjemahan medis", "desc": "Pendamping penerjemah medis profesional" },
+        { "title": "Transport medis pribadi", "desc": "Pickup bandara dan antar-jemput klinik khusus" }
       ]
     },
     "app": {
@@ -105,19 +125,20 @@
     "visualCaption": "Seoul · Korea Selatan"
   },
   "services": {
-    "title": "Tiga layanan inti",
-    "subtitle": "Mobilitas, pendampingan, dan pembayaran — dirancang untuk perjalanan medis yang tenang.",
+    "badge": "Concierge Services",
+    "title": "Layanan concierge medis inti",
+    "subtitle": "Transport, pendampingan, dan pembayaran dalam satu sistem perawatan profesional.",
     "van": {
-      "title": "Beautiro Van",
-      "desc": "Antar-jemput bandara, rumah sakit, dan hotel dengan privasi penuh setelah prosedur."
+      "title": "Transport medis pribadi",
+      "desc": "Antar-jemput khusus antara bandara, klinik, dan akomodasi dengan privasi penuh."
     },
     "mate": {
-      "title": "Beautiro Mate",
-      "desc": "Penerjemah medis spesialis — dari konsultasi hingga instruksi obat, dengan ketenangan penuh."
+      "title": "Pendamping penerjemah medis",
+      "desc": "Penerjemah medis spesialis mendampingi dari konsultasi hingga instruksi obat."
     },
     "pay": {
-      "title": "Beautiro Pay",
-      "desc": "Kurs preferensial dan panduan pembayaran aman melalui jaringan mitra terpercaya."
+      "title": "Pembayaran & kurs medis",
+      "desc": "Panduan penyelesaian medis aman melalui jaringan mitra kurs dan pembayaran."
     }
   },
   "steps": {

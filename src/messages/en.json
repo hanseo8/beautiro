@@ -11,7 +11,25 @@
     "faq": "FAQ",
     "cta": "Start consultation",
     "login": "Log in / Sign up",
-    "whatsapp": "WhatsApp"
+    "whatsapp": "WhatsApp",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu",
+    "menuMain": "Main menu",
+    "menuAccount": "Account",
+    "servicesTitle": "Medical concierge services",
+    "servicesVan": "Private medical transport",
+    "servicesMate": "Dedicated medical interpretation",
+    "servicesPay": "Medical payment & FX support",
+    "reservations": "Reservations",
+    "mypage": "My account"
+  },
+  "bottomNav": {
+    "ariaLabel": "Bottom navigation",
+    "home": "Home",
+    "search": "Procedures",
+    "concierge": "Concierge",
+    "bookings": "Bookings",
+    "mypage": "My"
   },
   "common": {
     "whatsappFloat": "WhatsApp chat"
@@ -25,24 +43,24 @@
     "carousel": {
       "slides": [
         {
-          "title": "SEA VIP medical travel with Beautiro Van",
-          "subtitle": "Airport to clinic",
-          "cta": "View packages",
+          "title": "Premium medical travel with dedicated concierge care",
+          "subtitle": "From airport pickup to clinic accompaniment",
+          "cta": "Request consultation",
           "href": "/book",
           "tone": "sky"
         },
         {
-          "title": "Beautiro Mate medical interpreters",
-          "subtitle": "Plastic · Skin · Oriental",
-          "cta": "Request consult",
-          "href": "/book",
+          "title": "Dedicated medical interpreter accompaniment",
+          "subtitle": "Plastic · Dermatology · Oriental · Dental",
+          "cta": "View services",
+          "href": "/#services",
           "tone": "blue"
         },
         {
-          "title": "Beautiro Pay FX & payments",
-          "subtitle": "Secure settlement guide",
+          "title": "Medical payment and foreign exchange support",
+          "subtitle": "Secure settlement guidance",
           "cta": "Learn more",
-          "href": "/#faq",
+          "href": "/#services",
           "tone": "ice"
         }
       ]
@@ -65,11 +83,13 @@
       "inquire": "Inquire"
     },
     "trust": {
+      "badge": "Medical Concierge",
+      "title": "Professional medical care framework",
       "items": [
-        { "title": "Verified partners", "desc": "Curated plastic, skin & oriental clinics" },
-        { "title": "24h concierge", "desc": "WhatsApp-first support" },
-        { "title": "Medical interpreters", "desc": "Beautiro Mate specialists" },
-        { "title": "VIP mobility", "desc": "Beautiro Van private pickup" }
+        { "title": "Verified partner institutions", "desc": "Specialist hospital network across plastic, dermatology, oriental & dental" },
+        { "title": "24-hour dedicated concierge", "desc": "Round-the-clock medical concierge center" },
+        { "title": "Medical interpretation", "desc": "Dedicated professional medical interpreter accompaniment" },
+        { "title": "Private medical transport", "desc": "Airport pickup and dedicated clinic transfers" }
       ]
     },
     "app": {
@@ -105,19 +125,20 @@
     "visualCaption": "Seoul · South Korea"
   },
   "services": {
-    "title": "Three core services",
-    "subtitle": "Mobility, companionship, and payments — composed for a calm medical journey.",
+    "badge": "Concierge Services",
+    "title": "Core medical concierge services",
+    "subtitle": "Transport, interpretation, and payment support delivered as one professional care system.",
     "van": {
-      "title": "Beautiro Van",
-      "desc": "Airport, hospital, and hotel transfers with privacy after your procedure."
+      "title": "Private medical transport",
+      "desc": "Dedicated transfers between airport, clinics, and accommodation with full privacy before and after procedures."
     },
     "mate": {
-      "title": "Beautiro Mate",
-      "desc": "Specialist medical interpreters — from consultation through medication guidance."
+      "title": "Medical interpreter accompaniment",
+      "desc": "Specialist medical interpreters accompany you from consultation through medication guidance."
     },
     "pay": {
-      "title": "Beautiro Pay",
-      "desc": "Preferential rates and secure payment guidance through trusted partners."
+      "title": "Medical payment & FX support",
+      "desc": "Secure medical billing guidance through our partner exchange and payment network."
     }
   },
   "steps": {

@@ -30,7 +30,7 @@ export function HeroCarousel() {
 
   return (
     <section className="relative">
-      <div className="card-modern relative min-h-[240px] overflow-hidden sm:min-h-[300px]">
+      <div className="card-modern relative min-h-[280px] overflow-hidden sm:min-h-[320px]">
         <CoverImage
           src={image}
           alt={slide.title}
@@ -38,45 +38,48 @@ export function HeroCarousel() {
           sizes="(max-width: 1080px) 100vw, 1080px"
           className="transition-transform duration-700"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0f172a]/80 via-[#0f172a]/45 to-[#1a5f5f]/35" />
-        <div className="relative px-8 py-12 text-white sm:px-12 sm:py-16">
-          <p className="text-label text-white/70">{slide.subtitle}</p>
-          <h2 className="mt-3 max-w-lg text-2xl font-bold leading-snug tracking-tight sm:text-[1.75rem]">
+        <div className="absolute inset-0 bg-[#0f172a]/55" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/90 via-[#0f172a]/35 to-transparent" />
+
+        <div className="relative flex min-h-[280px] flex-col justify-end px-6 py-8 sm:min-h-[320px] sm:px-10 sm:py-10">
+          <p className="text-label text-white/75">{slide.subtitle}</p>
+          <h2 className="font-display mt-2 max-w-xl text-xl font-semibold leading-snug tracking-tight text-white sm:text-2xl">
             {slide.title}
           </h2>
           <Link
             href={slide.href}
-            className="mt-8 inline-flex h-11 items-center rounded-2xl bg-white px-6 text-sm font-bold text-beautiro-primary transition-colors hover:bg-white/95"
+            className="mt-6 inline-flex h-11 w-fit items-center rounded-lg border border-white/30 bg-white/10 px-6 text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white hover:text-beautiro-primary"
           >
             {slide.cta}
           </Link>
         </div>
+
         <button
           type="button"
           onClick={prev}
-          className="absolute left-4 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-xl bg-white/15 backdrop-blur-sm transition-colors hover:bg-white/25"
+          className="absolute left-3 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-lg border border-white/20 bg-[#0f172a]/30 text-white backdrop-blur-sm transition-colors hover:bg-[#0f172a]/50 sm:left-4"
           aria-label="Previous"
         >
-          <ChevronLeft size={20} />
+          <ChevronLeft size={18} strokeWidth={1.5} />
         </button>
         <button
           type="button"
           onClick={next}
-          className="absolute right-4 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-xl bg-white/15 backdrop-blur-sm transition-colors hover:bg-white/25"
+          className="absolute right-3 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-lg border border-white/20 bg-[#0f172a]/30 text-white backdrop-blur-sm transition-colors hover:bg-[#0f172a]/50 sm:right-4"
           aria-label="Next"
         >
-          <ChevronRight size={20} />
+          <ChevronRight size={18} strokeWidth={1.5} />
         </button>
-        <div className="absolute bottom-4 left-1/2 z-10 flex -translate-x-1/2 gap-1.5">
+        <div className="absolute bottom-4 right-4 z-10 flex gap-1.5 sm:bottom-6 sm:right-6">
           {slides.map((_, i) => (
             <button
               key={i}
               type="button"
               onClick={() => setIndex(i)}
-              className={`h-1.5 rounded-full transition-all ${
+              className={`h-1 rounded-full transition-all ${
                 i === index
-                  ? "w-6 bg-white"
-                  : "w-1.5 bg-white/40 hover:bg-white/60"
+                  ? "w-5 bg-white"
+                  : "w-1 bg-white/40 hover:bg-white/60"
               }`}
               aria-label={`Slide ${i + 1}`}
             />

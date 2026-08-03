@@ -11,9 +11,9 @@
   --beautiro-charcoal-hover: #1e293b;
   --beautiro-muted: #5c6b68;
   --beautiro-muted-light: #8a9693;
-  --beautiro-border: #e0e8e6;
-  --beautiro-surface: #f4f8f7;
-  --beautiro-surface-blue: #eef4f3;
+  --beautiro-border: #e2e8e6;
+  --beautiro-surface: #f8faf9;
+  --beautiro-surface-blue: #f1f5f4;
   --beautiro-primary: #1a5f5f;
   --beautiro-primary-hover: #144d4d;
   --beautiro-primary-deep: #0f4545;
@@ -47,9 +47,10 @@
   --color-beautiro-coral: var(--beautiro-sky);
   --color-beautiro-sage: var(--beautiro-ice);
   --color-beautiro-gold: var(--beautiro-gold);
-  --font-sans: var(--font-outfit), system-ui, sans-serif;
-  --font-brand: var(--font-outfit), system-ui, sans-serif;
-  --font-korean: "Pretendard Variable", var(--font-outfit), system-ui, sans-serif;
+  --font-sans: var(--font-noto-sans), "Pretendard Variable", system-ui, sans-serif;
+  --font-brand: var(--font-noto-sans), "Pretendard Variable", system-ui, sans-serif;
+  --font-display: var(--font-noto-serif), "Pretendard Variable", Georgia, serif;
+  --font-korean: "Pretendard Variable", var(--font-noto-sans), system-ui, sans-serif;
 }
 
 body {
@@ -91,6 +92,11 @@ html[lang="ko"] h4 {
 @layer utilities {
   .font-brand {
     font-family: var(--font-brand);
+  }
+
+  .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
   }
 
   .text-label {
@@ -151,23 +157,21 @@ html[lang="ko"] h4 {
   }
 
   .card-modern {
-    border-radius: 1.5rem;
-    border: 1px solid color-mix(in srgb, var(--beautiro-border) 80%, transparent);
+    border-radius: 0.75rem;
+    border: 1px solid color-mix(in srgb, var(--beautiro-border) 90%, transparent);
     background: var(--background);
-    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.03);
   }
 
   .card-modern-hover {
     transition:
       box-shadow 0.2s ease,
-      transform 0.2s ease,
       border-color 0.2s ease;
   }
 
   .card-modern-hover:hover {
-    border-color: color-mix(in srgb, var(--beautiro-primary) 25%, transparent);
-    box-shadow: 0 12px 40px rgba(26, 95, 95, 0.08);
-    transform: translateY(-2px);
+    border-color: color-mix(in srgb, var(--beautiro-primary) 20%, transparent);
+    box-shadow: 0 8px 24px rgba(26, 95, 95, 0.06);
   }
 }
 

@@ -11,7 +11,25 @@
     "faq": "FAQ",
     "cta": "상담 시작",
     "login": "로그인/가입",
-    "whatsapp": "WhatsApp"
+    "whatsapp": "WhatsApp",
+    "menuOpen": "메뉴 열기",
+    "menuClose": "메뉴 닫기",
+    "menuMain": "메인 메뉴",
+    "menuAccount": "계정",
+    "servicesTitle": "메디컬 컨시어지 서비스",
+    "servicesVan": "프라이빗 의료 이동 서비스",
+    "servicesMate": "전문 의료 통역 동행",
+    "servicesPay": "의료비 결제·환전 지원",
+    "reservations": "예약 내역",
+    "mypage": "마이페이지"
+  },
+  "bottomNav": {
+    "ariaLabel": "하단 메뉴",
+    "home": "홈",
+    "search": "시술·병원",
+    "concierge": "컨시어지",
+    "bookings": "예약",
+    "mypage": "마이"
   },
   "common": {
     "whatsappFloat": "WhatsApp 상담"
@@ -25,24 +43,24 @@
     "carousel": {
       "slides": [
         {
-          "title": "동남아 VIP 의료관광, Beautiro Van과 함께",
-          "subtitle": "공항 픽업부터 병원까지",
-          "cta": "패키지 보기",
+          "title": "프리미엄 의료관광, 전담 컨시어지와 함께",
+          "subtitle": "공항 픽업부터 병원 동행까지",
+          "cta": "상담 신청",
           "href": "/book",
           "tone": "sky"
         },
         {
-          "title": "메디컬 통역 Mate 최대 49% 혜택",
-          "subtitle": "성형·피부·한방 전문",
-          "cta": "상담 신청",
-          "href": "/book",
+          "title": "전문 의료 통역사 전담 동행 서비스",
+          "subtitle": "성형·피부·한방·치과 전문",
+          "cta": "서비스 안내",
+          "href": "/#services",
           "tone": "blue"
         },
         {
-          "title": "Beautiro Pay 환전·결제 케어",
+          "title": "의료비 결제·환전 전문 지원",
           "subtitle": "안전한 정산 가이드",
-          "cta": "자세히",
-          "href": "/#faq",
+          "cta": "자세히 보기",
+          "href": "/#services",
           "tone": "ice"
         }
       ]
@@ -65,11 +83,13 @@
       "inquire": "문의하기"
     },
     "trust": {
+      "badge": "Medical Concierge",
+      "title": "전문 메디컬 케어 체계",
       "items": [
-        { "title": "검증 제휴 병원", "desc": "성형·피부·한방·치과 파트너 큐레이션" },
-        { "title": "24시간 컨시어지", "desc": "WhatsApp 우선 응대" },
-        { "title": "메디컬 통역", "desc": "Beautiro Mate 전문 동행" },
-        { "title": "VIP 이동", "desc": "Beautiro Van 프라이빗 픽업" }
+        { "title": "검증된 제휴 의료기관", "desc": "성형·피부·한방·치과 전문 병원 네트워크" },
+        { "title": "24시간 전담 컨시어지", "desc": "24시간 전담 메디컬 컨시어지 센터" },
+        { "title": "전문 의료 통역", "desc": "전문 의료 통역사 전담 동행 서비스" },
+        { "title": "프라이빗 의료 이동", "desc": "공항 픽업 및 병원 간 전용 이동 서비스" }
       ]
     },
     "app": {
@@ -105,19 +125,20 @@
     "visualCaption": "Seoul · 대한민국"
   },
   "services": {
-    "title": "3대 핵심 서비스",
-    "subtitle": "이동 · 동행 · 결제를 한결같은 톤으로 설계한 VIP 의료관광 케어.",
+    "badge": "Concierge Services",
+    "title": "메디컬 컨시어지 핵심 서비스",
+    "subtitle": "이동 · 통역 동행 · 결제 지원을 하나의 전문 케어 체계로 제공합니다.",
     "van": {
-      "title": "Beautiro Van",
-      "desc": "공항·병원·호텔 이동, 시술 후에도 프라이버시를 지키는 프라이빗 모빌리티."
+      "title": "프라이빗 의료 이동",
+      "desc": "공항·병원·숙소 간 전용 이동. 시술 전후 프라이버시를 보장하는 의료 전용 모빌리티입니다."
     },
     "mate": {
-      "title": "Beautiro Mate",
-      "desc": "성형·피부·한방 메디컬 통역 — 상담부터 복약 안내까지 전담 동행."
+      "title": "전문 의료 통역 동행",
+      "desc": "성형·피부·한방·치과 분야 전문 의료 통역사가 상담부터 복약 안내까지 전담 동행합니다."
     },
     "pay": {
-      "title": "Beautiro Pay",
-      "desc": "제휴 환전·결제 네트워크와 안전한 정산 가이드."
+      "title": "의료비 결제·환전 지원",
+      "desc": "제휴 환전·결제 네트워크를 통한 안전한 의료비 정산 가이드를 제공합니다."
     }
   },
   "steps": {

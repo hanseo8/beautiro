@@ -2,15 +2,21 @@ import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { Outfit } from "next/font/google";
+import { Noto_Sans, Noto_Serif } from "next/font/google";
 import { routing, type Locale } from "@/i18n/routing";
 import { SiteShell } from "@/components/SiteShell";
 import "../globals.css";
 
-const sans = Outfit({
-  variable: "--font-outfit",
+const sans = Noto_Sans({
+  variable: "--font-noto-sans",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
+});
+
+const serif = Noto_Serif({
+  variable: "--font-noto-serif",
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -39,7 +45,10 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`${sans.variable} h-full antialiased`}>
+    <html
+      lang={locale}
+      className={`${sans.variable} ${serif.variable} h-full antialiased`}
+    >
       <body className="min-h-full bg-white text-beautiro-charcoal">
         <NextIntlClientProvider messages={messages}>
           <SiteShell>{children}</SiteShell>
