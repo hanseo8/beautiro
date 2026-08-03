@@ -5,7 +5,7 @@ export async function AppPromoBanner() {
   const t = await getTranslations("home.app");
 
   return (
-    <section className="rounded-2xl bg-beautiro-surface px-6 py-10 sm:px-10">
+    <section className="card-modern bg-gradient-to-br from-beautiro-surface to-white px-6 py-10 sm:px-10">
       <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
         <div className="max-w-md text-center md:text-left">
           <h3 className="text-section-title text-beautiro-charcoal">

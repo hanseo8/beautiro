@@ -149,6 +149,26 @@ html[lang="ko"] h4 {
     font-weight: 700;
     letter-spacing: -0.02em;
   }
+
+  .card-modern {
+    border-radius: 1.5rem;
+    border: 1px solid color-mix(in srgb, var(--beautiro-border) 80%, transparent);
+    background: var(--background);
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+  }
+
+  .card-modern-hover {
+    transition:
+      box-shadow 0.2s ease,
+      transform 0.2s ease,
+      border-color 0.2s ease;
+  }
+
+  .card-modern-hover:hover {
+    border-color: color-mix(in srgb, var(--beautiro-primary) 25%, transparent);
+    box-shadow: 0 12px 40px rgba(26, 95, 95, 0.08);
+    transform: translateY(-2px);
+  }
 }
 
 html[lang="ko"] .text-card-title {

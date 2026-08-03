@@ -30,11 +30,11 @@ export function HomeSearch() {
           value={q}
           onChange={(e) => setQ(e.target.value)}
           placeholder={t("placeholder")}
-          className="h-[52px] w-full rounded-full border border-beautiro-border bg-beautiro-surface pl-5 pr-[52px] text-base shadow-[inset_0_1px_2px_rgba(0,0,0,0.04)] outline-none transition-shadow focus:border-beautiro-primary focus:ring-2 focus:ring-beautiro-primary/15"
+          className="h-14 w-full rounded-2xl border border-beautiro-border/80 bg-white pl-5 pr-14 text-base shadow-[0_8px_30px_rgba(15,23,42,0.04)] outline-none transition-all placeholder:text-beautiro-muted-light focus:border-beautiro-primary/40 focus:shadow-[0_8px_30px_rgba(26,95,95,0.1)] focus:ring-4 focus:ring-beautiro-primary/10"
         />
         <button
           type="submit"
-          className="absolute right-1.5 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-beautiro-primary text-white hover:bg-beautiro-primary-hover"
+          className="absolute right-2 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-xl bg-beautiro-primary text-white shadow-sm transition-colors hover:bg-beautiro-primary-hover"
           aria-label={t("placeholder")}
         >
           <Search size={20} strokeWidth={2.25} />
@@ -52,7 +52,7 @@ export function HomeSearch() {
               onClick={() =>
                 router.push(`/hospitals?q=${encodeURIComponent(tag)}`)
               }
-              className="rounded-full border border-beautiro-border bg-white px-3.5 py-1.5 text-xs font-medium text-beautiro-muted transition-colors hover:border-beautiro-primary/50 hover:text-beautiro-primary"
+              className="rounded-xl bg-beautiro-surface px-3 py-2 text-xs font-medium text-beautiro-muted transition-colors hover:bg-beautiro-primary/10 hover:text-beautiro-primary"
             >
               {tag}
             </button>

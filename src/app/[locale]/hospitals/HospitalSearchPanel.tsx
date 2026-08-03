@@ -229,7 +229,7 @@ export function HospitalSearchPanel({
 
       <div className="mt-4 grid gap-8 lg:grid-cols-[280px_minmax(0,1fr)]">
         <aside
-          className={`rounded-2xl border border-beautiro-border bg-white p-5 shadow-[0_1px_2px_rgba(0,0,0,0.04)] lg:sticky lg:top-24 lg:self-start ${mobileOpen ? "block" : "hidden lg:block"}`}
+          className={`card-modern p-5 lg:sticky lg:top-24 lg:self-start ${mobileOpen ? "block" : "hidden lg:block"}`}
         >
           <div className="mb-5 hidden border-b border-beautiro-border pb-4 lg:block">
             <p className="text-sm font-bold text-beautiro-charcoal">

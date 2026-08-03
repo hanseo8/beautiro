@@ -1,9 +1,7 @@
-import { Star } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { formatKrw } from "@/lib/hospitals";
-import { consultMessage, whatsappUrl } from "@/lib/whatsapp";
-import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { eventInquiryMessage, whatsappUrl } from "@/lib/whatsapp";
 import { CoverImage } from "@/components/ui/CoverImage";
 import type { Locale } from "@/i18n/routing";
 import type { MedicalCategory } from "@prisma/client";
@@ -13,44 +11,9 @@ export type PopularCard = {
   title: string;
   hospitalName: string;
   location: string;
-  priceFrom: number;
   category: MedicalCategory;
-  discountPercent: number;
-  rating: number;
-  reviewCount: number;
   imageUrl: string;
 };
-
-const categoryStyle: Record<
-  MedicalCategory,
-  { label: string; gradient: string; badge: string }
-> = {
-  PLASTIC: {
-    label: "PLASTIC",
-    gradient: "from-[#1a5f5f] to-[#0f4545]",
-    badge: "bg-beautiro-primary-deep",
-  },
-  DERMATOLOGY: {
-    label: "SKIN",
-    gradient: "from-[#2d7a7a] to-[#1a5f5f]",
-    badge: "bg-beautiro-primary",
-  },
-  ORIENTAL: {
-    label: "WELLNESS",
-    gradient: "from-[#3d8a7a] to-[#144d4d]",
-    badge: "bg-beautiro-ice",
-  },
-  DENTAL: {
-    label: "DENTAL",
-    gradient: "from-[#1a5f5f] to-[#2d7a7a]",
-    badge: "bg-beautiro-gold",
-  },
-};
-
-function listPrice(priceFrom: number, discountPercent: number) {
-  if (discountPercent <= 0) return null;
-  return Math.round(priceFrom / (1 - discountPercent / 100));
-}
 
 export async function PopularEventSection({
   cards,
@@ -60,31 +23,31 @@ export async function PopularEventSection({
   locale: Locale;
 }) {
   const t = await getTranslations("home.popular");
+  const tCat = await getTranslations("hospitals.categories");
 
   return (
-    <section className="">
-      <div className="mb-2 flex items-center gap-2">
-        <span className="rounded-md bg-beautiro-primary px-2 py-0.5 text-label text-white">
-          {t("badge")}
-        </span>
-      </div>
-      <div className="mb-6 flex items-end justify-between gap-4">
-        <h3 className="text-section-title text-beautiro-charcoal">
-          {t("title")}
-        </h3>
+    <section>
+      <div className="mb-8 flex items-end justify-between gap-4">
+        <div>
+          <p className="text-label text-beautiro-primary">{t("badge")}</p>
+          <h3 className="mt-1 text-2xl font-bold tracking-tight text-beautiro-charcoal">
+            {t("title")}
+          </h3>
+          <p className="mt-1 text-sm text-beautiro-muted">{t("subtitle")}</p>
+        </div>
         <Link
           href="/hospitals"
-          className="text-sm font-semibold text-beautiro-muted hover:text-beautiro-primary"
+          className="hidden items-center gap-1 text-sm font-semibold text-beautiro-primary hover:underline sm:inline-flex"
         >
           {t("viewAll")}
+          <ArrowUpRight size={16} />
         </Link>
       </div>
-      <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+
+      <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {cards.map((card) => {
-          const style = categoryStyle[card.category];
-          const original = listPrice(card.priceFrom, card.discountPercent);
           const wa = whatsappUrl(
-            consultMessage({
+            eventInquiryMessage({
               locale,
               procedureName: card.title,
               hospitalName: card.hospitalName,
@@ -93,91 +56,59 @@ export async function PopularEventSection({
 
           return (
             <li key={card.procedureId}>
-              <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-beautiro-border bg-white shadow-[0_1px_2px_rgba(0,0,0,0.04)] transition-all hover:border-beautiro-primary/30 hover:shadow-[0_8px_30px_rgba(26,95,95,0.12)]">
+              <article className="card-modern card-modern-hover group flex h-full flex-col overflow-hidden">
                 <Link
                   href={`/events/${card.procedureId}`}
-                  className="block overflow-hidden"
+                  className="relative block aspect-[5/4] overflow-hidden"
                 >
-                  <div className="relative aspect-[4/3] overflow-hidden">
-                    <CoverImage
-                      src={card.imageUrl}
-                      alt={card.title}
-                      className="transition-transform duration-500 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-                    <div className="absolute inset-0 flex flex-col justify-between p-4 text-white">
-                    <div className="flex items-start justify-between gap-2">
-                      <span
-                        className={`rounded px-2 py-0.5 text-label text-white ${style.badge}`}
-                      >
-                        {style.label}
-                      </span>
-                      <span className="rounded bg-white/20 px-2 py-0.5 text-xs font-semibold backdrop-blur-sm">
-                        VIP
-                      </span>
-                    </div>
-                    <div>
-                      <p className="text-caption opacity-90">
-                        {t("discount")}
-                      </p>
-                      <p className="text-price-lg text-white">
-                        {card.discountPercent}%
-                      </p>
-                    </div>
-                    </div>
+                  <CoverImage
+                    src={card.imageUrl}
+                    alt={card.hospitalName}
+                    className="transition-transform duration-500 group-hover:scale-[1.03]"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/75 via-[#0f172a]/10 to-transparent" />
+                  <div className="absolute left-4 top-4">
+                    <span className="rounded-full bg-white/95 px-2.5 py-1 text-[11px] font-bold tracking-wide text-beautiro-primary backdrop-blur-sm">
+                      {t("discountBadge")}
+                    </span>
+                  </div>
+                  <div className="absolute bottom-0 left-0 right-0 p-4">
+                    <p className="text-[11px] font-medium uppercase tracking-wider text-white/75">
+                      {tCat(card.category)}
+                    </p>
+                    <p className="mt-1 text-base font-bold leading-snug text-white">
+                      {card.hospitalName}
+                    </p>
                   </div>
                 </Link>
-                <div className="flex flex-1 flex-col p-4 pt-3">
+
+                <div className="flex flex-1 flex-col p-4">
                   <Link href={`/events/${card.procedureId}`}>
-                    <h4 className="text-card-title line-clamp-2 text-beautiro-charcoal group-hover:text-beautiro-primary-deep">
+                    <p className="text-sm font-semibold leading-snug text-beautiro-charcoal group-hover:text-beautiro-primary">
                       {card.title}
-                    </h4>
+                    </p>
                   </Link>
-                  <p className="mt-2 line-clamp-1 text-xs text-beautiro-muted">
-                    <span className="text-beautiro-charcoal/80">
-                      {card.location}
-                    </span>
-                    <span className="mx-1 text-beautiro-border">|</span>
-                    {card.hospitalName}
+                  <p className="mt-1.5 line-clamp-1 text-xs text-beautiro-muted">
+                    {card.location}
                   </p>
-                  <div className="mt-3 flex flex-wrap items-end gap-2">
-                    <span className="text-caption font-semibold text-beautiro-primary-deep">
-                      {card.discountPercent}%
-                    </span>
-                    <span className="text-lg text-price text-beautiro-charcoal">
-                      {formatKrw(card.priceFrom, locale)}
-                    </span>
-                    {original != null && (
-                      <span className="text-xs text-beautiro-muted line-through">
-                        {formatKrw(original, locale)}
-                      </span>
-                    )}
-                  </div>
-                  <div className="mt-2.5 flex items-center gap-1 text-xs">
-                    <Star
-                      size={14}
-                      className="fill-beautiro-gold text-beautiro-gold"
-                    />
-                    <span className="font-bold text-beautiro-charcoal">
-                      {card.rating.toFixed(1)}
-                    </span>
-                    <span className="text-beautiro-muted">
-                      ({card.reviewCount.toLocaleString(locale === "ko" ? "ko-KR" : locale === "id" ? "id-ID" : "en-US")})
-                    </span>
-                  </div>
-                  <p className="mt-2 text-xs text-beautiro-muted">
-                    {t("packageHint")}
+                  <p className="mt-3 flex-1 text-xs leading-relaxed text-beautiro-muted">
+                    {t("inquiryHint")}
                   </p>
-                  <div className="mt-3 space-y-2">
-                    <WhatsAppButton href={wa} size="sm">
-                      {t("consultWhatsApp")}
-                    </WhatsAppButton>
+                  <div className="mt-4 grid grid-cols-2 gap-2">
                     <Link
-                      href={`/book?procedure=${card.procedureId}`}
-                      className="block text-center text-xs font-semibold text-beautiro-muted hover:text-beautiro-primary"
+                      href={`/events/${card.procedureId}`}
+                      className="flex h-10 items-center justify-center rounded-xl bg-beautiro-surface text-xs font-semibold text-beautiro-charcoal transition-colors hover:bg-beautiro-primary/10 hover:text-beautiro-primary"
                     >
-                      {t("bookOnline")}
+                      {t("viewDetail")}
                     </Link>
+                    <a
+                      href={wa}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex h-10 items-center justify-center rounded-xl bg-beautiro-primary text-xs font-bold text-white transition-colors hover:bg-beautiro-primary-hover"
+                    >
+                      {t("inquire")}
+                    </a>
                   </div>
                 </div>
               </article>
@@ -185,6 +116,14 @@ export async function PopularEventSection({
           );
         })}
       </ul>
+
+      <Link
+        href="/hospitals"
+        className="mt-6 flex items-center justify-center gap-1 text-sm font-semibold text-beautiro-primary sm:hidden"
+      >
+        {t("viewAll")}
+        <ArrowUpRight size={16} />
+      </Link>
     </section>
   );
 }

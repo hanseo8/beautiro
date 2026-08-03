@@ -2,40 +2,19 @@
 
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import { formatKrw, type LocalizedHospital } from "@/lib/hospitals";
+import { ArrowUpRight } from "lucide-react";
+import type { LocalizedHospital } from "@/lib/hospitals";
 import {
   compareRegionGroup,
   formatRegionSectionTitle,
   regionGroupKey,
 } from "@/lib/regions";
-import { consultMessage, whatsappUrl } from "@/lib/whatsapp";
-import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { eventInquiryMessage, whatsappUrl } from "@/lib/whatsapp";
 import { CoverImage } from "@/components/ui/CoverImage";
 import { resolveHospitalImage } from "@/lib/media";
 import type { Locale } from "@/i18n/routing";
 import type { MedicalCategory } from "@prisma/client";
-import { MapPin, Star } from "lucide-react";
-
-function CategoryBadge({
-  category,
-  primary,
-}: {
-  category: MedicalCategory;
-  primary?: boolean;
-}) {
-  const t = useTranslations("hospitals");
-  return (
-    <span
-      className={
-        primary
-          ? "rounded-md bg-beautiro-primary px-2 py-0.5 text-[11px] font-bold text-white"
-          : "rounded-md border border-beautiro-border bg-white px-2 py-0.5 text-[11px] font-semibold text-beautiro-muted"
-      }
-    >
-      {t(`categories.${category}`)}
-    </span>
-  );
-}
+import { MapPin } from "lucide-react";
 
 function HospitalCard({
   h,
@@ -48,14 +27,10 @@ function HospitalCard({
   const primary =
     h.procedures.find((p) => p.category === h.primaryCategory) ??
     h.procedures[0];
-  const min = h.procedures
-    .map((p) => p.priceFrom)
-    .filter((p): p is number => p != null)
-    .sort((a, b) => a - b)[0];
   const wa = whatsappUrl(
-    consultMessage({
+    eventInquiryMessage({
       locale,
-      procedureName: primary?.name,
+      procedureName: primary?.name ?? h.name,
       hospitalName: h.name,
     }),
   );
@@ -66,77 +41,72 @@ function HospitalCard({
   );
 
   return (
-    <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-beautiro-border bg-white shadow-[0_1px_2px_rgba(0,0,0,0.04)] transition-shadow hover:shadow-md">
+    <article className="card-modern card-modern-hover group flex h-full flex-col overflow-hidden">
       <Link
         href={primary ? `/events/${primary.id}` : "/hospitals"}
-        className="block overflow-hidden"
+        className="relative block aspect-[16/10] overflow-hidden"
       >
-        <div className="relative aspect-[16/9]">
-          <CoverImage src={imageUrl} alt={h.name} />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/55 to-transparent" />
-          <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-            <div className="flex flex-wrap gap-1.5">
-              <CategoryBadge category={h.primaryCategory} primary />
-              {h.categories
-                .filter((c) => c !== h.primaryCategory)
-                .map((c) => (
-                  <CategoryBadge key={c} category={c} />
-                ))}
-            </div>
-            <h2 className="mt-2 text-lg font-bold leading-snug">{h.name}</h2>
-            <p className="mt-1 flex items-center gap-1 text-xs text-white/85">
-              <MapPin size={12} className="shrink-0" />
-              {h.regionLabel}
-            </p>
-          </div>
+        <CoverImage
+          src={imageUrl}
+          alt={h.name}
+          className="transition-transform duration-500 group-hover:scale-[1.03]"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/70 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 p-4">
+          <span className="rounded-full bg-white/95 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-beautiro-primary">
+            {t(`categories.${h.primaryCategory}`)}
+          </span>
+          <h2 className="mt-2 text-lg font-bold leading-snug text-white">
+            {h.name}
+          </h2>
+          <p className="mt-1 flex items-center gap-1 text-xs text-white/85">
+            <MapPin size={12} />
+            {h.regionLabel}
+          </p>
         </div>
       </Link>
+
       <div className="flex flex-1 flex-col p-5">
-        <p className="line-clamp-2 flex-1 text-sm leading-relaxed text-beautiro-muted">
+        <p className="line-clamp-2 text-sm leading-relaxed text-beautiro-muted">
           {h.description}
         </p>
         {h.procedures.length > 0 && (
-          <ul className="mt-3 space-y-1 border-t border-beautiro-border pt-3">
-            {h.procedures.slice(0, 3).map((p) => (
-              <li
-                key={p.id}
-                className="flex items-center justify-between gap-2 text-xs"
-              >
-                <span className="text-beautiro-charcoal">{p.name}</span>
-                {p.priceFrom != null && (
-                  <span className="shrink-0 font-semibold text-beautiro-primary">
-                    {formatKrw(p.priceFrom, locale)}
+          <ul className="mt-4 space-y-2">
+            {h.procedures.slice(0, 2).map((p) => (
+              <li key={p.id}>
+                <Link
+                  href={`/events/${p.id}`}
+                  className="flex items-center justify-between gap-2 rounded-xl bg-beautiro-surface px-3 py-2 text-xs transition-colors hover:bg-beautiro-primary/5"
+                >
+                  <span className="font-medium text-beautiro-charcoal">
+                    {p.name}
                   </span>
-                )}
+                  <ArrowUpRight
+                    size={14}
+                    className="shrink-0 text-beautiro-muted"
+                  />
+                </Link>
               </li>
             ))}
           </ul>
         )}
-        {min != null && (
-          <p className="mt-3 text-sm text-beautiro-muted">
-            {t("from")}{" "}
-            <span className="text-base text-price text-beautiro-charcoal">
-              {formatKrw(min, locale)}
-            </span>
-          </p>
-        )}
-        <div className="mt-2 flex items-center gap-1 text-xs">
-          <Star size={12} className="fill-amber-400 text-amber-400" />
-          <span className="font-bold">4.9</span>
-          <span className="text-beautiro-muted">(120+)</span>
-        </div>
-        <div className="mt-4 space-y-2">
-          <WhatsAppButton href={wa} size="sm">
-            {t("whatsappConsult")}
-          </WhatsAppButton>
+        <div className="mt-5 grid grid-cols-2 gap-2">
           {primary && (
             <Link
               href={`/events/${primary.id}`}
-              className="block text-center text-xs font-semibold text-beautiro-muted hover:text-beautiro-primary"
+              className="flex h-10 items-center justify-center rounded-xl border border-beautiro-border text-xs font-semibold text-beautiro-charcoal transition-colors hover:border-beautiro-primary/30 hover:text-beautiro-primary"
             >
               {t("viewEvent")}
             </Link>
           )}
+          <a
+            href={wa}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`flex h-10 items-center justify-center rounded-xl bg-beautiro-primary text-xs font-bold text-white transition-colors hover:bg-beautiro-primary-hover ${primary ? "" : "col-span-2"}`}
+          >
+            {t("inquireDiscount")}
+          </a>
         </div>
       </div>
     </article>
@@ -154,7 +124,7 @@ export function HospitalList({
 
   if (items.length === 0) {
     return (
-      <p className="mt-10 rounded-2xl border border-beautiro-border bg-beautiro-surface py-12 text-center text-sm text-beautiro-muted">
+      <p className="rounded-2xl bg-beautiro-surface py-16 text-center text-sm text-beautiro-muted">
         {t("empty")}
       </p>
     );
@@ -173,7 +143,7 @@ export function HospitalList({
   );
 
   return (
-    <div className="space-y-10">
+    <div className="space-y-12">
       {sortedGroups.map(([key, groupItems]) => {
         const sample = groupItems[0]!;
         const title = formatRegionSectionTitle(
@@ -194,12 +164,12 @@ export function HospitalList({
 
         return (
           <section key={key}>
-            <div className="flex flex-wrap items-end justify-between gap-2 border-b border-beautiro-border pb-3">
+            <div className="mb-5 flex flex-wrap items-end justify-between gap-2">
               <div>
                 <p className="text-label text-beautiro-primary">
                   {t("regionSectionLabel")}
                 </p>
-                <h2 className="text-section-title text-beautiro-charcoal">
+                <h2 className="mt-1 text-xl font-bold tracking-tight text-beautiro-charcoal">
                   {title}
                 </h2>
               </div>
@@ -207,7 +177,7 @@ export function HospitalList({
                 {t("regionHospitalCount", { count: groupItems.length })}
               </p>
             </div>
-            <ul className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            <ul className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
               {sortedHospitals.map((h) => (
                 <li key={h.id}>
                   <HospitalCard h={h} locale={locale} />

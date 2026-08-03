@@ -57,11 +57,12 @@
     "popular": {
       "badge": "Trending",
       "title": "Popular events right now",
+      "subtitle": "Partner extra discounts · inquire on WhatsApp",
       "viewAll": "View all",
-      "discount": "Up to",
-      "consultWhatsApp": "WhatsApp consult",
-      "bookOnline": "Apply online",
-      "packageHint": "Van · Mate · Pay packages available"
+      "discountBadge": "Extra discount",
+      "inquiryHint": "Discount terms vary by hospital. We'll guide you personally.",
+      "viewDetail": "Details",
+      "inquire": "Inquire"
     },
     "trust": {
       "items": [
@@ -151,6 +152,7 @@
     "empty": "No hospitals match your filters.",
     "whatsappConsult": "WhatsApp consult",
     "viewEvent": "View event details",
+    "inquireDiscount": "Ask about discount",
     "categories": {
       "PLASTIC": "Plastic surgery",
       "DERMATOLOGY": "Dermatology",

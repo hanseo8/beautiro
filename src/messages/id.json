@@ -57,11 +57,12 @@
     "popular": {
       "badge": "Sedang tren",
       "title": "Event populer saat ini",
+      "subtitle": "Diskon tambahan mitra · tanya langsung via WhatsApp",
       "viewAll": "Lihat semua",
-      "discount": "Diskon hingga",
-      "consultWhatsApp": "Konsultasi WhatsApp",
-      "bookOnline": "Ajukan online",
-      "packageHint": "Paket Van · Mate · Pay tersedia"
+      "discountBadge": "Diskon tambahan",
+      "inquiryHint": "Syarat diskon berbeda tiap rumah sakit. Kami bantu sesuaikan.",
+      "viewDetail": "Detail",
+      "inquire": "Tanya"
     },
     "trust": {
       "items": [
@@ -151,6 +152,7 @@
     "empty": "Tidak ada rumah sakit yang cocok.",
     "whatsappConsult": "Konsultasi WhatsApp",
     "viewEvent": "Detail event",
+    "inquireDiscount": "Tanya diskon",
     "categories": {
       "PLASTIC": "Bedah plastik",
       "DERMATOLOGY": "Kulit",

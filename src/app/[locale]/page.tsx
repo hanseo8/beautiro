@@ -40,18 +40,14 @@ export default async function HomePage({ params }: Props) {
   const regionT = (key: string) => tHospitals(key);
 
   const cards: PopularCard[] = hospitals
-    .flatMap((h, hi) => {
+    .flatMap((h) => {
       const item = localizeHospital(h, loc, regionT);
-      return item.procedures.map((p, pi) => ({
+      return item.procedures.map((p) => ({
         procedureId: p.id,
         title: p.name,
         hospitalName: item.name,
         location: item.regionLabel,
-        priceFrom: p.priceFrom ?? 500000,
         category: p.category,
-        discountPercent: [49, 45, 42, 38, 35, 40][(hi + pi) % 6],
-        rating: 4.9,
-        reviewCount: 89 + hi * 40 + pi * 17,
         imageUrl: resolveHospitalImage(h.slug, p.category, h.coverImage),
       }));
     })
@@ -80,7 +76,7 @@ export default async function HomePage({ params }: Props) {
             {(t.raw("items") as { q: string; a: string }[]).map((item) => (
               <div
                 key={item.q}
-                className="rounded-2xl border border-beautiro-border bg-white p-5"
+                className="card-modern p-5"
               >
                 <dt className="text-sm font-bold">{item.q}</dt>
                 <dd className="mt-2 text-sm leading-relaxed text-beautiro-muted">
