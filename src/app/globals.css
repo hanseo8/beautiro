@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import "pretendard/dist/web/variable/pretendardvariable.css";
 
 /*
   Beautiro — A) Premium clinic (deep teal + champagne gold)
@@ -47,10 +46,10 @@
   --color-beautiro-coral: var(--beautiro-sky);
   --color-beautiro-sage: var(--beautiro-ice);
   --color-beautiro-gold: var(--beautiro-gold);
-  --font-sans: var(--font-noto-sans), "Pretendard Variable", system-ui, sans-serif;
-  --font-brand: var(--font-noto-sans), "Pretendard Variable", system-ui, sans-serif;
-  --font-display: var(--font-noto-serif), "Pretendard Variable", Georgia, serif;
-  --font-korean: "Pretendard Variable", var(--font-noto-sans), system-ui, sans-serif;
+  --font-sans: var(--font-noto-sans), system-ui, sans-serif;
+  --font-brand: var(--font-noto-sans), system-ui, sans-serif;
+  --font-display: var(--font-noto-serif), Georgia, serif;
+  --font-korean: var(--font-nanum-square), "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
 }
 
 body {
@@ -65,14 +64,16 @@ html[lang="ko"] body {
   font-family: var(--font-korean);
   line-height: 1.6;
   word-break: keep-all;
-  font-variation-settings: "wght" 450;
 }
 
+html[lang="ko"] .font-brand,
+html[lang="ko"] .font-display,
 html[lang="ko"] h1,
 html[lang="ko"] h2,
 html[lang="ko"] h3,
 html[lang="ko"] h4 {
-  letter-spacing: -0.02em;
+  font-family: var(--font-korean);
+  letter-spacing: -0.01em;
 }
 
 ::selection {
