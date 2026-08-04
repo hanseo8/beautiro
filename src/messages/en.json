@@ -393,8 +393,48 @@
     "accountBack": "Back to consultation",
     "historyTitle": "Reservations",
     "historyDesc": "Your consultation history is managed by our concierge via WhatsApp.",
+    "historyLookupDesc": "Look up bookings with the email and phone number you used when applying.",
+    "historyLookup": "Look up reservations",
+    "historyLoading": "Loading…",
     "historyEmpty": "No reservations to display yet.",
-    "historyContact": "Contact concierge"
+    "historyContact": "Contact concierge",
+    "status": {
+      "PENDING": "Received",
+      "CONFIRMED": "Confirmed",
+      "IN_PROGRESS": "In progress",
+      "COMPLETED": "Completed",
+      "CANCELLED": "Cancelled"
+    },
+    "serviceType": {
+      "VAN": "Private transport",
+      "INTERPRETER": "Medical interpreter",
+      "FX_CARE": "Payment & FX"
+    },
+    "onlineBooking": {
+      "eyebrow": "Online Booking",
+      "title": "Book online",
+      "subtitle": "Choose a date and services, then submit your reservation.",
+      "tabNew": "New booking",
+      "tabHistory": "My bookings",
+      "step1Label": "Date",
+      "step2Label": "Services",
+      "step3Label": "Confirm",
+      "step1Title": "Choose a date",
+      "step1Desc": "Select your preferred consultation date. Arrival date is optional.",
+      "step2Title": "Choose services",
+      "step2Desc": "Select one or more concierge services you need.",
+      "step3Title": "Contact & confirm",
+      "step3Desc": "Enter your contact details to complete the online booking.",
+      "preferredDateTitle": "Preferred consultation date",
+      "preferredDateDesc": "Pick a date below or enter one manually.",
+      "arrivalDesc": "If you already know your arrival date in Korea, add it here.",
+      "today": "Today",
+      "serviceRequired": "Please select at least one service.",
+      "procedureOptional": "Procedure of interest (optional)",
+      "submit": "Book online",
+      "successTitle": "Your online booking is received",
+      "successBody": "Our concierge will review your date and services and contact you within 24 hours."
+    }
   },
   "faq": {
     "title": "FAQ",

@@ -25,6 +25,52 @@ function parseDate(value?: string) {
   return Number.isNaN(d.getTime()) ? undefined : d;
 }
 
+export async function GET(request: Request) {
+  try {
+    const { searchParams } = new URL(request.url);
+    const email = searchParams.get("email")?.trim();
+    const phone = searchParams.get("phone")?.trim();
+
+    if (!email || !phone || !email.includes("@") || phone.length < 6) {
+      return NextResponse.json({ error: "Invalid request" }, { status: 400 });
+    }
+
+    const bookings = await prisma.booking.findMany({
+      where: {
+        guestEmail: { equals: email, mode: "insensitive" },
+        guestPhone: phone,
+      },
+      include: {
+        services: true,
+        procedure: true,
+      },
+      orderBy: { createdAt: "desc" },
+      take: 20,
+    });
+
+    return NextResponse.json({
+      bookings: bookings.map((booking) => ({
+        id: booking.id,
+        status: booking.status,
+        createdAt: booking.createdAt.toISOString(),
+        preferredDate: booking.preferredDate?.toISOString() ?? null,
+        arrivalDate: booking.arrivalDate?.toISOString() ?? null,
+        services: booking.services.map((service) => ({ type: service.type })),
+        procedure: booking.procedure
+          ? {
+              nameKo: booking.procedure.nameKo,
+              nameEn: booking.procedure.nameEn,
+              nameId: booking.procedure.nameId,
+            }
+          : null,
+      })),
+    });
+  } catch (e) {
+    console.error(e);
+    return NextResponse.json({ error: "Server error" }, { status: 500 });
+  }
+}
+
 export async function POST(request: Request) {
   try {
     const json: unknown = await request.json();

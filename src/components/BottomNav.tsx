@@ -49,10 +49,11 @@ export function BottomNav() {
     },
     {
       key: "bookings",
-      href: "/book?tab=history",
+      href: "/book?tab=bookings",
       label: t("bookings"),
       icon: CalendarCheck,
-      match: () => pathname === "/book" && tab === "history",
+      match: () =>
+        pathname === "/book" && (tab === "bookings" || tab === "history"),
     },
     {
       key: "mypage",

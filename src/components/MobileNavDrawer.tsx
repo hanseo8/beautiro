@@ -67,7 +67,7 @@ export function MobileNavDrawer({ open, onClose }: Props) {
   ] as const;
 
   const accountLinks = [
-    { href: "/book?tab=history", label: t("reservations"), icon: CalendarCheck },
+    { href: "/book?tab=bookings&view=history", label: t("reservations"), icon: CalendarCheck },
     { href: "/book?tab=account", label: t("mypage"), icon: User },
   ] as const;
 

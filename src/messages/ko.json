@@ -393,8 +393,48 @@
     "accountBack": "상담 신청으로 돌아가기",
     "historyTitle": "예약 내역",
     "historyDesc": "접수된 상담 내역은 컨시어지가 WhatsApp으로 안내해 드립니다.",
+    "historyLookupDesc": "신청 시 입력한 이메일과 전화번호로 예약 내역을 조회할 수 있습니다.",
+    "historyLookup": "예약 내역 조회",
+    "historyLoading": "조회 중…",
     "historyEmpty": "표시할 예약 내역이 없습니다.",
-    "historyContact": "컨시어지에 문의하기"
+    "historyContact": "컨시어지에 문의하기",
+    "status": {
+      "PENDING": "접수 완료",
+      "CONFIRMED": "확정",
+      "IN_PROGRESS": "진행 중",
+      "COMPLETED": "완료",
+      "CANCELLED": "취소"
+    },
+    "serviceType": {
+      "VAN": "프라이빗 이동",
+      "INTERPRETER": "의료 통역",
+      "FX_CARE": "결제·환전"
+    },
+    "onlineBooking": {
+      "eyebrow": "Online Booking",
+      "title": "온라인 예약",
+      "subtitle": "날짜와 서비스를 선택하고 바로 예약 신청하세요.",
+      "tabNew": "새 예약",
+      "tabHistory": "예약 내역",
+      "step1Label": "날짜",
+      "step2Label": "서비스",
+      "step3Label": "확정",
+      "step1Title": "날짜 선택",
+      "step1Desc": "희망 상담일을 선택해 주세요. 입국일은 선택 사항입니다.",
+      "step2Title": "서비스 선택",
+      "step2Desc": "필요한 컨시어지 서비스를 하나 이상 선택해 주세요.",
+      "step3Title": "연락처 및 예약 확정",
+      "step3Desc": "연락처를 입력하고 온라인 예약을 완료하세요.",
+      "preferredDateTitle": "희망 상담일",
+      "preferredDateDesc": "아래 날짜 중에서 선택하거나 직접 입력하세요.",
+      "arrivalDesc": "한국 입국 예정일이 있으면 함께 알려주세요.",
+      "today": "오늘",
+      "serviceRequired": "최소 1개 이상의 서비스를 선택해 주세요.",
+      "procedureOptional": "관심 시술 (선택)",
+      "submit": "온라인 예약하기",
+      "successTitle": "온라인 예약이 접수되었습니다",
+      "successBody": "선택하신 날짜와 서비스를 확인한 뒤, 컨시어지가 24시간 내 연락드립니다."
+    }
   },
   "faq": {
     "title": "자주 묻는 질문",

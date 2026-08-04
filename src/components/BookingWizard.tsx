@@ -107,9 +107,6 @@ export function BookingWizard({
   if (tab === "account") {
     return <BookAccountPanel wa={wa} />;
   }
-  if (tab === "history") {
-    return <BookHistoryPanel wa={wa} />;
-  }
 
   async function handleSubmit() {
     setSubmitting(true);
@@ -837,36 +834,6 @@ function BookAccountPanel({ wa }: { wa: string }) {
       >
         <MessageCircle size={16} />
         {t("accountCta")}
-      </a>
-      <p className="mt-4">
-        <Link href="/book" className="text-sm font-medium text-beautiro-primary hover:underline">
-          {t("accountBack")}
-        </Link>
-      </p>
-    </div>
-  );
-}
-
-function BookHistoryPanel({ wa }: { wa: string }) {
-  const t = useTranslations("book");
-  return (
-    <div className="mx-auto max-w-md py-6 text-center sm:py-10">
-      <h2 className="font-display text-xl font-semibold text-beautiro-charcoal">
-        {t("historyTitle")}
-      </h2>
-      <p className="mt-3 text-sm leading-relaxed text-beautiro-muted">
-        {t("historyDesc")}
-      </p>
-      <p className="mt-6 rounded-xl bg-beautiro-surface py-8 text-sm text-beautiro-muted">
-        {t("historyEmpty")}
-      </p>
-      <a
-        href={wa}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mt-6 inline-flex text-sm font-medium text-beautiro-primary hover:underline"
-      >
-        {t("historyContact")}
       </a>
       <p className="mt-4">
         <Link href="/book" className="text-sm font-medium text-beautiro-primary hover:underline">

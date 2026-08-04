@@ -393,8 +393,48 @@
     "accountBack": "Kembali ke konsultasi",
     "historyTitle": "Riwayat reservasi",
     "historyDesc": "Riwayat konsultasi dikelola concierge via WhatsApp.",
+    "historyLookupDesc": "Cari reservasi dengan email dan nomor telepon yang Anda gunakan saat mendaftar.",
+    "historyLookup": "Cari reservasi",
+    "historyLoading": "Memuat…",
     "historyEmpty": "Belum ada reservasi untuk ditampilkan.",
-    "historyContact": "Hubungi concierge"
+    "historyContact": "Hubungi concierge",
+    "status": {
+      "PENDING": "Diterima",
+      "CONFIRMED": "Dikonfirmasi",
+      "IN_PROGRESS": "Diproses",
+      "COMPLETED": "Selesai",
+      "CANCELLED": "Dibatalkan"
+    },
+    "serviceType": {
+      "VAN": "Transport pribadi",
+      "INTERPRETER": "Penerjemah medis",
+      "FX_CARE": "Pembayaran & kurs"
+    },
+    "onlineBooking": {
+      "eyebrow": "Online Booking",
+      "title": "Reservasi online",
+      "subtitle": "Pilih tanggal dan layanan, lalu kirim reservasi Anda.",
+      "tabNew": "Reservasi baru",
+      "tabHistory": "Riwayat",
+      "step1Label": "Tanggal",
+      "step2Label": "Layanan",
+      "step3Label": "Konfirmasi",
+      "step1Title": "Pilih tanggal",
+      "step1Desc": "Pilih tanggal konsultasi yang diinginkan. Tanggal kedatangan opsional.",
+      "step2Title": "Pilih layanan",
+      "step2Desc": "Pilih satu atau lebih layanan concierge yang Anda butuhkan.",
+      "step3Title": "Kontak & konfirmasi",
+      "step3Desc": "Masukkan kontak Anda untuk menyelesaikan reservasi online.",
+      "preferredDateTitle": "Tanggal konsultasi",
+      "preferredDateDesc": "Pilih tanggal di bawah atau masukkan manual.",
+      "arrivalDesc": "Jika sudah tahu tanggal kedatangan ke Korea, isi di sini.",
+      "today": "Hari ini",
+      "serviceRequired": "Pilih minimal satu layanan.",
+      "procedureOptional": "Prosedur yang diminati (opsional)",
+      "submit": "Reservasi online",
+      "successTitle": "Reservasi online diterima",
+      "successBody": "Concierge kami akan meninjau tanggal dan layanan Anda, lalu menghubungi dalam 24 jam."
+    }
   },
   "faq": {
     "title": "Pertanyaan umum",
