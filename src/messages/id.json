@@ -97,15 +97,42 @@
       "viewDetail": "Detail",
       "inquire": "Tanya"
     },
-    "trust": {
-      "badge": "Medical Concierge",
-      "title": "Kerangka perawatan medis profesional",
-      "items": [
-        { "title": "Institusi mitra terverifikasi", "desc": "Jaringan rumah sakit spesialis plastik, kulit, oriental & gigi" },
-        { "title": "Concierge khusus 24 jam", "desc": "Pusat concierge medis 24 jam" },
-        { "title": "Penerjemahan medis", "desc": "Pendamping penerjemah medis profesional" },
-        { "title": "Transport medis pribadi", "desc": "Pickup bandara dan antar-jemput klinik khusus" }
+    "brandStory": {
+      "badge": "Brand Story",
+      "headline": "Memandu Anda dengan aman dalam perjalanan medis di Korea.",
+      "intro": "Mencari perawatan medis atau estetika di negara asing bisa terasa sangat menegangkan.",
+      "questions": [
+        "Klinik mana yang benar-benar bisa dipercaya?",
+        "Apakah akan ada hambatan bahasa?",
+        "Bagaimana cara berkeliling kota dengan aman?"
+      ],
+      "origin": "Beautiro dibuat untuk menjawab kekhawatiran tersebut.",
+      "paragraphs": [
+        "Seperti alamat jalan yang jelas membawa Anda ke tujuan dengan aman, Beautiro menjadi pemandu tepercaya di tengah lanskap medis Korea yang luas.",
+        "Alih-alih janji kosong, kami menghubungkan Anda dengan klinik mitra terverifikasi, didampingi penerjemah medis bersertifikat, serta transport pribadi yang nyaman dari kedatangan hingga kepulangan.",
+        "Beautiro bukan sekadar direktori. Kami adalah mitra Anda, agar fokus Anda tetap pada perawatan dan pemulihan."
+      ],
+      "closing": "Temukan jalan tepercaya menuju perawatan K-medical bersama Beautiro.",
+      "pillars": [
+        {
+          "title": "Klinik mitra terverifikasi",
+          "desc": "Rumah sakit terkurasi—bukan iklan berlebihan atau janji kosong."
+        },
+        {
+          "title": "Penerjemah medis bersertifikat",
+          "desc": "Pendamping profesional dari konsultasi hingga pemulihan."
+        },
+        {
+          "title": "Transport pribadi",
+          "desc": "Perjalanan aman dan nyaman dari bandara hingga kepulangan."
+        }
       ]
+    },
+    "brandKey": {
+      "badge": "Beautiro",
+      "title": "Lewati kerumitan. Beautiro adalah satu-satunya alamat yang perlu Anda ingat.",
+      "ctaBook": "Ajukan konsultasi",
+      "ctaServices": "Layanan kami"
     },
     "reviewPromo": {
       "badge": "Hadiah ulasan",

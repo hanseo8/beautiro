@@ -98,8 +98,13 @@ export const heroBannerImages: BannerPhoto[] = [
   },
 ];
 
-/** Home promo carousel — review reward · open discount · cosmetics gift */
+/** Home promo carousel — brand key phrase · review reward · open discount · cosmetics gift */
 export const promoBannerImages: BannerPhoto[] = [
+  {
+    src: KOREA_IMAGES.incheonAirportArrival,
+    position: "center 38%",
+    mobilePosition: "center 42%",
+  },
   {
     src: KOREA_IMAGES.kBeautyExpoKorea,
     position: "center 35%",

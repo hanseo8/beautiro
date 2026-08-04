@@ -8,6 +8,7 @@ import {
   ChevronLeft,
   ChevronRight,
   Gift,
+  MapPin,
   MessageSquareHeart,
   Plane,
   Sparkles,
@@ -18,6 +19,13 @@ import { BannerPhotoImage } from "@/components/ui/BannerPhotoImage";
 import { PROMO_BANNER_IMAGE_CLASS, promoBannerImages } from "@/lib/media";
 
 export type PromoSlide =
+  | {
+      type: "brandKey";
+      badge: string;
+      title: string;
+      ctaBook: string;
+      ctaServices: string;
+    }
   | {
       type: "openPromo" | "reviewPromo";
       badge: string;
@@ -110,7 +118,32 @@ export function PromoBannerCarousel({ slides }: { slides: PromoSlide[] }) {
         </div>
 
         <div className="relative bg-[#0f172a] p-5 sm:absolute sm:inset-0 sm:flex sm:flex-col sm:justify-end sm:bg-transparent sm:p-8">
-          {slide.type === "openPromo" || slide.type === "reviewPromo" ? (
+          {slide.type === "brandKey" ? (
+            <>
+              <div className="inline-flex w-fit items-center gap-1.5 rounded-full border border-white/25 bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-white/90 backdrop-blur-sm">
+                <MapPin size={12} />
+                {slide.badge}
+              </div>
+              <h2 className="font-display mt-3 max-w-2xl text-lg font-semibold leading-snug tracking-tight text-white sm:text-2xl md:text-[1.65rem] md:leading-snug">
+                {slide.title}
+              </h2>
+              <div className="mt-5 flex flex-wrap gap-3">
+                <Link
+                  href="/book"
+                  className="inline-flex h-10 items-center gap-1.5 rounded-lg bg-white px-5 text-sm font-semibold text-beautiro-primary transition-colors hover:bg-white/95"
+                >
+                  {slide.ctaBook}
+                  <ArrowRight size={16} />
+                </Link>
+                <Link
+                  href="/#services"
+                  className="inline-flex h-10 items-center rounded-lg border border-white/35 bg-white/10 px-5 text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/18"
+                >
+                  {slide.ctaServices}
+                </Link>
+              </div>
+            </>
+          ) : slide.type === "openPromo" || slide.type === "reviewPromo" ? (
             <>
               <div className="inline-flex w-fit items-center gap-1.5 rounded-full border border-white/25 bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-white/90 backdrop-blur-sm">
                 {slide.type === "reviewPromo" ? (

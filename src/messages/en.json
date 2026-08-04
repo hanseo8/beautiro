@@ -97,15 +97,42 @@
       "viewDetail": "Details",
       "inquire": "Inquire"
     },
-    "trust": {
-      "badge": "Medical Concierge",
-      "title": "Professional medical care framework",
-      "items": [
-        { "title": "Verified partner institutions", "desc": "Specialist hospital network across plastic, dermatology, oriental & dental" },
-        { "title": "24-hour dedicated concierge", "desc": "Round-the-clock medical concierge center" },
-        { "title": "Medical interpretation", "desc": "Dedicated professional medical interpreter accompaniment" },
-        { "title": "Private medical transport", "desc": "Airport pickup and dedicated clinic transfers" }
+    "brandStory": {
+      "badge": "Brand Story",
+      "headline": "Guiding You Safely Through Your Korean Medical Journey.",
+      "intro": "Seeking medical or cosmetic care in a foreign country can feel overwhelming.",
+      "questions": [
+        "Which clinic can I really trust?",
+        "Will there be a language barrier?",
+        "How do I navigate the city safely?"
+      ],
+      "origin": "Beautiro was created to answer these exact concerns.",
+      "paragraphs": [
+        "Just as a clear street address leads you safely to your destination, Beautiro serves as your reliable guide through Korea's vast medical landscape.",
+        "Instead of empty promises, we provide carefully curated, verified clinics, paired with certified medical interpreters who stay by your side, and private transport ensuring comfortable travel from arrival to departure.",
+        "Beautiro is more than just a directory. We are your dedicated partner, ensuring your focus remains entirely on your care and recovery."
+      ],
+      "closing": "Find your trusted path to K-medical care with Beautiro.",
+      "pillars": [
+        {
+          "title": "Verified partner clinics",
+          "desc": "Carefully curated hospitals—never empty promises or exaggerated ads."
+        },
+        {
+          "title": "Certified medical interpreters",
+          "desc": "Professional interpreters stay with you from consultation through recovery."
+        },
+        {
+          "title": "Private transport",
+          "desc": "Comfortable, safe travel from airport arrival to departure."
+        }
       ]
+    },
+    "brandKey": {
+      "badge": "Beautiro",
+      "title": "Skip the complexity. Beautiro is the only address you need.",
+      "ctaBook": "Request consultation",
+      "ctaServices": "Our services"
     },
     "reviewPromo": {
       "badge": "Review reward",

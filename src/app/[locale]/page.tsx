@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { HomeSearch } from "@/components/home/HomeSearch";
 import { PromoBannerSection } from "@/components/home/PromoBannerSection";
-import { TrustStrip } from "@/components/home/TrustStrip";
+import { BrandStorySection } from "@/components/home/BrandStorySection";
 import { HeroCarousel } from "@/components/home/HeroCarousel";
 import { CategoryPanels } from "@/components/home/CategoryPanels";
 import { ServicesSection } from "@/components/home/ServicesSection";
@@ -64,7 +64,7 @@ export default async function HomePage({ params }: Props) {
           <PromoBannerSection />
         </div>
       </section>
-      <TrustStrip />
+      <BrandStorySection />
       <div className="container-babitalk space-y-14 pt-10">
         <HeroCarousel />
         <ServicesSection />
