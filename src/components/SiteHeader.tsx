@@ -15,6 +15,11 @@ import type { Locale } from "@/i18n/routing";
 const navItems = [
   { href: "/", labelKey: "home" as const, match: (p: string) => p === "/" },
   {
+    href: "/#services",
+    labelKey: "services" as const,
+    match: () => false,
+  },
+  {
     href: "/hospitals",
     labelKey: "hospitals" as const,
     match: (p: string) =>

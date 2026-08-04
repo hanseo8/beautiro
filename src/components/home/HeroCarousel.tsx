@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { useState } from "react";
 import { CoverImage } from "@/components/ui/CoverImage";
-import { heroSlideImages } from "@/lib/media";
+import { heroBannerImages } from "@/lib/media";
 
 export function HeroCarousel() {
   const t = useTranslations("home.carousel");
@@ -19,7 +19,7 @@ export function HeroCarousel() {
 
   const [index, setIndex] = useState(0);
   const slide = slides[index] ?? slides[0];
-  const image = heroSlideImages[index] ?? heroSlideImages[0];
+  const banner = heroBannerImages[index] ?? heroBannerImages[0];
 
   function prev() {
     setIndex((i) => (i - 1 + slides.length) % slides.length);
@@ -30,18 +30,18 @@ export function HeroCarousel() {
 
   return (
     <section className="relative">
-      <div className="card-modern relative min-h-[280px] overflow-hidden sm:min-h-[320px]">
+      <div className="card-modern relative aspect-[5/2] min-h-[220px] overflow-hidden sm:min-h-[260px] lg:aspect-[21/8]">
         <CoverImage
-          src={image}
+          src={banner.src}
           alt={slide.title}
           priority
+          objectPosition={banner.position}
           sizes="(max-width: 1080px) 100vw, 1080px"
-          className="transition-transform duration-700"
         />
         <div className="absolute inset-0 bg-[#0f172a]/55" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/90 via-[#0f172a]/35 to-transparent" />
 
-        <div className="relative flex min-h-[280px] flex-col justify-end px-6 py-8 sm:min-h-[320px] sm:px-10 sm:py-10">
+        <div className="relative flex h-full min-h-[220px] flex-col justify-end px-6 py-8 sm:min-h-[260px] sm:px-10 sm:py-10">
           <p className="text-label text-white/75">{slide.subtitle}</p>
           <h2 className="font-display mt-2 max-w-xl text-xl font-semibold leading-snug tracking-tight text-white sm:text-2xl">
             {slide.title}

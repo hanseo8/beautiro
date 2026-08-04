@@ -37,7 +37,7 @@ export type PromoSlide =
 export function PromoBannerCarousel({ slides }: { slides: PromoSlide[] }) {
   const [index, setIndex] = useState(0);
   const slide = slides[index] ?? slides[0];
-  const image = promoBannerImages[index] ?? promoBannerImages[0];
+  const banner = promoBannerImages[index] ?? promoBannerImages[0];
 
   useEffect(() => {
     if (slides.length <= 1) return;
@@ -58,18 +58,18 @@ export function PromoBannerCarousel({ slides }: { slides: PromoSlide[] }) {
 
   return (
     <div className="relative overflow-hidden rounded-2xl shadow-[0_12px_40px_rgba(15,23,42,0.12)]">
-      <div className="relative min-h-[300px] sm:min-h-[340px]">
+      <div className="relative aspect-[5/2] min-h-[220px] sm:min-h-[260px] lg:aspect-[21/8]">
         <CoverImage
-          src={image}
+          src={banner.src}
           alt={slide.title}
           priority
+          objectPosition={banner.position}
           sizes="(max-width: 1080px) 100vw, 1080px"
-          className="transition-transform duration-700 scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#0f172a]/88 via-[#0f172a]/55 to-[#0f172a]/25" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/80 via-transparent to-[#0f172a]/20" />
 
-        <div className="relative flex min-h-[300px] flex-col justify-end p-6 sm:min-h-[340px] sm:p-8">
+        <div className="relative flex h-full min-h-[220px] flex-col justify-end p-6 sm:min-h-[260px] sm:p-8">
           {slide.type === "openPromo" ? (
             <>
               <div className="inline-flex w-fit items-center gap-1.5 rounded-full border border-white/25 bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-white/90 backdrop-blur-sm">

@@ -6,6 +6,7 @@ type Props = {
   className?: string;
   priority?: boolean;
   sizes?: string;
+  objectPosition?: string;
 };
 
 export function CoverImage({
@@ -14,6 +15,7 @@ export function CoverImage({
   className = "",
   priority = false,
   sizes = "(max-width: 768px) 100vw, 400px",
+  objectPosition = "center center",
 }: Props) {
   return (
     <Image
@@ -21,6 +23,7 @@ export function CoverImage({
       alt={alt}
       fill
       className={`object-cover ${className}`}
+      style={{ objectPosition }}
       sizes={sizes}
       priority={priority}
     />

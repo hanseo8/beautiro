@@ -10,6 +10,7 @@ import {
   CalendarCheck,
   User,
   Car,
+  Info,
   Languages,
   Wallet,
   MessageCircle,
@@ -47,6 +48,7 @@ export function MobileNavDrawer({ open, onClose }: Props) {
 
   const mainLinks = [
     { href: "/", label: t("home"), icon: Home },
+    { href: "/#services", label: t("services"), icon: Info },
     { href: "/hospitals", label: t("hospitals"), icon: Building2 },
     { href: "/#faq", label: t("faq"), icon: HelpCircle },
   ] as const;

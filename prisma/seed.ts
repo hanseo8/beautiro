@@ -58,7 +58,7 @@ async function main() {
       districtKey: "namdong",
       neighborhoodKey: null,
       primaryCategory: MedicalCategory.ORIENTAL,
-      coverImage: KOREA_IMAGES.hanyakTraditionalMedicine,
+      coverImage: KOREA_IMAGES.seoulKMediCenter,
       featured: true,
       procedures: [
         {

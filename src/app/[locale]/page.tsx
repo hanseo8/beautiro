@@ -14,7 +14,7 @@ import {
 import { AppPromoBanner } from "@/components/home/AppPromoBanner";
 import { prisma } from "@/lib/prisma";
 import { localizeHospital } from "@/lib/hospitals";
-import { resolveHospitalImage } from "@/lib/media";
+import { resolveHospitalImage, resolveHospitalImagePosition } from "@/lib/media";
 import type { Locale } from "@/i18n/routing";
 
 type Props = { params: Promise<{ locale: string }> };
@@ -51,6 +51,7 @@ export default async function HomePage({ params }: Props) {
         location: item.regionLabel,
         category: p.category,
         imageUrl: resolveHospitalImage(h.slug, p.category, h.coverImage),
+        imagePosition: resolveHospitalImagePosition(h.slug, p.category),
       }));
     })
     .slice(0, 8);

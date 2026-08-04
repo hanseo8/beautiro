@@ -8,7 +8,7 @@ import { localizeHospital } from "@/lib/hospitals";
 import type { Locale } from "@/i18n/routing";
 import { EventConsultActions } from "@/components/events/EventConsultActions";
 import { CoverImage } from "@/components/ui/CoverImage";
-import { resolveHospitalImage } from "@/lib/media";
+import { resolveHospitalImage, resolveHospitalImagePosition } from "@/lib/media";
 import { Link } from "@/i18n/navigation";
 
 type Props = {
@@ -47,6 +47,10 @@ export default async function EventDetailPage({ params }: Props) {
     procedure.category,
     procedure.hospital.coverImage,
   );
+  const coverPosition = resolveHospitalImagePosition(
+    procedure.hospital.slug,
+    procedure.category,
+  );
 
   return (
     <div className="min-h-[70vh] bg-[linear-gradient(180deg,var(--beautiro-surface)_0%,#fff_40%)] pb-20 pt-6">
@@ -67,6 +71,7 @@ export default async function EventDetailPage({ params }: Props) {
               src={coverImage}
               alt={hospital.name}
               priority
+              objectPosition={coverPosition}
               sizes="(max-width: 512px) 100vw, 512px"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/80 via-transparent to-transparent" />

@@ -11,7 +11,7 @@ import {
 } from "@/lib/regions";
 import { eventInquiryMessage, whatsappUrl } from "@/lib/whatsapp";
 import { CoverImage } from "@/components/ui/CoverImage";
-import { resolveHospitalImage } from "@/lib/media";
+import { resolveHospitalImage, resolveHospitalImagePosition } from "@/lib/media";
 import type { Locale } from "@/i18n/routing";
 import type { MedicalCategory } from "@prisma/client";
 import { MapPin } from "lucide-react";
@@ -39,6 +39,7 @@ function HospitalCard({
     h.primaryCategory,
     h.coverImage,
   );
+  const imagePosition = resolveHospitalImagePosition(h.slug, h.primaryCategory);
 
   return (
     <article className="card-modern card-modern-hover group flex h-full flex-col overflow-hidden">
@@ -49,6 +50,7 @@ function HospitalCard({
         <CoverImage
           src={imageUrl}
           alt={h.name}
+          objectPosition={imagePosition}
           className="transition-transform duration-500 group-hover:scale-[1.03]"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/70 to-transparent" />

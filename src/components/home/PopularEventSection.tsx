@@ -13,6 +13,7 @@ export type PopularCard = {
   location: string;
   category: MedicalCategory;
   imageUrl: string;
+  imagePosition: string;
 };
 
 export async function PopularEventSection({
@@ -64,6 +65,7 @@ export async function PopularEventSection({
                   <CoverImage
                     src={card.imageUrl}
                     alt={card.hospitalName}
+                    objectPosition={card.imagePosition}
                     className="transition-transform duration-500 group-hover:scale-[1.03]"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/75 via-[#0f172a]/10 to-transparent" />
