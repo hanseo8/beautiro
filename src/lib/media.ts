@@ -25,9 +25,9 @@ export type BannerPhoto = {
 export const BANNER_FRAME_CLASS =
   "relative aspect-[3/2] min-h-[220px] overflow-hidden sm:aspect-[16/9] sm:min-h-[240px]";
 
-/** Promo carousel image strip on mobile (content stacks below) */
-export const PROMO_BANNER_IMAGE_CLASS =
-  "relative aspect-[16/10] w-full overflow-hidden sm:absolute sm:inset-0 sm:aspect-auto";
+/** Promo carousel — compact wide strip, Coupang-style light overlay */
+export const PROMO_BANNER_FRAME_CLASS =
+  "relative aspect-[2.35/1] min-h-[168px] max-h-[200px] overflow-hidden sm:aspect-[3.1/1] sm:min-h-[176px] sm:max-h-[220px]";
 
 /**
  * Korea-verified photography mapped to slide / hospital context.

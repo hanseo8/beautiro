@@ -16,7 +16,7 @@ import {
 } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { BannerPhotoImage } from "@/components/ui/BannerPhotoImage";
-import { PROMO_BANNER_IMAGE_CLASS, promoBannerImages } from "@/lib/media";
+import { PROMO_BANNER_FRAME_CLASS, promoBannerImages } from "@/lib/media";
 
 export type PromoSlide =
   | {
@@ -43,6 +43,24 @@ export type PromoSlide =
       note: string;
       cta: string;
     };
+
+const navBtnClass =
+  "flex h-8 w-8 items-center justify-center rounded-full border border-beautiro-border bg-white/90 text-beautiro-charcoal shadow-sm backdrop-blur-sm transition-colors hover:bg-white";
+
+function PromoBadge({
+  icon: Icon,
+  children,
+}: {
+  icon: typeof Sparkles;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="inline-flex w-fit items-center gap-1.5 rounded-full border border-beautiro-border bg-white px-3 py-1 text-[11px] font-bold tracking-wide text-beautiro-charcoal shadow-sm">
+      <Icon size={12} className="text-beautiro-primary" />
+      {children}
+    </div>
+  );
+}
 
 export function PromoBannerCarousel({ slides }: { slides: PromoSlide[] }) {
   const [index, setIndex] = useState(0);
@@ -72,98 +90,55 @@ export function PromoBannerCarousel({ slides }: { slides: PromoSlide[] }) {
         : [Sparkles];
 
   return (
-    <div className="relative overflow-hidden rounded-2xl shadow-[0_12px_40px_rgba(15,23,42,0.12)]">
-      <div className="relative sm:aspect-[16/9] sm:min-h-[280px]">
-        <div className={PROMO_BANNER_IMAGE_CLASS}>
-          <BannerPhotoImage banner={banner} alt={slide.title} priority />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/50 to-transparent sm:hidden" />
-          <div className="absolute inset-0 hidden bg-gradient-to-r from-[#0f172a]/88 via-[#0f172a]/55 to-[#0f172a]/25 sm:block" />
-          <div className="absolute inset-0 hidden bg-gradient-to-t from-[#0f172a]/80 via-transparent to-[#0f172a]/20 sm:block" />
+    <div className="relative overflow-hidden rounded-2xl border border-beautiro-border bg-white shadow-[0_4px_24px_rgba(15,23,42,0.06)]">
+      <div className={PROMO_BANNER_FRAME_CLASS}>
+        <BannerPhotoImage banner={banner} alt={slide.title} priority />
+        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/55 sm:to-white/25" />
+        <div className="absolute inset-0 bg-gradient-to-t from-white/30 via-transparent to-white/20" />
 
-          {slides.length > 1 && (
-            <>
-              <button
-                type="button"
-                onClick={prev}
-                className="absolute left-3 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-lg border border-white/20 bg-[#0f172a]/40 text-white backdrop-blur-sm transition-colors hover:bg-[#0f172a]/60 sm:hidden"
-                aria-label="Previous slide"
-              >
-                <ChevronLeft size={18} strokeWidth={1.5} />
-              </button>
-              <button
-                type="button"
-                onClick={next}
-                className="absolute right-3 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-lg border border-white/20 bg-[#0f172a]/40 text-white backdrop-blur-sm transition-colors hover:bg-[#0f172a]/60 sm:hidden"
-                aria-label="Next slide"
-              >
-                <ChevronRight size={18} strokeWidth={1.5} />
-              </button>
-              <div className="absolute bottom-3 left-1/2 z-10 flex -translate-x-1/2 gap-1.5 sm:hidden">
-                {slides.map((_, i) => (
-                  <button
-                    key={i}
-                    type="button"
-                    onClick={() => setIndex(i)}
-                    className={`h-1 rounded-full transition-all ${
-                      i === index
-                        ? "w-6 bg-white"
-                        : "w-1.5 bg-white/40 hover:bg-white/60"
-                    }`}
-                    aria-label={`Slide ${i + 1}`}
-                  />
-                ))}
-              </div>
-            </>
-          )}
-        </div>
-
-        <div className="relative bg-[#0f172a] p-5 sm:absolute sm:inset-0 sm:flex sm:flex-col sm:justify-end sm:bg-transparent sm:p-8">
+        <div className="absolute inset-0 z-10 flex flex-col justify-center px-5 py-4 sm:px-8 sm:py-5">
           {slide.type === "brandKey" ? (
-            <>
-              <div className="inline-flex w-fit items-center gap-1.5 rounded-full border border-white/25 bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-white/90 backdrop-blur-sm">
-                <MapPin size={12} />
-                {slide.badge}
+            <div className="max-w-xl">
+              <PromoBadge icon={MapPin}>{slide.badge}</PromoBadge>
+              <div className="mt-3 rounded-2xl border border-beautiro-border/80 bg-white/90 px-4 py-3 shadow-sm backdrop-blur-sm sm:inline-block sm:px-5 sm:py-3.5">
+                <h2 className="text-base font-bold leading-snug tracking-tight text-beautiro-charcoal sm:text-xl sm:leading-snug">
+                  {slide.title}
+                </h2>
               </div>
-              <h2 className="font-display mt-3 max-w-2xl text-lg font-semibold leading-snug tracking-tight text-white sm:text-2xl md:text-[1.65rem] md:leading-snug">
-                {slide.title}
-              </h2>
-              <div className="mt-5 flex flex-wrap gap-3">
+              <div className="mt-3 flex flex-wrap gap-2">
                 <Link
                   href="/book"
-                  className="inline-flex h-10 items-center gap-1.5 rounded-lg bg-white px-5 text-sm font-semibold text-beautiro-primary transition-colors hover:bg-white/95"
+                  className="inline-flex h-9 items-center gap-1 rounded-full bg-beautiro-primary px-4 text-xs font-bold text-white transition-colors hover:bg-beautiro-primary-hover sm:h-10 sm:px-5 sm:text-sm"
                 >
                   {slide.ctaBook}
-                  <ArrowRight size={16} />
+                  <ArrowRight size={14} />
                 </Link>
                 <Link
                   href="/#services"
-                  className="inline-flex h-10 items-center rounded-lg border border-white/35 bg-white/10 px-5 text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/18"
+                  className="inline-flex h-9 items-center rounded-full border border-beautiro-border bg-white px-4 text-xs font-semibold text-beautiro-charcoal transition-colors hover:border-beautiro-primary/30 hover:text-beautiro-primary sm:h-10 sm:px-5 sm:text-sm"
                 >
                   {slide.ctaServices}
                 </Link>
               </div>
-            </>
+            </div>
           ) : slide.type === "openPromo" || slide.type === "reviewPromo" ? (
-            <>
-              <div className="inline-flex w-fit items-center gap-1.5 rounded-full border border-white/25 bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-white/90 backdrop-blur-sm">
-                {slide.type === "reviewPromo" ? (
-                  <MessageSquareHeart size={12} />
-                ) : (
-                  <Sparkles size={12} />
-                )}
+            <div className="max-w-2xl">
+              <PromoBadge
+                icon={slide.type === "reviewPromo" ? MessageSquareHeart : Sparkles}
+              >
                 {slide.badge}
-              </div>
-              <h2 className="font-display mt-3 max-w-xl text-lg font-semibold leading-snug tracking-tight text-white sm:text-2xl">
+              </PromoBadge>
+              <h2 className="mt-2 text-base font-bold leading-snug tracking-tight text-beautiro-charcoal sm:text-xl">
                 {slide.title}
               </h2>
-              <p className="mt-2 max-w-lg text-sm leading-relaxed text-white/85">
+              <p className="mt-1 max-w-lg text-xs leading-relaxed text-beautiro-muted sm:text-sm">
                 {slide.subtitle}
               </p>
               <ul
-                className={`mt-4 grid gap-2 sm:gap-3 ${
+                className={`mt-2.5 grid gap-1.5 ${
                   slide.benefits.length <= 2
-                    ? "sm:grid-cols-2 lg:max-w-xl"
-                    : "sm:grid-cols-3 lg:max-w-2xl"
+                    ? "grid-cols-1 sm:grid-cols-2 sm:max-w-lg"
+                    : "grid-cols-1 sm:grid-cols-3 sm:max-w-2xl"
                 }`}
               >
                 {slide.benefits.map((item, i) => {
@@ -171,18 +146,16 @@ export function PromoBannerCarousel({ slides }: { slides: PromoSlide[] }) {
                   return (
                     <li
                       key={item.title}
-                      className="flex items-start gap-2.5 rounded-lg border border-white/15 bg-white/10 px-3 py-2.5 backdrop-blur-md"
+                      className="flex items-center gap-2 rounded-xl border border-beautiro-border bg-white/90 px-2.5 py-2 shadow-sm backdrop-blur-sm"
                     >
-                      <Icon
-                        size={16}
-                        strokeWidth={1.5}
-                        className="mt-0.5 shrink-0 text-white/90"
-                      />
-                      <div>
-                        <p className="text-xs font-semibold text-white">
+                      <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-beautiro-surface text-beautiro-primary">
+                        <Icon size={14} strokeWidth={1.5} />
+                      </div>
+                      <div className="min-w-0">
+                        <p className="truncate text-[11px] font-bold text-beautiro-charcoal sm:text-xs">
                           {item.title}
                         </p>
-                        <p className="mt-0.5 text-[11px] leading-snug text-white/70 sm:block">
+                        <p className="hidden truncate text-[10px] text-beautiro-muted sm:block">
                           {item.desc}
                         </p>
                       </div>
@@ -190,43 +163,40 @@ export function PromoBannerCarousel({ slides }: { slides: PromoSlide[] }) {
                   );
                 })}
               </ul>
-              <div className="mt-5 flex flex-wrap gap-3">
+              <div className="mt-3 flex flex-wrap gap-2">
                 <Link
                   href={slide.type === "reviewPromo" ? "/reviews" : "/hospitals"}
-                  className="inline-flex h-10 items-center gap-1.5 rounded-lg bg-white px-5 text-sm font-semibold text-beautiro-primary transition-colors hover:bg-white/95"
+                  className="inline-flex h-9 items-center gap-1 rounded-full bg-beautiro-charcoal px-4 text-xs font-bold text-white transition-colors hover:bg-beautiro-charcoal-hover sm:h-10 sm:px-5 sm:text-sm"
                 >
                   {slide.ctaEvents}
-                  <ArrowRight size={16} />
+                  <ArrowRight size={14} />
                 </Link>
                 <Link
                   href="/book"
-                  className="inline-flex h-10 items-center rounded-lg border border-white/35 bg-white/10 px-5 text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/18"
+                  className="inline-flex h-9 items-center rounded-full border border-beautiro-border bg-white px-4 text-xs font-semibold text-beautiro-charcoal transition-colors hover:border-beautiro-primary/30 hover:text-beautiro-primary sm:h-10 sm:px-5 sm:text-sm"
                 >
                   {slide.ctaBook}
                 </Link>
               </div>
-            </>
+            </div>
           ) : slide.type === "cosmetics" ? (
-            <>
-              <div className="inline-flex w-fit items-center gap-1.5 rounded-full border border-white/25 bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-white/90 backdrop-blur-sm">
-                <Gift size={12} />
-                {slide.badge}
-              </div>
-              <h2 className="font-display mt-3 max-w-xl text-lg font-semibold leading-snug tracking-tight text-white sm:text-2xl">
+            <div className="max-w-xl">
+              <PromoBadge icon={Gift}>{slide.badge}</PromoBadge>
+              <h2 className="mt-2 text-base font-bold leading-snug tracking-tight text-beautiro-charcoal sm:text-xl">
                 {slide.title}
               </h2>
-              <p className="mt-2 max-w-lg text-sm leading-relaxed text-white/85">
+              <p className="mt-1 max-w-lg text-xs leading-relaxed text-beautiro-muted sm:text-sm">
                 {slide.subtitle}
               </p>
-              <p className="mt-2 text-xs text-white/65">{slide.note}</p>
+              <p className="mt-1 text-[11px] text-beautiro-muted-light">{slide.note}</p>
               <Link
                 href="/book"
-                className="mt-5 inline-flex h-10 w-fit items-center gap-1.5 rounded-lg bg-white px-5 text-sm font-semibold text-beautiro-primary transition-colors hover:bg-white/95"
+                className="mt-3 inline-flex h-9 items-center gap-1 rounded-full bg-beautiro-primary px-4 text-xs font-bold text-white transition-colors hover:bg-beautiro-primary-hover sm:h-10 sm:px-5 sm:text-sm"
               >
                 {slide.cta}
-                <ArrowRight size={16} />
+                <ArrowRight size={14} />
               </Link>
-            </>
+            </div>
           ) : null}
         </div>
 
@@ -235,20 +205,20 @@ export function PromoBannerCarousel({ slides }: { slides: PromoSlide[] }) {
             <button
               type="button"
               onClick={prev}
-              className="absolute left-4 top-1/2 z-10 hidden h-9 w-9 -translate-y-1/2 items-center justify-center rounded-lg border border-white/20 bg-[#0f172a]/40 text-white backdrop-blur-sm transition-colors hover:bg-[#0f172a]/60 sm:flex"
+              className={`absolute left-2 top-1/2 z-20 -translate-y-1/2 sm:left-3 ${navBtnClass}`}
               aria-label="Previous slide"
             >
-              <ChevronLeft size={18} strokeWidth={1.5} />
+              <ChevronLeft size={16} strokeWidth={1.5} />
             </button>
             <button
               type="button"
               onClick={next}
-              className="absolute right-4 top-1/2 z-10 hidden h-9 w-9 -translate-y-1/2 items-center justify-center rounded-lg border border-white/20 bg-[#0f172a]/40 text-white backdrop-blur-sm transition-colors hover:bg-[#0f172a]/60 sm:flex"
+              className={`absolute right-2 top-1/2 z-20 -translate-y-1/2 sm:right-3 ${navBtnClass}`}
               aria-label="Next slide"
             >
-              <ChevronRight size={18} strokeWidth={1.5} />
+              <ChevronRight size={16} strokeWidth={1.5} />
             </button>
-            <div className="absolute bottom-4 left-1/2 z-10 hidden -translate-x-1/2 gap-1.5 sm:flex">
+            <div className="absolute bottom-2.5 left-1/2 z-20 flex -translate-x-1/2 gap-1.5 sm:bottom-3">
               {slides.map((_, i) => (
                 <button
                   key={i}
@@ -256,8 +226,8 @@ export function PromoBannerCarousel({ slides }: { slides: PromoSlide[] }) {
                   onClick={() => setIndex(i)}
                   className={`h-1 rounded-full transition-all ${
                     i === index
-                      ? "w-6 bg-white"
-                      : "w-1.5 bg-white/40 hover:bg-white/60"
+                      ? "w-5 bg-beautiro-primary"
+                      : "w-1.5 bg-beautiro-border hover:bg-beautiro-muted-light"
                   }`}
                   aria-label={`Slide ${i + 1}`}
                 />
