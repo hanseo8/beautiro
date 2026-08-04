@@ -2,8 +2,7 @@ export const dynamic = "force-dynamic";
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { HomeSearch } from "@/components/home/HomeSearch";
-import { OpenPromoBanner } from "@/components/home/OpenPromoBanner";
-import { CosmeticsGiftBanner } from "@/components/home/CosmeticsGiftBanner";
+import { PromoBannerSection } from "@/components/home/PromoBannerSection";
 import { TrustStrip } from "@/components/home/TrustStrip";
 import { HeroCarousel } from "@/components/home/HeroCarousel";
 import { CategoryPanels } from "@/components/home/CategoryPanels";
@@ -61,8 +60,7 @@ export default async function HomePage({ params }: Props) {
       <section className="border-b border-beautiro-border bg-gradient-to-b from-beautiro-surface/40 to-white">
         <div className="container-babitalk space-y-4 py-6 md:space-y-5 md:py-8">
           <HomeSearch />
-          <OpenPromoBanner />
-          <CosmeticsGiftBanner />
+          <PromoBannerSection />
         </div>
       </section>
       <TrustStrip />

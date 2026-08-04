@@ -57,6 +57,12 @@ export const heroSlideImages = [
   KOREA_IMAGES.koreanCurrency,
 ] as const;
 
+/** Home promo banner carousel — open special, cosmetics gift */
+export const promoBannerImages = [
+  KOREA_IMAGES.incheonAirportArrival,
+  KOREA_IMAGES.hanyakTraditionalMedicine,
+] as const;
+
 export const hospitalCoverImages: Record<string, string> = {
   "arena-oriental-clinic": KOREA_IMAGES.seoulKMediCenter,
   "arena-oriental-hospital": KOREA_IMAGES.hanyakTraditionalMedicine,
