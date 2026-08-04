@@ -68,10 +68,38 @@ model Procedure {
   bookings    Booking[]
 }
 
+model User {
+  id           String          @id @default(cuid())
+  email        String          @unique
+  passwordHash String
+  name         String
+  phone        String?
+  locale       String          @default("en")
+  createdAt    DateTime        @default(now())
+  updatedAt    DateTime        @updatedAt
+  sessions     Session[]
+  bookings     Booking[]
+  reviews      PatientReview[]
+}
+
+model Session {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  token     String   @unique
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+
+  @@index([userId])
+  @@index([expiresAt])
+}
+
 model Booking {
   id            String           @id @default(cuid())
   status        BookingStatus    @default(PENDING)
   locale        String
+  userId        String?
+  user          User?            @relation(fields: [userId], references: [id], onDelete: SetNull)
   guestName     String
   guestEmail    String
   guestPhone    String
@@ -83,6 +111,9 @@ model Booking {
   services      BookingService[]
   createdAt     DateTime         @default(now())
   updatedAt     DateTime         @updatedAt
+
+  @@index([userId])
+  @@index([guestEmail])
 }
 
 model BookingService {
@@ -95,6 +126,8 @@ model BookingService {
 model PatientReview {
   id              String       @id @default(cuid())
   locale          String
+  userId          String?
+  user            User?        @relation(fields: [userId], references: [id], onDelete: SetNull)
   guestName       String
   guestEmail      String
   guestPhone      String?
@@ -106,4 +139,6 @@ model PatientReview {
   visitMonth      String?
   status          ReviewStatus @default(PENDING)
   createdAt       DateTime     @default(now())
+
+  @@index([userId])
 }

@@ -37,7 +37,7 @@ function unlockBodyScroll(scrollY: number) {
   window.scrollTo(0, scrollY);
 }
 
-const CONSULTATION_HREF = "/book";
+const CONSULTATION_HREF = "/book?tab=account";
 
 export function OpeningPromoPopup() {
   const t = useTranslations("promoPopup");

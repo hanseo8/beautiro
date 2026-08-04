@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { ServiceType } from "@prisma/client";
 import { prisma } from "@/lib/prisma";
+import { getSessionUser } from "@/lib/auth/session";
 
 const bodySchema = z.object({
   locale: z.enum(["id", "en", "ko"]),
@@ -27,9 +28,40 @@ function parseDate(value?: string) {
 
 export async function GET(request: Request) {
   try {
+    const sessionUser = await getSessionUser();
     const { searchParams } = new URL(request.url);
     const email = searchParams.get("email")?.trim();
     const phone = searchParams.get("phone")?.trim();
+
+    if (sessionUser) {
+      const bookings = await prisma.booking.findMany({
+        where: { userId: sessionUser.id },
+        include: {
+          services: true,
+          procedure: true,
+        },
+        orderBy: { createdAt: "desc" },
+        take: 20,
+      });
+
+      return NextResponse.json({
+        bookings: bookings.map((booking) => ({
+          id: booking.id,
+          status: booking.status,
+          createdAt: booking.createdAt.toISOString(),
+          preferredDate: booking.preferredDate?.toISOString() ?? null,
+          arrivalDate: booking.arrivalDate?.toISOString() ?? null,
+          services: booking.services.map((service) => ({ type: service.type })),
+          procedure: booking.procedure
+            ? {
+                nameKo: booking.procedure.nameKo,
+                nameEn: booking.procedure.nameEn,
+                nameId: booking.procedure.nameId,
+              }
+            : null,
+        })),
+      });
+    }
 
     if (!email || !phone || !email.includes("@") || phone.length < 6) {
       return NextResponse.json({ error: "Invalid request" }, { status: 400 });
@@ -73,6 +105,7 @@ export async function GET(request: Request) {
 
 export async function POST(request: Request) {
   try {
+    const sessionUser = await getSessionUser();
     const json: unknown = await request.json();
     const data = bodySchema.parse(json);
 
@@ -97,6 +130,7 @@ export async function POST(request: Request) {
     const booking = await prisma.booking.create({
       data: {
         locale: data.locale,
+        userId: sessionUser?.id ?? null,
         guestName: data.guestName,
         guestEmail: data.guestEmail,
         guestPhone: data.guestPhone,

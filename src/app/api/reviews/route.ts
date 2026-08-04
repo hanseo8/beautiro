@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { prisma } from "@/lib/prisma";
+import { getSessionUser } from "@/lib/auth/session";
 
 const bodySchema = z.object({
   locale: z.enum(["id", "en", "ko"]),
@@ -17,12 +18,14 @@ const bodySchema = z.object({
 
 export async function POST(request: Request) {
   try {
+    const sessionUser = await getSessionUser();
     const json: unknown = await request.json();
     const data = bodySchema.parse(json);
 
     const review = await prisma.patientReview.create({
       data: {
         locale: data.locale,
+        userId: sessionUser?.id ?? null,
         guestName: data.guestName,
         guestEmail: data.guestEmail,
         guestPhone: data.guestPhone,

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import { CalendarCheck, MessageCircle } from "lucide-react";
 import { Link } from "@/i18n/navigation";
@@ -22,13 +22,16 @@ export function BookingHistoryPanel({ wa }: { wa: string }) {
   const [loading, setLoading] = useState(false);
   const [bookings, setBookings] = useState<BookingRow[] | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [loggedIn, setLoggedIn] = useState(false);
 
-  async function loadHistory() {
+  async function loadHistory(params?: { email: string; phone: string }) {
     setLoading(true);
     setError(null);
     try {
-      const params = new URLSearchParams({ email: email.trim(), phone: phone.trim() });
-      const res = await fetch(`/api/bookings?${params.toString()}`);
+      const query = params
+        ? `?email=${encodeURIComponent(params.email)}&phone=${encodeURIComponent(params.phone)}`
+        : "";
+      const res = await fetch(`/api/bookings${query}`);
       const data = (await res.json()) as {
         bookings?: BookingRow[];
         error?: string;
@@ -43,39 +46,85 @@ export function BookingHistoryPanel({ wa }: { wa: string }) {
     }
   }
 
+  useEffect(() => {
+    let cancelled = false;
+    async function loadSessionHistory() {
+      try {
+        const meRes = await fetch("/api/auth/me");
+        const meData = (await meRes.json()) as {
+          user?: { email: string; phone: string | null } | null;
+        };
+        if (cancelled || !meData.user) return;
+        setLoggedIn(true);
+        if (meData.user.email) setEmail(meData.user.email);
+        if (meData.user.phone) setPhone(meData.user.phone);
+        await loadHistory();
+      } catch {
+        // guest lookup only
+      }
+    }
+    void loadSessionHistory();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
   return (
     <div className="py-2">
       <h2 className="font-display text-xl font-semibold text-beautiro-charcoal">
         {t("historyTitle")}
       </h2>
       <p className="mt-2 text-sm leading-relaxed text-beautiro-muted">
-        {t("historyLookupDesc")}
+        {loggedIn ? t("historyLoggedInDesc") : t("historyLookupDesc")}
       </p>
 
-      <div className="mt-5 grid gap-3">
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder={t("emailPlaceholder")}
-          className="w-full rounded-xl border border-beautiro-border px-4 py-3 text-sm outline-none focus:border-beautiro-primary/50 focus:ring-2 focus:ring-beautiro-primary/10"
-        />
-        <input
-          type="tel"
-          value={phone}
-          onChange={(e) => setPhone(e.target.value)}
-          placeholder={t("phonePlaceholder")}
-          className="w-full rounded-xl border border-beautiro-border px-4 py-3 text-sm outline-none focus:border-beautiro-primary/50 focus:ring-2 focus:ring-beautiro-primary/10"
-        />
-        <button
-          type="button"
-          onClick={() => void loadHistory()}
-          disabled={loading || !email.includes("@") || phone.trim().length < 6}
-          className="h-11 rounded-xl bg-beautiro-primary text-sm font-semibold text-white transition-colors hover:bg-beautiro-primary-hover disabled:opacity-40"
-        >
-          {loading ? t("historyLoading") : t("historyLookup")}
-        </button>
-      </div>
+      {!loggedIn && (
+        <div className="mt-5 grid gap-3">
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder={t("emailPlaceholder")}
+            className="w-full rounded-xl border border-beautiro-border px-4 py-3 text-sm outline-none focus:border-beautiro-primary/50 focus:ring-2 focus:ring-beautiro-primary/10"
+          />
+          <input
+            type="tel"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            placeholder={t("phonePlaceholder")}
+            className="w-full rounded-xl border border-beautiro-border px-4 py-3 text-sm outline-none focus:border-beautiro-primary/50 focus:ring-2 focus:ring-beautiro-primary/10"
+          />
+          <button
+            type="button"
+            onClick={() =>
+              void loadHistory({ email: email.trim(), phone: phone.trim() })
+            }
+            disabled={loading || !email.includes("@") || phone.trim().length < 6}
+            className="h-11 rounded-xl bg-beautiro-primary text-sm font-semibold text-white transition-colors hover:bg-beautiro-primary-hover disabled:opacity-40"
+          >
+            {loading ? t("historyLoading") : t("historyLookup")}
+          </button>
+        </div>
+      )}
+
+      {loggedIn && (
+        <div className="mt-5 flex flex-wrap items-center gap-3">
+          <button
+            type="button"
+            onClick={() => void loadHistory()}
+            disabled={loading}
+            className="h-10 rounded-xl bg-beautiro-primary px-4 text-sm font-semibold text-white transition-colors hover:bg-beautiro-primary-hover disabled:opacity-40"
+          >
+            {loading ? t("historyLoading") : t("historyRefresh")}
+          </button>
+          <Link
+            href="/book?tab=account"
+            className="text-sm font-medium text-beautiro-primary hover:underline"
+          >
+            {t("historyAccountLink")}
+          </Link>
+        </div>
+      )}
 
       {error && (
         <p className="mt-4 rounded-lg bg-red-50 px-4 py-3 text-sm text-red-800">{error}</p>

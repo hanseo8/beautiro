@@ -104,7 +104,7 @@ export function SiteHeader() {
                   href="/book?tab=account"
                   className="whitespace-nowrap px-1 text-xs font-medium leading-none text-beautiro-muted transition-colors hover:text-beautiro-primary"
                 >
-                  {t("signIn")}
+                  {t("login")}
                 </Link>
                 <ButtonLink
                   href="/book"

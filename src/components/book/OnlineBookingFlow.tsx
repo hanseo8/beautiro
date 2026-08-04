@@ -1,7 +1,7 @@
 "use client";
 
 import { useLocale, useTranslations } from "next-intl";
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import {
   CalendarDays,
   Car,
@@ -88,6 +88,31 @@ export function OnlineBookingFlow({
     guestPhone: "",
     notes: "",
   });
+
+  useEffect(() => {
+    let cancelled = false;
+    async function prefillFromSession() {
+      try {
+        const res = await fetch("/api/auth/me");
+        const data = (await res.json()) as {
+          user?: { name: string; email: string; phone: string | null } | null;
+        };
+        if (cancelled || !data.user) return;
+        setForm((prev) => ({
+          ...prev,
+          guestName: prev.guestName || data.user!.name,
+          guestEmail: prev.guestEmail || data.user!.email,
+          guestPhone: prev.guestPhone || data.user!.phone || "",
+        }));
+      } catch {
+        // ignore
+      }
+    }
+    void prefillFromSession();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   const stepLabels = useMemo(
     () => [t("step1Label"), t("step2Label"), t("step3Label")],

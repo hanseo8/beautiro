@@ -11,10 +11,11 @@ import {
   Search,
   Wallet,
 } from "lucide-react";
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { StepIndicator } from "@/components/StepIndicator";
 import { Button } from "@/components/ui/Button";
 import { Link } from "@/i18n/navigation";
+import { AuthPanel } from "@/components/auth/AuthPanel";
 import { MEDICAL_CATEGORIES } from "@/lib/regions";
 import { consultMessage, whatsappUrl } from "@/lib/whatsapp";
 import type { Locale } from "@/i18n/routing";
@@ -76,6 +77,31 @@ export function BookingWizard({
     fx: true,
   });
 
+  useEffect(() => {
+    let cancelled = false;
+    async function prefillFromSession() {
+      try {
+        const res = await fetch("/api/auth/me");
+        const data = (await res.json()) as {
+          user?: { name: string; email: string; phone: string | null } | null;
+        };
+        if (cancelled || !data.user) return;
+        setForm((prev) => ({
+          ...prev,
+          guestName: prev.guestName || data.user!.name,
+          guestEmail: prev.guestEmail || data.user!.email,
+          guestPhone: prev.guestPhone || data.user!.phone || "",
+        }));
+      } catch {
+        // ignore
+      }
+    }
+    void prefillFromSession();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
   const stepLabels = useMemo(
     () => [tSteps("step1"), tSteps("step2"), tSteps("step3")],
     [tSteps],
@@ -105,7 +131,7 @@ export function BookingWizard({
   }, [procedures, categoryFilter, searchQuery, tCat]);
 
   if (tab === "account") {
-    return <BookAccountPanel wa={wa} />;
+    return <AuthPanel wa={wa} />;
   }
 
   async function handleSubmit() {
@@ -812,34 +838,6 @@ function WizardFooter({
           {submitLabel}
         </Button>
       )}
-    </div>
-  );
-}
-
-function BookAccountPanel({ wa }: { wa: string }) {
-  const t = useTranslations("book");
-  return (
-    <div className="mx-auto max-w-md py-6 text-center sm:py-10">
-      <h2 className="font-display text-xl font-semibold text-beautiro-charcoal">
-        {t("accountTitle")}
-      </h2>
-      <p className="mt-3 text-sm leading-relaxed text-beautiro-muted">
-        {t("accountDesc")}
-      </p>
-      <a
-        href={wa}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mt-6 inline-flex h-11 items-center gap-2 rounded-xl bg-beautiro-primary px-6 text-sm font-semibold text-white hover:bg-beautiro-primary-hover"
-      >
-        <MessageCircle size={16} />
-        {t("accountCta")}
-      </a>
-      <p className="mt-4">
-        <Link href="/book" className="text-sm font-medium text-beautiro-primary hover:underline">
-          {t("accountBack")}
-        </Link>
-      </p>
     </div>
   );
 }
