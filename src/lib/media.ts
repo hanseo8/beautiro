@@ -15,7 +15,13 @@ export type BannerPhoto = {
   src: string;
   /** CSS object-position for wide banner crops */
   position: string;
+  /** Use contain for non-wide photos so the full image stays inside the banner */
+  fit?: "cover" | "contain";
 };
+
+/** Shared wide banner frame — 16:9 fits standard landscape Wikimedia photos */
+export const BANNER_FRAME_CLASS =
+  "relative aspect-[16/9] min-h-[200px] overflow-hidden sm:min-h-[240px]";
 
 /**
  * Korea-verified photography mapped to slide / hospital context.
@@ -47,10 +53,13 @@ export const KOREA_IMAGES = {
   /** 서울한방진흥센터 */
   seoulKMediCenter: wikiBanner("9/98/Seoul_K-Medi_Center.jpg"),
 
-  /** K-뷰티 엑스포 (오픈 특가·이벤트) */
+  /** K-뷰티 엑스포 코리아 (피부관리·뷰티 이벤트) */
   kBeautyExpoKorea: wikiBanner("0/09/K-Beauty_Expo_Korea.jpg"),
 
-  /** 화장품 기프트 박스 (증정 사은품) */
+  /** K-뷰티 엑스포 베트남 (화장품·증정) */
+  kBeautyExpoVietnam: wikiBanner("b/be/K-Beauty_Expo_Vietnam_1.jpg"),
+
+  /** 화장품 기프트 박스 */
   koreanCosmeticsGiftBox: wikiBanner("0/00/Box_of_Korean_cosmetics.jpg"),
 
   /** K-뷰티 매장 선반 */
@@ -67,31 +76,32 @@ export const KOREA_IMAGES = {
 export const heroBannerImages: BannerPhoto[] = [
   {
     src: KOREA_IMAGES.incheonAirportArrival,
-    position: "center 35%",
+    position: "center 38%",
   },
   {
     src: KOREA_IMAGES.konkukUniversityHospital,
-    position: "center 42%",
+    position: "center 45%",
   },
   {
     src: KOREA_IMAGES.koreanCurrency,
     position: "center center",
+    fit: "contain",
   },
 ];
 
 /** Home promo carousel — review reward · open discount · cosmetics gift */
 export const promoBannerImages: BannerPhoto[] = [
   {
-    src: KOREA_IMAGES.koreanCosmeticsShelf,
-    position: "center 45%",
-  },
-  {
     src: KOREA_IMAGES.kBeautyExpoKorea,
-    position: "center 40%",
+    position: "center 35%",
   },
   {
-    src: KOREA_IMAGES.koreanCosmeticsGiftBox,
-    position: "center 55%",
+    src: KOREA_IMAGES.asanMedicalCenter,
+    position: "center 42%",
+  },
+  {
+    src: KOREA_IMAGES.kBeautyExpoVietnam,
+    position: "center 38%",
   },
 ];
 
