@@ -45,7 +45,7 @@ export type PromoSlide =
     };
 
 const navBtnClass =
-  "flex h-8 w-8 items-center justify-center rounded-full border border-beautiro-border bg-white/90 text-beautiro-charcoal shadow-sm backdrop-blur-sm transition-colors hover:bg-white";
+  "flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-beautiro-border bg-white/95 text-beautiro-charcoal shadow-sm backdrop-blur-sm transition-colors hover:bg-white";
 
 function PromoBadge({
   icon: Icon,
@@ -55,8 +55,16 @@ function PromoBadge({
   children: React.ReactNode;
 }) {
   return (
-    <div className="inline-flex w-fit items-center gap-1.5 rounded-full border border-beautiro-border bg-white px-3 py-1 text-[11px] font-bold tracking-wide text-beautiro-charcoal shadow-sm">
+    <div className="inline-flex items-center gap-1.5 rounded-full border border-beautiro-border bg-white px-3 py-1 text-[11px] font-bold tracking-wide text-beautiro-charcoal shadow-sm">
       <Icon size={12} className="text-beautiro-primary" />
+      {children}
+    </div>
+  );
+}
+
+function SlideContent({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="mx-auto flex w-full max-w-lg flex-col items-center text-center">
       {children}
     </div>
   );
@@ -66,6 +74,10 @@ export function PromoBannerCarousel({ slides }: { slides: PromoSlide[] }) {
   const [index, setIndex] = useState(0);
   const slide = slides[index] ?? slides[0];
   const banner = promoBannerImages[index] ?? promoBannerImages[0];
+  const isDenseSlide =
+    slide.type === "openPromo" ||
+    slide.type === "reviewPromo" ||
+    slide.type === "cosmetics";
 
   useEffect(() => {
     if (slides.length <= 1) return;
@@ -91,21 +103,27 @@ export function PromoBannerCarousel({ slides }: { slides: PromoSlide[] }) {
 
   return (
     <div className="relative overflow-hidden rounded-2xl border border-beautiro-border bg-white shadow-[0_4px_24px_rgba(15,23,42,0.06)]">
-      <div className={PROMO_BANNER_FRAME_CLASS}>
-        <BannerPhotoImage banner={banner} alt={slide.title} priority />
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/55 sm:to-white/25" />
-        <div className="absolute inset-0 bg-gradient-to-t from-white/30 via-transparent to-white/20" />
+      <div
+        className={`${PROMO_BANNER_FRAME_CLASS} ${
+          isDenseSlide ? "min-h-[260px] sm:min-h-[200px]" : ""
+        }`}
+      >
+        <div className="absolute inset-0">
+          <BannerPhotoImage banner={banner} alt={slide.title} priority />
+          <div className="absolute inset-0 bg-white/78" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.96)_0%,rgba(255,255,255,0.88)_45%,rgba(255,255,255,0.55)_100%)]" />
+        </div>
 
-        <div className="absolute inset-0 z-10 flex flex-col justify-center px-5 py-4 sm:px-8 sm:py-5">
+        <div className="relative z-10 flex min-h-[inherit] flex-col items-center justify-center px-11 py-5 pb-8 text-center sm:absolute sm:inset-0 sm:px-14 sm:py-5 sm:pb-8">
           {slide.type === "brandKey" ? (
-            <div className="max-w-xl">
+            <SlideContent>
               <PromoBadge icon={MapPin}>{slide.badge}</PromoBadge>
-              <div className="mt-3 rounded-2xl border border-beautiro-border/80 bg-white/90 px-4 py-3 shadow-sm backdrop-blur-sm sm:inline-block sm:px-5 sm:py-3.5">
-                <h2 className="text-base font-bold leading-snug tracking-tight text-beautiro-charcoal sm:text-xl sm:leading-snug">
+              <div className="mt-3 w-full rounded-2xl border border-beautiro-border/80 bg-white/95 px-4 py-3 shadow-sm backdrop-blur-sm sm:px-5 sm:py-3.5">
+                <h2 className="text-[15px] font-bold leading-snug tracking-tight text-beautiro-charcoal sm:text-xl sm:leading-snug">
                   {slide.title}
                 </h2>
               </div>
-              <div className="mt-3 flex flex-wrap gap-2">
+              <div className="mt-3 flex flex-wrap justify-center gap-2">
                 <Link
                   href="/book"
                   className="inline-flex h-9 items-center gap-1 rounded-full bg-beautiro-primary px-4 text-xs font-bold text-white transition-colors hover:bg-beautiro-primary-hover sm:h-10 sm:px-5 sm:text-sm"
@@ -120,25 +138,25 @@ export function PromoBannerCarousel({ slides }: { slides: PromoSlide[] }) {
                   {slide.ctaServices}
                 </Link>
               </div>
-            </div>
+            </SlideContent>
           ) : slide.type === "openPromo" || slide.type === "reviewPromo" ? (
-            <div className="max-w-2xl">
+            <SlideContent>
               <PromoBadge
                 icon={slide.type === "reviewPromo" ? MessageSquareHeart : Sparkles}
               >
                 {slide.badge}
               </PromoBadge>
-              <h2 className="mt-2 text-base font-bold leading-snug tracking-tight text-beautiro-charcoal sm:text-xl">
+              <h2 className="mt-2 text-[15px] font-bold leading-snug tracking-tight text-beautiro-charcoal sm:text-xl">
                 {slide.title}
               </h2>
-              <p className="mt-1 max-w-lg text-xs leading-relaxed text-beautiro-muted sm:text-sm">
+              <p className="mt-1 text-xs leading-relaxed text-beautiro-muted sm:text-sm">
                 {slide.subtitle}
               </p>
               <ul
-                className={`mt-2.5 grid gap-1.5 ${
+                className={`mt-2.5 grid w-full gap-1.5 ${
                   slide.benefits.length <= 2
-                    ? "grid-cols-1 sm:grid-cols-2 sm:max-w-lg"
-                    : "grid-cols-1 sm:grid-cols-3 sm:max-w-2xl"
+                    ? "grid-cols-1 sm:grid-cols-2"
+                    : "grid-cols-1 sm:grid-cols-3"
                 }`}
               >
                 {slide.benefits.map((item, i) => {
@@ -146,16 +164,16 @@ export function PromoBannerCarousel({ slides }: { slides: PromoSlide[] }) {
                   return (
                     <li
                       key={item.title}
-                      className="flex items-center gap-2 rounded-xl border border-beautiro-border bg-white/90 px-2.5 py-2 shadow-sm backdrop-blur-sm"
+                      className="flex items-center gap-2 rounded-xl border border-beautiro-border bg-white/95 px-2.5 py-2 text-left shadow-sm backdrop-blur-sm"
                     >
                       <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-beautiro-surface text-beautiro-primary">
                         <Icon size={14} strokeWidth={1.5} />
                       </div>
-                      <div className="min-w-0">
-                        <p className="truncate text-[11px] font-bold text-beautiro-charcoal sm:text-xs">
+                      <div className="min-w-0 flex-1">
+                        <p className="text-[11px] font-bold leading-snug text-beautiro-charcoal sm:text-xs">
                           {item.title}
                         </p>
-                        <p className="hidden truncate text-[10px] text-beautiro-muted sm:block">
+                        <p className="mt-0.5 text-[10px] leading-snug text-beautiro-muted sm:text-[11px]">
                           {item.desc}
                         </p>
                       </div>
@@ -163,7 +181,7 @@ export function PromoBannerCarousel({ slides }: { slides: PromoSlide[] }) {
                   );
                 })}
               </ul>
-              <div className="mt-3 flex flex-wrap gap-2">
+              <div className="mt-3 flex flex-wrap justify-center gap-2">
                 <Link
                   href={slide.type === "reviewPromo" ? "/reviews" : "/hospitals"}
                   className="inline-flex h-9 items-center gap-1 rounded-full bg-beautiro-charcoal px-4 text-xs font-bold text-white transition-colors hover:bg-beautiro-charcoal-hover sm:h-10 sm:px-5 sm:text-sm"
@@ -178,14 +196,14 @@ export function PromoBannerCarousel({ slides }: { slides: PromoSlide[] }) {
                   {slide.ctaBook}
                 </Link>
               </div>
-            </div>
+            </SlideContent>
           ) : slide.type === "cosmetics" ? (
-            <div className="max-w-xl">
+            <SlideContent>
               <PromoBadge icon={Gift}>{slide.badge}</PromoBadge>
-              <h2 className="mt-2 text-base font-bold leading-snug tracking-tight text-beautiro-charcoal sm:text-xl">
+              <h2 className="mt-2 text-[15px] font-bold leading-snug tracking-tight text-beautiro-charcoal sm:text-xl">
                 {slide.title}
               </h2>
-              <p className="mt-1 max-w-lg text-xs leading-relaxed text-beautiro-muted sm:text-sm">
+              <p className="mt-1 text-xs leading-relaxed text-beautiro-muted sm:text-sm">
                 {slide.subtitle}
               </p>
               <p className="mt-1 text-[11px] text-beautiro-muted-light">{slide.note}</p>
@@ -196,7 +214,7 @@ export function PromoBannerCarousel({ slides }: { slides: PromoSlide[] }) {
                 {slide.cta}
                 <ArrowRight size={14} />
               </Link>
-            </div>
+            </SlideContent>
           ) : null}
         </div>
 
