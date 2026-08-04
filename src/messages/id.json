@@ -105,6 +105,23 @@
         { "title": "Transport medis pribadi", "desc": "Pickup bandara dan antar-jemput klinik khusus" }
       ]
     },
+    "reviewPromo": {
+      "badge": "Hadiah ulasan",
+      "title": "Tulis ulasan, dapatkan manfaat kunjungan",
+      "subtitle": "Bagikan pengalaman Beautiro Anda dan nikmati layanan gratis berikut saat kunjungan.",
+      "ctaBook": "Ajukan konsultasi",
+      "ctaEvents": "Lihat detail manfaat",
+      "benefits": [
+        {
+          "title": "1x perawatan kulit gratis",
+          "desc": "Satu sesi perawatan kulit premium gratis saat kunjungan"
+        },
+        {
+          "title": "1x pickup gratis",
+          "desc": "Satu kali pickup gratis bandara, hotel, atau klinik"
+        }
+      ]
+    },
     "openPromo": {
       "badge": "Promo pembukaan",
       "title": "Diskon spesial peluncuran Beautiro",

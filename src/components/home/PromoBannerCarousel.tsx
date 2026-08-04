@@ -4,9 +4,11 @@ import { useEffect, useState } from "react";
 import {
   ArrowRight,
   Building2,
+  Car,
   ChevronLeft,
   ChevronRight,
   Gift,
+  MessageSquareHeart,
   Plane,
   Sparkles,
   Wallet,
@@ -17,7 +19,7 @@ import { promoBannerImages } from "@/lib/media";
 
 export type PromoSlide =
   | {
-      type: "openPromo";
+      type: "openPromo" | "reviewPromo";
       badge: string;
       title: string;
       subtitle: string;
@@ -54,7 +56,12 @@ export function PromoBannerCarousel({ slides }: { slides: PromoSlide[] }) {
     setIndex((i) => (i + 1) % slides.length);
   }
 
-  const benefitIcons = [Wallet, Plane, Building2];
+  const benefitIcons =
+    slide.type === "reviewPromo"
+      ? [Sparkles, Car]
+      : slide.type === "openPromo"
+        ? [Wallet, Plane, Building2]
+        : [Sparkles];
 
   return (
     <div className="relative overflow-hidden rounded-2xl shadow-[0_12px_40px_rgba(15,23,42,0.12)]">
@@ -70,10 +77,14 @@ export function PromoBannerCarousel({ slides }: { slides: PromoSlide[] }) {
         <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/80 via-transparent to-[#0f172a]/20" />
 
         <div className="relative flex h-full min-h-[220px] flex-col justify-end p-6 sm:min-h-[260px] sm:p-8">
-          {slide.type === "openPromo" ? (
+          {slide.type === "openPromo" || slide.type === "reviewPromo" ? (
             <>
               <div className="inline-flex w-fit items-center gap-1.5 rounded-full border border-white/25 bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-white/90 backdrop-blur-sm">
-                <Sparkles size={12} />
+                {slide.type === "reviewPromo" ? (
+                  <MessageSquareHeart size={12} />
+                ) : (
+                  <Sparkles size={12} />
+                )}
                 {slide.badge}
               </div>
               <h2 className="font-display mt-3 max-w-xl text-xl font-semibold leading-snug tracking-tight text-white sm:text-2xl">
@@ -82,7 +93,13 @@ export function PromoBannerCarousel({ slides }: { slides: PromoSlide[] }) {
               <p className="mt-2 max-w-lg text-sm leading-relaxed text-white/85">
                 {slide.subtitle}
               </p>
-              <ul className="mt-4 grid gap-2 sm:grid-cols-3 sm:gap-3 lg:max-w-2xl">
+              <ul
+                className={`mt-4 grid gap-2 sm:gap-3 ${
+                  slide.benefits.length <= 2
+                    ? "sm:grid-cols-2 lg:max-w-xl"
+                    : "sm:grid-cols-3 lg:max-w-2xl"
+                }`}
+              >
                 {slide.benefits.map((item, i) => {
                   const Icon = benefitIcons[i] ?? Sparkles;
                   return (
@@ -123,7 +140,7 @@ export function PromoBannerCarousel({ slides }: { slides: PromoSlide[] }) {
                 </Link>
               </div>
             </>
-          ) : (
+          ) : slide.type === "cosmetics" ? (
             <>
               <div className="inline-flex w-fit items-center gap-1.5 rounded-full border border-white/25 bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-white/90 backdrop-blur-sm">
                 <Gift size={12} />
@@ -144,7 +161,7 @@ export function PromoBannerCarousel({ slides }: { slides: PromoSlide[] }) {
                 <ArrowRight size={16} />
               </Link>
             </>
-          )}
+          ) : null}
         </div>
 
         {slides.length > 1 && (

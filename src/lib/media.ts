@@ -79,8 +79,12 @@ export const heroBannerImages: BannerPhoto[] = [
   },
 ];
 
-/** Home promo carousel — open discount · cosmetics gift */
+/** Home promo carousel — review reward · open discount · cosmetics gift */
 export const promoBannerImages: BannerPhoto[] = [
+  {
+    src: KOREA_IMAGES.koreanCosmeticsShelf,
+    position: "center 45%",
+  },
   {
     src: KOREA_IMAGES.kBeautyExpoKorea,
     position: "center 40%",

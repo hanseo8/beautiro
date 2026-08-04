@@ -105,6 +105,23 @@
         { "title": "Private medical transport", "desc": "Airport pickup and dedicated clinic transfers" }
       ]
     },
+    "reviewPromo": {
+      "badge": "Review reward",
+      "title": "Leave a review, unlock visit perks",
+      "subtitle": "Share your Beautiro experience and receive these complimentary services on your visit.",
+      "ctaBook": "Request consultation",
+      "ctaEvents": "View benefit details",
+      "benefits": [
+        {
+          "title": "1 free skincare session",
+          "desc": "One complimentary premium skincare treatment on your visit"
+        },
+        {
+          "title": "1 free pickup",
+          "desc": "One complimentary airport, hotel, or clinic pickup"
+        }
+      ]
+    },
     "openPromo": {
       "badge": "Open special",
       "title": "Beautiro launch special discounts",

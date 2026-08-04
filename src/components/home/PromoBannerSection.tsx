@@ -5,10 +5,20 @@ import {
 } from "@/components/home/PromoBannerCarousel";
 
 export async function PromoBannerSection() {
+  const tReview = await getTranslations("home.reviewPromo");
   const tOpen = await getTranslations("home.openPromo");
   const tCosmetics = await getTranslations("home.cosmeticsPromo");
 
   const slides: PromoSlide[] = [
+    {
+      type: "reviewPromo",
+      badge: tReview("badge"),
+      title: tReview("title"),
+      subtitle: tReview("subtitle"),
+      ctaEvents: tReview("ctaEvents"),
+      ctaBook: tReview("ctaBook"),
+      benefits: tReview.raw("benefits") as { title: string; desc: string }[],
+    },
     {
       type: "openPromo",
       badge: tOpen("badge"),
