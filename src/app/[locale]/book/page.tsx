@@ -3,6 +3,7 @@ export const dynamic = "force-dynamic";
 import { Suspense } from "react";
 import { setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
+import { Headset, Shield } from "lucide-react";
 import { prisma } from "@/lib/prisma";
 import { localizeHospital } from "@/lib/hospitals";
 import type { Locale } from "@/i18n/routing";
@@ -32,11 +33,29 @@ export default async function BookPage({ params }: Props) {
   });
 
   return (
-    <div className="bg-beautiro-surface py-10">
+    <div className="bg-gradient-to-b from-beautiro-surface to-white pb-16 pt-8 sm:pt-10">
       <div className="container-babitalk">
-        <h1 className="text-2xl font-bold tracking-tight text-beautiro-charcoal">{t("title")}</h1>
-        <p className="mt-2 text-sm text-beautiro-muted">{t("asideHint")}</p>
-        <div className="mt-8 rounded-2xl border border-beautiro-border bg-white p-6 sm:p-8">
+        <div className="mx-auto max-w-3xl text-center lg:max-w-none lg:text-left">
+          <p className="text-label text-beautiro-primary">{t("eyebrow")}</p>
+          <h1 className="font-display mt-1 text-2xl font-semibold tracking-tight text-beautiro-charcoal sm:text-3xl">
+            {t("title")}
+          </h1>
+          <p className="mt-2 text-sm leading-relaxed text-beautiro-muted">
+            {t("asideHint")}
+          </p>
+          <div className="mt-4 flex flex-wrap justify-center gap-4 lg:justify-start">
+            <span className="inline-flex items-center gap-1.5 text-xs text-beautiro-muted">
+              <Headset size={14} className="text-beautiro-primary" />
+              {t("trustResponse")}
+            </span>
+            <span className="inline-flex items-center gap-1.5 text-xs text-beautiro-muted">
+              <Shield size={14} className="text-beautiro-primary" />
+              {t("trustPrivate")}
+            </span>
+          </div>
+        </div>
+
+        <div className="card-modern mx-auto mt-8 max-w-4xl p-5 sm:p-8">
           <Suspense fallback={<p className="text-sm text-beautiro-muted">…</p>}>
             <BookingWizard procedures={procedures} />
           </Suspense>
