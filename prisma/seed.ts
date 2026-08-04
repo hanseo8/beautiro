@@ -209,6 +209,43 @@ async function main() {
       ],
     },
     {
+      slug: "namdaejeon-nursing-hospital",
+      nameKo: "남대전요양병원",
+      nameEn: "Namdaejeon Nursing Hospital",
+      nameId: "Rumah Sakit Perawatan Namdaejeon",
+      descriptionKo:
+        "대전광역시 동구 제휴 요양병원. 입원 요양·재활 치료, Beautiro VIP 상담 및 동행 연계.",
+      descriptionEn:
+        "Partner nursing hospital in Dong-gu, Daejeon. Inpatient care and rehabilitation with Beautiro VIP coordination.",
+      descriptionId:
+        "Rumah sakit perawatan mitra di Dong-gu, Daejeon. Perawatan rawat inap dan rehabilitasi dengan koordinasi VIP Beautiro.",
+      provinceKey: "daejeon",
+      cityKey: null,
+      districtKey: "donggu",
+      neighborhoodKey: null,
+      primaryCategory: MedicalCategory.ORIENTAL,
+      coverImage: KOREA_IMAGES.soonchunhyangSeoulHospital,
+      featured: true,
+      procedures: [
+        {
+          category: MedicalCategory.ORIENTAL,
+          nameKo: "입원 요양 상담",
+          nameEn: "Inpatient nursing consultation",
+          nameId: "Konsultasi perawatan rawat inap",
+          priceFrom: null,
+          durationMin: 60,
+        },
+        {
+          category: MedicalCategory.ORIENTAL,
+          nameKo: "재활 치료 상담",
+          nameEn: "Rehabilitation treatment consultation",
+          nameId: "Konsultasi perawatan rehabilitasi",
+          priceFrom: null,
+          durationMin: 60,
+        },
+      ],
+    },
+    {
       slug: "seoul-central-dental",
       nameKo: "서울중앙치과",
       nameEn: "Seoul Central Dental",

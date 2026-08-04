@@ -223,7 +223,8 @@
     "regions": {
       "provinces": {
         "incheon": "인천광역시",
-        "gyeonggi": "경기도"
+        "gyeonggi": "경기도",
+        "daejeon": "대전광역시"
       },
       "cities": {
         "ansan": "안산시"
@@ -231,7 +232,8 @@
       "districts": {
         "yeonsu": "연수구",
         "namdong": "남동구",
-        "sangnok": "상록구"
+        "sangnok": "상록구",
+        "donggu": "동구"
       },
       "neighborhoods": {
         "guwol": "구월동"

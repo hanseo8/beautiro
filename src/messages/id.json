@@ -223,7 +223,8 @@
     "regions": {
       "provinces": {
         "incheon": "Kota Metropolitan Incheon",
-        "gyeonggi": "Provinsi Gyeonggi"
+        "gyeonggi": "Provinsi Gyeonggi",
+        "daejeon": "Kota Metropolitan Daejeon"
       },
       "cities": {
         "ansan": "Kota Ansan"
@@ -231,7 +232,8 @@
       "districts": {
         "yeonsu": "Yeonsu-gu",
         "namdong": "Namdong-gu",
-        "sangnok": "Sangnok-gu"
+        "sangnok": "Sangnok-gu",
+        "donggu": "Dong-gu"
       },
       "neighborhoods": {
         "guwol": "Guwol-dong"

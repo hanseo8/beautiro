@@ -43,6 +43,12 @@ export const KOREA_IMAGES = {
     960,
   ),
 
+  /** 프로모 — 제휴 병원 특가 할인 (의료 파트너) */
+  promoPartnerDiscount: wiki("e/e0/Asan_Medical_Center.jpg"),
+
+  /** 프로모 — 화장품 증정 (K-뷰티 기프트 박스) */
+  koreanCosmeticsGiftBox: wiki("0/00/Box_of_Korean_cosmetics.jpg", 960),
+
   /** 인천 송도 — 인천 제휴 병원 지역 */
   incheonSongdo: wiki(
     "f/f8/South_Korea%2C_Incheon%2C_Songdo%2C_the_Prugio_Central_Park_Towers%2C_Sharp_First_World_Towers%2C_and_Sheraton_Hotel.jpg",
@@ -59,8 +65,8 @@ export const heroSlideImages = [
 
 /** Home promo banner carousel — open special, cosmetics gift */
 export const promoBannerImages = [
-  KOREA_IMAGES.incheonAirportArrival,
-  KOREA_IMAGES.hanyakTraditionalMedicine,
+  KOREA_IMAGES.promoPartnerDiscount,
+  KOREA_IMAGES.koreanCosmeticsGiftBox,
 ] as const;
 
 export const hospitalCoverImages: Record<string, string> = {
@@ -71,6 +77,7 @@ export const hospitalCoverImages: Record<string, string> = {
   "seran-dermatology": KOREA_IMAGES.konkukUniversityHospital,
   "seran-dental": KOREA_IMAGES.konkukUniversityHospital,
   "seoul-central-dental": KOREA_IMAGES.konkukUniversityHospital,
+  "namdaejeon-nursing-hospital": KOREA_IMAGES.soonchunhyangSeoulHospital,
 };
 
 export const categoryFallbackImages: Record<MedicalCategory, string> = {

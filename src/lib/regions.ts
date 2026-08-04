@@ -1,8 +1,13 @@
 import type { MedicalCategory } from "@prisma/client";
 
-export const PROVINCE_KEYS = ["incheon", "gyeonggi"] as const;
+export const PROVINCE_KEYS = ["incheon", "gyeonggi", "daejeon"] as const;
 export const CITY_KEYS = ["ansan"] as const;
-export const DISTRICT_KEYS = ["yeonsu", "namdong", "sangnok"] as const;
+export const DISTRICT_KEYS = [
+  "yeonsu",
+  "namdong",
+  "sangnok",
+  "donggu",
+] as const;
 export const NEIGHBORHOOD_KEYS = ["guwol"] as const;
 export const MEDICAL_CATEGORIES = [
   "PLASTIC",
@@ -26,12 +31,14 @@ type RegionHospital = {
 const PROVINCE_ORDER: Record<ProvinceKey, number> = {
   incheon: 0,
   gyeonggi: 1,
+  daejeon: 2,
 };
 
 const DISTRICT_ORDER: Record<DistrictKey, number> = {
   namdong: 0,
   yeonsu: 1,
   sangnok: 2,
+  donggu: 3,
 };
 
 export function isProvinceKey(value: string): value is ProvinceKey {
@@ -110,6 +117,7 @@ export function compareRegionGroup(a: RegionHospital, b: RegionHospital): number
 
 export function districtsForProvince(provinceKey: ProvinceKey): DistrictKey[] {
   if (provinceKey === "incheon") return ["namdong", "yeonsu"];
+  if (provinceKey === "daejeon") return ["donggu"];
   return ["sangnok"];
 }
 
