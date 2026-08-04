@@ -1,11 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Car, Sparkles, X } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 
 const STORAGE_KEY = "beautiro-opening-promo-dismissed";
+const PROMO_IMAGE = "/promo/jakarta-launch-popup.png";
 
 function isDismissedToday() {
   if (typeof window === "undefined") return true;
@@ -63,24 +65,34 @@ export function OpeningPromoPopup() {
         aria-labelledby="opening-promo-title"
         className="fixed inset-0 z-[81] flex items-center justify-center p-4 sm:p-6"
       >
-        <div className="relative w-full max-w-md overflow-hidden rounded-2xl border border-beautiro-border bg-white shadow-[0_24px_64px_rgba(15,23,42,0.18)]">
-          <div className="bg-gradient-to-br from-beautiro-primary/10 via-white to-beautiro-surface px-6 pb-5 pt-6 sm:px-7 sm:pb-6 sm:pt-7">
+        <div className="relative w-full max-w-lg overflow-hidden rounded-2xl border border-beautiro-border bg-white shadow-[0_24px_64px_rgba(15,23,42,0.18)]">
+          <div className="relative aspect-[16/10] w-full bg-beautiro-surface">
+            <Image
+              src={PROMO_IMAGE}
+              alt={t("imageAlt")}
+              fill
+              priority
+              sizes="(max-width: 640px) 92vw, 512px"
+              className="object-cover object-center"
+            />
             <button
               type="button"
               onClick={() => setOpen(false)}
-              className="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full text-beautiro-muted transition-colors hover:bg-beautiro-surface hover:text-beautiro-charcoal"
+              className="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full border border-white/40 bg-white/95 text-beautiro-charcoal shadow-sm backdrop-blur-sm transition-colors hover:bg-white"
               aria-label={t("close")}
             >
               <X size={18} strokeWidth={1.5} />
             </button>
+          </div>
 
+          <div className="bg-gradient-to-br from-beautiro-primary/10 via-white to-beautiro-surface px-6 pb-5 pt-5 sm:px-7 sm:pb-6">
             <p className="inline-flex items-center gap-1.5 rounded-full border border-beautiro-primary/20 bg-white px-3 py-1 text-[11px] font-bold tracking-wide text-beautiro-primary">
               <Sparkles size={12} />
               {t("badge")}
             </p>
             <h2
               id="opening-promo-title"
-              className="mt-3 pr-8 text-lg font-bold leading-snug tracking-tight text-beautiro-charcoal sm:text-xl"
+              className="mt-3 text-lg font-bold leading-snug tracking-tight text-beautiro-charcoal sm:text-xl"
             >
               {t("title")}
             </h2>
