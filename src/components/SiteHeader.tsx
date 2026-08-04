@@ -16,14 +16,9 @@ const navItems = [
   { href: "/", labelKey: "home" as const, match: (p: string) => p === "/" },
   {
     href: "/hospitals",
-    labelKey: "events" as const,
+    labelKey: "hospitals" as const,
     match: (p: string) =>
       p.startsWith("/hospitals") || p.startsWith("/events"),
-  },
-  {
-    href: "/book",
-    labelKey: "book" as const,
-    match: (p: string) => p.startsWith("/book"),
   },
   {
     href: "/#faq",

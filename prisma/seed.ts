@@ -4,11 +4,6 @@ import { KOREA_IMAGES } from "../src/lib/media";
 const prisma = new PrismaClient();
 
 async function main() {
-  await prisma.bookingService.deleteMany();
-  await prisma.booking.deleteMany();
-  await prisma.procedure.deleteMany();
-  await prisma.hospital.deleteMany();
-
   const partners = [
     {
       slug: "arena-oriental-clinic",
@@ -286,15 +281,23 @@ async function main() {
 
   for (const partner of partners) {
     const { procedures, ...hospital } = partner;
-    await prisma.hospital.create({
-      data: {
+    await prisma.hospital.upsert({
+      where: { slug: hospital.slug },
+      create: {
         ...hospital,
         procedures: { create: procedures },
+      },
+      update: {
+        ...hospital,
+        procedures: {
+          deleteMany: {},
+          create: procedures,
+        },
       },
     });
   }
 
-  console.log(`Seeded ${partners.length} partner hospitals`);
+  console.log(`Upserted ${partners.length} partner hospitals`);
 }
 
 main()

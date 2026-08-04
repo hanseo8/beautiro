@@ -14,7 +14,6 @@ import {
   Wallet,
   MessageCircle,
   HelpCircle,
-  Sparkles,
 } from "lucide-react";
 import { consultMessage, whatsappUrl } from "@/lib/whatsapp";
 import type { Locale } from "@/i18n/routing";
@@ -48,9 +47,7 @@ export function MobileNavDrawer({ open, onClose }: Props) {
 
   const mainLinks = [
     { href: "/", label: t("home"), icon: Home },
-    { href: "/hospitals", label: t("events"), icon: Sparkles },
     { href: "/hospitals", label: t("hospitals"), icon: Building2 },
-    { href: "/book", label: t("book"), icon: CalendarCheck },
     { href: "/#faq", label: t("faq"), icon: HelpCircle },
   ] as const;
 

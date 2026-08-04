@@ -43,11 +43,11 @@ export const KOREA_IMAGES = {
     960,
   ),
 
-  /** 프로모 — 제휴 병원 특가 할인 (의료 파트너) */
-  promoPartnerDiscount: wiki("e/e0/Asan_Medical_Center.jpg"),
+  /** 프로모 — 오픈 특가·환전 우대 (할인·결제 혜택) */
+  promoPartnerDiscount: wiki("5/52/Currency_South_Korea.jpg", 960),
 
-  /** 프로모 — 화장품 증정 (K-뷰티 기프트 박스) */
-  koreanCosmeticsGiftBox: wiki("0/00/Box_of_Korean_cosmetics.jpg", 960),
+  /** 프로모 — 화장품 증정 (K-뷰티 매장 실사) */
+  koreanCosmeticsGiftBox: wiki("4/42/Korean_cosmetics_on_a_shelf.jpg", 960),
 
   /** 인천 송도 — 인천 제휴 병원 지역 */
   incheonSongdo: wiki(

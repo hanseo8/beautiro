@@ -9,6 +9,7 @@ import { localizeHospital } from "@/lib/hospitals";
 import type { Locale } from "@/i18n/routing";
 import { BookingWizard } from "@/components/BookingWizard";
 import { BookingBenefitsStrip } from "@/components/home/BookingBenefitsStrip";
+import { PartnerHospitalsPreview } from "@/components/book/PartnerHospitalsPreview";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -21,17 +22,22 @@ export default async function BookPage({ params }: Props) {
 
   const hospitals = await prisma.hospital.findMany({
     include: { procedures: true },
+    orderBy: [{ featured: "desc" }, { nameKo: "asc" }],
   });
 
-  const procedures = hospitals.flatMap((h) => {
-    const item = localizeHospital(h, loc, (key) => tHospitals(key));
-    return item.procedures.map((p) => ({
+  const regionT = (key: string) => tHospitals(key);
+  const localizedHospitals = hospitals.map((h) =>
+    localizeHospital(h, loc, regionT),
+  );
+
+  const procedures = localizedHospitals.flatMap((item) =>
+    item.procedures.map((p) => ({
       id: p.id,
       name: p.name,
       category: p.category,
       hospitalName: item.name,
-    }));
-  });
+    })),
+  );
 
   return (
     <div className="bg-gradient-to-b from-beautiro-surface to-white pb-16 pt-8 sm:pt-10">
@@ -57,6 +63,8 @@ export default async function BookPage({ params }: Props) {
         </div>
 
         <BookingBenefitsStrip />
+
+        <PartnerHospitalsPreview hospitals={localizedHospitals} />
 
         <div className="card-modern mx-auto mt-6 max-w-4xl p-5 sm:mt-8 sm:p-8">
           <Suspense fallback={<p className="text-sm text-beautiro-muted">…</p>}>
