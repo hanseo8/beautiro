@@ -58,11 +58,13 @@ export default async function HomePage({ params }: Props) {
 
   return (
     <div className="pb-12">
-      <div className="container-babitalk pt-8 pb-4">
-        <HomeSearch />
-      </div>
-      <OpenPromoBanner />
-      <CosmeticsGiftBanner />
+      <section className="border-b border-beautiro-border bg-gradient-to-b from-beautiro-surface/40 to-white">
+        <div className="container-babitalk space-y-4 py-6 md:space-y-5 md:py-8">
+          <HomeSearch />
+          <OpenPromoBanner />
+          <CosmeticsGiftBanner />
+        </div>
+      </section>
       <TrustStrip />
       <div className="container-babitalk space-y-14 pt-10">
         <HeroCarousel />

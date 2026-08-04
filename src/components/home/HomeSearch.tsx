@@ -23,8 +23,8 @@ export function HomeSearch() {
   const tags = t.raw("tags") as string[];
 
   return (
-    <section className="pt-6 pb-8 md:pt-8 md:pb-10">
-      <form onSubmit={submit} className="relative mx-auto max-w-[640px]">
+    <div className="mx-auto w-full max-w-2xl">
+      <form onSubmit={submit} className="relative">
         <input
           type="search"
           value={q}
@@ -40,25 +40,25 @@ export function HomeSearch() {
           <Search size={20} strokeWidth={2.25} />
         </button>
       </form>
-      <div className="mx-auto mt-4 max-w-[640px]">
-        <p className="text-xs font-semibold text-beautiro-charcoal">
+
+      <div className="mt-3 flex flex-wrap items-center justify-center gap-x-2 gap-y-2">
+        <span className="text-[11px] font-semibold uppercase tracking-wide text-beautiro-muted">
           {t("popularLabel")}
-        </p>
-        <div className="mt-3 flex flex-wrap gap-2.5">
-          {tags.map((tag) => (
-            <button
-              key={tag}
-              type="button"
-              onClick={() =>
-                router.push(`/hospitals?q=${encodeURIComponent(tag)}`)
-              }
-              className="rounded-xl bg-beautiro-surface px-3 py-2 text-xs font-medium text-beautiro-muted transition-colors hover:bg-beautiro-primary/10 hover:text-beautiro-primary"
-            >
-              {tag}
-            </button>
-          ))}
-        </div>
+        </span>
+        <span className="hidden h-3 w-px bg-beautiro-border sm:block" aria-hidden />
+        {tags.map((tag) => (
+          <button
+            key={tag}
+            type="button"
+            onClick={() =>
+              router.push(`/hospitals?q=${encodeURIComponent(tag)}`)
+            }
+            className="rounded-full border border-beautiro-border bg-white px-3 py-1 text-xs font-medium text-beautiro-muted transition-colors hover:border-beautiro-primary/30 hover:text-beautiro-primary"
+          >
+            {tag}
+          </button>
+        ))}
       </div>
-    </section>
+    </div>
   );
 }

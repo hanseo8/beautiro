@@ -29,7 +29,7 @@ export async function CosmeticsGiftBanner() {
   const t = await getTranslations("home.cosmeticsPromo");
 
   return (
-    <section className="container-babitalk pb-2 pt-2">
+    <div className="w-full">
       <div className="relative overflow-hidden rounded-2xl border border-[#e8d4c4]/80 shadow-[0_8px_32px_rgba(196,169,98,0.12)]">
         {/* Layered blush + champagne background */}
         <div
@@ -93,6 +93,6 @@ export async function CosmeticsGiftBanner() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

@@ -34,7 +34,7 @@ export async function OpenPromoBanner() {
   const icons = [Wallet, Plane, Building2];
 
   return (
-    <section className="container-babitalk -mt-2 pb-2">
+    <div className="w-full">
       <div className="relative overflow-hidden rounded-2xl border border-[#c4a962]/25 shadow-[0_16px_48px_rgba(15,69,69,0.28)]">
         {/* Layered background */}
         <div
@@ -108,6 +108,6 @@ export async function OpenPromoBanner() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
