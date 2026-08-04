@@ -3,14 +3,11 @@
 import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
-import { useLocale } from "next-intl";
-import { Menu, MessageCircle } from "lucide-react";
+import { Menu } from "lucide-react";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { ButtonLink } from "./ui/Button";
 import { MobileNavDrawer } from "./MobileNavDrawer";
 import { TopUtilBar } from "./TopUtilBar";
-import { consultMessage, whatsappUrl } from "@/lib/whatsapp";
-import type { Locale } from "@/i18n/routing";
 
 const navItems = [
   { href: "/", labelKey: "home" as const, match: (p: string) => p === "/" },
@@ -34,9 +31,7 @@ const navItems = [
 
 export function SiteHeader() {
   const t = useTranslations("nav");
-  const locale = useLocale() as Locale;
   const pathname = usePathname();
-  const wa = whatsappUrl(consultMessage({ locale }));
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -97,36 +92,31 @@ export function SiteHeader() {
               })}
             </nav>
 
-            <div className="ml-auto flex items-center gap-2 sm:gap-2.5">
+            <div className="ml-auto flex shrink-0 items-center gap-2 sm:gap-2.5">
               <LanguageSwitcher compact />
-              <span
-                className="hidden h-5 w-px bg-beautiro-border md:block"
-                aria-hidden
-              />
-              <a
-                href={wa}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hidden h-9 items-center gap-1.5 rounded-lg border border-beautiro-border px-3 text-xs font-medium text-beautiro-charcoal transition-colors hover:bg-beautiro-surface md:inline-flex"
-              >
-                <MessageCircle size={15} strokeWidth={1.5} />
-                <span>{t("whatsapp")}</span>
-              </a>
-              <Link
-                href="/book?tab=account"
-                className="hidden text-xs font-medium text-beautiro-muted transition-colors hover:text-beautiro-primary md:inline-block"
-              >
-                {t("signIn")}
-              </Link>
-              <ButtonLink
-                href="/book"
-                variant="primary"
-                className={`hidden px-4 text-xs md:inline-flex ${
-                  scrolled ? "h-8" : "h-9"
-                }`}
-              >
-                {t("cta")}
-              </ButtonLink>
+
+              <div className="hidden items-center gap-2 md:flex">
+                <span
+                  className="h-5 w-px bg-beautiro-border"
+                  aria-hidden
+                />
+                <Link
+                  href="/book?tab=account"
+                  className="whitespace-nowrap px-1 text-xs font-medium leading-none text-beautiro-muted transition-colors hover:text-beautiro-primary"
+                >
+                  {t("signIn")}
+                </Link>
+                <ButtonLink
+                  href="/book"
+                  variant="primary"
+                  className={`shrink-0 whitespace-nowrap px-4 py-0 text-xs leading-none ${
+                    scrolled ? "h-8" : "h-9"
+                  }`}
+                >
+                  {t("cta")}
+                </ButtonLink>
+              </div>
+
               <button
                 type="button"
                 onClick={() => setMenuOpen(true)}

@@ -42,12 +42,13 @@ export function TopUtilBar({ compact = false }: { compact?: boolean }) {
             href={wa}
             target="_blank"
             rel="noopener noreferrer"
-            className={`flex items-center gap-1 font-semibold text-white transition-opacity hover:opacity-90 ${
+            className={`flex shrink-0 items-center gap-1 font-semibold text-white transition-opacity hover:opacity-90 ${
               compact ? "text-[10px]" : "text-[11px] sm:text-xs"
             }`}
+            aria-label={t("whatsapp")}
           >
             <MessageCircle size={12} strokeWidth={1.5} />
-            <span>{t("whatsapp")}</span>
+            <span className="hidden sm:inline">{t("whatsapp")}</span>
           </a>
         </div>
       </div>

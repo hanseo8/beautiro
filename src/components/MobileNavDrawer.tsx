@@ -153,17 +153,31 @@ export function MobileNavDrawer({ open, onClose }: Props) {
           </ul>
         </nav>
 
-        <div className="space-y-3 border-t border-beautiro-border p-4">
+        <div className="space-y-2.5 border-t border-beautiro-border p-4">
           <LanguageSwitcher />
+          <Link
+            href="/book"
+            onClick={onClose}
+            className="flex h-11 w-full items-center justify-center rounded-xl bg-beautiro-primary text-sm font-semibold text-white transition-colors hover:bg-beautiro-primary-hover"
+          >
+            {t("cta")}
+          </Link>
           <a
             href={wa}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex h-11 w-full items-center justify-center gap-2 rounded-xl bg-beautiro-primary text-sm font-semibold text-white transition-colors hover:bg-beautiro-primary-hover"
+            className="flex h-10 w-full items-center justify-center gap-2 rounded-xl border border-beautiro-border bg-white text-sm font-medium text-beautiro-charcoal transition-colors hover:bg-beautiro-surface"
           >
-            <MessageCircle size={18} strokeWidth={1.5} />
+            <MessageCircle size={16} strokeWidth={1.5} />
             {t("whatsapp")}
           </a>
+          <Link
+            href="/book?tab=account"
+            onClick={onClose}
+            className="block py-1 text-center text-xs font-medium text-beautiro-muted transition-colors hover:text-beautiro-primary"
+          >
+            {t("signIn")}
+          </Link>
         </div>
       </aside>
     </>
