@@ -125,6 +125,13 @@
         }
       ]
     },
+    "cosmeticsPromo": {
+      "badge": "Manfaat member",
+      "title": "Hadiah kosmetik — daftar & konsultasi",
+      "subtitle": "Daftar Beautiro dan ajukan konsultasi untuk mendapatkan kit perawatan kulit premium.",
+      "note": "Untuk pengajuan konsultasi yang selesai · Selama persediaan masih ada.",
+      "cta": "Daftar & konsultasi"
+    },
     "app": {
       "title": "Lebih mudah dengan aplikasi Beautiro",
       "description": "Booking, jadwal, dan kontak Mate dalam satu tempat. (Segera)",

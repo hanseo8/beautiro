@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { HomeSearch } from "@/components/home/HomeSearch";
 import { OpenPromoBanner } from "@/components/home/OpenPromoBanner";
+import { CosmeticsGiftBanner } from "@/components/home/CosmeticsGiftBanner";
 import { TrustStrip } from "@/components/home/TrustStrip";
 import { HeroCarousel } from "@/components/home/HeroCarousel";
 import { CategoryPanels } from "@/components/home/CategoryPanels";
@@ -61,6 +62,7 @@ export default async function HomePage({ params }: Props) {
         <HomeSearch />
       </div>
       <OpenPromoBanner />
+      <CosmeticsGiftBanner />
       <TrustStrip />
       <div className="container-babitalk space-y-14 pt-10">
         <HeroCarousel />

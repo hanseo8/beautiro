@@ -125,6 +125,13 @@
         }
       ]
     },
+    "cosmeticsPromo": {
+      "badge": "Member benefit",
+      "title": "Free skincare gift — sign up & consult",
+      "subtitle": "Register with Beautiro and submit a consultation request to receive a premium skincare kit.",
+      "note": "For completed consultation requests · While supplies last.",
+      "cta": "Sign up & consult"
+    },
     "app": {
       "title": "Easier with the Beautiro app",
       "description": "Bookings, schedule, and your Mate contact in one place. (Coming soon)",
