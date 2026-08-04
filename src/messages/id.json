@@ -104,6 +104,27 @@
         { "title": "Transport medis pribadi", "desc": "Pickup bandara dan antar-jemput klinik khusus" }
       ]
     },
+    "openPromo": {
+      "badge": "Promo pembukaan",
+      "title": "Diskon spesial peluncuran Beautiro",
+      "subtitle": "Pesan melalui Beautiro untuk diskon tambahan mitra plus manfaat eksklusif berikut.",
+      "ctaEvents": "Lihat event diskon",
+      "ctaBook": "Ajukan konsultasi",
+      "benefits": [
+        {
+          "title": "Kurs preferensial",
+          "desc": "Kurs menguntungkan melalui jaringan mitra kami"
+        },
+        {
+          "title": "Pickup bandara Incheon & bagasi",
+          "desc": "Pickup bandara dan layanan bawa bagasi saat kedatangan"
+        },
+        {
+          "title": "Layanan tambahan per rumah sakit",
+          "desc": "Diskon dan paket tambahan khusus tiap rumah sakit mitra"
+        }
+      ]
+    },
     "app": {
       "title": "Lebih mudah dengan aplikasi Beautiro",
       "description": "Booking, jadwal, dan kontak Mate dalam satu tempat. (Segera)",

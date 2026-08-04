@@ -2,6 +2,7 @@ export const dynamic = "force-dynamic";
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { HomeSearch } from "@/components/home/HomeSearch";
+import { OpenPromoBanner } from "@/components/home/OpenPromoBanner";
 import { TrustStrip } from "@/components/home/TrustStrip";
 import { HeroCarousel } from "@/components/home/HeroCarousel";
 import { CategoryPanels } from "@/components/home/CategoryPanels";
@@ -56,9 +57,10 @@ export default async function HomePage({ params }: Props) {
 
   return (
     <div className="pb-12">
-      <div className="container-babitalk pt-8 pb-10">
+      <div className="container-babitalk pt-8 pb-4">
         <HomeSearch />
       </div>
+      <OpenPromoBanner />
       <TrustStrip />
       <div className="container-babitalk space-y-14 pt-10">
         <HeroCarousel />

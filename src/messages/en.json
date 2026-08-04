@@ -104,6 +104,27 @@
         { "title": "Private medical transport", "desc": "Airport pickup and dedicated clinic transfers" }
       ]
     },
+    "openPromo": {
+      "badge": "Open special",
+      "title": "Beautiro launch special discounts",
+      "subtitle": "Book through Beautiro for partner hospital extra discounts plus these exclusive benefits.",
+      "ctaEvents": "View discount events",
+      "ctaBook": "Request consultation",
+      "benefits": [
+        {
+          "title": "Preferred FX rates",
+          "desc": "Preferential exchange rates through our partner network"
+        },
+        {
+          "title": "Incheon airport pickup & luggage",
+          "desc": "Airport pickup and luggage carry service on arrival"
+        },
+        {
+          "title": "Hospital-specific extras",
+          "desc": "Custom add-on discounts and packages per partner hospital"
+        }
+      ]
+    },
     "app": {
       "title": "Easier with the Beautiro app",
       "description": "Bookings, schedule, and your Mate contact in one place. (Coming soon)",

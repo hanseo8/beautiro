@@ -8,6 +8,7 @@ import { prisma } from "@/lib/prisma";
 import { localizeHospital } from "@/lib/hospitals";
 import type { Locale } from "@/i18n/routing";
 import { BookingWizard } from "@/components/BookingWizard";
+import { BookingBenefitsStrip } from "@/components/home/BookingBenefitsStrip";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -55,7 +56,9 @@ export default async function BookPage({ params }: Props) {
           </div>
         </div>
 
-        <div className="card-modern mx-auto mt-8 max-w-4xl p-5 sm:p-8">
+        <BookingBenefitsStrip />
+
+        <div className="card-modern mx-auto mt-6 max-w-4xl p-5 sm:mt-8 sm:p-8">
           <Suspense fallback={<p className="text-sm text-beautiro-muted">…</p>}>
             <BookingWizard procedures={procedures} />
           </Suspense>
