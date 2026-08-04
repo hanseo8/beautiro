@@ -62,9 +62,19 @@ function PromoBadge({
   );
 }
 
-function SlideContent({ children }: { children: React.ReactNode }) {
+function SlideContent({
+  children,
+  wide = false,
+}: {
+  children: React.ReactNode;
+  wide?: boolean;
+}) {
   return (
-    <div className="mx-auto flex w-full max-w-lg flex-col items-center text-center">
+    <div
+      className={`flex flex-col items-center text-center ${
+        wide ? "w-full max-w-3xl" : "w-full max-w-xl sm:max-w-2xl"
+      }`}
+    >
       {children}
     </div>
   );
@@ -114,7 +124,7 @@ export function PromoBannerCarousel({ slides }: { slides: PromoSlide[] }) {
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.96)_0%,rgba(255,255,255,0.88)_45%,rgba(255,255,255,0.55)_100%)]" />
         </div>
 
-        <div className="relative z-10 flex min-h-[inherit] flex-col items-center justify-center px-11 py-5 pb-8 text-center sm:absolute sm:inset-0 sm:px-14 sm:py-5 sm:pb-8">
+        <div className="relative z-10 grid min-h-[inherit] w-full place-items-center px-11 py-5 pb-8 sm:absolute sm:inset-0 sm:px-16 sm:py-5 sm:pb-8">
           {slide.type === "brandKey" ? (
             <SlideContent>
               <PromoBadge icon={MapPin}>{slide.badge}</PromoBadge>
@@ -140,7 +150,7 @@ export function PromoBannerCarousel({ slides }: { slides: PromoSlide[] }) {
               </div>
             </SlideContent>
           ) : slide.type === "openPromo" || slide.type === "reviewPromo" ? (
-            <SlideContent>
+            <SlideContent wide>
               <PromoBadge
                 icon={slide.type === "reviewPromo" ? MessageSquareHeart : Sparkles}
               >

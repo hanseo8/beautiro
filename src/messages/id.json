@@ -15,6 +15,7 @@
   },
   "nav": {
     "home": "Beranda",
+    "brandStory": "Brand Story",
     "services": "Layanan",
     "events": "Event",
     "hospitals": "Rumah Sakit",
@@ -48,6 +49,26 @@
   },
   "common": {
     "whatsappFloat": "Chat WhatsApp"
+  },
+  "promoPopup": {
+    "badge": "Segera Dibuka",
+    "title": "Event Peluncuran Oktober",
+    "openingNote": "Layanan penuh kami direncanakan dibuka pertengahan Oktober.",
+    "body": "Tiga pelanggan yang mendaftar dan menyelesaikan konsultasi akan dipilih untuk mendapatkan layanan berikut secara gratis.",
+    "benefits": [
+      {
+        "title": "Layanan perawatan kulit",
+        "desc": "Perawatan kulit premium gratis untuk pemenang terpilih"
+      },
+      {
+        "title": "Layanan transport",
+        "desc": "Transfer bandara, hotel, dan rumah sakit gratis"
+      }
+    ],
+    "note": "Detail event dan pemberitahuan pemenang akan dihubungi secara individual.",
+    "ctaBook": "Daftar & ajukan konsultasi",
+    "dismissToday": "Jangan tampilkan hari ini",
+    "close": "Tutup"
   },
   "home": {
     "search": {

@@ -15,6 +15,7 @@
   },
   "nav": {
     "home": "Home",
+    "brandStory": "Brand Story",
     "services": "Services",
     "events": "Events",
     "hospitals": "Hospitals",
@@ -48,6 +49,26 @@
   },
   "common": {
     "whatsappFloat": "WhatsApp chat"
+  },
+  "promoPopup": {
+    "badge": "Opening Soon",
+    "title": "October Launch Event",
+    "openingNote": "Our full service launches in October.",
+    "body": "Three customers who sign up and complete a consultation will be selected to receive the following services for free.",
+    "benefits": [
+      {
+        "title": "Skincare service",
+        "desc": "Complimentary premium skincare for selected winners"
+      },
+      {
+        "title": "Ride service",
+        "desc": "Complimentary airport, hotel, and hospital transfers"
+      }
+    ],
+    "note": "Event details and winner notifications will be sent individually.",
+    "ctaBook": "Sign up & request consultation",
+    "dismissToday": "Don't show again today",
+    "close": "Close"
   },
   "home": {
     "search": {

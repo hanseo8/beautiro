@@ -5,11 +5,13 @@ import { SiteFooter } from "./SiteFooter";
 import { FloatingWhatsApp } from "./FloatingWhatsApp";
 import { BottomNav } from "./BottomNav";
 import { MetaPixel } from "./MetaPixel";
+import { OpeningPromoPopup } from "./OpeningPromoPopup";
 
 export function SiteShell({ children }: { children: ReactNode }) {
   return (
     <div className="flex min-h-screen flex-col">
       <MetaPixel />
+      <OpeningPromoPopup />
       <SiteHeader />
       <main className="flex-1 pb-[calc(4rem+env(safe-area-inset-bottom,0px))] lg:pb-0">
         {children}

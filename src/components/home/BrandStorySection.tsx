@@ -10,7 +10,10 @@ export async function BrandStorySection() {
   const pillars = t.raw("pillars") as { title: string; desc: string }[];
 
   return (
-    <section className="border-b border-beautiro-border bg-white py-10 md:py-14">
+    <section
+      id="brand-story"
+      className="scroll-mt-20 border-b border-beautiro-border bg-white py-10 md:py-14"
+    >
       <div className="container-babitalk">
         <div className="mx-auto max-w-3xl">
           <p className="text-label text-beautiro-primary">{t("badge")}</p>

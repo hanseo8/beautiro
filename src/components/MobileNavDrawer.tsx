@@ -17,6 +17,7 @@ import {
   HelpCircle,
   Gift,
   Sparkles,
+  BookOpen,
 } from "lucide-react";
 import { TrackedWhatsAppLink } from "@/components/TrackedWhatsAppLink";
 import { consultMessage, whatsappUrl } from "@/lib/whatsapp";
@@ -52,6 +53,7 @@ export function MobileNavDrawer({ open, onClose }: Props) {
   const mainLinks = [
     { href: "/", label: t("home"), icon: Home },
     { href: "/welcome", label: t("welcome"), icon: Sparkles },
+    { href: "/#brand-story", label: t("brandStory"), icon: BookOpen },
     { href: "/#services", label: t("services"), icon: Info },
     { href: "/hospitals", label: t("hospitals"), icon: Building2 },
     { href: "/reviews", label: t("reviews"), icon: Gift },
