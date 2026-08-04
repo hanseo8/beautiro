@@ -3,6 +3,10 @@
     "title": "Beautiro — Perawatan Medis Premium Korea",
     "description": "Platform one-stop medical tourism VIP: van pribadi, penerjemah medis, dan keuntungan kurs."
   },
+  "utilBar": {
+    "tagline": "Concierge Medis 24 Jam",
+    "whatsapp": "WhatsApp"
+  },
   "localeSwitcher": {
     "label": "Bahasa",
     "nameEn": "English",
@@ -15,7 +19,9 @@
     "hospitals": "Rumah Sakit",
     "book": "Konsultasi",
     "faq": "FAQ",
-    "cta": "Mulai Konsultasi",
+    "cta": "Ajukan Konsultasi",
+    "signIn": "Masuk",
+    "brandSubtitle": "Medical Concierge",
     "login": "Masuk / Daftar",
     "whatsapp": "WhatsApp",
     "menuOpen": "Buka menu",

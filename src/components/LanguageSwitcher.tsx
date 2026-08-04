@@ -4,7 +4,8 @@ import { useEffect, useRef, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { Check, ChevronDown, Globe } from "lucide-react";
-import { routing, type Locale } from "@/i18n/routing";
+import type { Locale } from "@/i18n/routing";
+import { setLocaleCookie } from "@/lib/locale-cookie";
 
 const localeOrder: Locale[] = ["en", "ko", "id"];
 
@@ -46,7 +47,10 @@ export function LanguageSwitcher({ compact = false }: { compact?: boolean }) {
 
   function select(next: Locale) {
     setOpen(false);
-    if (next !== locale) router.replace(pathname, { locale: next });
+    if (next !== locale) {
+      setLocaleCookie(next);
+      router.replace(pathname, { locale: next });
+    }
   }
 
   return (

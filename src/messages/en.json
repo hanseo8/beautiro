@@ -3,6 +3,10 @@
     "title": "Beautiro — Premium Medical Care in Korea",
     "description": "VIP one-stop medical tourism: private transport, medical interpreters, and FX benefits."
   },
+  "utilBar": {
+    "tagline": "24h Medical Concierge",
+    "whatsapp": "WhatsApp"
+  },
   "localeSwitcher": {
     "label": "Language",
     "nameEn": "English",
@@ -16,6 +20,8 @@
     "book": "Consultation",
     "faq": "FAQ",
     "cta": "Request Consultation",
+    "signIn": "Sign in",
+    "brandSubtitle": "Medical Concierge",
     "login": "Log in / Sign up",
     "whatsapp": "WhatsApp",
     "menuOpen": "Open menu",
