@@ -34,7 +34,9 @@
     "servicesMate": "Pendamping penerjemah medis",
     "servicesPay": "Pembayaran & kurs medis",
     "reservations": "Riwayat reservasi",
-    "mypage": "Akun saya"
+    "mypage": "Akun saya",
+    "reviews": "Tulis ulasan",
+    "welcome": "Mulai"
   },
   "bottomNav": {
     "ariaLabel": "Navigasi bawah",
@@ -548,8 +550,9 @@
     "links": [
       { "label": "Syarat", "href": "/terms" },
       { "label": "Privasi", "href": "/privacy" },
-      { "label": "Mitra", "href": "/book" },
-      { "label": "Bantuan", "href": "/book" }
+      { "label": "Tulis ulasan", "href": "/reviews" },
+      { "label": "Mulai", "href": "/welcome" },
+      { "label": "Mitra", "href": "/book" }
     ]
   },
   "language": "Bahasa"

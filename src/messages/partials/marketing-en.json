@@ -1,0 +1,131 @@
+{
+  "social": {
+    "instagramAria": "Beautiro Instagram @beautiro.official"
+  },
+  "reviews": {
+    "metaTitle": "Write a Review — Beautiro",
+    "metaDescription": "Share your Beautiro experience and receive a complimentary skin treatment and airport pickup on your next visit.",
+    "eyebrow": "Review reward",
+    "title": "Share your experience",
+    "subtitle": "Tell us about your medical tourism journey. After review, we will guide you to claim your visit rewards.",
+    "rewardTitle": "Review rewards",
+    "rewardItems": [
+      "1 complimentary skin treatment on your next visit",
+      "1 free airport pickup"
+    ],
+    "rating": "Rating",
+    "name": "Name",
+    "email": "Email",
+    "phone": "WhatsApp / phone",
+    "instagram": "Instagram handle (optional)",
+    "procedure": "Procedure received",
+    "procedurePlaceholder": "e.g. Botox, rhinoplasty",
+    "hospital": "Hospital visited (optional)",
+    "visitMonth": "Visit month (optional)",
+    "reviewText": "Your review",
+    "reviewPlaceholder": "Share your experience from consultation to treatment and transport services.",
+    "privacyNote": "Reviews may be featured on our website and social channels. Personal data is used for consultation purposes only.",
+    "submit": "Submit review",
+    "submitting": "Submitting…",
+    "reference": "Reference ID",
+    "successTitle": "Review received",
+    "successBody": "Our concierge will review and contact you on WhatsApp with reward details.",
+    "bookCta": "Request consultation"
+  },
+  "welcome": {
+    "metaTitle": "Beautiro — Korea Medical Tourism Concierge",
+    "metaDescription": "Airport pickup, partner hospital consultation, and cosmetic gifts. Message us on WhatsApp anytime.",
+    "eyebrow": "Medical Concierge",
+    "title": "Korea medical tourism with Beautiro",
+    "subtitle": "Partner hospitals · airport pickup · medical interpretation · FX support — all in one",
+    "ctaWhatsapp": "Free WhatsApp consultation",
+    "ctaBook": "Request consultation",
+    "ctaHospitals": "Partner hospitals",
+    "ctaReview": "Write a review & claim rewards",
+    "rewardTitle": "Review rewards",
+    "rewardItems": [
+      "1 skin treatment on visit",
+      "1 free pickup"
+    ],
+    "proceduresTitle": "Popular procedure guides",
+    "procedures": {
+      "rhinoplasty": "Rhinoplasty",
+      "double-eyelid": "Double eyelid",
+      "botox-filler": "Botox & filler",
+      "dental-implant": "Dental implant",
+      "skin-laser": "Skin laser"
+    },
+    "instagramHint": "Follow us on Instagram for the latest events and reviews"
+  },
+  "procedureLandings": {
+    "common": {
+      "breadcrumbHome": "Home",
+      "breadcrumbProcedures": "Procedure guides",
+      "priceLabel": "Estimated cost (confirmed after consultation)",
+      "priceNote": "Final price depends on hospital and treatment scope.",
+      "benefitsTitle": "Beautiro concierge benefits",
+      "includesTitle": "What may be included",
+      "ctaTitle": "Free consultation",
+      "ctaDesc": "A dedicated concierge will contact you within 24 hours.",
+      "whatsappCta": "WhatsApp chat",
+      "bookCta": "Book consultation",
+      "hospitalsCta": "View partner hospitals",
+      "reviewReward": "Write a review for skin care & pickup rewards"
+    },
+    "rhinoplasty": {
+      "metaTitle": "Korea Rhinoplasty — Beautiro",
+      "metaDescription": "Rhinoplasty consultation at verified partner clinics near Seoul and Incheon, with pickup and interpretation.",
+      "badge": "Plastic surgery",
+      "title": "Korea Rhinoplasty",
+      "subtitle": "Consult with verified partner plastic surgeons with VIP concierge support from arrival to recovery planning.",
+      "priceFrom": "₩3,500,000~",
+      "whatsappMessage": "I would like a rhinoplasty consultation.",
+      "benefits": ["Dedicated medical interpreter", "Airport & hospital pickup", "Partner hospital discounts"],
+      "includes": ["1:1 specialist consultation", "3D simulation (clinic-dependent)", "Post-op care guidance", "Hotel & transport coordination"]
+    },
+    "double-eyelid": {
+      "metaTitle": "Korea Double Eyelid Surgery — Beautiro",
+      "metaDescription": "Double eyelid and eye contour consultation with our partner hospital network.",
+      "badge": "Plastic surgery",
+      "title": "Double Eyelid Surgery",
+      "subtitle": "Natural-looking eye contour with personalized consultation and recovery scheduling by your concierge.",
+      "priceFrom": "₩2,200,000~",
+      "whatsappMessage": "I would like an eyelid surgery consultation.",
+      "benefits": ["Indonesian & English interpretation", "Same-day or short-stay itineraries", "Compare partner clinics"],
+      "includes": ["Eye contour consultation", "Anesthesia & surgery briefing", "Recovery hotel recommendations", "Interpretation escort"]
+    },
+    "botox-filler": {
+      "metaTitle": "Korea Botox & Filler — Beautiro",
+      "metaDescription": "Dermatology botox and filler packages with same-day treatment options.",
+      "badge": "Dermatology",
+      "title": "Botox & Filler",
+      "subtitle": "Premium dermatology treatments at partner clinics with interpretation and concierge support.",
+      "priceFrom": "₩450,000~",
+      "whatsappMessage": "I would like a botox/filler consultation.",
+      "benefits": ["Same-day treatment clinics", "Authentic product partners only", "Pickup & FX support"],
+      "includes": ["Skin consultation", "Treatment area design", "Aftercare guidance", "Follow-up scheduling"]
+    },
+    "dental-implant": {
+      "metaTitle": "Korea Dental Implant — Beautiro",
+      "metaDescription": "Implant and cosmetic dental consultation with interpretation escort.",
+      "badge": "Dental",
+      "title": "Dental Implant",
+      "subtitle": "Plan your implant or cosmetic dental treatment and stay itinerary in one consultation.",
+      "priceFrom": "₩1,800,000~",
+      "whatsappMessage": "I would like a dental implant consultation.",
+      "benefits": ["Dental interpretation specialist", "CT & exam scheduling", "Long-stay package guidance"],
+      "includes": ["Oral exam consultation", "Implant treatment plan", "Recovery timeline briefing", "Transport & hotel coordination"]
+    },
+    "skin-laser": {
+      "metaTitle": "Korea Skin Laser — Beautiro",
+      "metaDescription": "Laser toning and lifting consultation with K-beauty care.",
+      "badge": "Dermatology",
+      "title": "Skin Laser & Toning",
+      "subtitle": "Improve pigmentation, pores, and elasticity with safe laser treatments at partner dermatology clinics.",
+      "priceFrom": "₩280,000~",
+      "whatsappMessage": "I would like a skin laser consultation.",
+      "benefits": ["Skin-type matched clinics", "Post-treatment care kit guidance", "Review reward eligibility"],
+      "includes": ["Skin diagnosis", "Laser treatment plan", "Sun care & recovery guide", "Follow-up booking"]
+    }
+  }
+}

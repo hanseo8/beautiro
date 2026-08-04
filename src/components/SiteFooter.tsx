@@ -4,6 +4,8 @@ import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { consultMessage, whatsappUrl } from "@/lib/whatsapp";
+import { TrackedWhatsAppLink } from "@/components/TrackedWhatsAppLink";
+import { SocialLinks } from "@/components/SocialLinks";
 import type { Locale } from "@/i18n/routing";
 
 export function SiteFooter() {
@@ -16,15 +18,15 @@ export function SiteFooter() {
   return (
     <footer className="mt-auto border-t border-beautiro-border bg-white">
       <div className="container-babitalk border-b border-beautiro-border py-8">
-        <a
+        <TrackedWhatsAppLink
           href={wa}
-          target="_blank"
-          rel="noopener noreferrer"
+          location="footer"
           className="inline-flex items-center gap-2 rounded-xl bg-[#25D366] px-5 py-3 text-sm font-bold text-white hover:bg-[#20BD5A]"
         >
           {t("whatsappCta")}
-        </a>
+        </TrackedWhatsAppLink>
         <p className="mt-3 text-xs text-beautiro-muted">{t("whatsappHours")}</p>
+        <SocialLinks className="mt-4" />
       </div>
       <div className="container-babitalk py-10">
         <div className="flex flex-col gap-6 md:flex-row md:justify-between">

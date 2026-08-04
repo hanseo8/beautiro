@@ -1,0 +1,131 @@
+{
+  "social": {
+    "instagramAria": "Instagram Beautiro @beautiro.official"
+  },
+  "reviews": {
+    "metaTitle": "Tulis Ulasan — Beautiro",
+    "metaDescription": "Bagikan pengalaman Beautiro Anda dan dapatkan perawatan kulit gratis serta jemputan bandara pada kunjungan berikutnya.",
+    "eyebrow": "Hadiah ulasan",
+    "title": "Bagikan pengalaman Anda",
+    "subtitle": "Ceritakan perjalanan wisata medis Anda. Setelah ditinjau, kami akan menghubungi Anda untuk klaim hadiah.",
+    "rewardTitle": "Hadiah ulasan",
+    "rewardItems": [
+      "1x perawatan kulit saat kunjungan",
+      "1x jemputan bandara gratis"
+    ],
+    "rating": "Rating",
+    "name": "Nama",
+    "email": "Email",
+    "phone": "WhatsApp / telepon",
+    "instagram": "Akun Instagram (opsional)",
+    "procedure": "Prosedur yang diterima",
+    "procedurePlaceholder": "mis. Botox, operasi hidung",
+    "hospital": "Rumah sakit (opsional)",
+    "visitMonth": "Bulan kunjungan (opsional)",
+    "reviewText": "Ulasan Anda",
+    "reviewPlaceholder": "Ceritakan pengalaman dari konsultasi, perawatan, hingga layanan transport.",
+    "privacyNote": "Ulasan dapat ditampilkan di website dan media sosial kami. Data pribadi hanya digunakan untuk konsultasi.",
+    "submit": "Kirim ulasan",
+    "submitting": "Mengirim…",
+    "reference": "Nomor referensi",
+    "successTitle": "Ulasan diterima",
+    "successBody": "Concierge kami akan meninjau dan menghubungi Anda via WhatsApp untuk detail hadiah.",
+    "bookCta": "Ajukan konsultasi"
+  },
+  "welcome": {
+    "metaTitle": "Beautiro — Concierge Wisata Medis Korea",
+    "metaDescription": "Jemputan bandara, konsultasi rumah sakit mitra, dan hadiah kosmetik. Hubungi kami via WhatsApp.",
+    "eyebrow": "Medical Concierge",
+    "title": "Wisata medis Korea bersama Beautiro",
+    "subtitle": "Rumah sakit mitra · jemputan bandara · penerjemah medis · dukungan kurs — semua dalam satu",
+    "ctaWhatsapp": "Konsultasi WhatsApp gratis",
+    "ctaBook": "Ajukan konsultasi",
+    "ctaHospitals": "Rumah sakit mitra",
+    "ctaReview": "Tulis ulasan & klaim hadiah",
+    "rewardTitle": "Hadiah ulasan",
+    "rewardItems": [
+      "1x perawatan kulit saat kunjungan",
+      "1x jemputan gratis"
+    ],
+    "proceduresTitle": "Panduan prosedur populer",
+    "procedures": {
+      "rhinoplasty": "Operasi hidung",
+      "double-eyelid": "Operasi kelopak mata",
+      "botox-filler": "Botox & filler",
+      "dental-implant": "Implan gigi",
+      "skin-laser": "Laser kulit"
+    },
+    "instagramHint": "Ikuti Instagram kami untuk event dan ulasan terbaru"
+  },
+  "procedureLandings": {
+    "common": {
+      "breadcrumbHome": "Beranda",
+      "breadcrumbProcedures": "Panduan prosedur",
+      "priceLabel": "Estimasi biaya (dikonfirmasi setelah konsultasi)",
+      "priceNote": "Harga akhir tergantung rumah sakit dan cakupan perawatan.",
+      "benefitsTitle": "Manfaat concierge Beautiro",
+      "includesTitle": "Yang mungkin termasuk",
+      "ctaTitle": "Konsultasi gratis",
+      "ctaDesc": "Concierge khusus akan menghubungi Anda dalam 24 jam.",
+      "whatsappCta": "Chat WhatsApp",
+      "bookCta": "Ajukan konsultasi",
+      "hospitalsCta": "Lihat rumah sakit mitra",
+      "reviewReward": "Tulis ulasan untuk hadiah perawatan kulit & jemputan"
+    },
+    "rhinoplasty": {
+      "metaTitle": "Operasi Hidung Korea — Beautiro",
+      "metaDescription": "Konsultasi operasi hidung di klinik mitra terverifikasi dekat Seoul dan Incheon, dengan jemputan dan penerjemah.",
+      "badge": "Bedah plastik",
+      "title": "Operasi Hidung Korea",
+      "subtitle": "Konsultasi dengan ahli bedah plastik mitra terverifikasi dengan dukungan concierge VIP dari kedatangan hingga pemulihan.",
+      "priceFrom": "₩3.500.000~",
+      "whatsappMessage": "Saya ingin konsultasi operasi hidung.",
+      "benefits": ["Penerjemah medis khusus", "Jemputan bandara & rumah sakit", "Diskon rumah sakit mitra"],
+      "includes": ["Konsultasi 1:1", "Simulasi 3D (tergantung klinik)", "Panduan perawatan pasca operasi", "Koordinasi hotel & transport"]
+    },
+    "double-eyelid": {
+      "metaTitle": "Operasi Kelopak Mata Korea — Beautiro",
+      "metaDescription": "Konsultasi kelopak mata ganda dan kontur mata dengan jaringan rumah sakit mitra kami.",
+      "badge": "Bedah plastik",
+      "title": "Operasi Kelopak Mata",
+      "subtitle": "Kontur mata natural dengan konsultasi personal dan penjadwalan pemulihan oleh concierge Anda.",
+      "priceFrom": "₩2.200.000~",
+      "whatsappMessage": "Saya ingin konsultasi operasi kelopak mata.",
+      "benefits": ["Penerjemah Indonesia & Inggris", "Itinerary kunjungan singkat", "Bandingkan klinik mitra"],
+      "includes": ["Konsultasi kontur mata", "Briefing anestesi & operasi", "Rekomendasi hotel pemulihan", "Pendamping penerjemah"]
+    },
+    "botox-filler": {
+      "metaTitle": "Botox & Filler Korea — Beautiro",
+      "metaDescription": "Paket botox dan filler dermatologi dengan opsi perawatan di hari yang sama.",
+      "badge": "Dermatologi",
+      "title": "Botox & Filler",
+      "subtitle": "Perawatan dermatologi premium di klinik mitra dengan penerjemah dan dukungan concierge.",
+      "priceFrom": "₩450.000~",
+      "whatsappMessage": "Saya ingin konsultasi botox/filler.",
+      "benefits": ["Klinik perawatan hari yang sama", "Hanya mitra produk asli", "Dukungan jemputan & kurs"],
+      "includes": ["Konsultasi kulit", "Desain area perawatan", "Panduan aftercare", "Penjadwalan follow-up"]
+    },
+    "dental-implant": {
+      "metaTitle": "Implan Gigi Korea — Beautiro",
+      "metaDescription": "Konsultasi implan dan perawatan gigi estetik dengan pendamping penerjemah.",
+      "badge": "Gigi",
+      "title": "Implan Gigi",
+      "subtitle": "Rencanakan implan atau perawatan gigi estetik dan itinerary menginap dalam satu konsultasi.",
+      "priceFrom": "₩1.800.000~",
+      "whatsappMessage": "Saya ingin konsultasi implan gigi.",
+      "benefits": ["Penerjemah dental khusus", "Penjadwalan CT & pemeriksaan", "Panduan paket menginap panjang"],
+      "includes": ["Konsultasi pemeriksaan mulut", "Rencana perawatan implan", "Briefing timeline pemulihan", "Koordinasi transport & hotel"]
+    },
+    "skin-laser": {
+      "metaTitle": "Laser Kulit Korea — Beautiro",
+      "metaDescription": "Konsultasi laser toning dan lifting dengan perawatan K-beauty.",
+      "badge": "Dermatologi",
+      "title": "Laser Kulit & Toning",
+      "subtitle": "Perbaiki pigmentasi, pori-pori, dan elastisitas dengan perawatan laser aman di klinik dermatologi mitra.",
+      "priceFrom": "₩280.000~",
+      "whatsappMessage": "Saya ingin konsultasi laser kulit.",
+      "benefits": ["Klinik sesuai tipe kulit", "Panduan kit perawatan pasca", "Kelayakan hadiah ulasan"],
+      "includes": ["Diagnosis kulit", "Rencana perawatan laser", "Panduan perawatan & sinar matahari", "Booking follow-up"]
+    }
+  }
+}

@@ -13,15 +13,21 @@ function wikiBanner(path: string, w = 1920) {
 
 export type BannerPhoto = {
   src: string;
-  /** CSS object-position for wide banner crops */
+  /** CSS object-position for wide banner crops (desktop) */
   position: string;
+  /** Tighter crop on narrow screens — defaults to position */
+  mobilePosition?: string;
   /** Use contain for non-wide photos so the full image stays inside the banner */
   fit?: "cover" | "contain";
 };
 
-/** Shared wide banner frame — 16:9 fits standard landscape Wikimedia photos */
+/** Hero / simple overlay banners */
 export const BANNER_FRAME_CLASS =
-  "relative aspect-[16/9] min-h-[200px] overflow-hidden sm:min-h-[240px]";
+  "relative aspect-[3/2] min-h-[220px] overflow-hidden sm:aspect-[16/9] sm:min-h-[240px]";
+
+/** Promo carousel image strip on mobile (content stacks below) */
+export const PROMO_BANNER_IMAGE_CLASS =
+  "relative aspect-[16/10] w-full overflow-hidden sm:absolute sm:inset-0 sm:aspect-auto";
 
 /**
  * Korea-verified photography mapped to slide / hospital context.
@@ -77,14 +83,17 @@ export const heroBannerImages: BannerPhoto[] = [
   {
     src: KOREA_IMAGES.incheonAirportArrival,
     position: "center 38%",
+    mobilePosition: "center 42%",
   },
   {
     src: KOREA_IMAGES.konkukUniversityHospital,
     position: "center 45%",
+    mobilePosition: "center 50%",
   },
   {
     src: KOREA_IMAGES.koreanCurrency,
     position: "center center",
+    mobilePosition: "center center",
     fit: "contain",
   },
 ];
@@ -94,14 +103,17 @@ export const promoBannerImages: BannerPhoto[] = [
   {
     src: KOREA_IMAGES.kBeautyExpoKorea,
     position: "center 35%",
+    mobilePosition: "center 40%",
   },
   {
     src: KOREA_IMAGES.asanMedicalCenter,
     position: "center 42%",
+    mobilePosition: "center 48%",
   },
   {
     src: KOREA_IMAGES.kBeautyExpoVietnam,
     position: "center 38%",
+    mobilePosition: "center 45%",
   },
 ];
 

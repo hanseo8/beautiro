@@ -34,7 +34,9 @@
     "servicesMate": "Dedicated medical interpretation",
     "servicesPay": "Medical payment & FX support",
     "reservations": "Reservations",
-    "mypage": "My account"
+    "mypage": "My account",
+    "reviews": "Write a review",
+    "welcome": "Get started"
   },
   "bottomNav": {
     "ariaLabel": "Bottom navigation",
@@ -549,8 +551,9 @@
     "links": [
       { "label": "Terms", "href": "/terms" },
       { "label": "Privacy", "href": "/privacy" },
-      { "label": "Partners", "href": "/book" },
-      { "label": "Support", "href": "/book" }
+      { "label": "Write a review", "href": "/reviews" },
+      { "label": "Get started", "href": "/welcome" },
+      { "label": "Partners", "href": "/book" }
     ]
   },
   "language": "Language"

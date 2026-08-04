@@ -15,7 +15,10 @@ import {
   Wallet,
   MessageCircle,
   HelpCircle,
+  Gift,
+  Sparkles,
 } from "lucide-react";
+import { TrackedWhatsAppLink } from "@/components/TrackedWhatsAppLink";
 import { consultMessage, whatsappUrl } from "@/lib/whatsapp";
 import type { Locale } from "@/i18n/routing";
 import { LanguageSwitcher } from "./LanguageSwitcher";
@@ -48,8 +51,10 @@ export function MobileNavDrawer({ open, onClose }: Props) {
 
   const mainLinks = [
     { href: "/", label: t("home"), icon: Home },
+    { href: "/welcome", label: t("welcome"), icon: Sparkles },
     { href: "/#services", label: t("services"), icon: Info },
     { href: "/hospitals", label: t("hospitals"), icon: Building2 },
+    { href: "/reviews", label: t("reviews"), icon: Gift },
     { href: "/#faq", label: t("faq"), icon: HelpCircle },
   ] as const;
 
@@ -162,15 +167,14 @@ export function MobileNavDrawer({ open, onClose }: Props) {
           >
             {t("cta")}
           </Link>
-          <a
+          <TrackedWhatsAppLink
             href={wa}
-            target="_blank"
-            rel="noopener noreferrer"
+            location="mobile_drawer"
             className="flex h-10 w-full items-center justify-center gap-2 rounded-xl border border-beautiro-border bg-white text-sm font-medium text-beautiro-charcoal transition-colors hover:bg-beautiro-surface"
           >
             <MessageCircle size={16} strokeWidth={1.5} />
             {t("whatsapp")}
-          </a>
+          </TrackedWhatsAppLink>
           <Link
             href="/book?tab=account"
             onClick={onClose}

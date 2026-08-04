@@ -34,7 +34,9 @@
     "servicesMate": "전문 의료 통역 동행",
     "servicesPay": "의료비 결제·환전 지원",
     "reservations": "예약 내역",
-    "mypage": "마이페이지"
+    "mypage": "마이페이지",
+    "reviews": "후기 남기기",
+    "welcome": "시작하기"
   },
   "bottomNav": {
     "ariaLabel": "하단 메뉴",
@@ -550,8 +552,9 @@
     "links": [
       { "label": "이용약관", "href": "/terms" },
       { "label": "개인정보처리방침", "href": "/privacy" },
-      { "label": "제휴 문의", "href": "/book" },
-      { "label": "고객센터", "href": "/book" }
+      { "label": "후기 남기기", "href": "/reviews" },
+      { "label": "시작하기", "href": "/welcome" },
+      { "label": "제휴 문의", "href": "/book" }
     ]
   },
   "language": "언어"

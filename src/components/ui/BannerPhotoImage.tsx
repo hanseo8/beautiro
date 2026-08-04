@@ -20,6 +20,7 @@ export function BannerPhotoImage({ banner, alt, priority = false }: Props) {
         alt={alt}
         priority={priority}
         objectPosition={banner.position}
+        mobileObjectPosition={banner.mobilePosition}
         objectFit={fit}
         sizes="(max-width: 1080px) 100vw, 1080px"
       />

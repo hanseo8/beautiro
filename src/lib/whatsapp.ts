@@ -11,15 +11,18 @@ export function consultMessage(params: {
   locale: string;
   procedureName?: string;
   hospitalName?: string;
+  extra?: string;
 }): string {
-  const { locale, procedureName, hospitalName } = params;
+  const { locale, procedureName, hospitalName, extra } = params;
+  let base: string;
   if (locale === "ko") {
-    return `[Beautiro] 상담 문의${procedureName ? `\n시술: ${procedureName}` : ""}${hospitalName ? `\n병원: ${hospitalName}` : ""}`;
+    base = `[Beautiro] 상담 문의${procedureName ? `\n시술: ${procedureName}` : ""}${hospitalName ? `\n병원: ${hospitalName}` : ""}`;
+  } else if (locale === "id") {
+    base = `[Beautiro] Konsultasi${procedureName ? `\nProsedur: ${procedureName}` : ""}${hospitalName ? `\nKlinik: ${hospitalName}` : ""}`;
+  } else {
+    base = `[Beautiro] Consultation request${procedureName ? `\nProcedure: ${procedureName}` : ""}${hospitalName ? `\nClinic: ${hospitalName}` : ""}`;
   }
-  if (locale === "id") {
-    return `[Beautiro] Konsultasi${procedureName ? `\nProsedur: ${procedureName}` : ""}${hospitalName ? `\nKlinik: ${hospitalName}` : ""}`;
-  }
-  return `[Beautiro] Consultation request${procedureName ? `\nProcedure: ${procedureName}` : ""}${hospitalName ? `\nClinic: ${hospitalName}` : ""}`;
+  return extra ? `${base}\n${extra}` : base;
 }
 
 export function eventInquiryMessage(params: {

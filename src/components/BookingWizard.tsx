@@ -18,6 +18,7 @@ import { Link } from "@/i18n/navigation";
 import { MEDICAL_CATEGORIES } from "@/lib/regions";
 import { consultMessage, whatsappUrl } from "@/lib/whatsapp";
 import type { Locale } from "@/i18n/routing";
+import { trackBookingComplete } from "@/lib/analytics";
 import type { MedicalCategory } from "@prisma/client";
 
 export type ProcedureOption = {
@@ -135,6 +136,7 @@ export function BookingWizard({
       });
       const data = (await res.json()) as { id?: string; error?: string };
       if (!res.ok) throw new Error(data.error ?? "Request failed");
+      if (data.id) trackBookingComplete(data.id);
       setReferenceId(data.id ?? null);
       setStep(4);
     } catch (e) {

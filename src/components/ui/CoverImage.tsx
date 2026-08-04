@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { CSSProperties } from "react";
 
 type Props = {
   src: string;
@@ -7,6 +8,7 @@ type Props = {
   priority?: boolean;
   sizes?: string;
   objectPosition?: string;
+  mobileObjectPosition?: string;
   objectFit?: "cover" | "contain";
 };
 
@@ -17,17 +19,29 @@ export function CoverImage({
   priority = false,
   sizes = "(max-width: 768px) 100vw, 400px",
   objectPosition = "center center",
+  mobileObjectPosition,
   objectFit = "cover",
 }: Props) {
+  const mobilePos = mobileObjectPosition ?? objectPosition;
+
   return (
-    <Image
-      src={src}
-      alt={alt}
-      fill
-      className={`${objectFit === "contain" ? "object-contain" : "object-cover"} ${className}`}
-      style={{ objectPosition }}
-      sizes={sizes}
-      priority={priority}
-    />
+    <div
+      className={`cover-image-responsive absolute inset-0 ${className}`}
+      style={
+        {
+          "--cover-pos-mobile": mobilePos,
+          "--cover-pos-desktop": objectPosition,
+        } as CSSProperties
+      }
+    >
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        className={objectFit === "contain" ? "object-contain" : "object-cover"}
+        sizes={sizes}
+        priority={priority}
+      />
+    </div>
   );
 }

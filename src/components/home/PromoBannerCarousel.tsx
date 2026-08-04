@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { BannerPhotoImage } from "@/components/ui/BannerPhotoImage";
-import { BANNER_FRAME_CLASS, promoBannerImages } from "@/lib/media";
+import { PROMO_BANNER_IMAGE_CLASS, promoBannerImages } from "@/lib/media";
 
 export type PromoSlide =
   | {
@@ -65,16 +65,51 @@ export function PromoBannerCarousel({ slides }: { slides: PromoSlide[] }) {
 
   return (
     <div className="relative overflow-hidden rounded-2xl shadow-[0_12px_40px_rgba(15,23,42,0.12)]">
-      <div className={BANNER_FRAME_CLASS}>
-        <BannerPhotoImage
-          banner={banner}
-          alt={slide.title}
-          priority
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0f172a]/88 via-[#0f172a]/55 to-[#0f172a]/25" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/80 via-transparent to-[#0f172a]/20" />
+      <div className="relative sm:aspect-[16/9] sm:min-h-[280px]">
+        <div className={PROMO_BANNER_IMAGE_CLASS}>
+          <BannerPhotoImage banner={banner} alt={slide.title} priority />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/50 to-transparent sm:hidden" />
+          <div className="absolute inset-0 hidden bg-gradient-to-r from-[#0f172a]/88 via-[#0f172a]/55 to-[#0f172a]/25 sm:block" />
+          <div className="absolute inset-0 hidden bg-gradient-to-t from-[#0f172a]/80 via-transparent to-[#0f172a]/20 sm:block" />
 
-        <div className="relative flex h-full flex-col justify-end p-6 sm:p-8">
+          {slides.length > 1 && (
+            <>
+              <button
+                type="button"
+                onClick={prev}
+                className="absolute left-3 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-lg border border-white/20 bg-[#0f172a]/40 text-white backdrop-blur-sm transition-colors hover:bg-[#0f172a]/60 sm:hidden"
+                aria-label="Previous slide"
+              >
+                <ChevronLeft size={18} strokeWidth={1.5} />
+              </button>
+              <button
+                type="button"
+                onClick={next}
+                className="absolute right-3 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-lg border border-white/20 bg-[#0f172a]/40 text-white backdrop-blur-sm transition-colors hover:bg-[#0f172a]/60 sm:hidden"
+                aria-label="Next slide"
+              >
+                <ChevronRight size={18} strokeWidth={1.5} />
+              </button>
+              <div className="absolute bottom-3 left-1/2 z-10 flex -translate-x-1/2 gap-1.5 sm:hidden">
+                {slides.map((_, i) => (
+                  <button
+                    key={i}
+                    type="button"
+                    onClick={() => setIndex(i)}
+                    className={`h-1 rounded-full transition-all ${
+                      i === index
+                        ? "w-6 bg-white"
+                        : "w-1.5 bg-white/40 hover:bg-white/60"
+                    }`}
+                    aria-label={`Slide ${i + 1}`}
+                  />
+                ))}
+              </div>
+            </>
+          )}
+        </div>
+
+        <div className="relative bg-[#0f172a] p-5 sm:absolute sm:inset-0 sm:flex sm:flex-col sm:justify-end sm:bg-transparent sm:p-8">
           {slide.type === "openPromo" || slide.type === "reviewPromo" ? (
             <>
               <div className="inline-flex w-fit items-center gap-1.5 rounded-full border border-white/25 bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-white/90 backdrop-blur-sm">
@@ -85,7 +120,7 @@ export function PromoBannerCarousel({ slides }: { slides: PromoSlide[] }) {
                 )}
                 {slide.badge}
               </div>
-              <h2 className="font-display mt-3 max-w-xl text-xl font-semibold leading-snug tracking-tight text-white sm:text-2xl">
+              <h2 className="font-display mt-3 max-w-xl text-lg font-semibold leading-snug tracking-tight text-white sm:text-2xl">
                 {slide.title}
               </h2>
               <p className="mt-2 max-w-lg text-sm leading-relaxed text-white/85">
@@ -114,7 +149,7 @@ export function PromoBannerCarousel({ slides }: { slides: PromoSlide[] }) {
                         <p className="text-xs font-semibold text-white">
                           {item.title}
                         </p>
-                        <p className="mt-0.5 hidden text-[11px] leading-snug text-white/70 sm:block">
+                        <p className="mt-0.5 text-[11px] leading-snug text-white/70 sm:block">
                           {item.desc}
                         </p>
                       </div>
@@ -124,7 +159,7 @@ export function PromoBannerCarousel({ slides }: { slides: PromoSlide[] }) {
               </ul>
               <div className="mt-5 flex flex-wrap gap-3">
                 <Link
-                  href="/hospitals"
+                  href={slide.type === "reviewPromo" ? "/reviews" : "/hospitals"}
                   className="inline-flex h-10 items-center gap-1.5 rounded-lg bg-white px-5 text-sm font-semibold text-beautiro-primary transition-colors hover:bg-white/95"
                 >
                   {slide.ctaEvents}
@@ -144,7 +179,7 @@ export function PromoBannerCarousel({ slides }: { slides: PromoSlide[] }) {
                 <Gift size={12} />
                 {slide.badge}
               </div>
-              <h2 className="font-display mt-3 max-w-xl text-xl font-semibold leading-snug tracking-tight text-white sm:text-2xl">
+              <h2 className="font-display mt-3 max-w-xl text-lg font-semibold leading-snug tracking-tight text-white sm:text-2xl">
                 {slide.title}
               </h2>
               <p className="mt-2 max-w-lg text-sm leading-relaxed text-white/85">
@@ -167,7 +202,7 @@ export function PromoBannerCarousel({ slides }: { slides: PromoSlide[] }) {
             <button
               type="button"
               onClick={prev}
-              className="absolute left-3 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-lg border border-white/20 bg-[#0f172a]/40 text-white backdrop-blur-sm transition-colors hover:bg-[#0f172a]/60 sm:left-4"
+              className="absolute left-4 top-1/2 z-10 hidden h-9 w-9 -translate-y-1/2 items-center justify-center rounded-lg border border-white/20 bg-[#0f172a]/40 text-white backdrop-blur-sm transition-colors hover:bg-[#0f172a]/60 sm:flex"
               aria-label="Previous slide"
             >
               <ChevronLeft size={18} strokeWidth={1.5} />
@@ -175,12 +210,12 @@ export function PromoBannerCarousel({ slides }: { slides: PromoSlide[] }) {
             <button
               type="button"
               onClick={next}
-              className="absolute right-3 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-lg border border-white/20 bg-[#0f172a]/40 text-white backdrop-blur-sm transition-colors hover:bg-[#0f172a]/60 sm:right-4"
+              className="absolute right-4 top-1/2 z-10 hidden h-9 w-9 -translate-y-1/2 items-center justify-center rounded-lg border border-white/20 bg-[#0f172a]/40 text-white backdrop-blur-sm transition-colors hover:bg-[#0f172a]/60 sm:flex"
               aria-label="Next slide"
             >
               <ChevronRight size={18} strokeWidth={1.5} />
             </button>
-            <div className="absolute bottom-4 left-1/2 z-10 flex -translate-x-1/2 gap-1.5">
+            <div className="absolute bottom-4 left-1/2 z-10 hidden -translate-x-1/2 gap-1.5 sm:flex">
               {slides.map((_, i) => (
                 <button
                   key={i}

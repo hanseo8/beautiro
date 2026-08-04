@@ -178,3 +178,13 @@ html[lang="ko"] h4 {
 html[lang="ko"] .text-card-title {
   min-height: 2.5rem;
 }
+
+.cover-image-responsive img {
+  object-position: var(--cover-pos-mobile, center center);
+}
+
+@media (min-width: 640px) {
+  .cover-image-responsive img {
+    object-position: var(--cover-pos-desktop, center center);
+  }
+}

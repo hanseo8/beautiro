@@ -2,6 +2,7 @@
 
 import { useLocale, useTranslations } from "next-intl";
 import { consultMessage, whatsappUrl } from "@/lib/whatsapp";
+import { TrackedWhatsAppLink } from "@/components/TrackedWhatsAppLink";
 import type { Locale } from "@/i18n/routing";
 
 function WhatsAppIcon() {
@@ -18,14 +19,13 @@ export function FloatingWhatsApp() {
   const href = whatsappUrl(consultMessage({ locale }));
 
   return (
-    <a
+    <TrackedWhatsAppLink
       href={href}
-      target="_blank"
-      rel="noopener noreferrer"
+      location="floating"
       className="fixed bottom-[calc(4.5rem+env(safe-area-inset-bottom,0px))] right-4 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg shadow-[#25D366]/25 transition-transform hover:scale-105 hover:bg-[#20BD5A] md:bottom-8 md:right-8 lg:bottom-8"
       aria-label={t("whatsappFloat")}
     >
       <WhatsAppIcon />
-    </a>
+    </TrackedWhatsAppLink>
   );
 }

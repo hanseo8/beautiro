@@ -39,9 +39,9 @@ export function HeroCarousel() {
         <div className="absolute inset-0 bg-[#0f172a]/55" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/90 via-[#0f172a]/35 to-transparent" />
 
-        <div className="relative flex h-full flex-col justify-end px-6 py-8 sm:px-10 sm:py-10">
+        <div className="relative flex h-full flex-col justify-end px-5 py-7 sm:px-10 sm:py-10">
           <p className="text-label text-white/75">{slide.subtitle}</p>
-          <h2 className="font-display mt-2 max-w-xl text-xl font-semibold leading-snug tracking-tight text-white sm:text-2xl">
+          <h2 className="font-display mt-2 max-w-xl text-lg font-semibold leading-snug tracking-tight text-white sm:text-2xl">
             {slide.title}
           </h2>
           <Link
@@ -55,7 +55,7 @@ export function HeroCarousel() {
         <button
           type="button"
           onClick={prev}
-          className="absolute left-3 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-lg border border-white/20 bg-[#0f172a]/30 text-white backdrop-blur-sm transition-colors hover:bg-[#0f172a]/50 sm:left-4"
+          className="absolute left-3 top-1/2 z-10 hidden h-9 w-9 -translate-y-1/2 items-center justify-center rounded-lg border border-white/20 bg-[#0f172a]/30 text-white backdrop-blur-sm transition-colors hover:bg-[#0f172a]/50 sm:flex sm:left-4"
           aria-label="Previous"
         >
           <ChevronLeft size={18} strokeWidth={1.5} />
@@ -63,12 +63,12 @@ export function HeroCarousel() {
         <button
           type="button"
           onClick={next}
-          className="absolute right-3 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-lg border border-white/20 bg-[#0f172a]/30 text-white backdrop-blur-sm transition-colors hover:bg-[#0f172a]/50 sm:right-4"
+          className="absolute right-3 top-1/2 z-10 hidden h-9 w-9 -translate-y-1/2 items-center justify-center rounded-lg border border-white/20 bg-[#0f172a]/30 text-white backdrop-blur-sm transition-colors hover:bg-[#0f172a]/50 sm:flex sm:right-4"
           aria-label="Next"
         >
           <ChevronRight size={18} strokeWidth={1.5} />
         </button>
-        <div className="absolute bottom-4 right-4 z-10 flex gap-1.5 sm:bottom-6 sm:right-6">
+        <div className="absolute bottom-4 left-1/2 z-10 flex -translate-x-1/2 gap-1.5 sm:left-auto sm:right-6 sm:translate-x-0">
           {slides.map((_, i) => (
             <button
               key={i}
