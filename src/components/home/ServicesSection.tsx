@@ -34,7 +34,33 @@ export async function ServicesSection() {
       <p className="mt-2 max-w-2xl text-sm leading-relaxed text-beautiro-muted">
         {t("subtitle")}
       </p>
-      <div className="mt-8">
+
+      <div className="card-modern mt-6 p-6 sm:p-8">
+        <h3 className="text-base font-semibold text-beautiro-charcoal">
+          {t("introTitle")}
+        </h3>
+        <div className="mt-4 space-y-3 text-sm leading-relaxed text-beautiro-muted">
+          {(t.raw("intro") as string[]).map((paragraph) => (
+            <p key={paragraph.slice(0, 40)}>{paragraph}</p>
+          ))}
+        </div>
+        <ul className="mt-5 grid gap-2 sm:grid-cols-2">
+          {(t.raw("highlights") as string[]).map((item) => (
+            <li
+              key={item}
+              className="flex items-start gap-2 text-sm text-beautiro-charcoal"
+            >
+              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-beautiro-primary" />
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <h3 className="mt-10 text-base font-semibold text-beautiro-charcoal">
+        {t("servicesHeading")}
+      </h3>
+      <div className="mt-4">
         <ServiceShowcase items={items} />
       </div>
     </section>

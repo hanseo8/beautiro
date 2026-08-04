@@ -185,9 +185,21 @@
     "visualCaption": "Seoul · South Korea"
   },
   "services": {
-    "badge": "Concierge Services",
-    "title": "Core medical concierge services",
-    "subtitle": "Transport, interpretation, and payment support delivered as one professional care system.",
+    "badge": "Services",
+    "title": "Beautiro Medical Tourism Concierge",
+    "subtitle": "We connect consultation, transport, interpretation, and payment into one professional care system for your Korea visit.",
+    "introTitle": "What is Beautiro?",
+    "intro": [
+      "Beautiro is a premium Korea medical tourism concierge platform for international visitors, especially from Southeast Asia. We connect you with verified partner hospitals in plastic surgery, dermatology, dental, and traditional medicine—and support the entire journey from consultation and scheduling to transport, interpretation, and payment guidance.",
+      "We do not operate hospitals ourselves. Our role is to recommend the right partner clinic for your needs and help you have a safe, comfortable visit. Free WhatsApp consultation is available 24/7 in Indonesian, English, and Korean."
+    ],
+    "highlights": [
+      "Verified partner hospital consultation & booking",
+      "Incheon airport pickup and private clinic transfers",
+      "Specialist medical interpretation escort",
+      "FX and medical payment guidance"
+    ],
+    "servicesHeading": "Core services we provide",
     "van": {
       "title": "Private medical transport",
       "desc": "Dedicated transfers between airport, clinics, and accommodation with full privacy before and after procedures."

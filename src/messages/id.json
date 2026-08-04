@@ -185,9 +185,21 @@
     "visualCaption": "Seoul · Korea Selatan"
   },
   "services": {
-    "badge": "Concierge Services",
-    "title": "Layanan concierge medis inti",
-    "subtitle": "Transport, pendampingan, dan pembayaran dalam satu sistem perawatan profesional.",
+    "badge": "Layanan",
+    "title": "Concierge Wisata Medis Beautiro",
+    "subtitle": "Kami menghubungkan konsultasi, transport, penerjemahan, dan pembayaran dalam satu sistem perawatan profesional untuk kunjungan Anda ke Korea.",
+    "introTitle": "Apa itu Beautiro?",
+    "intro": [
+      "Beautiro adalah platform concierge wisata medis premium Korea untuk pengunjung internasional, terutama dari Asia Tenggara. Kami menghubungkan Anda dengan rumah sakit mitra terverifikasi di bidang bedah plastik, dermatologi, gigi, dan pengobatan tradisional—serta mendampingi seluruh perjalanan mulai dari konsultasi dan penjadwalan hingga transport, penerjemahan, dan panduan pembayaran.",
+      "Kami tidak mengoperasikan rumah sakit sendiri. Peran kami adalah merekomendasikan klinik mitra yang paling sesuai dan membantu Anda mendapatkan pengalaman kunjungan yang aman dan nyaman. Konsultasi WhatsApp gratis tersedia 24 jam dalam Bahasa Indonesia, Inggris, dan Korea."
+    ],
+    "highlights": [
+      "Konsultasi & reservasi rumah sakit mitra terverifikasi",
+      "Jemputan bandara Incheon dan transport klinik pribadi",
+      "Pendamping penerjemah medis spesialis",
+      "Panduan kurs dan pembayaran medis"
+    ],
+    "servicesHeading": "Layanan inti yang kami sediakan",
     "van": {
       "title": "Transport medis pribadi",
       "desc": "Antar-jemput khusus antara bandara, klinik, dan akomodasi dengan privasi penuh."
