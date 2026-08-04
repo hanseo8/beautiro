@@ -64,7 +64,9 @@ export default async function HomePage({ params }: Props) {
           <PromoBannerSection />
         </div>
       </section>
-      <BrandStorySection />
+      <div className="hidden md:block">
+        <BrandStorySection />
+      </div>
       <div className="container-babitalk space-y-14 pt-10">
         <HeroCarousel />
         <ServicesSection />
