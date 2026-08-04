@@ -3,13 +3,19 @@
     "title": "Beautiro — Premium Medical Care in Korea",
     "description": "VIP one-stop medical tourism: private transport, medical interpreters, and FX benefits."
   },
+  "localeSwitcher": {
+    "label": "Language",
+    "nameEn": "English",
+    "nameKo": "한국어",
+    "nameId": "Bahasa Indonesia"
+  },
   "nav": {
     "home": "Home",
     "events": "Events",
     "hospitals": "Hospitals",
     "book": "Consultation",
     "faq": "FAQ",
-    "cta": "Start consultation",
+    "cta": "Request Consultation",
     "login": "Log in / Sign up",
     "whatsapp": "WhatsApp",
     "menuOpen": "Open menu",

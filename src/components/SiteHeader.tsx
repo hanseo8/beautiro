@@ -2,88 +2,102 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
+import { Link, usePathname } from "@/i18n/navigation";
 import { useLocale } from "next-intl";
-import { Menu } from "lucide-react";
+import { Menu, MessageCircle } from "lucide-react";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { ButtonLink } from "./ui/Button";
 import { MobileNavDrawer } from "./MobileNavDrawer";
 import { consultMessage, whatsappUrl } from "@/lib/whatsapp";
 import type { Locale } from "@/i18n/routing";
 
+const navItems = [
+  { href: "/", labelKey: "home" as const, match: (p: string) => p === "/" },
+  {
+    href: "/hospitals",
+    labelKey: "events" as const,
+    match: (p: string) =>
+      p.startsWith("/hospitals") || p.startsWith("/events"),
+  },
+  {
+    href: "/book",
+    labelKey: "book" as const,
+    match: (p: string) => p.startsWith("/book"),
+  },
+  {
+    href: "/#faq",
+    labelKey: "faq" as const,
+    match: () => false,
+  },
+] as const;
+
 export function SiteHeader() {
   const t = useTranslations("nav");
   const locale = useLocale() as Locale;
+  const pathname = usePathname();
   const wa = whatsappUrl(consultMessage({ locale }));
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <>
       <header className="sticky top-0 z-50 border-b border-beautiro-border/80 bg-white/95 backdrop-blur-md">
-        <div className="container-babitalk flex h-14 items-center justify-between gap-3">
+        <div className="container-babitalk flex h-14 items-center gap-4 lg:gap-8">
           <Link
             href="/"
-            className="font-brand text-xl font-bold tracking-tight text-beautiro-primary sm:text-2xl"
+            className="shrink-0 font-brand text-xl font-bold tracking-tight text-beautiro-primary"
           >
             Beautiro
           </Link>
-          <nav className="hidden items-center gap-6 text-sm font-medium text-beautiro-charcoal lg:flex">
-            <Link
-              href="/"
-              className="transition-colors hover:text-beautiro-primary"
-            >
-              {t("home")}
-            </Link>
-            <Link
-              href="/hospitals"
-              className="transition-colors hover:text-beautiro-primary"
-            >
-              {t("events")}
-            </Link>
-            <Link
-              href="/hospitals"
-              className="transition-colors hover:text-beautiro-primary"
-            >
-              {t("hospitals")}
-            </Link>
-            <Link
-              href="/book"
-              className="transition-colors hover:text-beautiro-primary"
-            >
-              {t("book")}
-            </Link>
-            <Link
-              href="/#faq"
-              className="transition-colors hover:text-beautiro-primary"
-            >
-              {t("faq")}
-            </Link>
+
+          <nav className="hidden flex-1 items-center justify-center gap-1 lg:flex">
+            {navItems.map((item) => {
+              const active = item.match(pathname);
+              return (
+                <Link
+                  key={item.labelKey}
+                  href={item.href}
+                  className={`rounded-lg px-3.5 py-2 text-sm font-medium transition-colors ${
+                    active
+                      ? "bg-beautiro-surface text-beautiro-primary"
+                      : "text-beautiro-muted hover:bg-beautiro-surface/60 hover:text-beautiro-charcoal"
+                  }`}
+                >
+                  {t(item.labelKey)}
+                </Link>
+              );
+            })}
           </nav>
-          <div className="flex items-center gap-1.5 sm:gap-2">
-            <LanguageSwitcher />
+
+          <div className="ml-auto flex items-center gap-2 sm:gap-2.5">
+            <LanguageSwitcher compact />
+            <span
+              className="hidden h-5 w-px bg-beautiro-border md:block"
+              aria-hidden
+            />
             <a
               href={wa}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden rounded-lg border border-beautiro-border px-3 py-2 text-xs font-semibold text-beautiro-primary transition-colors hover:bg-beautiro-surface sm:inline-block"
+              className="hidden h-9 items-center gap-1.5 rounded-lg border border-beautiro-border px-3 text-xs font-medium text-beautiro-charcoal transition-colors hover:bg-beautiro-surface md:inline-flex"
             >
-              {t("whatsapp")}
+              <MessageCircle size={15} strokeWidth={1.5} />
+              <span>{t("whatsapp")}</span>
             </a>
             <ButtonLink
               href="/book"
               variant="primary"
-              className="hidden text-xs sm:inline-flex sm:text-sm"
+              className="hidden h-9 px-4 text-xs md:inline-flex"
             >
-              {t("login")}
+              {t("cta")}
             </ButtonLink>
             <button
               type="button"
               onClick={() => setMenuOpen(true)}
-              className="flex h-10 w-10 items-center justify-center rounded-lg border border-beautiro-border text-beautiro-charcoal transition-colors hover:bg-beautiro-surface lg:hidden"
+              className="flex h-9 w-9 items-center justify-center rounded-lg border border-beautiro-border text-beautiro-charcoal transition-colors hover:bg-beautiro-surface lg:hidden"
               aria-label={t("menuOpen")}
               aria-expanded={menuOpen}
             >
-              <Menu size={22} strokeWidth={1.5} />
+              <Menu size={20} strokeWidth={1.5} />
             </button>
           </div>
         </div>

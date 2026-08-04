@@ -3,13 +3,19 @@
     "title": "Beautiro — 프리미엄 한국 의료관광",
     "description": "VIP 원스톱 의료관광: 프라이빗 밴, 전문 메디컬 통역, 환전 케어."
   },
+  "localeSwitcher": {
+    "label": "언어",
+    "nameEn": "English",
+    "nameKo": "한국어",
+    "nameId": "Bahasa Indonesia"
+  },
   "nav": {
     "home": "홈",
     "events": "이벤트",
     "hospitals": "제휴 병원",
     "book": "상담 신청",
     "faq": "FAQ",
-    "cta": "상담 시작",
+    "cta": "상담 신청",
     "login": "로그인/가입",
     "whatsapp": "WhatsApp",
     "menuOpen": "메뉴 열기",

@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import { consultMessage, whatsappUrl } from "@/lib/whatsapp";
 import type { Locale } from "@/i18n/routing";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 type Props = {
   open: boolean;
@@ -153,7 +154,8 @@ export function MobileNavDrawer({ open, onClose }: Props) {
           </ul>
         </nav>
 
-        <div className="border-t border-beautiro-border p-4">
+        <div className="space-y-3 border-t border-beautiro-border p-4">
+          <LanguageSwitcher />
           <a
             href={wa}
             target="_blank"
