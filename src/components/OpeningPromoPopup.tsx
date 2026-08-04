@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Car, Sparkles, X } from "lucide-react";
-import { Link } from "@/i18n/navigation";
+import { useRouter } from "@/i18n/navigation";
 
 const STORAGE_KEY = "beautiro-opening-promo-dismissed";
 const PROMO_IMAGE = "/promo/jakarta-launch-popup.png";
@@ -37,8 +37,11 @@ function unlockBodyScroll(scrollY: number) {
   window.scrollTo(0, scrollY);
 }
 
+const CONSULTATION_HREF = "/book";
+
 export function OpeningPromoPopup() {
   const t = useTranslations("promoPopup");
+  const router = useRouter();
   const benefits = t.raw("benefits") as { title: string; desc: string }[];
   const [open, setOpen] = useState(false);
 
@@ -72,28 +75,33 @@ export function OpeningPromoPopup() {
     setOpen(false);
   }
 
+  function goToConsultation() {
+    setOpen(false);
+    router.push(CONSULTATION_HREF);
+  }
+
   if (!open) return null;
 
   const benefitIcons = [Sparkles, Car];
 
   return (
     <div
-      className="fixed inset-0 z-[80] overflow-y-auto overscroll-contain"
+      className="fixed inset-0 z-[80] overflow-y-auto overscroll-contain pointer-events-none"
       role="presentation"
     >
       <button
         type="button"
-        className="fixed inset-0 bg-[#0f172a]/50 backdrop-blur-[2px]"
+        className="pointer-events-auto fixed inset-0 z-0 bg-[#0f172a]/50 backdrop-blur-[2px]"
         aria-label={t("close")}
         onClick={close}
       />
 
-      <div className="relative flex min-h-full items-start justify-center px-3 pb-[calc(1rem+env(safe-area-inset-bottom,0px))] pt-[calc(3.5rem+env(safe-area-inset-top,0px))] sm:items-center sm:px-4 sm:py-8">
+      <div className="pointer-events-none relative z-10 flex min-h-full items-start justify-center px-3 pb-[calc(1rem+env(safe-area-inset-bottom,0px))] pt-[calc(3.5rem+env(safe-area-inset-top,0px))] sm:items-center sm:px-4 sm:py-8">
         <div
           role="dialog"
           aria-modal="true"
           aria-labelledby="opening-promo-title"
-          className="relative z-[1] w-full max-w-lg"
+          className="pointer-events-auto relative w-full max-w-lg"
           onClick={(e) => e.stopPropagation()}
         >
           <button
@@ -164,13 +172,13 @@ export function OpeningPromoPopup() {
                 {t("note")}
               </p>
 
-              <Link
-                href="/book"
-                onClick={close}
+              <button
+                type="button"
+                onClick={goToConsultation}
                 className="mt-5 flex h-11 w-full items-center justify-center rounded-xl bg-beautiro-primary text-sm font-bold text-white transition-colors hover:bg-beautiro-primary-hover"
               >
                 {t("ctaBook")}
-              </Link>
+              </button>
 
               <button
                 type="button"
