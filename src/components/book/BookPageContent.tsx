@@ -20,11 +20,13 @@ export function BookPageContent({
   const t = useTranslations("book");
   const tab = useSearchParams().get("tab");
   const isBookingsTab = tab === "bookings" || tab === "history";
+  const isAccountTab = tab === "account";
+  const showConsultationIntro = !isBookingsTab && !isAccountTab;
 
   return (
     <div className="bg-gradient-to-b from-beautiro-surface to-white pb-16 pt-8 sm:pt-10">
       <div className="container-babitalk">
-        {!isBookingsTab && (
+        {showConsultationIntro && (
           <>
             <div className="mx-auto max-w-3xl text-center lg:max-w-none lg:text-left">
               <p className="text-label text-beautiro-primary">{t("eyebrow")}</p>
@@ -53,7 +55,9 @@ export function BookPageContent({
 
         <div
           className={`card-modern mx-auto p-5 sm:p-8 ${
-            isBookingsTab ? "mt-0 max-w-2xl" : "mt-6 max-w-4xl sm:mt-8"
+            isBookingsTab || isAccountTab
+              ? "mt-0 max-w-2xl"
+              : "mt-6 max-w-4xl sm:mt-8"
           }`}
         >
           <Suspense fallback={<p className="text-sm text-beautiro-muted">…</p>}>

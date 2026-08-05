@@ -1,8 +1,10 @@
-import { Building2, Plane, Wallet } from "lucide-react";
-import { getTranslations } from "next-intl/server";
+"use client";
 
-export async function BookingBenefitsStrip() {
-  const t = await getTranslations("home.openPromo");
+import { Building2, Plane, Wallet } from "lucide-react";
+import { useTranslations } from "next-intl";
+
+export function BookingBenefitsStrip() {
+  const t = useTranslations("home.openPromo");
   const benefits = t.raw("benefits") as { title: string; desc: string }[];
   const icons = [Wallet, Plane, Building2];
 
