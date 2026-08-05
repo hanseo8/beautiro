@@ -2,11 +2,7 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { prisma } from "@/lib/prisma";
 import { verifyPassword } from "@/lib/auth/password";
-import {
-  createSession,
-  setSessionCookie,
-} from "@/lib/auth/session";
-import { toPublicUser } from "@/lib/auth/user";
+import { buildAuthResponse } from "@/lib/auth/session";
 
 const bodySchema = z.object({
   email: z.string().email(),
@@ -20,7 +16,7 @@ export async function POST(request: Request) {
     const email = data.email.trim().toLowerCase();
 
     const user = await prisma.user.findUnique({ where: { email } });
-    if (!user) {
+    if (!user || !user.passwordHash) {
       return NextResponse.json({ error: "INVALID_CREDENTIALS" }, { status: 401 });
     }
 
@@ -29,10 +25,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "INVALID_CREDENTIALS" }, { status: 401 });
     }
 
-    const { token, expiresAt } = await createSession(user.id);
-    const response = NextResponse.json({ user: toPublicUser(user) });
-    setSessionCookie(response, token, expiresAt);
-    return response;
+    return buildAuthResponse(user, request);
   } catch (e) {
     if (e instanceof z.ZodError) {
       return NextResponse.json({ error: "INVALID_REQUEST" }, { status: 400 });

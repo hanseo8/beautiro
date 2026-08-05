@@ -44,6 +44,9 @@ export function AuthPanel({ wa }: { wa: string }) {
   const [phone, setPhone] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [verifyMessage, setVerifyMessage] = useState<string | null>(null);
+
+  const googleHref = `/api/auth/google?locale=${locale}&returnTo=${encodeURIComponent(`/${locale}/book?tab=account`)}`;
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -79,6 +82,9 @@ export function AuthPanel({ wa }: { wa: string }) {
       }
 
       setUser(data.user ?? null);
+      if (mode === "signup") {
+        setVerifyMessage(t("signupVerifySent"));
+      }
       await refresh();
     } catch {
       setError(t("genericError"));
@@ -93,6 +99,21 @@ export function AuthPanel({ wa }: { wa: string }) {
       await fetch("/api/auth/logout", { method: "POST" });
       setUser(null);
       setPassword("");
+      setVerifyMessage(null);
+    } finally {
+      setSubmitting(false);
+    }
+  }
+
+  async function resendVerification() {
+    setSubmitting(true);
+    setVerifyMessage(null);
+    try {
+      const res = await fetch("/api/auth/resend-verification", { method: "POST" });
+      if (!res.ok) throw new Error("failed");
+      setVerifyMessage(t("verifyResent"));
+    } catch {
+      setError(t("genericError"));
     } finally {
       setSubmitting(false);
     }
@@ -122,6 +143,26 @@ export function AuthPanel({ wa }: { wa: string }) {
           <p className="mt-1 text-xs text-beautiro-muted-light">{user.email}</p>
         </div>
 
+        {!user.emailVerified && (
+          <div className="mt-4 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900">
+            <p>{t("verifyBanner")}</p>
+            <button
+              type="button"
+              onClick={() => void resendVerification()}
+              disabled={submitting}
+              className="mt-2 font-semibold text-beautiro-primary hover:underline disabled:opacity-40"
+            >
+              {t("resendVerification")}
+            </button>
+          </div>
+        )}
+
+        {verifyMessage && (
+          <p className="mt-4 rounded-xl bg-beautiro-surface px-4 py-3 text-sm text-beautiro-charcoal">
+            {verifyMessage}
+          </p>
+        )}
+
         <div className="mt-5 grid gap-3">
           <Link
             href="/book?tab=bookings"
@@ -129,6 +170,14 @@ export function AuthPanel({ wa }: { wa: string }) {
           >
             {t("myBookings")}
           </Link>
+          {user.role === "ADMIN" && (
+            <a
+              href="/admin"
+              className="flex h-11 items-center justify-center rounded-xl border border-beautiro-charcoal bg-beautiro-charcoal text-sm font-semibold text-white hover:bg-beautiro-charcoal-hover"
+            >
+              {t("adminPanel")}
+            </a>
+          )}
           <Link
             href="/book"
             className="flex h-11 items-center justify-center rounded-xl border border-beautiro-border bg-white text-sm font-semibold text-beautiro-charcoal hover:bg-beautiro-surface"
@@ -168,7 +217,21 @@ export function AuthPanel({ wa }: { wa: string }) {
         {mode === "signup" ? t("signupDesc") : t("loginDesc")}
       </p>
 
-      <div className="mt-5 flex rounded-xl border border-beautiro-border bg-beautiro-surface p-1">
+      <a
+        href={googleHref}
+        className="mt-5 flex h-11 w-full items-center justify-center gap-2 rounded-xl border border-beautiro-border bg-white text-sm font-semibold text-beautiro-charcoal hover:bg-beautiro-surface"
+      >
+        <span className="text-base">G</span>
+        {t("googleButton")}
+      </a>
+
+      <div className="my-4 flex items-center gap-3 text-xs text-beautiro-muted-light">
+        <div className="h-px flex-1 bg-beautiro-border" />
+        {t("orContinueWithEmail")}
+        <div className="h-px flex-1 bg-beautiro-border" />
+      </div>
+
+      <div className="flex rounded-xl border border-beautiro-border bg-beautiro-surface p-1">
         <button
           type="button"
           onClick={() => {
@@ -242,9 +305,24 @@ export function AuthPanel({ wa }: { wa: string }) {
         {mode === "signup" && (
           <p className="text-xs text-beautiro-muted-light">{t("passwordHint")}</p>
         )}
+        {mode === "login" && (
+          <p className="text-right">
+            <Link
+              href="/auth/forgot-password"
+              className="text-xs font-medium text-beautiro-primary hover:underline"
+            >
+              {t("forgotLink")}
+            </Link>
+          </p>
+        )}
 
         {error && (
           <p className="rounded-lg bg-red-50 px-4 py-3 text-sm text-red-800">{error}</p>
+        )}
+        {verifyMessage && (
+          <p className="rounded-lg bg-beautiro-surface px-4 py-3 text-sm text-beautiro-charcoal">
+            {verifyMessage}
+          </p>
         )}
 
         <button

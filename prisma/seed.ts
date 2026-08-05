@@ -1,5 +1,6 @@
 import { PrismaClient, MedicalCategory } from "@prisma/client";
 import { KOREA_IMAGES } from "../src/lib/media";
+import { hashPassword } from "../src/lib/auth/password";
 
 const prisma = new PrismaClient();
 
@@ -298,6 +299,29 @@ async function main() {
   }
 
   console.log(`Upserted ${partners.length} partner hospitals`);
+
+  const adminEmail = process.env.ADMIN_EMAIL?.trim().toLowerCase();
+  const adminPassword = process.env.ADMIN_PASSWORD ?? "BeautiroAdmin2026!";
+  if (adminEmail) {
+    const passwordHash = await hashPassword(adminPassword);
+    await prisma.user.upsert({
+      where: { email: adminEmail },
+      update: {
+        role: "ADMIN",
+        emailVerified: new Date(),
+        passwordHash,
+      },
+      create: {
+        email: adminEmail,
+        passwordHash,
+        name: "Beautiro Admin",
+        role: "ADMIN",
+        emailVerified: new Date(),
+        locale: "ko",
+      },
+    });
+    console.log(`Ensured admin user ${adminEmail}`);
+  }
 }
 
 main()

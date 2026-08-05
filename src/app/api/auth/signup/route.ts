@@ -2,11 +2,9 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { prisma } from "@/lib/prisma";
 import { hashPassword } from "@/lib/auth/password";
-import {
-  createSession,
-  setSessionCookie,
-} from "@/lib/auth/session";
-import { toPublicUser } from "@/lib/auth/user";
+import { buildAuthResponse } from "@/lib/auth/session";
+import { createVerificationToken } from "@/lib/auth/tokens";
+import { sendEmail, verificationEmailHtml } from "@/lib/email";
 
 const bodySchema = z.object({
   email: z.string().email(),
@@ -38,10 +36,16 @@ export async function POST(request: Request) {
       },
     });
 
-    const { token, expiresAt } = await createSession(user.id);
-    const response = NextResponse.json({ user: toPublicUser(user) });
-    setSessionCookie(response, token, expiresAt);
-    return response;
+    const verifyToken = await createVerificationToken(user.id, "EMAIL_VERIFY");
+    await sendEmail({
+      to: user.email,
+      subject: "Verify your Beautiro email",
+      html: verificationEmailHtml(user.name, verifyToken, data.locale),
+    }).catch((error) => {
+      console.error("[signup:verify-email]", error);
+    });
+
+    return buildAuthResponse(user, request);
   } catch (e) {
     if (e instanceof z.ZodError) {
       return NextResponse.json({ error: "INVALID_REQUEST" }, { status: 400 });

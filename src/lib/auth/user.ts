@@ -6,6 +6,8 @@ export type PublicUser = {
   name: string;
   phone: string | null;
   locale: string;
+  role: "USER" | "ADMIN";
+  emailVerified: boolean;
   createdAt: string;
 };
 
@@ -16,6 +18,8 @@ export function toPublicUser(user: User): PublicUser {
     name: user.name,
     phone: user.phone,
     locale: user.locale,
+    role: user.role,
+    emailVerified: Boolean(user.emailVerified),
     createdAt: user.createdAt.toISOString(),
   };
 }

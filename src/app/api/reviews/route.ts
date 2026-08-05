@@ -18,7 +18,7 @@ const bodySchema = z.object({
 
 export async function POST(request: Request) {
   try {
-    const sessionUser = await getSessionUser();
+    const sessionUser = await getSessionUser(request);
     const json: unknown = await request.json();
     const data = bodySchema.parse(json);
 

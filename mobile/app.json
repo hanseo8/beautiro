@@ -1,0 +1,20 @@
+{
+  "expo": {
+    "name": "Beautiro",
+    "slug": "beautiro",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "beautiro",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.beautiro.app"
+    },
+    "android": {
+      "package": "com.beautiro.app"
+    },
+    "extra": {
+      "apiUrl": "https://www.beautiro.com"
+    }
+  }
+}

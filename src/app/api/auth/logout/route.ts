@@ -1,15 +1,13 @@
-import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
 import {
   clearSessionCookie,
   deleteSessionByToken,
-  SESSION_COOKIE,
+  resolveSessionToken,
 } from "@/lib/auth/session";
 
-export async function POST() {
+export async function POST(request: Request) {
   try {
-    const cookieStore = await cookies();
-    const token = cookieStore.get(SESSION_COOKIE)?.value;
+    const token = await resolveSessionToken(request);
 
     if (token) {
       await deleteSessionByToken(token);

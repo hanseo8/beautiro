@@ -28,7 +28,7 @@ function parseDate(value?: string) {
 
 export async function GET(request: Request) {
   try {
-    const sessionUser = await getSessionUser();
+    const sessionUser = await getSessionUser(request);
     const { searchParams } = new URL(request.url);
     const email = searchParams.get("email")?.trim();
     const phone = searchParams.get("phone")?.trim();
@@ -105,7 +105,7 @@ export async function GET(request: Request) {
 
 export async function POST(request: Request) {
   try {
-    const sessionUser = await getSessionUser();
+    const sessionUser = await getSessionUser(request);
     const json: unknown = await request.json();
     const data = bodySchema.parse(json);
 
