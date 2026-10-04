@@ -14,7 +14,7 @@ model=Image.open(OUT/'model-candidate-32280799.jpg').convert('RGB')
 model_after=Image.open(OUT/'model-30797188.jpg').convert('RGB')
 model_sequence=[
  model,
- Image.open(OUT/'seran-model-03.jpg').convert('RGB').crop((625,5,925,300)),
+ Image.open(OUT/'model-seoul-17427594.jpg').convert('RGB'),
  Image.open(OUT/'model-8076215.jpg').convert('RGB'),
  Image.open(OUT/'model-hook-38794386.jpg').convert('RGB'),
  model_after,
