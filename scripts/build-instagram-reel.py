@@ -94,15 +94,46 @@ def render_smooth(t):
    break
  return frame
 
+def render_continuous(t):
+ # Keep one licensed real model on screen for the entire Reel.
+ progress=t/12
+ zoom=1.04+0.10*progress
+ source=ImageOps.fit(model,(int(W*zoom),int(H*zoom)),method=Image.Resampling.LANCZOS)
+ max_x=max(0,source.width-W); max_y=max(0,source.height-H)
+ x=int(max_x*(0.25+0.50*progress)); y=int(max_y*(0.60-0.25*progress))
+ frame=source.crop((x,y,x+W,y+H)).convert('RGBA')
+ overlay=Image.new('RGBA',(W,H),(0,0,0,0)); d=ImageDraw.Draw(overlay)
+ d.rectangle((66,278,934,568),fill=(12,42,39,220))
+ d.rectangle((66,1090,934,1245),fill=(12,42,39,235))
+ frame=Image.alpha_composite(frame,overlay).convert('RGB'); draw=ImageDraw.Draw(frame)
+ text(draw,(88,292),'Beautiro',serif(64),'white')
+ text(draw,(90,373),'YOUR KOREAN BEAUTY JOURNEY',bold(20),'#D5BC8E')
+ if t < 3.2:
+  text(draw,(88,412),'Ingin tampil lebih percaya diri?',bold(54),'white')
+  text(draw,(90,510),'Mulai dengan konsultasi.',regular(32),'white')
+  text(draw,(90,1110),'Korean beauty look, your way.',bold(38),'white')
+ elif t < 7.2:
+  text(draw,(88,412),'Tanya saja, dapatkan benefitnya.',bold(48),'white')
+  text(draw,(90,510),'Ride gratis · Penerjemah gratis',regular(32),'white')
+  text(draw,(90,1110),'Untuk konsultasi selama promo',bold(34),'white')
+ else:
+  text(draw,(88,412),'Rencanakan kunjungan Anda.',bold(52),'white')
+  text(draw,(90,510),'Tanya Beautiro hari ini.',regular(32),'white')
+  text(draw,(90,1110),'WhatsApp · Link di bio',bold(38),'white')
+ text(draw,(90,1172),'Model ilustrasi · Bukan hasil perawatan',regular(26),'white')
+ fade=min(1,t*18,(12-t)*18)
+ if fade<1: frame=Image.blend(Image.new('RGB',(W,H),PAPER),frame,max(0,fade))
+ return frame
+
 video=OUT/'beautiro-indonesia-reel-12s.mp4'
 command=[imageio_ffmpeg.get_ffmpeg_exe(),'-y','-f','rawvideo','-vcodec','rawvideo','-s',f'{W}x{H}','-pix_fmt','rgb24','-r',str(FPS),'-i','pipe:0','-an','-c:v','libx264','-preset','fast','-crf','20','-pix_fmt','yuv420p','-movflags','+faststart',str(video)]
 process=subprocess.Popen(command,stdin=subprocess.PIPE,stdout=subprocess.DEVNULL,stderr=subprocess.PIPE)
-for number in range(12*FPS): process.stdin.write(render_smooth(number/FPS).tobytes())
+for number in range(12*FPS): process.stdin.write(render_continuous(number/FPS).tobytes())
 process.stdin.close(); errors=process.stderr.read().decode(errors='replace'); code=process.wait()
 if code: raise RuntimeError(errors[-2000:])
-render_smooth(1.0).save(OUT/'beautiro-reel-cover.jpg',quality=95)
+render_continuous(1.0).save(OUT/'beautiro-reel-cover.jpg',quality=95)
 thumbs=Image.new('RGB',(1080,960),PAPER)
-for i,t in enumerate([1.0,3.5,6.5,10.0]): thumbs.paste(render_smooth(t).resize((270,480)),(i*270,240))
+for i,t in enumerate([1.0,3.5,6.5,10.0]): thumbs.paste(render_continuous(t).resize((270,480)),(i*270,240))
 thumbs.save(OUT/'beautiro-reel-storyboard.jpg',quality=95)
 (OUT/'reel-scenes.json').write_text(json.dumps(scenes,ensure_ascii=False,indent=2),encoding='utf-8')
 print(f'Rendered: {video}\n1080x1920 · 30 fps · 12 seconds · H.264 · silent master')
