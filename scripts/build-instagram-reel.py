@@ -11,10 +11,11 @@ serif=lambda n: ImageFont.truetype(str(FONT/'georgia.ttf'),n)
 TEAL='#174C48'; INK='#172D2B'; PAPER='#F7F7F2'; GOLD='#AE9161'
 photos=[Image.open(ROOT/'public/hospitals/seran-plus'/p).convert('RGB') for p in ['lobby.jpg','consultation-rooms.jpg','corridor.jpg']]
 model=Image.open(OUT/'model-8076215.jpg').convert('RGB')
+model_after=Image.open(OUT/'model-30797188.jpg').convert('RGB')
 scenes=[
- dict(start=0,end=4,photo=0,eyebrow='K-MEDICAL, WITH BEAUTIRO',title=['Beauty trip','ke Korea?'],body=['Mulai dengan konsultasi.'],small='Kami bantu merencanakan perjalanan Anda.'),
- dict(start=4,end=9,photo=1,eyebrow='SERAN PLUS · INCHEON',title=['Klinik nyata.','Pendampingan nyata.'],body=['Koordinasi langsung dengan klinik.'],small='Seran Plus Plastic Surgery · Guwol-dong, Incheon'),
- dict(start=9,end=14,photo=2,eyebrow='YOUR MEDICAL CONCIERGE',title=['Dari kedatangan','hingga konsultasi.'],body=['Pickup bandara · Penerjemah','Penawaran khusus klinik'],small='Syarat & ketersediaan dikonfirmasi saat konsultasi.'),
+ dict(start=0,end=4,photo=0,eyebrow='K-BEAUTY PROMO',title=['Ingin tampil','lebih percaya diri?'],body=['Mulai dengan konsultasi.'],small='Model ilustrasi · Bukan hasil perawatan'),
+ dict(start=4,end=9,photo=1,eyebrow='PROMO SEDANG BERLANGSUNG',title=['Beauty care','di Korea'],body=['Tanya promo yang tersedia.'],small='Syarat dan ketersediaan dikonfirmasi saat konsultasi.'),
+ dict(start=9,end=14,photo=2,eyebrow='PROMO BEAUTIRO',title=['Tanya saja,','dapatkan benefitnya.'],body=['Ride gratis · Penerjemah gratis','Untuk konsultasi selama promo'],small='Syarat & ketersediaan dikonfirmasi saat konsultasi.'),
  dict(start=14,end=20,photo=0,eyebrow='LET’S PLAN YOUR VISIT',title=['Tanya biaya.','Rencanakan kunjungan.'],body=['Chat kami di WhatsApp.'],small='Link di bio · www.beautiro.com')
 ]
 def text(draw,xy,value,font,fill):
@@ -22,8 +23,14 @@ def text(draw,xy,value,font,fill):
 def render(t):
  scene=next((s for s in scenes if s['start']<=t<s['end']),scenes[-1]); p=(t-scene['start'])/(scene['end']-scene['start'])
  if scene is scenes[0]:
+  source=model if p < 0.48 else model_after
+  # Fast editorial cut: the first model changes into a second real East Asian beauty model.
+  if 0.42 <= p <= 0.58:
+   a=ImageOps.fit(model,(W,H),method=Image.Resampling.LANCZOS).convert('RGBA')
+   b=ImageOps.fit(model_after,(W,H),method=Image.Resampling.LANCZOS).convert('RGBA')
+   source=Image.blend(a,b,(p-0.42)/0.16).convert('RGB')
   zoom=1+0.035*p
-  expanded=ImageOps.fit(model,(int(W*zoom),int(H*zoom)),method=Image.Resampling.LANCZOS)
+  expanded=ImageOps.fit(source,(int(W*zoom),int(H*zoom)),method=Image.Resampling.LANCZOS)
   x=(expanded.width-W)//2; y=(expanded.height-H)//2
   frame=expanded.crop((x,y,x+W,y+H)).convert('RGBA')
   overlay=Image.new('RGBA',(W,H),(0,0,0,0)); d=ImageDraw.Draw(overlay)
@@ -32,9 +39,9 @@ def render(t):
   frame=Image.alpha_composite(frame,overlay).convert('RGB'); draw=ImageDraw.Draw(frame)
   text(draw,(88,292),'Beautiro',serif(64),'white')
   text(draw,(90,373),'YOUR KOREAN BEAUTY JOURNEY',bold(20),'#D5BC8E')
-  text(draw,(88,412),'Beauty trip ke Korea?',bold(66),'white')
-  text(draw,(90,510),'Mulai dari konsultasi.',regular(32),'white')
-  text(draw,(90,1110),'Klinik · Pickup · Penerjemah',bold(36),'white')
+  text(draw,(88,412),'Ingin tampil lebih percaya diri?',bold(54),'white')
+  text(draw,(90,510),'Tanya Beautiro.',regular(32),'white')
+  text(draw,(90,1110),'Promo sedang berlangsung',bold(38),'white')
   text(draw,(90,1172),'Model ilustrasi · Bukan hasil perawatan',regular(26),'white')
   return frame
  frame=Image.new('RGB',(W,H),PAPER); draw=ImageDraw.Draw(frame)
