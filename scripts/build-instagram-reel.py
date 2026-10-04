@@ -10,7 +10,7 @@ bold=lambda n: ImageFont.truetype(str(FONT/'segoeuib.ttf'),n)
 serif=lambda n: ImageFont.truetype(str(FONT/'georgia.ttf'),n)
 TEAL='#174C48'; INK='#172D2B'; PAPER='#F7F7F2'; GOLD='#AE9161'
 photos=[Image.open(ROOT/'public/hospitals/seran-plus'/p).convert('RGB') for p in ['lobby.jpg','consultation-rooms.jpg','corridor.jpg']]
-model=Image.open(OUT/'model-hook-38794386.jpg').convert('RGB')
+model=Image.open(OUT/'model-candidate-32280799.jpg').convert('RGB')
 model_after=Image.open(OUT/'model-30797188.jpg').convert('RGB')
 scenes=[
  dict(start=0,end=2.5,photo=0,eyebrow='K-BEAUTY PROMO',title=['Ingin tampil','lebih percaya diri?'],body=['Mulai dengan konsultasi.'],small='Model ilustrasi · Bukan hasil perawatan'),
