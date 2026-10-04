@@ -16,21 +16,21 @@
   {
     "start": 2.5,
     "end": 5,
-    "photo": 1,
-    "eyebrow": "PROMO SEDANG BERLANGSUNG",
+    "photo": 0,
+    "eyebrow": "GLOW-UP MOMENT",
     "title": [
-      "Beauty care",
-      "di Korea"
+      "Korean beauty",
+      "look, your way."
     ],
     "body": [
-      "Tanya promo yang tersedia."
+      "Tanya Beautiro hari ini."
     ],
-    "small": "Syarat dan ketersediaan dikonfirmasi saat konsultasi."
+    "small": "Model ilustrasi · Bukan hasil perawatan"
   },
   {
     "start": 5,
     "end": 8.5,
-    "photo": 2,
+    "photo": 0,
     "eyebrow": "PROMO BEAUTIRO",
     "title": [
       "Tanya saja,",

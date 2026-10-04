@@ -14,18 +14,18 @@ model=Image.open(OUT/'model-candidate-32280799.jpg').convert('RGB')
 model_after=Image.open(OUT/'model-30797188.jpg').convert('RGB')
 scenes=[
  dict(start=0,end=2.5,photo=0,eyebrow='K-BEAUTY PROMO',title=['Ingin tampil','lebih percaya diri?'],body=['Mulai dengan konsultasi.'],small='Model ilustrasi · Bukan hasil perawatan'),
- dict(start=2.5,end=5,photo=1,eyebrow='PROMO SEDANG BERLANGSUNG',title=['Beauty care','di Korea'],body=['Tanya promo yang tersedia.'],small='Syarat dan ketersediaan dikonfirmasi saat konsultasi.'),
- dict(start=5,end=8.5,photo=2,eyebrow='PROMO BEAUTIRO',title=['Tanya saja,','dapatkan benefitnya.'],body=['Ride gratis · Penerjemah gratis','Untuk konsultasi selama promo'],small='Syarat & ketersediaan dikonfirmasi saat konsultasi.'),
+ dict(start=2.5,end=5,photo=0,eyebrow='GLOW-UP MOMENT',title=['Korean beauty','look, your way.'],body=['Tanya Beautiro hari ini.'],small='Model ilustrasi · Bukan hasil perawatan'),
+ dict(start=5,end=8.5,photo=0,eyebrow='PROMO BEAUTIRO',title=['Tanya saja,','dapatkan benefitnya.'],body=['Ride gratis · Penerjemah gratis','Untuk konsultasi selama promo'],small='Syarat & ketersediaan dikonfirmasi saat konsultasi.'),
  dict(start=8.5,end=12,photo=0,eyebrow='LET’S PLAN YOUR VISIT',title=['Tanya biaya.','Rencanakan kunjungan.'],body=['Chat kami di WhatsApp.'],small='Link di bio · www.beautiro.com')
 ]
 def text(draw,xy,value,font,fill):
  draw.text(xy,value,font=font,fill=fill,stroke_width=0)
 def render(t):
  scene=next((s for s in scenes if s['start']<=t<s['end']),scenes[-1]); p=(t-scene['start'])/(scene['end']-scene['start'])
- if scene is scenes[0]:
-  source=model if p < 0.48 else model_after
+ if scene is scenes[0] or scene is scenes[1]:
+  source=model if scene is scenes[0] else model_after
   # Fast editorial cut: the first model changes into a second real East Asian beauty model.
-  if 0.42 <= p <= 0.58:
+  if scene is scenes[0] and 0.42 <= p <= 0.58:
    a=ImageOps.fit(model,(W,H),method=Image.Resampling.LANCZOS).convert('RGBA')
    b=ImageOps.fit(model_after,(W,H),method=Image.Resampling.LANCZOS).convert('RGBA')
    source=Image.blend(a,b,(p-0.42)/0.16).convert('RGB')
@@ -39,26 +39,36 @@ def render(t):
   frame=Image.alpha_composite(frame,overlay).convert('RGB'); draw=ImageDraw.Draw(frame)
   text(draw,(88,292),'Beautiro',serif(64),'white')
   text(draw,(90,373),'YOUR KOREAN BEAUTY JOURNEY',bold(20),'#D5BC8E')
-  text(draw,(88,412),'Ingin tampil lebih percaya diri?',bold(54),'white')
-  text(draw,(90,510),'Tanya Beautiro.',regular(32),'white')
-  text(draw,(90,1110),'Promo sedang berlangsung',bold(38),'white')
+  if scene is scenes[0]:
+   text(draw,(88,412),'Ingin tampil lebih percaya diri?',bold(54),'white')
+   text(draw,(90,510),'Tanya Beautiro.',regular(32),'white')
+   text(draw,(90,1110),'Promo sedang berlangsung',bold(38),'white')
+  else:
+   text(draw,(88,412),'Korean beauty look, your way.',bold(54),'white')
+   text(draw,(90,510),'Tanya Beautiro hari ini.',regular(32),'white')
+   text(draw,(90,1110),'Real photo · K-beauty mood',bold(38),'white')
   text(draw,(90,1172),'Model ilustrasi · Bukan hasil perawatan',regular(26),'white')
   return frame
  frame=Image.new('RGB',(W,H),PAPER); draw=ImageDraw.Draw(frame)
  # Original clinic photograph, fitted without stretching; a restrained pan gives motion.
- photo=photos[scene['photo']]; scale=1+0.035*p
- panel=ImageOps.fit(photo,(int(1000*scale),int(751*scale)),method=Image.Resampling.LANCZOS)
- left=(panel.width-1000)//2; top=(panel.height-751)//2
- frame.paste(panel.crop((left,top,left+1000,top+751)),(40,840))
+ if scene is scenes[2]:
+  photo=photos[scene['photo']]; scale=1+0.035*p
+  panel=ImageOps.fit(photo,(int(1000*scale),int(751*scale)),method=Image.Resampling.LANCZOS)
+  left=(panel.width-1000)//2; top=(panel.height-751)//2
+  frame.paste(panel.crop((left,top,left+1000,top+751)),(40,840))
+ else:
+  draw.rounded_rectangle((40,840,1040,1591),radius=8,fill=TEAL)
  draw=ImageDraw.Draw(frame)
  draw.rectangle((40,840,1040,1591),outline='#DDDCD6',width=1)
- text(draw,(88,292),'Beautiro',serif(66),TEAL)
- text(draw,(91,375),scene['eyebrow'],bold(22),GOLD)
+ ink = TEAL
+ accent = GOLD
+ text(draw,(88,292),'Beautiro',serif(66),ink)
+ text(draw,(91,375),scene['eyebrow'],bold(22),accent)
  draw.line((88,427,910,427),fill='#D8DDD8',width=2)
  for i,line in enumerate(scene['title']):
   font_size=68 if len(line)>22 else 76
-  text(draw,(88,470+i*98),line,bold(font_size),INK)
- for i,line in enumerate(scene['body']): text(draw,(90,691+i*46),line,regular(34),TEAL)
+  text(draw,(88,470+i*98),line,bold(font_size),ink)
+ for i,line in enumerate(scene['body']): text(draw,(90,691+i*46),line,regular(34),ink)
  # Safety band keeps the key CTA above the Reels controls.
  if scene is scenes[-1]:
   draw.rounded_rectangle((82,1012,918,1152),radius=6,fill=TEAL)
