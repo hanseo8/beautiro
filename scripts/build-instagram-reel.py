@@ -10,13 +10,13 @@ bold=lambda n: ImageFont.truetype(str(FONT/'segoeuib.ttf'),n)
 serif=lambda n: ImageFont.truetype(str(FONT/'georgia.ttf'),n)
 TEAL='#174C48'; INK='#172D2B'; PAPER='#F7F7F2'; GOLD='#AE9161'
 photos=[Image.open(ROOT/'public/hospitals/seran-plus'/p).convert('RGB') for p in ['lobby.jpg','consultation-rooms.jpg','corridor.jpg']]
-model=Image.open(OUT/'model-8076215.jpg').convert('RGB')
+model=Image.open(OUT/'model-hook-38794386.jpg').convert('RGB')
 model_after=Image.open(OUT/'model-30797188.jpg').convert('RGB')
 scenes=[
- dict(start=0,end=4,photo=0,eyebrow='K-BEAUTY PROMO',title=['Ingin tampil','lebih percaya diri?'],body=['Mulai dengan konsultasi.'],small='Model ilustrasi · Bukan hasil perawatan'),
- dict(start=4,end=9,photo=1,eyebrow='PROMO SEDANG BERLANGSUNG',title=['Beauty care','di Korea'],body=['Tanya promo yang tersedia.'],small='Syarat dan ketersediaan dikonfirmasi saat konsultasi.'),
- dict(start=9,end=14,photo=2,eyebrow='PROMO BEAUTIRO',title=['Tanya saja,','dapatkan benefitnya.'],body=['Ride gratis · Penerjemah gratis','Untuk konsultasi selama promo'],small='Syarat & ketersediaan dikonfirmasi saat konsultasi.'),
- dict(start=14,end=20,photo=0,eyebrow='LET’S PLAN YOUR VISIT',title=['Tanya biaya.','Rencanakan kunjungan.'],body=['Chat kami di WhatsApp.'],small='Link di bio · www.beautiro.com')
+ dict(start=0,end=2.5,photo=0,eyebrow='K-BEAUTY PROMO',title=['Ingin tampil','lebih percaya diri?'],body=['Mulai dengan konsultasi.'],small='Model ilustrasi · Bukan hasil perawatan'),
+ dict(start=2.5,end=5,photo=1,eyebrow='PROMO SEDANG BERLANGSUNG',title=['Beauty care','di Korea'],body=['Tanya promo yang tersedia.'],small='Syarat dan ketersediaan dikonfirmasi saat konsultasi.'),
+ dict(start=5,end=8.5,photo=2,eyebrow='PROMO BEAUTIRO',title=['Tanya saja,','dapatkan benefitnya.'],body=['Ride gratis · Penerjemah gratis','Untuk konsultasi selama promo'],small='Syarat & ketersediaan dikonfirmasi saat konsultasi.'),
+ dict(start=8.5,end=12,photo=0,eyebrow='LET’S PLAN YOUR VISIT',title=['Tanya biaya.','Rencanakan kunjungan.'],body=['Chat kami di WhatsApp.'],small='Link di bio · www.beautiro.com')
 ]
 def text(draw,xy,value,font,fill):
  draw.text(xy,value,font=font,fill=fill,stroke_width=0)
@@ -74,15 +74,15 @@ def render(t):
  fade=min(1,p*18,(1-p)*18)
  if fade<1: frame=Image.blend(Image.new('RGB',(W,H),PAPER),frame,max(0,fade))
  return frame
-video=OUT/'beautiro-indonesia-reel-20s.mp4'
+video=OUT/'beautiro-indonesia-reel-12s.mp4'
 command=[imageio_ffmpeg.get_ffmpeg_exe(),'-y','-f','rawvideo','-vcodec','rawvideo','-s',f'{W}x{H}','-pix_fmt','rgb24','-r',str(FPS),'-i','pipe:0','-an','-c:v','libx264','-preset','fast','-crf','20','-pix_fmt','yuv420p','-movflags','+faststart',str(video)]
 process=subprocess.Popen(command,stdin=subprocess.PIPE,stdout=subprocess.DEVNULL,stderr=subprocess.PIPE)
-for number in range(20*FPS): process.stdin.write(render(number/FPS).tobytes())
+for number in range(12*FPS): process.stdin.write(render(number/FPS).tobytes())
 process.stdin.close(); errors=process.stderr.read().decode(errors='replace'); code=process.wait()
 if code: raise RuntimeError(errors[-2000:])
-render(1.5).save(OUT/'beautiro-reel-cover.jpg',quality=95)
+render(1.0).save(OUT/'beautiro-reel-cover.jpg',quality=95)
 thumbs=Image.new('RGB',(1080,960),PAPER)
-for i,t in enumerate([1.5,6.5,11.5,17]): thumbs.paste(render(t).resize((270,480)),(i*270,240))
+for i,t in enumerate([1.0,3.5,6.5,10.0]): thumbs.paste(render(t).resize((270,480)),(i*270,240))
 thumbs.save(OUT/'beautiro-reel-storyboard.jpg',quality=95)
 (OUT/'reel-scenes.json').write_text(json.dumps(scenes,ensure_ascii=False,indent=2),encoding='utf-8')
-print(f'Rendered: {video}\n1080x1920 · 30 fps · 20 seconds · H.264 · silent master')
+print(f'Rendered: {video}\n1080x1920 · 30 fps · 12 seconds · H.264 · silent master')

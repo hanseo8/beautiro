@@ -1,7 +1,7 @@
 [
   {
     "start": 0,
-    "end": 4,
+    "end": 2.5,
     "photo": 0,
     "eyebrow": "K-BEAUTY PROMO",
     "title": [
@@ -14,8 +14,8 @@
     "small": "Model ilustrasi · Bukan hasil perawatan"
   },
   {
-    "start": 4,
-    "end": 9,
+    "start": 2.5,
+    "end": 5,
     "photo": 1,
     "eyebrow": "PROMO SEDANG BERLANGSUNG",
     "title": [
@@ -28,8 +28,8 @@
     "small": "Syarat dan ketersediaan dikonfirmasi saat konsultasi."
   },
   {
-    "start": 9,
-    "end": 14,
+    "start": 5,
+    "end": 8.5,
     "photo": 2,
     "eyebrow": "PROMO BEAUTIRO",
     "title": [
@@ -43,8 +43,8 @@
     "small": "Syarat & ketersediaan dikonfirmasi saat konsultasi."
   },
   {
-    "start": 14,
-    "end": 20,
+    "start": 8.5,
+    "end": 12,
     "photo": 0,
     "eyebrow": "LET’S PLAN YOUR VISIT",
     "title": [
