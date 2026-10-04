@@ -84,15 +84,25 @@ def render(t):
  fade=min(1,p*18,(1-p)*18)
  if fade<1: frame=Image.blend(Image.new('RGB',(W,H),PAPER),frame,max(0,fade))
  return frame
+def render_smooth(t):
+ frame=render(t)
+ # Use a short cross-dissolve at every scene boundary instead of a hard cut.
+ for scene in scenes[1:]:
+  if scene['start'] <= t < scene['start'] + 0.32:
+   previous=render(max(0, t-0.32))
+   frame=Image.blend(previous, frame, (t-scene['start'])/0.32)
+   break
+ return frame
+
 video=OUT/'beautiro-indonesia-reel-12s.mp4'
 command=[imageio_ffmpeg.get_ffmpeg_exe(),'-y','-f','rawvideo','-vcodec','rawvideo','-s',f'{W}x{H}','-pix_fmt','rgb24','-r',str(FPS),'-i','pipe:0','-an','-c:v','libx264','-preset','fast','-crf','20','-pix_fmt','yuv420p','-movflags','+faststart',str(video)]
 process=subprocess.Popen(command,stdin=subprocess.PIPE,stdout=subprocess.DEVNULL,stderr=subprocess.PIPE)
-for number in range(12*FPS): process.stdin.write(render(number/FPS).tobytes())
+for number in range(12*FPS): process.stdin.write(render_smooth(number/FPS).tobytes())
 process.stdin.close(); errors=process.stderr.read().decode(errors='replace'); code=process.wait()
 if code: raise RuntimeError(errors[-2000:])
-render(1.0).save(OUT/'beautiro-reel-cover.jpg',quality=95)
+render_smooth(1.0).save(OUT/'beautiro-reel-cover.jpg',quality=95)
 thumbs=Image.new('RGB',(1080,960),PAPER)
-for i,t in enumerate([1.0,3.5,6.5,10.0]): thumbs.paste(render(t).resize((270,480)),(i*270,240))
+for i,t in enumerate([1.0,3.5,6.5,10.0]): thumbs.paste(render_smooth(t).resize((270,480)),(i*270,240))
 thumbs.save(OUT/'beautiro-reel-storyboard.jpg',quality=95)
 (OUT/'reel-scenes.json').write_text(json.dumps(scenes,ensure_ascii=False,indent=2),encoding='utf-8')
 print(f'Rendered: {video}\n1080x1920 · 30 fps · 12 seconds · H.264 · silent master')
