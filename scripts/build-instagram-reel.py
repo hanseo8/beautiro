@@ -12,6 +12,13 @@ TEAL='#174C48'; INK='#172D2B'; PAPER='#F7F7F2'; GOLD='#AE9161'
 photos=[Image.open(ROOT/'public/hospitals/seran-plus'/p).convert('RGB') for p in ['lobby.jpg','consultation-rooms.jpg','corridor.jpg']]
 model=Image.open(OUT/'model-candidate-32280799.jpg').convert('RGB')
 model_after=Image.open(OUT/'model-30797188.jpg').convert('RGB')
+model_sequence=[
+ model,
+ model_after,
+ Image.open(OUT/'model-8076215.jpg').convert('RGB'),
+ Image.open(OUT/'model-hook-38794386.jpg').convert('RGB'),
+ Image.open(OUT/'model-candidate-30797182.jpg').convert('RGB'),
+]
 scenes=[
  dict(start=0,end=2.5,photo=0,eyebrow='K-BEAUTY PROMO',title=['Ingin tampil','lebih percaya diri?'],body=['Mulai dengan konsultasi.'],small='Model ilustrasi · Bukan hasil perawatan'),
  dict(start=2.5,end=5,photo=0,eyebrow='GLOW-UP MOMENT',title=['Korean beauty','look, your way.'],body=['Tanya Beautiro hari ini.'],small='Model ilustrasi · Bukan hasil perawatan'),
@@ -95,12 +102,21 @@ def render_smooth(t):
  return frame
 
 def render_continuous(t):
- # Alternate licensed Indonesian and Korean beauty models every two seconds.
+ # Show a different licensed real model in each two-second segment.
  segment=int(t//2)
- source_image=model if segment % 2 == 0 else model_after
+ if segment >= len(model_sequence):
+  frame=Image.new('RGB',(W,H),TEAL); draw=ImageDraw.Draw(frame)
+  text(draw,(88,292),'Beautiro',serif(66),'white')
+  text(draw,(91,375),'LET’S PLAN YOUR VISIT',bold(22),'#D5BC8E')
+  text(draw,(88,470),'Tanya Beautiro.',bold(76),'white')
+  text(draw,(90,691),'WhatsApp · Link di bio',regular(38),'white')
+  text(draw,(88,1680),'KOREAN MEDICAL CONCIERGE',regular(21),'#D5BC8E')
+  text(draw,(88,1720),'www.beautiro.com',regular(27),'white')
+  return frame
+ source_image=model_sequence[segment]
  local=t%2
  if local < 0.28 and t > 0:
-  previous_image=model_after if segment % 2 == 0 else model
+  previous_image=model_sequence[segment-1]
   previous=ImageOps.fit(previous_image,(W,H),method=Image.Resampling.LANCZOS).convert('RGBA')
   current=ImageOps.fit(source_image,(W,H),method=Image.Resampling.LANCZOS).convert('RGBA')
   source_image=Image.blend(previous,current,local/0.28).convert('RGB')
