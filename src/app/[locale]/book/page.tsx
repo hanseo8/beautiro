@@ -3,7 +3,7 @@ export const dynamic = "force-dynamic";
 import { Suspense } from "react";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { prisma } from "@/lib/prisma";
-import { localizeHospital } from "@/lib/hospitals";
+import { localizeHospital, publicHospitalWhere, prioritizeHospitals } from "@/lib/hospitals";
 import type { Locale } from "@/i18n/routing";
 import { BookPageContent } from "@/components/book/BookPageContent";
 
@@ -15,10 +15,11 @@ export default async function BookPage({ params }: Props) {
   const tHospitals = await getTranslations("hospitals");
   const loc = locale as Locale;
 
-  const hospitals = await prisma.hospital.findMany({
+  const hospitals = prioritizeHospitals(await prisma.hospital.findMany({
+    where: publicHospitalWhere,
     include: { procedures: true },
     orderBy: [{ featured: "desc" }, { nameKo: "asc" }],
-  });
+  }));
 
   const regionT = (key: string) => tHospitals(key);
   const localizedHospitals = hospitals.map((h) =>

@@ -111,3 +111,10 @@ export function formatKrw(amount: number, locale: Locale): string {
     { style: "currency", currency: "KRW", maximumFractionDigits: 0 },
   ).format(amount);
 }
+
+/** Public listings exclude discontinued partners while retaining booking history. */
+export const publicHospitalWhere = { slug: { not: "seran-plastic" } };
+
+export function prioritizeHospitals<T extends { slug: string }>(items: T[]): T[] {
+  return [...items].sort((a, b) => Number(b.slug === "seran-plus-plastic") - Number(a.slug === "seran-plus-plastic"));
+}

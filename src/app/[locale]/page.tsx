@@ -15,7 +15,7 @@ import {
 } from "@/components/home/PopularEventSection";
 import { AppPromoBanner } from "@/components/home/AppPromoBanner";
 import { prisma } from "@/lib/prisma";
-import { localizeHospital } from "@/lib/hospitals";
+import { localizeHospital, publicHospitalWhere, prioritizeHospitals } from "@/lib/hospitals";
 import { resolveHospitalImage, resolveHospitalImagePosition } from "@/lib/media";
 import type { Locale } from "@/i18n/routing";
 
@@ -37,9 +37,10 @@ export default async function HomePage({ params }: Props) {
   const tHospitals = await getTranslations("hospitals");
   const loc = locale as Locale;
 
-  const hospitals = await prisma.hospital.findMany({
+  const hospitals = prioritizeHospitals(await prisma.hospital.findMany({
+    where: publicHospitalWhere,
     include: { procedures: true },
-  });
+  }));
 
   const seranPlus = hospitals.find(h => h.slug === "seran-plus-plastic");
 

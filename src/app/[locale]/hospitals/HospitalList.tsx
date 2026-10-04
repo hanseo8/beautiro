@@ -141,7 +141,7 @@ export function HospitalList({
   }
 
   const sortedGroups = [...groups.entries()].sort(([, aItems], [, bItems]) =>
-    compareRegionGroup(aItems[0]!, bItems[0]!),
+    Number(bItems.some(h => h.slug === "seran-plus-plastic")) - Number(aItems.some(h => h.slug === "seran-plus-plastic")) || compareRegionGroup(aItems[0]!, bItems[0]!),
   );
 
   return (
@@ -156,6 +156,8 @@ export function HospitalList({
           (k) => t(k),
         );
         const sortedHospitals = [...groupItems].sort((a, b) => {
+          const priority = Number(b.slug === "seran-plus-plastic") - Number(a.slug === "seran-plus-plastic");
+          if (priority) return priority;
           const catOrder = (c: MedicalCategory) =>
             ["PLASTIC", "DERMATOLOGY", "ORIENTAL", "DENTAL"].indexOf(c);
           const diff =
