@@ -30,9 +30,9 @@ export function PartnerHospitalsPreview({
           {t("viewAllHospitals")}
         </Link>
       </div>
-      <ul className="mt-4 grid gap-2 sm:grid-cols-2">
+      <ul className="mt-4 grid min-w-0 grid-cols-1 gap-2 sm:grid-cols-2">
         {hospitals.map((h) => (
-          <li key={h.id}>
+          <li key={h.id} className="min-w-0">
             <Link
               href={`/hospitals?q=${encodeURIComponent(h.name)}`}
               className="flex items-start gap-3 rounded-xl border border-beautiro-border bg-beautiro-surface/50 px-4 py-3 transition-colors hover:border-beautiro-primary/30 hover:bg-beautiro-primary/5"
@@ -40,8 +40,8 @@ export function PartnerHospitalsPreview({
               <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white text-beautiro-primary">
                 <Building2 size={16} strokeWidth={1.5} />
               </span>
-              <span className="min-w-0">
-                <span className="block text-sm font-semibold text-beautiro-charcoal">
+              <span className="min-w-0 flex-1">
+                <span className="block break-words text-sm font-semibold text-beautiro-charcoal">
                   {h.name}
                 </span>
                 <span className="mt-0.5 flex items-center gap-1 text-xs text-beautiro-muted">

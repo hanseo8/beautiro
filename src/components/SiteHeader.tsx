@@ -56,7 +56,7 @@ export function SiteHeader() {
         <TopUtilBar compact={scrolled} />
         <header className="border-b border-beautiro-border/80 bg-white/95 backdrop-blur-md">
           <div
-            className={`container-babitalk flex items-center gap-4 transition-all duration-300 lg:gap-8 ${
+            className={`container-babitalk flex items-center gap-4 transition-all duration-300 xl:gap-6 ${
               scrolled ? "h-11" : "h-14"
             }`}
           >
@@ -68,19 +68,19 @@ export function SiteHeader() {
               >
                 Beautiro
               </span>
-              <span className="hidden border-l border-beautiro-border pl-2.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-beautiro-muted lg:block">
+              <span className="hidden border-l border-beautiro-border pl-2.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-beautiro-muted xl:block">
                 {t("brandSubtitle")}
               </span>
             </Link>
 
-            <nav className="hidden flex-1 items-center justify-center gap-1 lg:flex">
+            <nav className="hidden flex-1 items-center justify-center gap-1 xl:flex">
               {navItems.map((item) => {
                 const active = item.match(pathname);
                 return (
                   <Link
                     key={item.labelKey}
                     href={item.href}
-                    className={`rounded-lg px-3.5 py-2 text-sm font-medium transition-colors ${
+                    className={`whitespace-nowrap rounded-lg px-2.5 py-2 text-sm font-medium transition-colors ${
                       active
                         ? "bg-beautiro-surface text-beautiro-primary"
                         : "text-beautiro-muted hover:bg-beautiro-surface/60 hover:text-beautiro-charcoal"
@@ -120,7 +120,7 @@ export function SiteHeader() {
               <button
                 type="button"
                 onClick={() => setMenuOpen(true)}
-                className="flex h-9 w-9 items-center justify-center rounded-lg border border-beautiro-border text-beautiro-charcoal transition-colors hover:bg-beautiro-surface lg:hidden"
+                className="flex h-9 w-9 items-center justify-center rounded-lg border border-beautiro-border text-beautiro-charcoal transition-colors hover:bg-beautiro-surface xl:hidden"
                 aria-label={t("menuOpen")}
                 aria-expanded={menuOpen}
               >

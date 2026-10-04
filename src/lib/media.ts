@@ -23,11 +23,11 @@ export type BannerPhoto = {
 
 /** Hero / simple overlay banners */
 export const BANNER_FRAME_CLASS =
-  "relative aspect-[3/2] min-h-[220px] overflow-hidden sm:aspect-[16/9] sm:min-h-[240px]";
+  "relative w-full min-w-0 min-h-[220px] overflow-hidden sm:aspect-[16/9] sm:min-h-[240px]";
 
-/** Promo carousel — full-width strip; fixed height on desktop, grows on mobile when needed */
+/** Promo carousel — full-width strip; content-driven height to preserve translated text at every viewport */
 export const PROMO_BANNER_FRAME_CLASS =
-  "relative w-full min-h-[200px] overflow-hidden sm:h-[240px] sm:min-h-0";
+  "relative w-full min-h-[200px] overflow-hidden sm:min-h-[240px]";
 
 /**
  * Korea-verified photography mapped to slide / hospital context.
