@@ -1,0 +1,59 @@
+[
+  {
+    "start": 0,
+    "end": 4,
+    "photo": 0,
+    "eyebrow": "K-MEDICAL, WITH BEAUTIRO",
+    "title": [
+      "Perawatan kecantikan",
+      "di Korea?"
+    ],
+    "body": [
+      "Mulai dengan konsultasi."
+    ],
+    "small": "Kami bantu merencanakan perjalanan Anda."
+  },
+  {
+    "start": 4,
+    "end": 9,
+    "photo": 1,
+    "eyebrow": "SERAN PLUS · INCHEON",
+    "title": [
+      "Klinik nyata.",
+      "Pendampingan nyata."
+    ],
+    "body": [
+      "Koordinasi langsung dengan klinik."
+    ],
+    "small": "Seran Plus Plastic Surgery · Guwol-dong, Incheon"
+  },
+  {
+    "start": 9,
+    "end": 14,
+    "photo": 2,
+    "eyebrow": "YOUR MEDICAL CONCIERGE",
+    "title": [
+      "Dari kedatangan",
+      "hingga konsultasi."
+    ],
+    "body": [
+      "Pickup bandara · Penerjemah",
+      "Penawaran khusus klinik"
+    ],
+    "small": "Syarat & ketersediaan dikonfirmasi saat konsultasi."
+  },
+  {
+    "start": 14,
+    "end": 20,
+    "photo": 0,
+    "eyebrow": "LET’S PLAN YOUR VISIT",
+    "title": [
+      "Tanya biaya.",
+      "Rencanakan kunjungan."
+    ],
+    "body": [
+      "Chat kami di WhatsApp."
+    ],
+    "small": "Link di bio · www.beautiro.com"
+  }
+]
