@@ -37,3 +37,8 @@
 ## 재생성
 Python의 Pillow와 imageio-ffmpeg를 사용한다.
 `python scripts/build-instagram-reel.py`
+
+## 모델 훅 버전
+첫 4초를 실제 뷰티 모델 사진과 “Beauty trip ke Korea?”로 변경. 실제 시술 전후나 후기 모델이 아니며, 영상에 인도네시아어로 모델 이미지임을 표시한다.
+사진: MART PRODUCTION / Pexels, https://www.pexels.com/photo/a-woman-applying-skincare-on-her-face-8076215/
+라이선스: https://www.pexels.com/license/
