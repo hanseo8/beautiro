@@ -125,11 +125,20 @@ export const promoBannerImages: BannerPhoto[] = [
 /** @deprecated Use heroBannerImages */
 export const heroSlideImages = heroBannerImages.map((b) => b.src);
 
+/** Actual Seran Plus photographs from its official facility gallery. */
+export const verifiedHospitalPhotos: Record<string, { src: string; label: "lobby" | "consultationRooms" | "corridor" }[]> = {
+  "seran-plus-plastic": [
+    { src: "/hospitals/seran-plus/lobby.jpg", label: "lobby" },
+    { src: "/hospitals/seran-plus/consultation-rooms.jpg", label: "consultationRooms" },
+    { src: "/hospitals/seran-plus/corridor.jpg", label: "corridor" },
+  ],
+};
+
 export const hospitalCoverImages: Record<string, string> = {
   "arena-oriental-clinic": KOREA_IMAGES.seoulKMediCenter,
   "arena-oriental-hospital": KOREA_IMAGES.seoulKMediCenter,
   "seran-plastic": KOREA_IMAGES.konkukUniversityHospital,
-  "seran-plus-plastic": KOREA_IMAGES.asanMedicalCenter,
+  "seran-plus-plastic": "/hospitals/seran-plus/lobby.jpg",
   "seran-dermatology": KOREA_IMAGES.konkukUniversityHospital,
   "seran-dental": KOREA_IMAGES.konkukUniversityHospital,
   "seoul-central-dental": KOREA_IMAGES.konkukUniversityHospital,
@@ -140,7 +149,7 @@ export const hospitalCoverPositions: Record<string, string> = {
   "arena-oriental-clinic": "center 45%",
   "arena-oriental-hospital": "center 45%",
   "seran-plastic": "center 42%",
-  "seran-plus-plastic": "center 40%",
+  "seran-plus-plastic": "center center",
   "seran-dermatology": "center 42%",
   "seran-dental": "center 42%",
   "seoul-central-dental": "center 42%",
@@ -167,6 +176,7 @@ export function resolveHospitalImage(
   coverImage?: string | null,
 ): string {
   return (
+    verifiedHospitalPhotos[slug]?.[0]?.src ??
     coverImage ??
     hospitalCoverImages[slug] ??
     categoryFallbackImages[category]

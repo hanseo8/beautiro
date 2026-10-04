@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { CalendarCheck, MessageCircle } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 
@@ -17,6 +17,7 @@ type BookingRow = {
 
 export function BookingHistoryPanel({ wa }: { wa: string }) {
   const t = useTranslations("book");
+  const locale = useLocale();
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [loading, setLoading] = useState(false);
@@ -154,10 +155,11 @@ export function BookingHistoryPanel({ wa }: { wa: string }) {
                 </div>
                 <CalendarCheck size={18} className="shrink-0 text-beautiro-primary" />
               </div>
+              {booking.procedure && <p className="mt-3 break-words text-sm font-semibold text-beautiro-charcoal">{locale === "ko" ? booking.procedure.nameKo : locale === "id" ? booking.procedure.nameId : booking.procedure.nameEn}</p>}
               {booking.preferredDate && (
                 <p className="mt-3 text-sm text-beautiro-charcoal">
                   {t("preferred")}:{" "}
-                  {new Date(booking.preferredDate).toLocaleDateString()}
+                  {new Date(booking.preferredDate).toLocaleDateString(locale === "ko" ? "ko-KR" : locale === "id" ? "id-ID" : "en-US")}
                 </p>
               )}
               <p className="mt-1 text-xs text-beautiro-muted">

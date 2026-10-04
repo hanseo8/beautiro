@@ -1,6 +1,7 @@
 "use client";
 
 import { useLocale, useTranslations } from "next-intl";
+import { useSearchParams } from "next/navigation";
 import { useMemo, useState, useEffect } from "react";
 import {
   CalendarDays,
@@ -10,6 +11,7 @@ import {
   MessageCircle,
   Wallet,
 } from "lucide-react";
+import catalog from "@/lib/seranplus-catalog.json";
 import { StepIndicator } from "@/components/StepIndicator";
 import { Button } from "@/components/ui/Button";
 import type { ProcedureOption } from "@/components/BookingWizard";
@@ -31,7 +33,7 @@ type FormState = {
 };
 
 const inputClass =
-  "w-full rounded-xl border border-beautiro-border bg-white px-4 py-3 text-sm text-beautiro-charcoal outline-none transition-colors placeholder:text-beautiro-muted-light focus:border-beautiro-primary/50 focus:ring-2 focus:ring-beautiro-primary/10";
+  "w-full min-w-0 rounded-xl border border-beautiro-border bg-white px-4 py-3 text-base text-beautiro-charcoal sm:text-sm outline-none transition-colors placeholder:text-beautiro-muted-light focus:border-beautiro-primary/50 focus:ring-2 focus:ring-beautiro-primary/10";
 
 function todayString() {
   const d = new Date();
@@ -70,6 +72,7 @@ export function OnlineBookingFlow({
   const tBook = useTranslations("book");
   const locale = useLocale() as Locale;
   const minDate = todayString();
+  const preselected = useSearchParams().get("procedure") ?? "";
 
   const [step, setStep] = useState(1);
   const [submitting, setSubmitting] = useState(false);
@@ -82,7 +85,7 @@ export function OnlineBookingFlow({
     van: false,
     interpreter: false,
     fx: false,
-    procedureId: "",
+    procedureId: procedures.some((p) => p.id === preselected) ? preselected : "",
     guestName: "",
     guestEmail: "",
     guestPhone: "",
@@ -123,6 +126,19 @@ export function OnlineBookingFlow({
     () => Array.from({ length: 14 }, (_, i) => addDays(minDate, i)),
     [minDate],
   );
+
+  const procedureGroups = useMemo(() => {
+    const labels = new Map<string, ProcedureOption[]>();
+    const nameKey = locale === "ko" ? "nameKo" : locale === "id" ? "nameId" : "nameEn";
+    for (const procedure of procedures) {
+      const group = catalog.groups.find(g => g.items.some(item => item.key === procedure.id || item[nameKey] === procedure.name));
+      const label = group ? `${procedure.hospitalName} · ${group[nameKey]}` : procedure.hospitalName;
+      const list = labels.get(label) ?? [];
+      list.push(procedure);
+      labels.set(label, list);
+    }
+    return [...labels.entries()];
+  }, [procedures, locale]);
 
   const selectedProcedure = procedures.find((p) => p.id === form.procedureId);
   const wa = whatsappUrl(consultMessage({ locale }));
@@ -403,10 +419,10 @@ export function OnlineBookingFlow({
                 }
               >
                 <option value="">{tBook("noProcedure")}</option>
-                {procedures.map((p) => (
-                  <option key={p.id} value={p.id}>
-                    {p.name} — {p.hospitalName}
-                  </option>
+                {procedureGroups.map(([label, options]) => (
+                  <optgroup key={label} label={label}>
+                    {options.map(p => <option key={p.id} value={p.id}>{p.name}</option>)}
+                  </optgroup>
                 ))}
               </select>
             </label>

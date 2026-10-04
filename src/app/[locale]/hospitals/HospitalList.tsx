@@ -44,7 +44,7 @@ function HospitalCard({
   return (
     <article className="card-modern card-modern-hover group flex h-full flex-col overflow-hidden">
       <Link
-        href={primary ? `/events/${primary.id}` : "/hospitals"}
+        href={h.slug === "seran-plus-plastic" ? "/hospitals/seran-plus" : primary ? `/events/${primary.id}` : "/hospitals"}
         className="relative block aspect-[16/10] overflow-hidden"
       >
         <CoverImage
@@ -95,10 +95,10 @@ function HospitalCard({
         <div className="mt-5 grid grid-cols-2 gap-2">
           {primary && (
             <Link
-              href={`/events/${primary.id}`}
+              href={h.slug === "seran-plus-plastic" ? "/hospitals/seran-plus" : `/events/${primary.id}`}
               className="flex h-10 items-center justify-center rounded-xl border border-beautiro-border text-xs font-semibold text-beautiro-charcoal transition-colors hover:border-beautiro-primary/30 hover:text-beautiro-primary"
             >
-              {t("viewEvent")}
+              {h.slug === "seran-plus-plastic" ? t("viewTreatments", { count: h.procedures.length }) : t("viewEvent")}
             </Link>
           )}
           <a

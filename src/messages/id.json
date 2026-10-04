@@ -387,7 +387,8 @@
       "neighborhoods": {
         "guwol": "Guwol-dong"
       }
-    }
+    },
+    "viewTreatments": "Semua {count} perawatan"
   },
   "event": {
     "breadcrumbHome": "Beranda",
@@ -397,7 +398,15 @@
     "inquiryNote": "Besar diskon, isi paket, dan jadwal berbeda tiap klinik. Hubungi kami via WhatsApp untuk info lengkap.",
     "whatsappCta": "Tanya syarat diskon",
     "responseHint": "Balasan biasanya <24 jam · ID / EN / KO",
-    "moreHospitals": "Lihat mitra lain"
+    "moreHospitals": "Lihat mitra lain",
+    "galleryTitle": "Foto interior klinik",
+    "galleryLabels": {
+      "lobby": "Lobi dan ruang tunggu",
+      "consultationRooms": "Ruang konsultasi",
+      "corridor": "Koridor klinik"
+    },
+    "bookOnline": "Pilih tanggal dan ajukan reservasi",
+    "allTreatments": "Lihat semua perawatan Seran Plus"
   },
   "book": {
     "title": "Ajukan konsultasi",
@@ -784,5 +793,19 @@
         "desc": "Atur penjemputan dan penerjemah sesuai pemesanan yang dikonfirmasi."
       }
     }
+  },
+  "seranplus": {
+    "title": "Jelajahi perawatan Seran Plus",
+    "intro": "Lihat {count} pilihan menu resmi dalam 8 kelompok layanan dan ajukan konsultasi atau reservasi.",
+    "profile": "Lihat profil klinik",
+    "groupLabel": "Pilih kelompok perawatan",
+    "all": "Semua",
+    "search": "Cari perawatan: Ultherapy, Botox, operasi kelopak mata",
+    "results": "{count} pilihan perawatan",
+    "details": "Detail",
+    "book": "Ajukan reservasi",
+    "empty": "Tidak ada hasil. Coba kata kunci lain.",
+    "note": "Berdasarkan menu perawatan resmi klinik. Ketersediaan, kesesuaian, biaya dan ketentuan promo dikonfirmasi saat konsultasi klinik. Permintaan reservasi tidak langsung terkonfirmasi.",
+    "profileIntro": "Beautiro bekerja sama secara operasional langsung dengan Seran Plus Plastic Surgery di Guwol-dong, Incheon untuk mengoordinasikan konsultasi, reservasi, penerjemah medis dan transportasi. Pilih perawatan di bawah untuk mengajukan konsultasi dan tanggal kunjungan."
   }
 }

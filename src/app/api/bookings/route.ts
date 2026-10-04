@@ -4,14 +4,21 @@ import { ServiceType } from "@prisma/client";
 import { prisma } from "@/lib/prisma";
 import { getSessionUser } from "@/lib/auth/session";
 
+const dateSchema = z.string().refine(value => {
+  if (!value) return true;
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) return false;
+  const date = new Date(`${value}T00:00:00Z`);
+  return !Number.isNaN(date.getTime()) && date.toISOString().slice(0, 10) === value;
+}, "Invalid date").optional();
+
 const bodySchema = z.object({
   locale: z.enum(["id", "en", "ko"]),
   procedureId: z.string().optional(),
-  guestName: z.string().min(2),
-  guestEmail: z.string().email(),
-  guestPhone: z.string().min(6),
-  arrivalDate: z.string().optional(),
-  preferredDate: z.string().optional(),
+  guestName: z.string().trim().min(2),
+  guestEmail: z.string().trim().email(),
+  guestPhone: z.string().trim().min(6),
+  arrivalDate: dateSchema,
+  preferredDate: dateSchema,
   notes: z.string().optional(),
   services: z.object({
     van: z.boolean(),
@@ -146,7 +153,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ id: booking.id });
   } catch (e) {
-    if (e instanceof z.ZodError) {
+    if (e instanceof z.ZodError || e instanceof SyntaxError) {
       return NextResponse.json({ error: "Invalid request" }, { status: 400 });
     }
     console.error(e);

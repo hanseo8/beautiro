@@ -2,6 +2,7 @@ export const dynamic = "force-dynamic";
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ConsultationEntry } from "@/components/home/ConsultationEntry";
+import { SeranPlusTreatments } from "@/components/hospitals/SeranPlusTreatments";
 import { HomeSearch } from "@/components/home/HomeSearch";
 import { PromoBannerSection } from "@/components/home/PromoBannerSection";
 import { BrandStorySection } from "@/components/home/BrandStorySection";
@@ -40,6 +41,8 @@ export default async function HomePage({ params }: Props) {
     include: { procedures: true },
   });
 
+  const seranPlus = hospitals.find(h => h.slug === "seran-plus-plastic");
+
   const regionT = (key: string) => tHospitals(key);
 
   const cards: PopularCard[] = hospitals
@@ -71,6 +74,7 @@ export default async function HomePage({ params }: Props) {
       </div>
       <div className="container-babitalk space-y-14 pt-10">
         <HeroCarousel />
+        {seranPlus && <SeranPlusTreatments procedures={localizeHospital(seranPlus, loc, regionT).procedures} />}
         <ServicesSection />
         <CategoryPanels />
         <PopularEventSection cards={cards} locale={loc} />

@@ -1,5 +1,5 @@
 import { PrismaClient, MedicalCategory } from "@prisma/client";
-import { KOREA_IMAGES } from "../src/lib/media";
+import { KOREA_IMAGES, hospitalCoverImages } from "../src/lib/media";
 import { hashPassword } from "../src/lib/auth/password";
 
 const prisma = new PrismaClient();
@@ -125,7 +125,7 @@ async function main() {
       districtKey: "namdong",
       neighborhoodKey: "guwol",
       primaryCategory: MedicalCategory.PLASTIC,
-      coverImage: KOREA_IMAGES.asanMedicalCenter,
+      coverImage: hospitalCoverImages["seran-plus-plastic"],
       featured: true,
       procedures: [
         {
@@ -282,19 +282,22 @@ async function main() {
 
   for (const partner of partners) {
     const { procedures, ...hospital } = partner;
-    await prisma.hospital.upsert({
-      where: { slug: hospital.slug },
-      create: {
-        ...hospital,
-        procedures: { create: procedures },
-      },
-      update: {
-        ...hospital,
-        procedures: {
-          deleteMany: {},
-          create: procedures,
-        },
-      },
+    await prisma.$transaction(async (tx) => {
+      const saved = await tx.hospital.upsert({
+        where: { slug: hospital.slug },
+        create: hospital,
+        update: hospital,
+      });
+      for (const procedure of procedures) {
+        const existing = await tx.procedure.findFirst({
+          where: { hospitalId: saved.id, category: procedure.category, nameKo: procedure.nameKo },
+        });
+        if (existing) {
+          await tx.procedure.update({ where: { id: existing.id }, data: procedure });
+        } else {
+          await tx.procedure.create({ data: { ...procedure, hospitalId: saved.id } });
+        }
+      }
     });
   }
 

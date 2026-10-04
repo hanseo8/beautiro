@@ -8,7 +8,7 @@ import { localizeHospital } from "@/lib/hospitals";
 import type { Locale } from "@/i18n/routing";
 import { EventConsultActions } from "@/components/events/EventConsultActions";
 import { CoverImage } from "@/components/ui/CoverImage";
-import { resolveHospitalImage, resolveHospitalImagePosition } from "@/lib/media";
+import { resolveHospitalImage, resolveHospitalImagePosition, verifiedHospitalPhotos } from "@/lib/media";
 import { Link } from "@/i18n/navigation";
 
 type Props = {
@@ -51,6 +51,8 @@ export default async function EventDetailPage({ params }: Props) {
     procedure.hospital.slug,
     procedure.category,
   );
+
+  const photos = verifiedHospitalPhotos[procedure.hospital.slug] ?? [];
 
   return (
     <div className="min-h-[70vh] bg-[linear-gradient(180deg,var(--beautiro-surface)_0%,#fff_40%)] pb-20 pt-6">
@@ -106,7 +108,25 @@ export default async function EventDetailPage({ params }: Props) {
               </p>
             </div>
 
+            {photos.length > 0 && (
+              <section aria-labelledby="hospital-gallery-title">
+                <h2 id="hospital-gallery-title" className="text-base font-semibold">{t("galleryTitle")}</h2>
+                <div className="mt-3 grid grid-cols-1 gap-4 sm:grid-cols-2">
+                  {photos.slice(1).map((photo) => (
+                    <figure key={photo.src} className="min-w-0">
+                      <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
+                        <CoverImage src={photo.src} alt={`${hospital.name} — ${t(`galleryLabels.${photo.label}`)}`} sizes="(max-width: 640px) 100vw, 220px" />
+                      </div>
+                      <figcaption className="mt-2 text-xs text-beautiro-muted">{t(`galleryLabels.${photo.label}`)}</figcaption>
+                    </figure>
+                  ))}
+                </div>
+              </section>
+            )}
+
+            {procedure.hospital.slug === "seran-plus-plastic" && <Link href="/hospitals/seran-plus" className="block text-sm font-semibold text-beautiro-primary hover:underline">{t("allTreatments")}</Link>}
             <EventConsultActions
+              procedureId={procedure.id}
               procedureName={procName}
               hospitalName={hospital.name}
             />

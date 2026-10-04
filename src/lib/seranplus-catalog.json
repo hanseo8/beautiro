@@ -1,0 +1,589 @@
+{
+  "source": "http://seranplus.co.kr/",
+  "groups": [
+    {
+      "key": "eyes",
+      "nameKo": "눈성형",
+      "nameEn": "Eye surgery",
+      "nameId": "Operasi kelopak mata",
+      "items": [
+        {
+          "key": "seranplus-sub09-01",
+          "sourceUrl": "http://seranplus.co.kr/page/sub09_01.php",
+          "nameKo": "쌍꺼풀",
+          "nameEn": "Double eyelid surgery",
+          "nameId": "Operasi kelopak mata ganda",
+          "category": "PLASTIC"
+        },
+        {
+          "key": "seranplus-sub09-02",
+          "sourceUrl": "http://seranplus.co.kr/page/sub09_02.php",
+          "nameKo": "트임성형",
+          "nameEn": "Canthoplasty",
+          "nameId": "Kantoplasti",
+          "category": "PLASTIC"
+        },
+        {
+          "key": "seranplus-sub09-03",
+          "sourceUrl": "http://seranplus.co.kr/page/sub09_03.php",
+          "nameKo": "눈매교정",
+          "nameEn": "Eyelid ptosis correction",
+          "nameId": "Koreksi ptosis kelopak mata",
+          "category": "PLASTIC"
+        },
+        {
+          "key": "seranplus-sub09-07",
+          "sourceUrl": "http://seranplus.co.kr/page/sub09_07.php",
+          "nameKo": "눈밑성형",
+          "nameEn": "Lower eyelid surgery",
+          "nameId": "Operasi kelopak mata bawah",
+          "category": "PLASTIC"
+        },
+        {
+          "key": "seranplus-sub09-04",
+          "sourceUrl": "http://seranplus.co.kr/page/sub09_04.php",
+          "nameKo": "동안눈성형",
+          "nameEn": "Rejuvenating eyelid surgery",
+          "nameId": "Operasi peremajaan kelopak mata",
+          "category": "PLASTIC"
+        },
+        {
+          "key": "seranplus-sub09-05",
+          "sourceUrl": "http://seranplus.co.kr/page/sub09_05.php",
+          "nameKo": "눈재수술",
+          "nameEn": "Revision eyelid surgery",
+          "nameId": "Operasi revisi kelopak mata",
+          "category": "PLASTIC"
+        },
+        {
+          "key": "seranplus-sub09-06",
+          "sourceUrl": "http://seranplus.co.kr/page/sub09_06.php",
+          "nameKo": "남성눈수술",
+          "nameEn": "Male eyelid surgery",
+          "nameId": "Operasi kelopak mata pria",
+          "category": "PLASTIC"
+        }
+      ]
+    },
+    {
+      "key": "botox",
+      "nameKo": "보톡스",
+      "nameEn": "Botox",
+      "nameId": "Botox",
+      "items": [
+        {
+          "key": "seranplus-sub02-01",
+          "sourceUrl": "http://seranplus.co.kr/page/sub02_01.php",
+          "nameKo": "사각턱보톡스",
+          "nameEn": "Masseter Botox",
+          "nameId": "Botox rahang",
+          "category": "DERMATOLOGY"
+        },
+        {
+          "key": "seranplus-sub02-02",
+          "sourceUrl": "http://seranplus.co.kr/page/sub02_02.php",
+          "nameKo": "얼굴주름보톡스",
+          "nameEn": "Facial wrinkle Botox",
+          "nameId": "Botox kerutan wajah",
+          "category": "DERMATOLOGY"
+        },
+        {
+          "key": "seranplus-sub02-03",
+          "sourceUrl": "http://seranplus.co.kr/page/sub02_03.php",
+          "nameKo": "스킨보톡스(더모톡신)",
+          "nameEn": "Skin Botox (Dermotoxin)",
+          "nameId": "Skin Botox (Dermotoxin)",
+          "category": "DERMATOLOGY"
+        },
+        {
+          "key": "seranplus-sub02-04",
+          "sourceUrl": "http://seranplus.co.kr/page/sub02_04.php",
+          "nameKo": "종아리보톡스",
+          "nameEn": "Calf Botox",
+          "nameId": "Botox betis",
+          "category": "DERMATOLOGY"
+        },
+        {
+          "key": "seranplus-sub02-05",
+          "sourceUrl": "http://seranplus.co.kr/page/sub02_05.php",
+          "nameKo": "승모근보톡스",
+          "nameEn": "Trapezius Botox",
+          "nameId": "Botox trapezius",
+          "category": "DERMATOLOGY"
+        },
+        {
+          "key": "seranplus-sub02-06",
+          "sourceUrl": "http://seranplus.co.kr/page/sub02_06.php",
+          "nameKo": "허벅지보톡스",
+          "nameEn": "Thigh Botox",
+          "nameId": "Botox paha",
+          "category": "DERMATOLOGY"
+        },
+        {
+          "key": "seranplus-sub02-07",
+          "sourceUrl": "http://seranplus.co.kr/page/sub02_07.php",
+          "nameKo": "팔뚝보톡스",
+          "nameEn": "Upper arm Botox",
+          "nameId": "Botox lengan atas",
+          "category": "DERMATOLOGY"
+        },
+        {
+          "key": "seranplus-sub02-08",
+          "sourceUrl": "http://seranplus.co.kr/page/sub02_08.php",
+          "nameKo": "다한증보톡스",
+          "nameEn": "Hyperhidrosis Botox",
+          "nameId": "Botox hiperhidrosis",
+          "category": "DERMATOLOGY"
+        },
+        {
+          "key": "seranplus-sub02-09",
+          "sourceUrl": "http://seranplus.co.kr/page/sub02_09.php",
+          "nameKo": "V슬림주사",
+          "nameEn": "V Slim injection",
+          "nameId": "Injeksi V Slim",
+          "category": "DERMATOLOGY"
+        }
+      ]
+    },
+    {
+      "key": "filler",
+      "nameKo": "필러",
+      "nameEn": "Fillers",
+      "nameId": "Filler",
+      "items": [
+        {
+          "key": "seranplus-sub02-10",
+          "sourceUrl": "http://seranplus.co.kr/page/sub02_10.php",
+          "nameKo": "코필러",
+          "nameEn": "Nose filler",
+          "nameId": "Filler hidung",
+          "category": "DERMATOLOGY"
+        },
+        {
+          "key": "seranplus-sub02-11",
+          "sourceUrl": "http://seranplus.co.kr/page/sub02_11.php",
+          "nameKo": "팔자주름필러",
+          "nameEn": "Nasolabial fold filler",
+          "nameId": "Filler lipatan nasolabial",
+          "category": "DERMATOLOGY"
+        },
+        {
+          "key": "seranplus-sub02-12",
+          "sourceUrl": "http://seranplus.co.kr/page/sub02_12.php",
+          "nameKo": "턱끝필러",
+          "nameEn": "Chin filler",
+          "nameId": "Filler dagu",
+          "category": "DERMATOLOGY"
+        },
+        {
+          "key": "seranplus-sub02-13",
+          "sourceUrl": "http://seranplus.co.kr/page/sub02_13.php",
+          "nameKo": "미간주름필러",
+          "nameEn": "Glabellar line filler",
+          "nameId": "Filler garis glabella",
+          "category": "DERMATOLOGY"
+        },
+        {
+          "key": "seranplus-sub02-14",
+          "sourceUrl": "http://seranplus.co.kr/page/sub02_14.php",
+          "nameKo": "이마필러",
+          "nameEn": "Forehead filler",
+          "nameId": "Filler dahi",
+          "category": "DERMATOLOGY"
+        },
+        {
+          "key": "seranplus-sub02-15",
+          "sourceUrl": "http://seranplus.co.kr/page/sub02_15.php",
+          "nameKo": "볼꺼짐필러",
+          "nameEn": "Hollow cheek filler",
+          "nameId": "Filler pipi cekung",
+          "category": "DERMATOLOGY"
+        },
+        {
+          "key": "seranplus-sub02-16",
+          "sourceUrl": "http://seranplus.co.kr/page/sub02_16.php",
+          "nameKo": "앞볼필러",
+          "nameEn": "Anterior cheek filler",
+          "nameId": "Filler pipi depan",
+          "category": "DERMATOLOGY"
+        },
+        {
+          "key": "seranplus-sub02-17",
+          "sourceUrl": "http://seranplus.co.kr/page/sub02_17.php",
+          "nameKo": "눈밑꺼짐필러",
+          "nameEn": "Under-eye filler",
+          "nameId": "Filler bawah mata",
+          "category": "DERMATOLOGY"
+        },
+        {
+          "key": "seranplus-sub02-18",
+          "sourceUrl": "http://seranplus.co.kr/page/sub02_18.php",
+          "nameKo": "입술/입꼬리필러",
+          "nameEn": "Lip / mouth corner filler",
+          "nameId": "Filler bibir / sudut mulut",
+          "category": "DERMATOLOGY"
+        },
+        {
+          "key": "seranplus-sub02-19",
+          "sourceUrl": "http://seranplus.co.kr/page/sub02_19.php",
+          "nameKo": "애교필러",
+          "nameEn": "Aegyo-sal filler",
+          "nameId": "Filler aegyo-sal",
+          "category": "DERMATOLOGY"
+        }
+      ]
+    },
+    {
+      "key": "vitamin",
+      "nameKo": "비타민 클리닉",
+      "nameEn": "Vitamin clinic",
+      "nameId": "Klinik vitamin",
+      "items": [
+        {
+          "key": "seranplus-sub03-01",
+          "sourceUrl": "http://seranplus.co.kr/page/sub03_01.php",
+          "nameKo": "백옥주사",
+          "nameEn": "Baekok injection",
+          "nameId": "Injeksi Baekok",
+          "category": "DERMATOLOGY"
+        },
+        {
+          "key": "seranplus-sub03-02",
+          "sourceUrl": "http://seranplus.co.kr/page/sub03_02.php",
+          "nameKo": "신데렐라주사",
+          "nameEn": "Cinderella injection",
+          "nameId": "Injeksi Cinderella",
+          "category": "DERMATOLOGY"
+        },
+        {
+          "key": "seranplus-sub03-03",
+          "sourceUrl": "http://seranplus.co.kr/page/sub03_03.php",
+          "nameKo": "멀티미네랄주사",
+          "nameEn": "Multi-mineral injection",
+          "nameId": "Injeksi multimineral",
+          "category": "DERMATOLOGY"
+        }
+      ]
+    },
+    {
+      "key": "skin",
+      "nameKo": "메디컬 스킨케어",
+      "nameEn": "Medical skin care",
+      "nameId": "Perawatan kulit medis",
+      "items": [
+        {
+          "key": "seranplus-sub04-20",
+          "sourceUrl": "http://seranplus.co.kr/page/sub04_20.php",
+          "nameKo": "실펌X",
+          "nameEn": "Sylfirm X",
+          "nameId": "Sylfirm X",
+          "category": "DERMATOLOGY"
+        },
+        {
+          "key": "seranplus-sub04-01",
+          "sourceUrl": "http://seranplus.co.kr/page/sub04_01.php",
+          "nameKo": "IPL",
+          "nameEn": "IPL",
+          "nameId": "IPL",
+          "category": "DERMATOLOGY"
+        },
+        {
+          "key": "seranplus-sub04-02",
+          "sourceUrl": "http://seranplus.co.kr/page/sub04_02.php",
+          "nameKo": "레이저토닝",
+          "nameEn": "Laser toning",
+          "nameId": "Laser toning",
+          "category": "DERMATOLOGY"
+        },
+        {
+          "key": "seranplus-sub04-03",
+          "sourceUrl": "http://seranplus.co.kr/page/sub04_03.php",
+          "nameKo": "제네시스토닝",
+          "nameEn": "Genesis toning",
+          "nameId": "Genesis toning",
+          "category": "DERMATOLOGY"
+        },
+        {
+          "key": "seranplus-sub04-04",
+          "sourceUrl": "http://seranplus.co.kr/page/sub04_04.php",
+          "nameKo": "듀얼토닝",
+          "nameEn": "Dual toning",
+          "nameId": "Dual toning",
+          "category": "DERMATOLOGY"
+        },
+        {
+          "key": "seranplus-sub04-19",
+          "sourceUrl": "http://seranplus.co.kr/page/sub04_19.php",
+          "nameKo": "레블라이트 SI",
+          "nameEn": "Revlite SI",
+          "nameId": "Revlite SI",
+          "category": "DERMATOLOGY"
+        },
+        {
+          "key": "seranplus-sub04-05",
+          "sourceUrl": "http://seranplus.co.kr/page/sub04_05.php",
+          "nameKo": "CO2레이저(점,검버섯)",
+          "nameEn": "CO2 laser (moles / age spots)",
+          "nameId": "Laser CO2 (tahi lalat / bintik penuaan)",
+          "category": "DERMATOLOGY"
+        },
+        {
+          "key": "seranplus-sub04-06",
+          "sourceUrl": "http://seranplus.co.kr/page/sub04_06.php",
+          "nameKo": "아쿠아필",
+          "nameEn": "Aqua peel",
+          "nameId": "Aqua peel",
+          "category": "DERMATOLOGY"
+        },
+        {
+          "key": "seranplus-sub04-07",
+          "sourceUrl": "http://seranplus.co.kr/page/sub04_07.php",
+          "nameKo": "여드름스케일링",
+          "nameEn": "Acne scaling",
+          "nameId": "Acne scaling",
+          "category": "DERMATOLOGY"
+        },
+        {
+          "key": "seranplus-sub04-08",
+          "sourceUrl": "http://seranplus.co.kr/page/sub04_08.php",
+          "nameKo": "여드름색소흉터",
+          "nameEn": "Acne pigmentation / scarring",
+          "nameId": "Pigmentasi / bekas jerawat",
+          "category": "DERMATOLOGY"
+        },
+        {
+          "key": "seranplus-sub04-09",
+          "sourceUrl": "http://seranplus.co.kr/page/sub04_09.php",
+          "nameKo": "기미/주근깨/잡티",
+          "nameEn": "Melasma / freckles / pigmentation",
+          "nameId": "Melasma / freckles / pigmentasi",
+          "category": "DERMATOLOGY"
+        },
+        {
+          "key": "seranplus-sub04-10",
+          "sourceUrl": "http://seranplus.co.kr/page/sub04_10.php",
+          "nameKo": "재생관리",
+          "nameEn": "Regenerative skin care",
+          "nameId": "Perawatan regenerasi kulit",
+          "category": "DERMATOLOGY"
+        },
+        {
+          "key": "seranplus-sub04-11",
+          "sourceUrl": "http://seranplus.co.kr/page/sub04_11.php",
+          "nameKo": "미백관리",
+          "nameEn": "Brightening skin care",
+          "nameId": "Perawatan pencerahan kulit",
+          "category": "DERMATOLOGY"
+        },
+        {
+          "key": "seranplus-sub04-12",
+          "sourceUrl": "http://seranplus.co.kr/page/sub04_12.php",
+          "nameKo": "보습관리",
+          "nameEn": "Hydrating skin care",
+          "nameId": "Perawatan hidrasi kulit",
+          "category": "DERMATOLOGY"
+        },
+        {
+          "key": "seranplus-sub04-13",
+          "sourceUrl": "http://seranplus.co.kr/page/sub04_13.php",
+          "nameKo": "진정관리",
+          "nameEn": "Soothing skin care",
+          "nameId": "Perawatan penenangan kulit",
+          "category": "DERMATOLOGY"
+        },
+        {
+          "key": "seranplus-sub04-14",
+          "sourceUrl": "http://seranplus.co.kr/page/sub04_14.php",
+          "nameKo": "물광주사",
+          "nameEn": "Skin hydration injection",
+          "nameId": "Injeksi hidrasi kulit",
+          "category": "DERMATOLOGY"
+        },
+        {
+          "key": "seranplus-sub04-15",
+          "sourceUrl": "http://seranplus.co.kr/page/sub04_15.php",
+          "nameKo": "PHA연예인필(물광필)",
+          "nameEn": "PHA peel",
+          "nameId": "Peeling PHA",
+          "category": "DERMATOLOGY"
+        },
+        {
+          "key": "seranplus-sub04-16",
+          "sourceUrl": "http://seranplus.co.kr/page/sub04_16.php",
+          "nameKo": "뉴알라딘필링",
+          "nameEn": "New Aladdin peeling",
+          "nameId": "Peeling New Aladdin",
+          "category": "DERMATOLOGY"
+        },
+        {
+          "key": "seranplus-sub04-17",
+          "sourceUrl": "http://seranplus.co.kr/page/sub04_17.php",
+          "nameKo": "베네브아기주사",
+          "nameEn": "Benev baby injection",
+          "nameId": "Injeksi Benev",
+          "category": "DERMATOLOGY"
+        },
+        {
+          "key": "seranplus-sub04-18",
+          "sourceUrl": "http://seranplus.co.kr/page/sub04_18.php",
+          "nameKo": "필로가주사",
+          "nameEn": "Filorga injection",
+          "nameId": "Injeksi Filorga",
+          "category": "DERMATOLOGY"
+        }
+      ]
+    },
+    {
+      "key": "lifting",
+      "nameKo": "리프팅 클리닉",
+      "nameEn": "Lifting clinic",
+      "nameId": "Klinik lifting",
+      "items": [
+        {
+          "key": "seranplus-sub05-07",
+          "sourceUrl": "http://seranplus.co.kr/page/sub05_07.php",
+          "nameKo": "울쎄라리프팅",
+          "nameEn": "Ultherapy lifting",
+          "nameId": "Ultherapy lifting",
+          "category": "PLASTIC"
+        },
+        {
+          "key": "seranplus-sub05-08",
+          "sourceUrl": "http://seranplus.co.kr/page/sub05_08.php",
+          "nameKo": "써마지FLX",
+          "nameEn": "Thermage FLX",
+          "nameId": "Thermage FLX",
+          "category": "PLASTIC"
+        },
+        {
+          "key": "seranplus-sub05-01",
+          "sourceUrl": "http://seranplus.co.kr/page/sub05_01.php",
+          "nameKo": "슈링크리프팅",
+          "nameEn": "Shurink lifting",
+          "nameId": "Shurink lifting",
+          "category": "PLASTIC"
+        },
+        {
+          "key": "seranplus-sub05-02",
+          "sourceUrl": "http://seranplus.co.kr/page/sub05_02.php",
+          "nameKo": "인모드리프팅",
+          "nameEn": "InMode lifting",
+          "nameId": "InMode lifting",
+          "category": "PLASTIC"
+        },
+        {
+          "key": "seranplus-sub05-03",
+          "sourceUrl": "http://seranplus.co.kr/page/sub05_03.php",
+          "nameKo": "민트실리프팅",
+          "nameEn": "MINT thread lifting",
+          "nameId": "MINT thread lifting",
+          "category": "PLASTIC"
+        },
+        {
+          "key": "seranplus-sub05-04",
+          "sourceUrl": "http://seranplus.co.kr/page/sub05_04.php",
+          "nameKo": "목주름리프팅",
+          "nameEn": "Neck wrinkle lifting",
+          "nameId": "Lifting kerutan leher",
+          "category": "PLASTIC"
+        },
+        {
+          "key": "seranplus-sub05-05",
+          "sourceUrl": "http://seranplus.co.kr/page/sub05_05.php",
+          "nameKo": "원데이퀵리프팅",
+          "nameEn": "One-day quick lifting",
+          "nameId": "One-day quick lifting",
+          "category": "PLASTIC"
+        },
+        {
+          "key": "seranplus-sub05-06",
+          "sourceUrl": "http://seranplus.co.kr/page/sub05_06.php",
+          "nameKo": "프로파운드리프팅",
+          "nameEn": "Profound lifting",
+          "nameId": "Profound lifting",
+          "category": "PLASTIC"
+        }
+      ]
+    },
+    {
+      "key": "body",
+      "nameKo": "비만 클리닉",
+      "nameEn": "Weight & body care",
+      "nameId": "Berat badan & perawatan tubuh",
+      "items": [
+        {
+          "key": "seranplus-sub06-01",
+          "sourceUrl": "http://seranplus.co.kr/page/sub06_01.php",
+          "nameKo": "미니지방흡입",
+          "nameEn": "Mini liposuction",
+          "nameId": "Liposuction mini",
+          "category": "PLASTIC"
+        },
+        {
+          "key": "seranplus-sub06-02",
+          "sourceUrl": "http://seranplus.co.kr/page/sub06_02.php",
+          "nameKo": "삭센다",
+          "nameEn": "Saxenda consultation",
+          "nameId": "Konsultasi Saxenda",
+          "category": "PLASTIC"
+        },
+        {
+          "key": "seranplus-sub06-03",
+          "sourceUrl": "http://seranplus.co.kr/page/sub06_03.php",
+          "nameKo": "HPL",
+          "nameEn": "HPL",
+          "nameId": "HPL",
+          "category": "PLASTIC"
+        },
+        {
+          "key": "seranplus-sub06-04",
+          "sourceUrl": "http://seranplus.co.kr/page/sub06_04.php",
+          "nameKo": "다이어트처방전",
+          "nameEn": "Weight-management prescription consultation",
+          "nameId": "Konsultasi resep pengelolaan berat badan",
+          "category": "PLASTIC"
+        },
+        {
+          "key": "seranplus-sub06-05",
+          "sourceUrl": "http://seranplus.co.kr/page/sub06_05.php",
+          "nameKo": "남성여유증",
+          "nameEn": "Gynecomastia consultation",
+          "nameId": "Konsultasi ginekomastia",
+          "category": "PLASTIC"
+        }
+      ]
+    },
+    {
+      "key": "special",
+      "nameKo": "스페셜 클리닉",
+      "nameEn": "Special treatments",
+      "nameId": "Perawatan khusus",
+      "items": [
+        {
+          "key": "seranplus-sub07-01",
+          "sourceUrl": "http://seranplus.co.kr/page/sub07_01.php",
+          "nameKo": "여성제모",
+          "nameEn": "Female hair removal",
+          "nameId": "Penghilangan bulu wanita",
+          "category": "DERMATOLOGY"
+        },
+        {
+          "key": "seranplus-sub07-02",
+          "sourceUrl": "http://seranplus.co.kr/page/sub07_02.php",
+          "nameKo": "남성제모",
+          "nameEn": "Male hair removal",
+          "nameId": "Penghilangan bulu pria",
+          "category": "DERMATOLOGY"
+        },
+        {
+          "key": "seranplus-sub07-03",
+          "sourceUrl": "http://seranplus.co.kr/page/sub07_03.php",
+          "nameKo": "타투제거",
+          "nameEn": "Tattoo removal",
+          "nameId": "Penghilangan tato",
+          "category": "DERMATOLOGY"
+        }
+      ]
+    }
+  ]
+}

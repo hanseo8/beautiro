@@ -7,9 +7,11 @@ import { eventInquiryMessage, whatsappUrl } from "@/lib/whatsapp";
 import type { Locale } from "@/i18n/routing";
 
 export function EventConsultActions({
+  procedureId,
   procedureName,
   hospitalName,
 }: {
+  procedureId: string;
   procedureName: string;
   hospitalName: string;
 }) {
@@ -31,6 +33,12 @@ export function EventConsultActions({
         <MessageCircle size={18} />
         {t("whatsappCta")}
       </a>
+      <Link
+        href={`/book?tab=bookings&procedure=${encodeURIComponent(procedureId)}`}
+        className="flex min-h-12 w-full items-center justify-center rounded-lg border border-beautiro-primary px-4 py-3 text-center text-sm font-semibold text-beautiro-primary hover:bg-beautiro-primary/5"
+      >
+        {t("bookOnline")}
+      </Link>
       <p className="text-center text-xs leading-relaxed text-beautiro-muted">
         {t("responseHint")}
       </p>

@@ -387,7 +387,8 @@
       "neighborhoods": {
         "guwol": "구월동"
       }
-    }
+    },
+    "viewTreatments": "전체 시술 {count}개"
   },
   "event": {
     "breadcrumbHome": "홈",
@@ -397,7 +398,15 @@
     "inquiryNote": "할인율·구성·일정은 병원별로 다릅니다. WhatsApp으로 문의해 주시면 맞춤 안내해 드립니다.",
     "whatsappCta": "할인 조건 문의하기",
     "responseHint": "평균 24시간 이내 응답 · 인니어/영어/한국어",
-    "moreHospitals": "다른 제휴 병원 보기"
+    "moreHospitals": "다른 제휴 병원 보기",
+    "galleryTitle": "병원 내부 사진",
+    "galleryLabels": {
+      "lobby": "로비·대기 공간",
+      "consultationRooms": "상담실",
+      "corridor": "내부 복도"
+    },
+    "bookOnline": "날짜·서비스 선택하고 예약 신청",
+    "allTreatments": "세란플러스 전체 진료·시술 보기"
   },
   "book": {
     "title": "상담 신청",
@@ -786,5 +795,19 @@
         "desc": "확정한 예약에 맞춰 픽업과 의료 통역을 준비합니다."
       }
     }
+  },
+  "seranplus": {
+    "title": "세란플러스 진료·시술 찾기",
+    "intro": "8개 진료군, 공식 메뉴 {count}개 항목을 확인하고 상담·예약을 신청하세요.",
+    "profile": "병원 소개 보기",
+    "groupLabel": "진료군 선택",
+    "all": "전체",
+    "search": "시술 검색: 울쎄라, 보톡스, 쌍꺼풀 등",
+    "results": "{count}개 시술 항목",
+    "details": "상세 보기",
+    "book": "예약 신청",
+    "empty": "검색 결과가 없습니다. 다른 검색어를 입력해 주세요.",
+    "note": "공식 홈페이지의 진료 메뉴를 바탕으로 안내합니다. 현재 시술 가능 여부, 적합성, 비용과 프로모션 조건은 병원 상담 후 확인됩니다. 예약 신청은 즉시 확정되지 않습니다.",
+    "profileIntro": "인천 구월동의 세란플러스성형외과와 직접 연계하여 진료 상담·예약, 의료 통역, 이동 서비스를 조율합니다. 아래에서 원하는 진료 항목을 선택해 상담과 방문 일정을 신청할 수 있습니다."
   }
 }

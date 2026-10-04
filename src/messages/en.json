@@ -387,7 +387,8 @@
       "neighborhoods": {
         "guwol": "Guwol-dong"
       }
-    }
+    },
+    "viewTreatments": "All {count} treatments"
   },
   "event": {
     "breadcrumbHome": "Home",
@@ -397,7 +398,15 @@
     "inquiryNote": "Discount rates, inclusions, and schedules vary by clinic. Message us on WhatsApp for personalized details.",
     "whatsappCta": "Ask about the discount",
     "responseHint": "Typical reply within 24h · ID / EN / KO",
-    "moreHospitals": "Browse more partners"
+    "moreHospitals": "Browse more partners",
+    "galleryTitle": "Inside the clinic",
+    "galleryLabels": {
+      "lobby": "Lobby and waiting area",
+      "consultationRooms": "Consultation rooms",
+      "corridor": "Clinic corridor"
+    },
+    "bookOnline": "Choose a date and request a booking",
+    "allTreatments": "Explore all Seran Plus treatments"
   },
   "book": {
     "title": "Request consultation",
@@ -785,5 +794,19 @@
         "desc": "Arrange pickup and interpretation according to your confirmed booking."
       }
     }
+  },
+  "seranplus": {
+    "title": "Explore Seran Plus treatments",
+    "intro": "Browse {count} official menu items across 8 care groups and request a consultation or booking.",
+    "profile": "View clinic profile",
+    "groupLabel": "Choose a care group",
+    "all": "All",
+    "search": "Search treatments: Ultherapy, Botox, eyelid surgery",
+    "results": "{count} treatment options",
+    "details": "Details",
+    "book": "Request booking",
+    "empty": "No matching treatments. Try another search.",
+    "note": "Based on the clinic’s official treatment menu. Current availability, suitability, fees and promotion terms are confirmed during clinic consultation. Booking requests are not instantly confirmed.",
+    "profileIntro": "Beautiro works directly with Seran Plus Plastic Surgery in Guwol-dong, Incheon to coordinate consultations, bookings, medical interpretation and transport. Choose a treatment below to request a consultation and visit date."
   }
 }
