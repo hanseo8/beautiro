@@ -27,6 +27,8 @@ export type ProcedureOption = {
   name: string;
   category: MedicalCategory;
   hospitalName: string;
+  requestedTreatmentKey?: string;
+  groupName?: string;
 };
 
 type FormState = {
@@ -63,6 +65,8 @@ export function BookingWizard({
   const [error, setError] = useState<string | null>(null);
   const [categoryFilter, setCategoryFilter] = useState<CategoryFilter>("ALL");
   const [searchQuery, setSearchQuery] = useState("");
+  const [groupFilter, setGroupFilter] = useState("");
+  const groupNames = [...new Set(procedures.flatMap(p => p.groupName ? [p.groupName] : []))];
 
   const [form, setForm] = useState<FormState>({
     procedureId: preselected,
@@ -118,6 +122,7 @@ export function BookingWizard({
   const filteredProcedures = useMemo(() => {
     const q = searchQuery.trim().toLowerCase();
     return procedures.filter((p) => {
+      if (groupFilter && p.groupName !== groupFilter) return false;
       if (categoryFilter !== "ALL" && p.category !== categoryFilter) {
         return false;
       }
@@ -128,7 +133,7 @@ export function BookingWizard({
         tCat(p.category).toLowerCase().includes(q)
       );
     });
-  }, [procedures, categoryFilter, searchQuery, tCat]);
+  }, [procedures, categoryFilter, groupFilter, searchQuery, tCat]);
 
   if (tab === "account") {
     return <AuthPanel wa={wa} />;
@@ -143,7 +148,8 @@ export function BookingWizard({
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           locale,
-          procedureId: form.procedureId || undefined,
+          procedureId: selectedProcedure?.requestedTreatmentKey ? undefined : form.procedureId || undefined,
+          requestedTreatmentKey: selectedProcedure?.requestedTreatmentKey,
           guestName: form.guestName,
           guestEmail: form.guestEmail,
           guestPhone: form.guestPhone,
@@ -270,6 +276,14 @@ export function BookingWizard({
               <p className="text-label text-beautiro-muted">
                 {t("selectProcedure")}
               </p>
+              <p className="mt-2 text-xs leading-6 text-beautiro-muted">{t("sharedTreatmentHint")}</p>
+              <label className="mt-3 block text-xs text-beautiro-muted">
+                {t("treatmentGroup")}
+                <select className={inputClass + " mt-1"} value={groupFilter} onChange={e => setGroupFilter(e.target.value)}>
+                  <option value="">{t("filterAll")}</option>
+                  {groupNames.map(name => <option key={name} value={name}>{name}</option>)}
+                </select>
+              </label>
               <div className="relative mt-3">
                 <Search
                   size={16}

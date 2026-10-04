@@ -425,7 +425,7 @@
     "step3Desc": "Select add-on services. You can adjust these later.",
     "preview": "Request summary",
     "servicesLabel": "Selected services",
-    "selectProcedure": "Partner hospital procedures",
+    "selectProcedure": "Shared treatments and clinic-specific consultations",
     "partnerHospitals": "Partner hospitals",
     "partnerHospitalsDesc": "Choose a procedure from a partner hospital below, or apply for a general consultation if undecided.",
     "viewAllHospitals": "View all hospitals",
@@ -502,7 +502,7 @@
       "step1Title": "Choose a date",
       "step1Desc": "Select your preferred consultation date. Arrival date is optional.",
       "step2Title": "Choose services",
-      "step2Desc": "Select one or more concierge services you need.",
+      "step2Desc": "Choose any concierge services you need, or continue with a treatment request only.",
       "step3Title": "Contact & confirm",
       "step3Desc": "Enter your contact details to complete the online booking.",
       "preferredDateTitle": "Preferred consultation date",
@@ -513,8 +513,12 @@
       "procedureOptional": "Procedure of interest (optional)",
       "submit": "Book online",
       "successTitle": "Your online booking is received",
-      "successBody": "Our concierge will review your date and services and contact you within 24 hours."
-    }
+      "successBody": "Our concierge will review your date and services and contact you within 24 hours.",
+      "serviceOptional": "Concierge services are optional. Continue to request treatment only."
+    },
+    "commonHospital": "Shared treatment request · clinic assigned after consultation",
+    "sharedTreatmentHint": "Choose from 65 shared treatment requests. Availability, cost and clinic assignment are confirmed during consultation.",
+    "treatmentGroup": "Treatment group"
   },
   "faq": {
     "title": "FAQ",

@@ -4,6 +4,8 @@ import { ServiceType } from "@prisma/client";
 import { prisma } from "@/lib/prisma";
 import { getSessionUser } from "@/lib/auth/session";
 
+import { findRequestedTreatment, requestedTreatmentFromNotes, treatmentRequestNotes } from "@/lib/booking-treatments";
+
 const dateSchema = z.string().refine(value => {
   if (!value) return true;
   if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) return false;
@@ -14,6 +16,7 @@ const dateSchema = z.string().refine(value => {
 const bodySchema = z.object({
   locale: z.enum(["id", "en", "ko"]),
   procedureId: z.string().optional(),
+  requestedTreatmentKey: z.string().optional(),
   guestName: z.string().trim().min(2),
   guestEmail: z.string().trim().email(),
   guestPhone: z.string().trim().min(6),
@@ -65,7 +68,7 @@ export async function GET(request: Request) {
                 nameEn: booking.procedure.nameEn,
                 nameId: booking.procedure.nameId,
               }
-            : null,
+            : requestedTreatmentFromNotes(booking.notes),
         })),
       });
     }
@@ -101,7 +104,7 @@ export async function GET(request: Request) {
               nameEn: booking.procedure.nameEn,
               nameId: booking.procedure.nameId,
             }
-          : null,
+          : requestedTreatmentFromNotes(booking.notes),
       })),
     });
   } catch (e) {
@@ -116,6 +119,9 @@ export async function POST(request: Request) {
     const json: unknown = await request.json();
     const data = bodySchema.parse(json);
 
+    if (data.requestedTreatmentKey && (!findRequestedTreatment(data.requestedTreatmentKey) || data.procedureId)) {
+      return NextResponse.json({ error: "Invalid requested treatment" }, { status: 400 });
+    }
     if (data.procedureId) {
       const exists = await prisma.procedure.findUnique({
         where: { id: data.procedureId },
@@ -143,7 +149,7 @@ export async function POST(request: Request) {
         guestPhone: data.guestPhone,
         arrivalDate: parseDate(data.arrivalDate),
         preferredDate: parseDate(data.preferredDate),
-        notes: data.notes,
+        notes: data.requestedTreatmentKey ? treatmentRequestNotes(data.requestedTreatmentKey, data.notes) : data.notes,
         procedureId: data.procedureId || null,
         services: {
           create: serviceRows,

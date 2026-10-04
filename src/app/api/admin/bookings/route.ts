@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { requireAdmin } from "@/lib/auth/admin";
 
+import { requestedTreatmentFromNotes } from "@/lib/booking-treatments";
+
 export async function GET(request: Request) {
   const admin = await requireAdmin(request);
   if (admin instanceof NextResponse) return admin;
@@ -32,7 +34,7 @@ export async function GET(request: Request) {
             nameEn: booking.procedure.nameEn,
             nameKo: booking.procedure.nameKo,
           }
-        : null,
+        : requestedTreatmentFromNotes(booking.notes),
       user: booking.user,
     })),
   });

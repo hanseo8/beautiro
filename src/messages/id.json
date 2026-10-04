@@ -425,7 +425,7 @@
     "step3Desc": "Pilih layanan tambahan. Dapat diubah nanti.",
     "preview": "Ringkasan permintaan",
     "servicesLabel": "Layanan dipilih",
-    "selectProcedure": "Prosedur rumah sakit mitra",
+    "selectProcedure": "Perawatan umum dan konsultasi khusus klinik",
     "partnerHospitals": "Rumah sakit mitra",
     "partnerHospitalsDesc": "Pilih prosedur dari rumah sakit mitra di bawah, atau ajukan konsultasi umum jika belum memutuskan.",
     "viewAllHospitals": "Lihat semua rumah sakit",
@@ -502,7 +502,7 @@
       "step1Title": "Pilih tanggal",
       "step1Desc": "Pilih tanggal konsultasi yang diinginkan. Tanggal kedatangan opsional.",
       "step2Title": "Pilih layanan",
-      "step2Desc": "Pilih satu atau lebih layanan concierge yang Anda butuhkan.",
+      "step2Desc": "Pilih layanan concierge yang dibutuhkan, atau lanjutkan dengan permintaan perawatan saja.",
       "step3Title": "Kontak & konfirmasi",
       "step3Desc": "Masukkan kontak Anda untuk menyelesaikan reservasi online.",
       "preferredDateTitle": "Tanggal konsultasi",
@@ -513,8 +513,12 @@
       "procedureOptional": "Prosedur yang diminati (opsional)",
       "submit": "Reservasi online",
       "successTitle": "Reservasi online diterima",
-      "successBody": "Concierge kami akan meninjau tanggal dan layanan Anda, lalu menghubungi dalam 24 jam."
-    }
+      "successBody": "Concierge kami akan meninjau tanggal dan layanan Anda, lalu menghubungi dalam 24 jam.",
+      "serviceOptional": "Layanan concierge bersifat opsional. Lanjutkan untuk mengajukan perawatan saja."
+    },
+    "commonHospital": "Permintaan perawatan umum · klinik ditentukan setelah konsultasi",
+    "sharedTreatmentHint": "Pilih dari 65 perawatan yang dapat diajukan. Ketersediaan, biaya dan penentuan klinik dikonfirmasi saat konsultasi.",
+    "treatmentGroup": "Kelompok perawatan"
   },
   "faq": {
     "title": "Pertanyaan umum",

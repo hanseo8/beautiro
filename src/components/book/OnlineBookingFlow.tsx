@@ -132,7 +132,7 @@ export function OnlineBookingFlow({
     const nameKey = locale === "ko" ? "nameKo" : locale === "id" ? "nameId" : "nameEn";
     for (const procedure of procedures) {
       const group = catalog.groups.find(g => g.items.some(item => item.key === procedure.id || item[nameKey] === procedure.name));
-      const label = group ? `${procedure.hospitalName} · ${group[nameKey]}` : procedure.hospitalName;
+      const label = procedure.groupName ?? (group ? `${procedure.hospitalName} · ${group[nameKey]}` : procedure.hospitalName);
       const list = labels.get(label) ?? [];
       list.push(procedure);
       labels.set(label, list);
@@ -158,7 +158,8 @@ export function OnlineBookingFlow({
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           locale,
-          procedureId: form.procedureId || undefined,
+          procedureId: selectedProcedure?.requestedTreatmentKey ? undefined : form.procedureId || undefined,
+          requestedTreatmentKey: selectedProcedure?.requestedTreatmentKey,
           guestName: form.guestName,
           guestEmail: form.guestEmail,
           guestPhone: form.guestPhone,
@@ -342,8 +343,8 @@ export function OnlineBookingFlow({
             checked={form.fx}
             onChange={(fx) => setForm((f) => ({ ...f, fx }))}
           />
-          {!hasSelectedService(form) && (
-            <p className="text-xs text-beautiro-muted">{t("serviceRequired")}</p>
+          {selectedServices.length === 0 && (
+            <p className="text-xs text-beautiro-muted">{t("serviceOptional")}</p>
           )}
         </div>
       )}
@@ -425,6 +426,7 @@ export function OnlineBookingFlow({
                   </optgroup>
                 ))}
               </select>
+              <p className="mt-2 text-xs leading-6 text-beautiro-muted">{tBook("sharedTreatmentHint")}</p>
             </label>
             <label className="block">
               <span className="text-xs font-medium text-beautiro-charcoal">
@@ -466,8 +468,7 @@ export function OnlineBookingFlow({
           <Button
             onClick={() => setStep((s) => s + 1)}
             disabled={
-              (step === 1 && !form.preferredDate) ||
-              (step === 2 && !hasSelectedService(form))
+              step === 1 && !form.preferredDate
             }
             className="min-w-[7rem] disabled:opacity-40"
           >
@@ -485,10 +486,6 @@ export function OnlineBookingFlow({
       </div>
     </div>
   );
-}
-
-function hasSelectedService(form: FormState) {
-  return form.van || form.interpreter || form.fx;
 }
 
 function canSubmitContact(form: FormState) {
