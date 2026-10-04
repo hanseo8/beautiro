@@ -4,7 +4,7 @@
     "description": "VIP one-stop medical tourism: private transport, medical interpreters, and FX benefits."
   },
   "utilBar": {
-    "tagline": "24h Medical Concierge",
+    "tagline": "24/7 WhatsApp enquiries",
     "whatsapp": "WhatsApp"
   },
   "localeSwitcher": {
@@ -122,7 +122,14 @@
     "search": {
       "placeholder": "Search procedures, clinics, areas",
       "popularLabel": "Popular searches",
-      "tags": ["Eyelid", "Lifting", "Botox", "Oriental diet", "Gangnam", "VIP pickup"]
+      "tags": [
+        "Eyelid",
+        "Lifting",
+        "Botox",
+        "Oriental diet",
+        "Gangnam",
+        "VIP pickup"
+      ]
     },
     "carousel": {
       "slides": [
@@ -153,8 +160,22 @@
       "plasticTitle": "Plastic surgery events",
       "careTitle": "Treatments & care",
       "more": "See more",
-      "plastic": ["Eyes", "Nose", "Contouring", "Breast", "Liposuction", "Lifting"],
-      "care": ["Botox", "Filler", "Laser", "Ultherapy", "Oriental diet", "Wellness"]
+      "plastic": [
+        "Eyes",
+        "Nose",
+        "Contouring",
+        "Breast",
+        "Liposuction",
+        "Lifting"
+      ],
+      "care": [
+        "Botox",
+        "Filler",
+        "Laser",
+        "Ultherapy",
+        "Oriental diet",
+        "Wellness"
+      ]
     },
     "popular": {
       "badge": "Trending",
@@ -287,7 +308,7 @@
     "introTitle": "What is Beautiro?",
     "intro": [
       "Beautiro is a premium Korea medical tourism concierge platform for international visitors, especially from Southeast Asia. We connect you with verified partner hospitals in plastic surgery, dermatology, dental, and traditional medicine—and support the entire journey from consultation and scheduling to transport, interpretation, and payment guidance.",
-      "We do not operate hospitals ourselves. Our role is to recommend the right partner clinic for your needs and help you have a safe, comfortable visit. Free WhatsApp consultation is available 24/7 in Indonesian, English, and Korean."
+      "We do not operate hospitals ourselves. Our role is to recommend the right partner clinic for your needs and help you have a safe, comfortable visit. WhatsApp enquiries are accepted 24/7 in Indonesian, English, and Korean."
     ],
     "highlights": [
       "Verified partner hospital consultation & booking",
@@ -693,19 +714,76 @@
   "footer": {
     "tagline": "SEA VIP premium medical tourism, one stop",
     "whatsappCta": "WhatsApp customer care",
-    "whatsappHours": "Daily 09:00–22:00 (KST) · Indonesian / English / Korean",
+    "whatsappHours": "WhatsApp enquiries welcome 24/7 · English / Indonesian / Korean",
     "badgePrivacy": "Privacy",
     "badgePartner": "Verified partners",
     "contact": "Contact us on WhatsApp",
     "company": "Beautiro · Medical tourism concierge",
     "rights": "© Beautiro. Medical information is for reference only, not a diagnosis.",
     "links": [
-      { "label": "Terms", "href": "/terms" },
-      { "label": "Privacy", "href": "/privacy" },
-      { "label": "Write a review", "href": "/reviews" },
-      { "label": "Get started", "href": "/welcome" },
-      { "label": "Partners", "href": "/book" }
+      {
+        "label": "Terms",
+        "href": "/terms"
+      },
+      {
+        "label": "Privacy",
+        "href": "/privacy"
+      },
+      {
+        "label": "Write a review",
+        "href": "/reviews"
+      },
+      {
+        "label": "Get started",
+        "href": "/welcome"
+      },
+      {
+        "label": "Partners",
+        "href": "/book"
+      }
     ]
   },
-  "language": "Language"
+  "language": "Language",
+  "consultationEntry": {
+    "eyebrow": "Your medical journey in Korea",
+    "title": "Clinic selection, interpretation and airport pickup. Together.",
+    "description": "Tell us what care you are looking for and when you plan to visit. Beautiro helps coordinate partner clinic consultations, appointments and travel support.",
+    "hospitals": "Explore partner clinics",
+    "costNote": "Medical fees and transport / interpretation fees are separate. Inclusions and costs are confirmed before booking.",
+    "startTitle": "Start with a WhatsApp consultation",
+    "interest": "Interested service",
+    "timing": "Visit timing",
+    "language": "Preferred language",
+    "cta": "Continue on WhatsApp",
+    "sendNote": "No account needed. Your selections prepare a message; send it in WhatsApp to start your consultation. Messages welcome 24/7.",
+    "online": "Prefer a form? Request a consultation online",
+    "services": {
+      "unsure": "Help me choose",
+      "skin": "Skin care / dermatology",
+      "plastic": "Plastic surgery",
+      "dental": "Dental care",
+      "oriental": "Traditional Korean medicine",
+      "transport": "Pickup / interpretation"
+    },
+    "timings": {
+      "undecided": "Not decided yet",
+      "month": "Within 1 month",
+      "quarter": "Within 3 months",
+      "later": "Later / planning ahead"
+    },
+    "journey": {
+      "consult": {
+        "title": "Tell us your needs",
+        "desc": "Share your preferred care, language and visit timing."
+      },
+      "plan": {
+        "title": "Review your proposed plan",
+        "desc": "Confirm clinic availability, costs and included support."
+      },
+      "visit": {
+        "title": "Visit with coordinated support",
+        "desc": "Arrange pickup and interpretation according to your confirmed booking."
+      }
+    }
+  }
 }

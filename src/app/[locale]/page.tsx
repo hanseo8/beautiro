@@ -1,6 +1,7 @@
 export const dynamic = "force-dynamic";
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { ConsultationEntry } from "@/components/home/ConsultationEntry";
 import { HomeSearch } from "@/components/home/HomeSearch";
 import { PromoBannerSection } from "@/components/home/PromoBannerSection";
 import { BrandStorySection } from "@/components/home/BrandStorySection";
@@ -60,6 +61,7 @@ export default async function HomePage({ params }: Props) {
     <div className="pb-12">
       <section className="border-b border-beautiro-border bg-gradient-to-b from-beautiro-surface/40 to-white">
         <div className="container-babitalk space-y-4 py-6 md:space-y-5 md:py-8">
+          <ConsultationEntry />
           <HomeSearch />
           <PromoBannerSection />
         </div>

@@ -1,7 +1,7 @@
 /** E.164 without + (default placeholder — set NEXT_PUBLIC_WHATSAPP_NUMBER in .env) */
 export const WHATSAPP_NUMBER =
   process.env.NEXT_PUBLIC_WHATSAPP_NUMBER?.replace(/\D/g, "") ||
-  "6281234567890";
+  "821077708778";
 
 export function whatsappUrl(text: string): string {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;

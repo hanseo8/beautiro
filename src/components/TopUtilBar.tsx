@@ -30,14 +30,14 @@ export function TopUtilBar({ compact = false }: { compact?: boolean }) {
         <div className="flex shrink-0 items-center gap-3 sm:gap-4">
           <a
             href={phoneTelHref()}
-            className={`flex items-center gap-1 font-medium text-white/90 transition-colors hover:text-white ${
+            className={`hidden items-center gap-1 font-medium text-white/90 sm:flex transition-colors hover:text-white ${
               compact ? "text-[10px]" : "text-[11px] sm:text-xs"
             }`}
           >
             <Phone size={12} strokeWidth={1.5} className="hidden sm:block" />
             <span className="tabular-nums">{phone}</span>
           </a>
-          <span className="h-3 w-px bg-white/25" aria-hidden />
+          <span className="hidden h-3 w-px bg-white/25 sm:block" aria-hidden />
           <a
             href={wa}
             target="_blank"
@@ -48,7 +48,7 @@ export function TopUtilBar({ compact = false }: { compact?: boolean }) {
             aria-label={t("whatsapp")}
           >
             <MessageCircle size={12} strokeWidth={1.5} />
-            <span className="hidden sm:inline">{t("whatsapp")}</span>
+            <span>{t("whatsapp")}</span>
           </a>
         </div>
       </div>

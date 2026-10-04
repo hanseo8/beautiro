@@ -4,7 +4,7 @@
     "description": "Platform one-stop medical tourism VIP: van pribadi, penerjemah medis, dan keuntungan kurs."
   },
   "utilBar": {
-    "tagline": "Concierge Medis 24 Jam",
+    "tagline": "Pertanyaan WhatsApp 24/7",
     "whatsapp": "WhatsApp"
   },
   "localeSwitcher": {
@@ -122,7 +122,14 @@
     "search": {
       "placeholder": "Cari prosedur, klinik, area",
       "popularLabel": "Pencarian populer",
-      "tags": ["Kelopak mata", "Lifting", "Botox", "Diet oriental", "Gangnam", "VIP pickup"]
+      "tags": [
+        "Kelopak mata",
+        "Lifting",
+        "Botox",
+        "Diet oriental",
+        "Gangnam",
+        "VIP pickup"
+      ]
     },
     "carousel": {
       "slides": [
@@ -153,8 +160,22 @@
       "plasticTitle": "Event bedah plastik",
       "careTitle": "Perawatan & wellness",
       "more": "Lihat lainnya",
-      "plastic": ["Mata", "Hidung", "Kontur", "Payudara", "Sedot lemak", "Lifting"],
-      "care": ["Botox", "Filler", "Laser", "Ultherapy", "Diet oriental", "Wellness"]
+      "plastic": [
+        "Mata",
+        "Hidung",
+        "Kontur",
+        "Payudara",
+        "Sedot lemak",
+        "Lifting"
+      ],
+      "care": [
+        "Botox",
+        "Filler",
+        "Laser",
+        "Ultherapy",
+        "Diet oriental",
+        "Wellness"
+      ]
     },
     "popular": {
       "badge": "Sedang tren",
@@ -287,7 +308,7 @@
     "introTitle": "Apa itu Beautiro?",
     "intro": [
       "Beautiro adalah platform concierge wisata medis premium Korea untuk pengunjung internasional, terutama dari Asia Tenggara. Kami menghubungkan Anda dengan rumah sakit mitra terverifikasi di bidang bedah plastik, dermatologi, gigi, dan pengobatan tradisional—serta mendampingi seluruh perjalanan mulai dari konsultasi dan penjadwalan hingga transport, penerjemahan, dan panduan pembayaran.",
-      "Kami tidak mengoperasikan rumah sakit sendiri. Peran kami adalah merekomendasikan klinik mitra yang paling sesuai dan membantu Anda mendapatkan pengalaman kunjungan yang aman dan nyaman. Konsultasi WhatsApp gratis tersedia 24 jam dalam Bahasa Indonesia, Inggris, dan Korea."
+      "Kami tidak mengoperasikan rumah sakit sendiri. Peran kami adalah merekomendasikan klinik mitra yang paling sesuai dan membantu Anda mendapatkan pengalaman kunjungan yang aman dan nyaman. Pertanyaan melalui WhatsApp diterima 24 jam dalam Bahasa Indonesia, Inggris, dan Korea."
     ],
     "highlights": [
       "Konsultasi & reservasi rumah sakit mitra terverifikasi",
@@ -692,19 +713,76 @@
   "footer": {
     "tagline": "Medical tourism premium VIP ASEAN, satu atap",
     "whatsappCta": "Layanan pelanggan WhatsApp",
-    "whatsappHours": "Setiap hari 09:00–22:00 (KST) · ID / EN / KO",
+    "whatsappHours": "Pertanyaan WhatsApp diterima 24/7 · Inggris / Indonesia / Korea",
     "badgePrivacy": "Privasi",
     "badgePartner": "Mitra terverifikasi",
     "contact": "Hubungi kami via WhatsApp",
     "company": "Beautiro · Concierge medical tourism",
     "rights": "© Beautiro. Informasi medis bersifat informatif, bukan diagnosis.",
     "links": [
-      { "label": "Syarat", "href": "/terms" },
-      { "label": "Privasi", "href": "/privacy" },
-      { "label": "Tulis ulasan", "href": "/reviews" },
-      { "label": "Mulai", "href": "/welcome" },
-      { "label": "Mitra", "href": "/book" }
+      {
+        "label": "Syarat",
+        "href": "/terms"
+      },
+      {
+        "label": "Privasi",
+        "href": "/privacy"
+      },
+      {
+        "label": "Tulis ulasan",
+        "href": "/reviews"
+      },
+      {
+        "label": "Mulai",
+        "href": "/welcome"
+      },
+      {
+        "label": "Mitra",
+        "href": "/book"
+      }
     ]
   },
-  "language": "Bahasa"
+  "language": "Bahasa",
+  "consultationEntry": {
+    "eyebrow": "Perjalanan medis Anda di Korea",
+    "title": "Pemilihan klinik, penerjemah dan penjemputan bandara.",
+    "description": "Beri tahu kami perawatan yang Anda inginkan dan rencana kunjungan. Beautiro membantu koordinasi konsultasi klinik mitra, jadwal dan dukungan perjalanan.",
+    "hospitals": "Lihat klinik mitra",
+    "costNote": "Biaya medis terpisah dari transportasi dan penerjemah. Biaya serta layanan yang termasuk dikonfirmasi sebelum pemesanan.",
+    "startTitle": "Mulai konsultasi melalui WhatsApp",
+    "interest": "Layanan yang diminati",
+    "timing": "Waktu kunjungan",
+    "language": "Bahasa pilihan",
+    "cta": "Lanjutkan ke WhatsApp",
+    "sendNote": "Tanpa akun. Pilihan Anda menyiapkan pesan; kirim melalui WhatsApp untuk memulai konsultasi. Pesan diterima 24/7.",
+    "online": "Ajukan konsultasi melalui formulir online",
+    "services": {
+      "unsure": "Bantu saya memilih",
+      "skin": "Perawatan kulit / dermatologi",
+      "plastic": "Bedah plastik",
+      "dental": "Perawatan gigi",
+      "oriental": "Pengobatan tradisional Korea",
+      "transport": "Penjemputan / penerjemah"
+    },
+    "timings": {
+      "undecided": "Belum ditentukan",
+      "month": "Dalam 1 bulan",
+      "quarter": "Dalam 3 bulan",
+      "later": "Nanti / masih merencanakan"
+    },
+    "journey": {
+      "consult": {
+        "title": "Sampaikan kebutuhan Anda",
+        "desc": "Pilih perawatan, bahasa dan waktu kunjungan."
+      },
+      "plan": {
+        "title": "Tinjau rencana kunjungan",
+        "desc": "Konfirmasi jadwal klinik, biaya dan dukungan yang termasuk."
+      },
+      "visit": {
+        "title": "Kunjungan dengan dukungan",
+        "desc": "Atur penjemputan dan penerjemah sesuai pemesanan yang dikonfirmasi."
+      }
+    }
+  }
 }
