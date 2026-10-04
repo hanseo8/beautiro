@@ -14,10 +14,10 @@ model=Image.open(OUT/'model-candidate-32280799.jpg').convert('RGB')
 model_after=Image.open(OUT/'model-30797188.jpg').convert('RGB')
 model_sequence=[
  model,
- model_after,
+ Image.open(OUT/'seran-model-01.jpg').convert('RGB').crop((245,15,525,449)),
  Image.open(OUT/'model-8076215.jpg').convert('RGB'),
  Image.open(OUT/'model-hook-38794386.jpg').convert('RGB'),
- Image.open(OUT/'model-candidate-30797182.jpg').convert('RGB'),
+ model_after,
 ]
 scenes=[
  dict(start=0,end=2.5,photo=0,eyebrow='K-BEAUTY PROMO',title=['Ingin tampil','lebih percaya diri?'],body=['Mulai dengan konsultasi.'],small='Model ilustrasi · Bukan hasil perawatan'),
