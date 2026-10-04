@@ -95,10 +95,18 @@ def render_smooth(t):
  return frame
 
 def render_continuous(t):
- # Keep one licensed real model on screen for the entire Reel.
+ # Alternate licensed Indonesian and Korean beauty models every two seconds.
+ segment=int(t//2)
+ source_image=model if segment % 2 == 0 else model_after
+ local=t%2
+ if local < 0.28 and t > 0:
+  previous_image=model_after if segment % 2 == 0 else model
+  previous=ImageOps.fit(previous_image,(W,H),method=Image.Resampling.LANCZOS).convert('RGBA')
+  current=ImageOps.fit(source_image,(W,H),method=Image.Resampling.LANCZOS).convert('RGBA')
+  source_image=Image.blend(previous,current,local/0.28).convert('RGB')
  progress=t/12
  zoom=1.04+0.10*progress
- source=ImageOps.fit(model,(int(W*zoom),int(H*zoom)),method=Image.Resampling.LANCZOS)
+ source=ImageOps.fit(source_image,(int(W*zoom),int(H*zoom)),method=Image.Resampling.LANCZOS)
  max_x=max(0,source.width-W); max_y=max(0,source.height-H)
  x=int(max_x*(0.25+0.50*progress)); y=int(max_y*(0.60-0.25*progress))
  frame=source.crop((x,y,x+W,y+H)).convert('RGBA')
