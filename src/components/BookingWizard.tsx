@@ -57,7 +57,7 @@ export function BookingWizard({
   const locale = useLocale() as Locale;
   const searchParams = useSearchParams();
   const tab = searchParams.get("tab");
-  const preselected = searchParams.get("procedure") ?? "";
+  const preselected = procedures.find(p => p.requestedTreatmentKey === searchParams.get("treatment"))?.id ?? searchParams.get("procedure") ?? "";
 
   const [step, setStep] = useState(1);
   const [submitting, setSubmitting] = useState(false);

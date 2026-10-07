@@ -8,6 +8,7 @@ import { PromoBannerSection } from "@/components/home/PromoBannerSection";
 import { BrandStorySection } from "@/components/home/BrandStorySection";
 import { HeroCarousel } from "@/components/home/HeroCarousel";
 import { CategoryPanels } from "@/components/home/CategoryPanels";
+import { FaceTreatmentExplorer } from "@/components/FaceTreatmentExplorer";
 import { ServicesSection } from "@/components/home/ServicesSection";
 import {
   PopularEventSection,
@@ -75,6 +76,7 @@ export default async function HomePage({ params }: Props) {
       </div>
       <div className="container-babitalk space-y-14 pt-10">
         <HeroCarousel />
+        <FaceTreatmentExplorer />
         {seranPlus && <SeranPlusTreatments procedures={localizeHospital(seranPlus, loc, regionT).procedures} />}
         <ServicesSection />
         <CategoryPanels />

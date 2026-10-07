@@ -11,6 +11,7 @@ import { TopUtilBar } from "./TopUtilBar";
 
 const navItems = [
   { href: "/", labelKey: "home" as const, match: (p: string) => p === "/" },
+  { href: "/explore", labelKey: "faceGuide" as const, match: (p: string) => p.startsWith("/explore") },
   {
     href: "/#services",
     labelKey: "services" as const,

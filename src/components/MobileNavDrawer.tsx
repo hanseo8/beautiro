@@ -5,6 +5,7 @@ import { useTranslations, useLocale } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import {
   X,
+  Search,
   Home,
   Building2,
   CalendarCheck,
@@ -51,6 +52,7 @@ export function MobileNavDrawer({ open, onClose }: Props) {
   }, [open, onClose]);
 
   const mainLinks = [
+    { href: "/explore", label: t("faceGuide"), icon: Search },
     { href: "/", label: t("home"), icon: Home },
     { href: "/welcome", label: t("welcome"), icon: Sparkles },
     { href: "/brand-story", label: t("brandStory"), icon: BookOpen },

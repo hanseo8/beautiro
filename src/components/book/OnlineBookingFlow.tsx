@@ -72,7 +72,8 @@ export function OnlineBookingFlow({
   const tBook = useTranslations("book");
   const locale = useLocale() as Locale;
   const minDate = todayString();
-  const preselected = useSearchParams().get("procedure") ?? "";
+  const searchParams = useSearchParams();
+  const preselected = procedures.find(p => p.requestedTreatmentKey === searchParams.get("treatment"))?.id ?? searchParams.get("procedure") ?? "";
 
   const [step, setStep] = useState(1);
   const [submitting, setSubmitting] = useState(false);
