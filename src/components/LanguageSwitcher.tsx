@@ -13,7 +13,7 @@ const localeCodes: Record<Locale, string> = {
   en: "EN",
   ko: "KO",
   id: "ID",
-  zh: "ZH",
+  zh: "中文",
   th: "TH",
   vi: "VI",
 };

@@ -6,23 +6,17 @@ import { consultMessage, whatsappUrl } from "@/lib/whatsapp";
 import { formatPhoneDisplay, phoneTelHref } from "@/lib/phone";
 import type { Locale } from "@/i18n/routing";
 
-export function TopUtilBar({ compact = false }: { compact?: boolean }) {
+export function TopUtilBar() {
   const t = useTranslations("utilBar");
   const locale = useLocale() as Locale;
   const wa = whatsappUrl(consultMessage({ locale }));
   const phone = formatPhoneDisplay();
 
   return (
-    <div
-      className={`border-b border-beautiro-border/60 bg-beautiro-primary-deep text-white transition-all duration-200 ${
-        compact ? "py-1" : "py-1.5"
-      }`}
-    >
+    <div className="flex h-8 items-center border-b border-beautiro-border/60 bg-beautiro-primary-deep text-white">
       <div className="container-babitalk flex items-center justify-between gap-3">
         <p
-          className={`flex min-w-0 items-center gap-1.5 font-medium transition-all duration-200 ${
-            compact ? "text-[10px]" : "text-[11px] sm:text-xs"
-          }`}
+          className="flex min-w-0 items-center gap-1.5 text-[11px] font-medium sm:text-xs"
         >
           <Headset size={13} strokeWidth={1.5} className="shrink-0 opacity-80" />
           <span className="truncate">{t("tagline")}</span>
@@ -30,9 +24,7 @@ export function TopUtilBar({ compact = false }: { compact?: boolean }) {
         <div className="flex shrink-0 items-center gap-3 sm:gap-4">
           <a
             href={phoneTelHref()}
-            className={`hidden items-center gap-1 font-medium text-white/90 sm:flex transition-colors hover:text-white ${
-              compact ? "text-[10px]" : "text-[11px] sm:text-xs"
-            }`}
+            className="hidden items-center gap-1 text-[11px] font-medium text-white/90 transition-colors hover:text-white sm:flex sm:text-xs"
           >
             <Phone size={12} strokeWidth={1.5} className="hidden sm:block" />
             <span className="tabular-nums">{phone}</span>
@@ -42,9 +34,7 @@ export function TopUtilBar({ compact = false }: { compact?: boolean }) {
             href={wa}
             target="_blank"
             rel="noopener noreferrer"
-            className={`flex shrink-0 items-center gap-1 font-semibold text-white transition-opacity hover:opacity-90 ${
-              compact ? "text-[10px]" : "text-[11px] sm:text-xs"
-            }`}
+            className="flex shrink-0 items-center gap-1 text-[11px] font-semibold text-white transition-opacity hover:opacity-90 sm:text-xs"
             aria-label={t("whatsapp")}
           >
             <MessageCircle size={12} strokeWidth={1.5} />

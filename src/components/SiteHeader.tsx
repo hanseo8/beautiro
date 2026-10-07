@@ -47,17 +47,19 @@ export function SiteHeader() {
 
   return (
     <>
+      {/* Reserve constant space so header resizing cannot change scrollY via scroll anchoring. */}
+      <div className="h-[89px] shrink-0" aria-hidden="true" />
       <div
-        className={`sticky top-0 z-50 transition-shadow duration-300 ${
+        className={`fixed inset-x-0 top-0 z-50 transition-shadow duration-300 ${
           scrolled
             ? "shadow-[0_4px_24px_rgba(15,23,42,0.1)]"
             : "shadow-none"
         }`}
       >
-        <TopUtilBar compact={scrolled} />
+        <TopUtilBar />
         <header className="border-b border-beautiro-border/80 bg-white/95 backdrop-blur-md">
           <div
-            className={`container-babitalk flex items-center gap-4 transition-all duration-300 xl:gap-6 ${
+            className={`container-babitalk flex items-center gap-4 transition-[height] duration-300 motion-reduce:transition-none xl:gap-6 ${
               scrolled ? "h-11" : "h-14"
             }`}
           >
