@@ -76,14 +76,14 @@ export function MobileNavDrawer({ open, onClose }: Props) {
   return (
     <>
       <div
-        className={`fixed inset-0 z-[60] bg-[#0f172a]/40 backdrop-blur-[2px] transition-opacity duration-300 lg:hidden ${
+        className={`fixed inset-0 z-[60] bg-[#0f172a]/40 backdrop-blur-[2px] transition-opacity duration-300 xl:hidden ${
           open ? "opacity-100" : "pointer-events-none opacity-0"
         }`}
         onClick={onClose}
         aria-hidden={!open}
       />
       <aside
-        className={`fixed inset-y-0 right-0 z-[70] flex w-[min(100vw-3rem,320px)] flex-col bg-white shadow-2xl transition-transform duration-300 ease-out lg:hidden ${
+        className={`fixed inset-y-0 right-0 z-[70] flex w-[min(100vw-3rem,320px)] flex-col bg-white shadow-2xl transition-transform duration-300 ease-out xl:hidden ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
         aria-hidden={!open}
