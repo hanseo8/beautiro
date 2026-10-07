@@ -10,6 +10,7 @@ import type { Locale } from "@/i18n/routing";
 
 export function SiteFooter() {
   const t = useTranslations("footer");
+  const nav = useTranslations("nav");
   const locale = useLocale() as Locale;
   const wa = whatsappUrl(consultMessage({ locale }));
 
@@ -37,9 +38,10 @@ export function SiteFooter() {
             </p>
           </div>
           <ul className="flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-beautiro-muted">
+            <li><Link href="/brand-story" className="hover:text-beautiro-charcoal">{nav("brandStory")}</Link></li>
             {links.map((link) => (
               <li key={link.label}>
-                <Link href={link.href} className="hover:text-beautiro-charcoal">
+                <Link href={link.href === "/#services" ? "/services" : link.href === "/#faq" ? "/services#faq" : link.href} className="hover:text-beautiro-charcoal">
                   {link.label}
                 </Link>
               </li>

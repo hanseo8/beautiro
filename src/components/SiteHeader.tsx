@@ -13,7 +13,7 @@ const navItems = [
   { href: "/", labelKey: "home" as const, match: (p: string) => p === "/" },
   { href: "/explore", labelKey: "faceGuide" as const, match: (p: string) => p.startsWith("/explore") },
   {
-    href: "/#services",
+    href: "/services",
     labelKey: "services" as const,
     match: () => false,
   },
@@ -24,7 +24,7 @@ const navItems = [
       p.startsWith("/hospitals") || p.startsWith("/events"),
   },
   {
-    href: "/#faq",
+    href: "/services#faq",
     labelKey: "faq" as const,
     match: () => false,
   },

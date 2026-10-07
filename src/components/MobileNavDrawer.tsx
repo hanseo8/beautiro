@@ -56,16 +56,16 @@ export function MobileNavDrawer({ open, onClose }: Props) {
     { href: "/", label: t("home"), icon: Home },
     { href: "/welcome", label: t("welcome"), icon: Sparkles },
     { href: "/brand-story", label: t("brandStory"), icon: BookOpen },
-    { href: "/#services", label: t("services"), icon: Info },
+    { href: "/services", label: t("services"), icon: Info },
     { href: "/hospitals", label: t("hospitals"), icon: Building2 },
     { href: "/reviews", label: t("reviews"), icon: Gift },
-    { href: "/#faq", label: t("faq"), icon: HelpCircle },
+    { href: "/services#faq", label: t("faq"), icon: HelpCircle },
   ] as const;
 
   const serviceLinks = [
-    { href: "/#services", label: t("servicesVan"), icon: Car },
-    { href: "/#services", label: t("servicesMate"), icon: Languages },
-    { href: "/#services", label: t("servicesPay"), icon: Wallet },
+    { href: "/services", label: t("servicesVan"), icon: Car },
+    { href: "/services", label: t("servicesMate"), icon: Languages },
+    { href: "/services", label: t("servicesPay"), icon: Wallet },
   ] as const;
 
   const accountLinks = [

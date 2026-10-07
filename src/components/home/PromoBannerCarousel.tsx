@@ -142,7 +142,7 @@ export function PromoBannerCarousel({ slides }: { slides: PromoSlide[] }) {
                   <ArrowRight size={14} />
                 </Link>
                 <Link
-                  href="/#services"
+                  href="/services"
                   className="inline-flex h-9 items-center rounded-full border border-beautiro-border bg-white px-4 text-xs font-semibold text-beautiro-charcoal transition-colors hover:border-beautiro-primary/30 hover:text-beautiro-primary sm:h-10 sm:px-5 sm:text-sm"
                 >
                   {slide.ctaServices}
