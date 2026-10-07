@@ -15,7 +15,7 @@ export function ConsultationEntry() {
   const [language, setLanguage] = useState(locale);
   const services = ["unsure", "skin", "plastic", "dental", "oriental", "transport"];
   const timings = ["undecided", "month", "quarter", "later"];
-  const languages = [{ value: "en", label: "English" }, { value: "id", label: "Bahasa Indonesia" }, { value: "ko", label: "한국어" }];
+  const languages = [{ value: "en", label: "English" }, { value: "id", label: "Bahasa Indonesia" }, { value: "ko", label: "한국어" }, { value: "zh", label: "中文（简体）" }, { value: "th", label: "ไทย" }, { value: "vi", label: "Tiếng Việt" }];
   const wa = whatsappUrl(consultMessage({ locale, extra: `${t("interest")}: ${t(`services.${service}`)}\n${t("timing")}: ${t(`timings.${timing}`)}\n${t("language")}: ${languages.find(item => item.value === language)?.label}` }));
   const fieldClass = "mt-2 w-full min-w-0 rounded-md border border-beautiro-border bg-white px-3 py-3 text-base text-beautiro-charcoal sm:text-sm focus:outline-none focus:ring-2 focus:ring-beautiro-primary";
   return (

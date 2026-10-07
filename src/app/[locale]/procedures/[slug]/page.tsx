@@ -18,7 +18,7 @@ type Props = {
 
 export function generateStaticParams() {
   return PROCEDURE_LANDING_SLUGS.flatMap((slug) =>
-    ["en", "ko", "id"].map((locale) => ({ locale, slug })),
+    ["en", "ko", "id", "zh", "th", "vi"].map((locale) => ({ locale, slug })),
   );
 }
 

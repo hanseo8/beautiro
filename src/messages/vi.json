@@ -1,0 +1,817 @@
+{
+  "meta": {
+    "title": "Beautiro — Chăm sóc y tế cao cấp tại Hàn Quốc",
+    "description": "Du lịch y tế trọn gói: xe riêng, phiên dịch y tế và ưu đãi đổi ngoại tệ."
+  },
+  "utilBar": {
+    "tagline": "Yêu cầu WhatsApp 24/7",
+    "whatsapp": "WhatsApp"
+  },
+  "localeSwitcher": {
+    "label": "Ngôn ngữ",
+    "nameEn": "English",
+    "nameKo": "한국어",
+    "nameId": "Bahasa Indonesia"
+  },
+  "nav": {
+    "faceGuide": "Khuôn mặt",
+    "home": "Trang chủ",
+    "brandStory": "Câu chuyện thương hiệu",
+    "services": "Dịch vụ",
+    "events": "Sự kiện",
+    "hospitals": "Cơ sở y tế",
+    "book": "Tư vấn",
+    "faq": "Câu hỏi thường gặp",
+    "cta": "Yêu cầu tư vấn",
+    "signIn": "Đăng nhập",
+    "brandSubtitle": "Hỗ trợ hành trình y tế",
+    "login": "Đăng nhập/Đăng ký",
+    "whatsapp": "WhatsApp",
+    "menuOpen": "Mở trình đơn",
+    "menuClose": "Đóng trình đơn",
+    "menuMain": "Menu chính",
+    "menuAccount": "Tài khoản",
+    "servicesTitle": "Dịch vụ trợ giúp y tế",
+    "servicesVan": "Đưa đón riêng",
+    "servicesMate": "Phiên dịch y tế đồng hành",
+    "servicesPay": "Thanh toán y tế & hỗ trợ ngoại hối",
+    "reservations": "Lịch đặt hẹn",
+    "mypage": "Tài khoản của tôi",
+    "reviews": "Viết đánh giá",
+    "welcome": "Bắt đầu"
+  },
+  "bottomNav": {
+    "ariaLabel": "Điều hướng dưới cùng",
+    "home": "Trang chủ",
+    "search": "Dịch vụ",
+    "concierge": "Hỗ trợ",
+    "bookings": "Lịch hẹn",
+    "mypage": "Tài khoản"
+  },
+  "common": {
+    "whatsappFloat": "Trò chuyện qua WhatsApp"
+  },
+  "auth": {
+    "signupTitle": "Tạo tài khoản Beautiro của bạn",
+    "loginTitle": "Chào mừng bạn quay lại",
+    "signupDesc": "Đăng ký để lưu hồ sơ, theo dõi lịch hẹn và tham gia chương trình dành cho thành viên.",
+    "loginDesc": "Đăng nhập để xem thông tin đặt chỗ của bạn và tiếp tục các yêu cầu tư vấn của bạn.",
+    "signupTab": "Đăng ký",
+    "loginTab": "Đăng nhập",
+    "namePlaceholder": "Tên đầy đủ",
+    "emailPlaceholder": "E-mail",
+    "phonePlaceholder": "Điện thoại / WhatsApp (tùy chọn)",
+    "passwordPlaceholder": "Mật khẩu",
+    "passwordHint": "Sử dụng ít nhất 8 ký tự.",
+    "signupButton": "Tạo tài khoản",
+    "loginButton": "Đăng nhập",
+    "submitting": "Vui lòng chờ…",
+    "logout": "Đăng xuất",
+    "loggedInTitle": "Tài khoản của tôi",
+    "loggedInAs": "Đã đăng nhập với tên {name}",
+    "myBookings": "Xem lịch đặt hẹn của tôi",
+    "emailTaken": "Email này đã được đăng ký. Vui lòng đăng nhập.",
+    "invalidCredentials": "Email hoặc mật khẩu không đúng.",
+    "genericError": "Đã xảy ra lỗi. Vui lòng thử lại.",
+    "googleButton": "Tiếp tục với Google",
+    "orContinueWithEmail": "hoặc",
+    "forgotLink": "Quên mật khẩu?",
+    "forgotTitle": "Đặt lại mật khẩu",
+    "forgotDesc": "Nhập email của bạn và chúng tôi sẽ gửi cho bạn một liên kết đặt lại.",
+    "forgotButton": "Gửi liên kết đặt lại mật khẩu",
+    "forgotSent": "Nếu có tài khoản cho email đó thì liên kết đặt lại đã được gửi.",
+    "resetTitle": "Chọn mật khẩu mới",
+    "resetDesc": "Nhập mật khẩu mới cho tài khoản Beautiro của bạn.",
+    "resetButton": "Cập nhật mật khẩu",
+    "resetSuccess": "Mật khẩu đã được cập nhật. Bạn có thể đăng nhập ngay.",
+    "confirmPasswordPlaceholder": "Xác nhận mật khẩu",
+    "passwordMismatch": "Mật khẩu không khớp.",
+    "invalidResetToken": "Liên kết đặt lại mật khẩu không hợp lệ hoặc đã hết hạn.",
+    "verifyTitle": "Xác minh email",
+    "verifySuccess": "Email của bạn đã được xác minh.",
+    "verifyInvalid": "Liên kết xác minh không hợp lệ hoặc đã hết hạn.",
+    "verifyPending": "Kiểm tra hộp thư đến của bạn để tìm email xác minh.",
+    "verifyBanner": "Vui lòng xác minh email của bạn để bảo mật tài khoản của bạn.",
+    "resendVerification": "Gửi lại email xác minh",
+    "verifyResent": "Đã gửi email xác minh.",
+    "signupVerifySent": "Tài khoản đã được tạo. Vui lòng kiểm tra email của bạn để xác minh địa chỉ của bạn.",
+    "backToAccount": "Quay lại tài khoản",
+    "adminPanel": "Trang tổng quan dành cho quản trị viên"
+  },
+  "promoPopup": {
+    "badge": "Sắp khai trương",
+    "imageAlt": "Indonesia Jakarta ra mắt dịch vụ và sự kiện khách hàng may mắn",
+    "title": "Sự kiện ra mắt tháng 10",
+    "openingNote": "Dịch vụ đầy đủ của chúng tôi sẽ ra mắt vào tháng 10.",
+    "body": "Ba khách hàng đăng ký và hoàn tất tư vấn sẽ được chọn để nhận miễn phí các dịch vụ sau.",
+    "benefits": [
+      {
+        "title": "Dịch vụ chăm sóc da",
+        "desc": "Chăm sóc da cao cấp miễn phí cho người chiến thắng được chọn"
+      },
+      {
+        "title": "Dịch vụ đưa đón",
+        "desc": "Miễn phí đưa đón sân bay, khách sạn và bệnh viện"
+      }
+    ],
+    "note": "Chi tiết sự kiện và thông báo người chiến thắng sẽ được gửi riêng lẻ.",
+    "ctaBook": "Đăng ký và yêu cầu tư vấn",
+    "dismissToday": "Đừng hiển thị lại hôm nay",
+    "close": "Đóng"
+  },
+  "home": {
+    "search": {
+      "placeholder": "Tìm dịch vụ, cơ sở y tế hoặc khu vực",
+      "popularLabel": "Tìm kiếm phổ biến",
+      "tags": [
+        "Mí mắt",
+        "Nâng",
+        "Botox",
+        "Chế độ ăn uống phương Đông",
+        "Gangnam",
+        "Đưa đón VIP"
+      ]
+    },
+    "carousel": {
+      "slides": [
+        {
+          "title": "Du lịch y tế cao cấp với dịch vụ chăm sóc hướng dẫn tận tình",
+          "subtitle": "Từ đón tại sân bay đến đi cùng phòng khám",
+          "cta": "Yêu cầu tư vấn",
+          "href": "/book",
+          "tone": "sky"
+        },
+        {
+          "title": "Phiên dịch viên y tế chuyên dụng đi kèm",
+          "subtitle": "Nhựa · Da liễu · Phương Đông · Nha khoa",
+          "cta": "Xem dịch vụ",
+          "href": "/#services",
+          "tone": "blue"
+        },
+        {
+          "title": "Thanh toán y tế và hỗ trợ ngoại hối",
+          "subtitle": "Hướng dẫn thanh toán an toàn",
+          "cta": "Tìm hiểu thêm",
+          "href": "/#services",
+          "tone": "ice"
+        }
+      ]
+    },
+    "categories": {
+      "plasticTitle": "Sự kiện phẫu thuật thẩm mỹ",
+      "careTitle": "Dịch vụ điều trị và chăm sóc",
+      "more": "Xem thêm",
+      "plastic": [
+        "Mắt",
+        "Mũi",
+        "Đường viền",
+        "Nhũ hoa",
+        "Hút mỡ",
+        "Nâng"
+      ],
+      "care": [
+        "Botox",
+        "chất làm đầy",
+        "Tia laze",
+        "Ultherapy",
+        "Chế độ ăn uống phương Đông",
+        "Chăm sóc sức khỏe"
+      ]
+    },
+    "popular": {
+      "badge": "Được quan tâm",
+      "title": "Sự kiện phổ biến hiện nay",
+      "subtitle": "Giảm giá thêm cho đối tác · hỏi trên WhatsApp",
+      "viewAll": "Xem tất cả",
+      "discountBadge": "Giảm giá thêm",
+      "inquiryHint": "Điều kiện giảm giá khác nhau tùy theo bệnh viện. Chúng tôi sẽ hướng dẫn cá nhân bạn.",
+      "viewDetail": "Chi tiết",
+      "inquire": "hỏi thăm"
+    },
+    "brandStory": {
+      "badge": "Câu chuyện thương hiệu",
+      "headline": "Hướng dẫn bạn an toàn trong hành trình khám chữa bệnh tại Hàn Quốc.",
+      "intro": "Việc tìm kiếm dịch vụ y tế hoặc thẩm mỹ ở nước ngoài có thể khiến bạn lo lắng.",
+      "questions": [
+        "Tôi có thể tin tưởng cơ sở nào?",
+        "Liệu có rào cản ngôn ngữ không?",
+        "Làm cách nào để di chuyển trong thành phố một cách an toàn?"
+      ],
+      "origin": "Beautiro được tạo ra để giải đáp những mối quan tâm chính xác này.",
+      "paragraphs": [
+        "Giống như một địa chỉ đường phố rõ ràng sẽ đưa bạn đến đích một cách an toàn, Beautiro đóng vai trò là người hướng dẫn đáng tin cậy giúp bạn khám phá bối cảnh y tế rộng lớn của Hàn Quốc.",
+        "Thay vì những lời hứa suông, chúng tôi cung cấp các phòng khám đã được xác minh, tuyển chọn cẩn thận, kết hợp với các thông dịch viên y tế được chứng nhận luôn ở bên cạnh bạn và phương tiện di chuyển cá nhân đảm bảo bạn đi lại thoải mái từ khi đến cho đến khi khởi hành.",
+        "Beautiro không chỉ là một thư mục. Chúng tôi là đối tác tận tâm của bạn, đảm bảo sự tập trung của bạn hoàn toàn vào việc chăm sóc và phục hồi."
+      ],
+      "closing": "Tìm con đường đáng tin cậy của bạn để chăm sóc K-Medical với Beautiro.",
+      "pillars": [
+        {
+          "title": "Cơ sở đối tác đã được xác minh",
+          "desc": "Các bệnh viện được quản lý cẩn thận—không bao giờ hứa suông hoặc quảng cáo phóng đại."
+        },
+        {
+          "title": "Phiên dịch viên y tế được chứng nhận",
+          "desc": "Phiên dịch viên chuyên nghiệp luôn đồng hành cùng bạn từ lúc tư vấn cho đến khi phục hồi."
+        },
+        {
+          "title": "Phương tiện giao thông cá nhân",
+          "desc": "Đi lại thoải mái, an toàn từ khi đến sân bay cho đến khi khởi hành."
+        }
+      ]
+    },
+    "brandKey": {
+      "badge": "người đẹp",
+      "title": "Bỏ qua sự phức tạp. Chỉ cần nhớ đến Beautiro.",
+      "ctaBook": "Yêu cầu tư vấn",
+      "ctaServices": "Dịch vụ của chúng tôi"
+    },
+    "reviewPromo": {
+      "badge": "Quà tặng khi đánh giá",
+      "title": "Để lại đánh giá, mở khóa đặc quyền truy cập",
+      "subtitle": "Chia sẻ trải nghiệm Beautiro và nhận các dịch vụ miễn phí này khi đến thăm.",
+      "ctaBook": "Yêu cầu tư vấn",
+      "ctaEvents": "Xem chi tiết quyền lợi",
+      "benefits": [
+        {
+          "title": "Tặng 1 buổi chăm sóc da miễn phí",
+          "desc": "Một liệu trình chăm sóc da cao cấp miễn phí trong chuyến thăm của bạn"
+        },
+        {
+          "title": "1 lượt đón miễn phí",
+          "desc": "Một lần đón tại sân bay, khách sạn hoặc phòng khám miễn phí"
+        }
+      ]
+    },
+    "openPromo": {
+      "badge": "Mở đặc biệt",
+      "title": "Beautiro ra mắt giảm giá đặc biệt",
+      "subtitle": "Đặt qua Beautiro để được giảm giá thêm tại bệnh viện đối tác cùng với những lợi ích độc quyền này.",
+      "ctaEvents": "Xem chương trình ưu đãi",
+      "ctaBook": "Yêu cầu tư vấn",
+      "benefits": [
+        {
+          "title": "Tỷ giá hối đoái ưa thích",
+          "desc": "Tỷ giá hối đoái ưu đãi thông qua mạng lưới đối tác của chúng tôi"
+        },
+        {
+          "title": "Đón và gửi hành lý tại sân bay Seoul",
+          "desc": "Dịch vụ đón tại sân bay và vận chuyển hành lý khi đến nơi"
+        },
+        {
+          "title": "Các khoản bổ sung dành riêng cho bệnh viện",
+          "desc": "Các gói và giảm giá bổ sung tùy chỉnh cho mỗi bệnh viện đối tác"
+        }
+      ]
+    },
+    "cosmeticsPromo": {
+      "badge": "Lợi ích thành viên",
+      "title": "Quà tặng chăm sóc da miễn phí - đăng ký và tư vấn",
+      "subtitle": "Đăng ký Beautiro và gửi yêu cầu tư vấn để nhận bộ sản phẩm chăm sóc da.",
+      "note": "Đối với các yêu cầu tư vấn đã hoàn thành · Trong khi nguồn cung cấp vẫn còn.",
+      "cta": "Đăng ký và tư vấn"
+    },
+    "app": {
+      "title": "Dễ dàng hơn với ứng dụng Beautiro",
+      "description": "Đặt chỗ, lên lịch và liên hệ Mate của bạn ở cùng một nơi. (Sắp ra mắt)",
+      "qrHint": "Quét QR · Tải ứng dụng"
+    },
+    "faq": {
+      "title": "Câu hỏi thường gặp",
+      "items": [
+        {
+          "q": "Beautiro có phải là bệnh viện không?",
+          "a": "Chúng tôi kết nối bạn với các đối tác đã được xác minh và dịch vụ chăm sóc VIP."
+        },
+        {
+          "q": "Hỗ trợ những ngôn ngữ nào?",
+          "a": "Tiếng Indonesia, tiếng Anh và tiếng Hàn để tư vấn và phiên dịch y tế."
+        },
+        {
+          "q": "Thanh toán hoạt động như thế nào?",
+          "a": "Sau khi xác nhận, Beautiro Pay sẽ hướng dẫn bạn một cách an toàn."
+        }
+      ]
+    }
+  },
+  "hero": {
+    "badge": "Du lịch y tế VIP tại Hàn Quốc",
+    "title": "Chăm sóc y tế cao cấp, liền mạch",
+    "subtitle": "Từ sân bay đến phòng khám — xe tải riêng, phiên dịch viên y tế chuyên nghiệp và hỗ trợ FX trên một nền tảng.",
+    "primaryCta": "Yêu cầu tư vấn",
+    "secondaryCta": "Duyệt các bệnh viện đối tác",
+    "concierge": "Concierge trong vòng 24 giờ",
+    "visualCaption": "Seoul · Hàn Quốc"
+  },
+  "services": {
+    "badge": "Dịch vụ",
+    "title": "Nhân viên hướng dẫn du lịch y tế Beautiro",
+    "subtitle": "Chúng tôi phối hợp tư vấn, di chuyển, phiên dịch và thanh toán trong một quy trình chăm sóc cho chuyến đi Hàn Quốc của bạn.",
+    "introTitle": "Beautiro là gì?",
+    "intro": [
+      "Beautiro là nền tảng hỗ trợ du lịch y tế cao cấp của Hàn Quốc dành cho du khách quốc tế, đặc biệt là từ Đông Nam Á. Chúng tôi kết nối bạn với các bệnh viện đối tác đã được xác minh trong lĩnh vực phẫu thuật thẩm mỹ, da liễu, nha khoa và y học cổ truyền—đồng thời hỗ trợ toàn bộ hành trình từ tư vấn và lên lịch đến vận chuyển, phiên dịch và hướng dẫn thanh toán.",
+      "Beautiro vận hành các dịch vụ du lịch y tế với sự cộng tác trực tiếp với các bệnh viện và phòng khám. Thông qua các mối quan hệ này, chúng tôi điều phối việc tư vấn, đặt lịch hẹn, phiên dịch y tế và vận chuyển, đồng thời giúp bạn khám phá mức giá cạnh tranh và các chương trình khuyến mãi có sẵn. Chi phí và điều kiện khuyến mãi được giải thích trước khi đặt chỗ. Các yêu cầu WhatsApp được chấp nhận 24/7 bằng tiếng Indonesia, tiếng Anh và tiếng Hàn."
+    ],
+    "highlights": [
+      "Tư vấn và đặt lịch với cơ sở đối tác đã được xác minh",
+      "Đón tại sân bay và đưa đón tại phòng khám tư nhân",
+      "Phiên dịch y tế đồng hành",
+      "Hướng dẫn thanh toán ngoại hối và y tế"
+    ],
+    "servicesHeading": "Dịch vụ cốt lõi chúng tôi cung cấp",
+    "van": {
+      "title": "Vận chuyển y tế tư nhân",
+      "desc": "Dịch vụ đưa đón chuyên dụng giữa sân bay, phòng khám và chỗ ở với sự riêng tư hoàn toàn trước và sau khi làm thủ tục."
+    },
+    "mate": {
+      "title": "Phiên dịch viên y tế đi kèm",
+      "desc": "Phiên dịch y tế đồng hành từ tư vấn đến hướng dẫn sử dụng thuốc."
+    },
+    "pay": {
+      "title": "Thanh toán y tế & hỗ trợ ngoại hối",
+      "desc": "Hướng dẫn thanh toán y tế qua mạng lưới đối tác đổi ngoại tệ và thanh toán."
+    }
+  },
+  "steps": {
+    "title": "Chỉ cần 3 bước",
+    "step1": "Yêu cầu tư vấn",
+    "step2": "Xác nhận lịch trình",
+    "step3": "Chọn dịch vụ"
+  },
+  "hospitals": {
+    "title": "Cơ sở y tế đối tác đã được xác minh",
+    "subtitle": "Duyệt các đối tác của Beautiro theo khu vực (tỉnh, thành phố, quận) và chuyên ngành.",
+    "from": "Từ",
+    "viewAll": "Tất cả bệnh viện",
+    "filterTitle": "Tìm bệnh viện",
+    "searchLabel": "Từ khóa",
+    "searchPlaceholder": "Bệnh viện, điều trị hoặc khu vực",
+    "filterCategory": "Chuyên khoa",
+    "filterProvince": "Tỉnh / đô thị",
+    "filterDistrict": "Quận / huyện",
+    "filterAll": "Tất cả chuyên khoa",
+    "filterAllRegions": "Toàn quốc",
+    "filterAllDistricts": "Tất cả các quận",
+    "selectProvinceFirst": "Chọn tỉnh/thành phố trước",
+    "applyFilters": "Tìm kiếm",
+    "activeFilters": "Bộ lọc đã chọn",
+    "clearFilters": "Xóa bộ lọc",
+    "filterHint": "Bộ lọc đang áp dụng",
+    "partnerCount": "{count} cơ sở y tế đối tác",
+    "resultCount": "Hiển thị {count} kết quả",
+    "regionSectionLabel": "Khu vực",
+    "regionHospitalCount": "{count} đối tác",
+    "empty": "Không có bệnh viện nào phù hợp với bộ lọc của bạn.",
+    "whatsappConsult": "Tư vấn qua WhatsApp",
+    "viewEvent": "Xem chi tiết chương trình",
+    "inquireDiscount": "Hỏi về giảm giá",
+    "categories": {
+      "PLASTIC": "Phẫu thuật thẩm mỹ",
+      "DERMATOLOGY": "Da liễu",
+      "ORIENTAL": "Y học cổ truyền Hàn Quốc",
+      "DENTAL": "Nha khoa"
+    },
+    "regions": {
+      "provinces": {
+        "incheon": "Thành phố Incheon",
+        "gyeonggi": "Tỉnh Gyeonggi",
+        "daejeon": "Thành phố Daejeon"
+      },
+      "cities": {
+        "ansan": "Thành phố Ansan"
+      },
+      "districts": {
+        "yeonsu": "Yeonsu-gu",
+        "namdong": "Namdong-gu",
+        "sangnok": "Sangnok-gu",
+        "donggu": "Đông-gu"
+      },
+      "neighborhoods": {
+        "guwol": "Guwol-dong"
+      }
+    },
+    "viewTreatments": "Tất cả các phương pháp điều trị {count}"
+  },
+  "event": {
+    "breadcrumbHome": "Trang chủ",
+    "breadcrumbEvents": "Sự kiện",
+    "discountBadge": "Giảm giá thêm cho đối tác",
+    "summary": "Một sự kiện giảm giá thêm cho các phương pháp điều trị và trọn gói tại phòng khám đối tác Beautiro này.",
+    "inquiryNote": "Tỷ lệ giảm giá, bao gồm và lịch trình khác nhau tùy theo phòng khám. Nhắn tin cho chúng tôi trên WhatsApp để biết chi tiết được cá nhân hóa.",
+    "whatsappCta": "Hỏi về giảm giá",
+    "responseHint": "Thông thường phản hồi trong 24 giờ · Indonesia / Anh / Hàn",
+    "moreHospitals": "Duyệt thêm đối tác",
+    "galleryTitle": "Bên trong phòng khám",
+    "galleryLabels": {
+      "lobby": "Khu vực sảnh và chờ",
+      "consultationRooms": "Phòng tư vấn",
+      "corridor": "Hành lang phòng khám"
+    },
+    "bookOnline": "Chọn ngày và yêu cầu đặt chỗ",
+    "allTreatments": "Khám phá tất cả các phương pháp điều trị Seran Plus"
+  },
+  "book": {
+    "title": "Yêu cầu tư vấn",
+    "eyebrow": "Hướng dẫn viên y tế",
+    "asideTitle": "Một đội ngũ cho hành trình của bạn",
+    "asideHint": "Mọi yêu cầu đều được nhân viên trợ giúp tận tình của chúng tôi xem xét — thường trong vòng 24 giờ.",
+    "trustTitle": "Những điều bạn có thể mong đợi",
+    "trustResponse": "Trả lời hướng dẫn viên chuyên dụng trong vòng 24 giờ",
+    "trustPrivate": "Thông tin của bạn chỉ được dùng cho việc tư vấn",
+    "stepLabel": "Bước {current} trên {total}",
+    "step1Title": "Chọn phương pháp điều trị của bạn",
+    "step1Desc": "Bạn chưa chắc chắn? Bắt đầu với tư vấn chung - chúng tôi sẽ hướng dẫn bạn.",
+    "step2Title": "Liên hệ & lịch trình",
+    "step2Desc": "Cung cấp thông tin để đội ngũ hỗ trợ có thể liên hệ với bạn.",
+    "step3Title": "Dịch vụ hướng dẫn khách",
+    "step3Desc": "Chọn dịch vụ bổ sung. Bạn có thể điều chỉnh sau.",
+    "preview": "Tóm tắt yêu cầu",
+    "servicesLabel": "Dịch vụ đã chọn",
+    "selectProcedure": "Danh sách dịch vụ chung và tư vấn riêng của từng cơ sở",
+    "partnerHospitals": "Bệnh viện đối tác",
+    "partnerHospitalsDesc": "Chọn một quy trình từ bệnh viện đối tác bên dưới hoặc đăng ký tư vấn tổng quát nếu chưa quyết định.",
+    "viewAllHospitals": "Xem tất cả cơ sở y tế",
+    "recommended": "Đề xuất",
+    "noProcedure": "Chưa chắc chắn - tư vấn chung",
+    "noProcedureDesc": "Nhân viên trợ giúp của chúng tôi sẽ giới thiệu bệnh viện và lịch trình phù hợp cho bạn.",
+    "searchProcedure": "Tìm dịch vụ hoặc cơ sở y tế",
+    "filterAll": "Tất cả",
+    "noResults": "Không có thủ tục phù hợp với tìm kiếm của bạn.",
+    "contactSection": "Thông tin liên hệ",
+    "contactSectionDesc": "Chúng tôi sẽ liên hệ qua WhatsApp hoặc email.",
+    "scheduleSection": "Lịch trình chuyến đi (không bắt buộc)",
+    "scheduleSectionDesc": "Ngày gần đúng giúp chúng tôi lên kế hoạch tư vấn cho bạn.",
+    "name": "Tên đầy đủ",
+    "namePlaceholder": "John Smith",
+    "email": "E-mail",
+    "emailPlaceholder": "name@email.com",
+    "phone": "WhatsApp / điện thoại",
+    "phonePlaceholder": "+62 812 3456 7890",
+    "arrival": "Ngày đến",
+    "preferred": "Ngày tư vấn mong muốn",
+    "notes": "Yêu cầu bổ sung",
+    "notesPlaceholder": "Thủ tục quan tâm, dị ứng, các câu hỏi khác",
+    "van": "Vận chuyển y tế tư nhân",
+    "vanDesc": "Đưa đón chuyên dụng giữa sân bay, phòng khám và khách sạn",
+    "interpreter": "Phiên dịch viên y tế đi kèm",
+    "interpreterDesc": "Phiên dịch chuyên môn từ tư vấn đến chăm sóc sau điều trị",
+    "fx": "Thanh toán y tế & hỗ trợ ngoại hối",
+    "fxDesc": "Hướng dẫn thanh toán và hỗ trợ đổi ngoại tệ",
+    "back": "Quay lại",
+    "next": "Tiếp tục",
+    "submit": "Gửi yêu cầu",
+    "submitting": "Đang gửi…",
+    "successTitle": "Đã nhận yêu cầu",
+    "successBody": "Đội ngũ hỗ trợ sẽ liên hệ với bạn trong vòng 24 giờ.",
+    "reference": "Mã tham chiếu",
+    "another": "Gửi yêu cầu khác",
+    "whatsappFollowUp": "Tin nhắn trên WhatsApp",
+    "accountTitle": "Tài khoản của tôi",
+    "accountDesc": "Tạo một tài khoản hoặc đăng nhập để quản lý hồ sơ và lịch sử đặt phòng của bạn.",
+    "accountCta": "Kết nối với nhân viên hướng dẫn",
+    "accountBack": "Quay lại tư vấn",
+    "historyTitle": "Lịch đặt hẹn",
+    "historyDesc": "Đội ngũ hỗ trợ quản lý lịch sử tư vấn của bạn qua WhatsApp.",
+    "historyLookupDesc": "Tra cứu các lượt đặt chỗ bằng email và số điện thoại bạn đã sử dụng khi đăng ký.",
+    "historyLoggedInDesc": "Các lịch hẹn liên kết với tài khoản này được hiển thị bên dưới.",
+    "historyRefresh": "Làm mới",
+    "historyAccountLink": "Cài đặt tài khoản",
+    "historyLookup": "Tra cứu đặt chỗ",
+    "historyLoading": "Đang tải…",
+    "historyEmpty": "Chưa có đặt chỗ nào để hiển thị.",
+    "historyContact": "Liên hệ nhân viên hướng dẫn",
+    "status": {
+      "PENDING": "Đã nhận",
+      "CONFIRMED": "Đã xác nhận",
+      "IN_PROGRESS": "Đang tiến hành",
+      "COMPLETED": "Hoàn thành",
+      "CANCELLED": "Đã hủy"
+    },
+    "serviceType": {
+      "VAN": "Phương tiện giao thông cá nhân",
+      "INTERPRETER": "Phiên dịch viên y tế",
+      "FX_CARE": "Thanh toán & FX"
+    },
+    "onlineBooking": {
+      "eyebrow": "Đặt lịch trực tuyến",
+      "title": "Đặt lịch trực tuyến",
+      "subtitle": "Chọn ngày và dịch vụ, sau đó gửi yêu cầu đặt lịch.",
+      "tabNew": "Đặt lịch mới",
+      "tabHistory": "Lịch hẹn của tôi",
+      "step1Label": "Ngày",
+      "step2Label": "Dịch vụ",
+      "step3Label": "Xác nhận",
+      "step1Title": "Chọn một ngày",
+      "step1Desc": "Chọn ngày tư vấn mong muốn. Ngày đến không bắt buộc.",
+      "step2Title": "Chọn dịch vụ",
+      "step2Desc": "Chọn dịch vụ hỗ trợ cần thiết hoặc chỉ gửi yêu cầu điều trị.",
+      "step3Title": "Liên hệ & xác nhận",
+      "step3Desc": "Nhập thông tin liên hệ để gửi yêu cầu đặt lịch trực tuyến.",
+      "preferredDateTitle": "Ngày tư vấn mong muốn",
+      "preferredDateDesc": "Chọn một ngày bên dưới hoặc nhập một ngày theo cách thủ công.",
+      "arrivalDesc": "Nếu bạn đã biết ngày đến Hàn Quốc, hãy thêm nó vào đây.",
+      "today": "Hôm nay",
+      "serviceRequired": "Vui lòng chọn ít nhất một dịch vụ.",
+      "procedureOptional": "Dịch vụ quan tâm (không bắt buộc)",
+      "submit": "Gửi yêu cầu đặt lịch",
+      "successTitle": "Đã nhận yêu cầu đặt lịch trực tuyến",
+      "successBody": "Đội ngũ hỗ trợ sẽ xem xét ngày và dịch vụ, rồi liên hệ trong vòng 24 giờ.",
+      "serviceOptional": "Dịch vụ hỗ trợ không bắt buộc. Bạn có thể chỉ gửi yêu cầu điều trị."
+    },
+    "commonHospital": "Yêu cầu dịch vụ chung · xác nhận cơ sở sau tư vấn",
+    "sharedTreatmentHint": "Chọn từ 65 yêu cầu điều trị được chia sẻ. Tính khả dụng, chi phí và chỉ định phòng khám được xác nhận trong quá trình tư vấn.",
+    "treatmentGroup": "Nhóm dịch vụ"
+  },
+  "faq": {
+    "title": "Câu hỏi thường gặp",
+    "items": [
+      {
+        "q": "Beautiro có phải là bệnh viện không?",
+        "a": "Không. Chúng tôi kết nối bạn với các bệnh viện đối tác đã được xác minh và các dịch vụ hỗ trợ."
+      },
+      {
+        "q": "Hỗ trợ những ngôn ngữ nào?",
+        "a": "Tiếng Indonesia, tiếng Anh và tiếng Hàn để tư vấn và phiên dịch y tế."
+      },
+      {
+        "q": "Thanh toán hoạt động như thế nào?",
+        "a": "Sau khi lịch trình của bạn được xác nhận, nhóm của chúng tôi sẽ hướng dẫn bạn cách gửi tiền và thanh toán một cách an toàn."
+      }
+    ]
+  },
+  "terms": {
+    "metaTitle": "Điều khoản dịch vụ",
+    "title": "Điều khoản dịch vụ",
+    "effectiveDate": "Có hiệu lực: ngày 4 tháng 8 năm 2026",
+    "intro": "Điều khoản này áp dụng cho dịch vụ hỗ trợ du lịch y tế Beautiro (Dịch vụ) do Beautiro (Công ty) vận hành.",
+    "contactNote": "Câu hỏi về các Điều khoản này: Chăm sóc khách hàng của Beautiro (WhatsApp) hoặc Privacy@beautiro.com",
+    "sections": [
+      {
+        "title": "1. Mục đích",
+        "paragraphs": [
+          "Điều khoản quy định điều kiện và quy trình sử dụng tư vấn trực tuyến, hỗ trợ đặt lịch, di chuyển, phiên dịch và thông tin du lịch y tế do Công ty cung cấp."
+        ]
+      },
+      {
+        "title": "2. Định nghĩa",
+        "paragraphs": [
+          "\"Người dùng\" nghĩa là bất kỳ thành viên hoặc không phải thành viên nào sử dụng Dịch vụ theo các Điều khoản này.",
+          "\"Phòng khám đối tác\" nghĩa là bệnh viện, phòng khám hoặc nhà cung cấp dịch vụ y tế cung cấp các dịch vụ y tế theo thỏa thuận riêng với Công ty.",
+          "\"Dịch vụ trợ giúp đặc biệt\" có nghĩa là các hỗ trợ như tư vấn tiếp nhận, lên lịch, vận chuyển, phiên dịch và hướng dẫn thanh toán trong quá trình di chuyển y tế."
+        ]
+      },
+      {
+        "title": "3. Đăng tải và sửa đổi",
+        "paragraphs": [
+          "Công ty công bố Điều khoản này trên Dịch vụ.",
+          "Công ty có thể sửa đổi Điều khoản trong phạm vi pháp luật cho phép và thông báo trước ngày hiệu lực cùng lý do.",
+          "Việc tiếp tục sử dụng sau ngày có hiệu lực sẽ đồng nghĩa với việc chấp nhận Điều khoản đã sửa đổi."
+        ]
+      },
+      {
+        "title": "4. Dịch vụ cung cấp",
+        "paragraphs": [
+          "Công ty cung cấp thông tin du lịch y tế, tiếp nhận tư vấn và đặt lịch, kết nối cơ sở đối tác và hỗ trợ khách hàng.",
+          "Công ty không thực hiện hoạt động y tế; chẩn đoán, điều trị và thủ thuật thuộc trách nhiệm của cơ sở đối tác.",
+          "Dịch vụ có thể tạm ngừng do bảo trì, bất khả kháng hoặc sự cố kỹ thuật."
+        ]
+      },
+      {
+        "title": "5. Nghĩa vụ của người dùng",
+        "paragraphs": [
+          "Người dùng không được cung cấp thông tin sai hoặc sử dụng trái phép danh tính người khác.",
+          "Người dùng phải tuân thủ pháp luật, Điều khoản này và thông báo dịch vụ.",
+          "Người dùng phải khai báo chính xác tình trạng sức khỏe và yêu cầu đi lại như hộ chiếu, thị thực khi đặt lịch."
+        ]
+      },
+      {
+        "title": "6. Nghĩa vụ của công ty",
+        "paragraphs": [
+          "Công ty nỗ lực cung cấp Dịch vụ ổn định và liên tục.",
+          "Công ty bảo vệ dữ liệu cá nhân theo Chính sách quyền riêng tư.",
+          "Công ty giải quyết khiếu nại chính đáng không chậm trễ quá mức."
+        ]
+      },
+      {
+        "title": "7. Đặt và hủy",
+        "paragraphs": [
+          "Việc tư vấn và đặt chỗ được chấp nhận thông qua trang web, WhatsApp và các kênh khác do Công ty cung cấp.",
+          "Việc xác nhận, lịch trình và phí phụ thuộc vào chính sách của phòng khám đối tác và thỏa thuận chung.",
+          "Việc hủy, thay đổi và hoàn tiền tuân theo các quy định của phòng khám đối tác và thông báo gói; Công ty đóng vai trò là người hỗ trợ."
+        ]
+      },
+      {
+        "title": "8. Phí và thanh toán",
+        "paragraphs": [
+          "Phí dịch vụ, thủ tục và tiện ích bổ sung được tính dựa trên thông báo trước.",
+          "Phương thức thanh toán, tiền tệ, tỷ giá hối đoái và phí tuân theo hướng dẫn cá nhân và luật hiện hành.",
+          "Công ty không thu phí khi chưa có sự đồng ý trước của người dùng."
+        ]
+      },
+      {
+        "title": "9. Tuyên bố từ chối trách nhiệm",
+        "paragraphs": [
+          "Công ty không chịu trách nhiệm về kết quả y tế, hiệu quả hoặc tác dụng phụ tại cơ sở đối tác.",
+          "Công ty không chịu trách nhiệm về thiệt hại ngoài khả năng kiểm soát hợp lý, gồm thiên tai, chiến tranh hoặc gián đoạn của đối tác.",
+          "Thông tin y tế và giá cả trên Dịch vụ chỉ mang tính chất tham khảo; phòng khám đối tác cung cấp xác nhận cuối cùng."
+        ]
+      },
+      {
+        "title": "10. Sở hữu trí tuệ",
+        "paragraphs": [
+          "Nội dung, logo và thiết kế trên Dịch vụ thuộc về Công ty hoặc chủ sở hữu hợp pháp.",
+          "Người dùng không được sao chép, phân phối hoặc sử dụng thương mại tài liệu khi chưa được đồng ý bằng văn bản."
+        ]
+      },
+      {
+        "title": "11. Giải quyết tranh chấp",
+        "paragraphs": [
+          "Tranh chấp trước tiên sẽ được giải quyết thông qua thương lượng thiện chí.",
+          "Nếu không giải quyết được, tranh chấp sẽ được giải quyết theo luật hiện hành; các tòa án tại địa điểm kinh doanh chính của Công ty sẽ có thẩm quyền xét xử."
+        ]
+      },
+      {
+        "title": "Điều khoản bổ sung",
+        "paragraphs": [
+          "Điều khoản này có hiệu lực từ ngày 4 tháng 8 năm 2026."
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "metaTitle": "Chính sách bảo mật",
+    "title": "Chính sách bảo mật",
+    "effectiveDate": "Có hiệu lực: ngày 4 tháng 8 năm 2026",
+    "intro": "Beautiro (\"Công ty\") coi trọng quyền riêng tư của bạn và tuân thủ luật bảo vệ dữ liệu hiện hành.",
+    "contactNote": "Yêu cầu về quyền riêng tư: Privacy@beautiro.com · Chăm sóc khách hàng của Beautiro (WhatsApp)",
+    "sections": [
+      {
+        "title": "1. Dữ liệu cá nhân được thu thập",
+        "paragraphs": [
+          "Công ty có thể thu thập dữ liệu sau để cung cấp Dịch vụ.",
+          "Bắt buộc: tên, liên hệ (điện thoại/WhatsApp), email, thông tin tư vấn/đặt lịch và ngày mong muốn",
+          "Tùy chọn: quốc tịch, ưu tiên ngôn ngữ, thông tin hộ chiếu/visa, yêu cầu vận chuyển/thông dịch",
+          "Tự động: nhật ký truy cập, địa chỉ IP, cookie, thông tin thiết bị, hồ sơ sử dụng"
+        ]
+      },
+      {
+        "title": "2. Mục đích sử dụng",
+        "paragraphs": [
+          "Tư vấn, đặt chỗ và lên lịch du lịch y tế",
+          "Dịch vụ kết nối và trợ giúp của phòng khám đối tác (vận chuyển, phiên dịch, hướng dẫn thanh toán)",
+          "Hỗ trợ khách hàng, khiếu nại và thông báo",
+          "Cải thiện dịch vụ, phân tích và phòng chống gian lận",
+          "Tuân thủ các nghĩa vụ pháp lý"
+        ]
+      },
+      {
+        "title": "3. Thời gian lưu giữ",
+        "paragraphs": [
+          "Dữ liệu sẽ bị xóa ngay khi mục đích được hoàn thành.",
+          "Khi pháp luật yêu cầu, dữ liệu có thể được lưu trong thời hạn luật định.",
+          "Ví dụ: hồ sơ hợp đồng 5 năm, khiếu nại 3 năm, nhật ký truy cập 3 tháng nếu có."
+        ]
+      },
+      {
+        "title": "4. Cung cấp của bên thứ ba",
+        "paragraphs": [
+          "Công ty không cung cấp dữ liệu cá nhân cho bên thứ ba khi chưa có sự đồng ý, trừ trường hợp pháp luật yêu cầu.",
+          "Khi được đồng ý, dữ liệu có thể được chia sẻ với cơ sở y tế và đối tác di chuyển/phiên dịch để thực hiện lịch hẹn.",
+          "Người nhận, mục đích, loại dữ liệu và thời gian lưu trữ được thông báo trước."
+        ]
+      },
+      {
+        "title": "5. Xử lý ủy quyền",
+        "paragraphs": [
+          "Công ty có thể giao nhiệm vụ cho nhà cung cấp chuyên môn như lưu trữ, nhắn tin và thanh toán.",
+          "Các đại biểu và nhiệm vụ được nêu trong Chính sách này và được quản lý theo luật hiện hành."
+        ]
+      },
+      {
+        "title": "6. Quyền của bạn",
+        "paragraphs": [
+          "Bạn có thể yêu cầu truy cập, sửa, xóa hoặc hạn chế xử lý dữ liệu cá nhân.",
+          "Liên hệ Privacy@beautiro.com hoặc bộ phận chăm sóc khách hàng; Công ty sẽ phản hồi không chậm trễ.",
+          "Người đại diện theo pháp luật có thể thực hiện các quyền khi được pháp luật cho phép."
+        ]
+      },
+      {
+        "title": "7. Bánh quy",
+        "paragraphs": [
+          "Công ty có thể sử dụng cookie để cải thiện Dịch vụ.",
+          "Bạn có thể từ chối cookie qua cài đặt trình duyệt; một số tính năng có thể bị hạn chế."
+        ]
+      },
+      {
+        "title": "8. Các biện pháp an ninh",
+        "paragraphs": [
+          "Công ty áp dụng biện pháp kỹ thuật và tổ chức như kiểm soát truy cập, mã hóa và chương trình bảo mật.",
+          "Giới hạn số nhân viên có quyền truy cập dữ liệu và đào tạo định kỳ."
+        ]
+      },
+      {
+        "title": "9. Nhân viên bảo mật",
+        "paragraphs": [
+          "Nhân viên bảo mật: Beautiro",
+          "Email: Privacy@beautiro.com",
+          "Chăm sóc khách hàng: Kênh WhatsApp Beautiro"
+        ]
+      },
+      {
+        "title": "10. Thay đổi chính sách",
+        "paragraphs": [
+          "Những thay đổi quan trọng sẽ được thông báo kèm theo ngày có hiệu lực và lý do.",
+          "Chính sách cập nhật có hiệu lực vào ngày được thông báo."
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Du lịch y tế VIP trọn gói dành cho Đông Nam Á",
+    "whatsappCta": "Chăm sóc khách hàng qua WhatsApp",
+    "whatsappHours": "Nhận tin nhắn WhatsApp 24/7 · Anh / Indonesia / Hàn",
+    "badgePrivacy": "Quyền riêng tư",
+    "badgePartner": "Đối tác đã được xác minh",
+    "contact": "Liên hệ với chúng tôi trên WhatsApp",
+    "company": "Beautiro · Nhân viên hỗ trợ du lịch y tế",
+    "rights": "© Beautiro. Thông tin y tế chỉ để tham khảo, không phải chẩn đoán.",
+    "links": [
+      {
+        "label": "Điều khoản",
+        "href": "/terms"
+      },
+      {
+        "label": "Sự riêng tư",
+        "href": "/privacy"
+      },
+      {
+        "label": "Viết đánh giá",
+        "href": "/reviews"
+      },
+      {
+        "label": "Bắt đầu",
+        "href": "/welcome"
+      },
+      {
+        "label": "Đối tác",
+        "href": "/book"
+      }
+    ]
+  },
+  "language": "Ngôn ngữ",
+  "consultationEntry": {
+    "eyebrow": "Hành trình chăm sóc y tế tại Hàn Quốc",
+    "title": "Lựa chọn cơ sở y tế, phiên dịch và đón sân bay. Cùng một đội ngũ.",
+    "description": "Cho chúng tôi biết dịch vụ bạn quan tâm và thời gian dự kiến đến Hàn Quốc. Beautiro hỗ trợ phối hợp tư vấn, đặt lịch và di chuyển với các cơ sở đối tác.",
+    "hospitals": "Khám phá cơ sở y tế đối tác",
+    "costNote": "Chi phí y tế tách biệt với phí di chuyển và phiên dịch. Nội dung dịch vụ và chi phí được xác nhận trước khi đặt lịch.",
+    "startTitle": "Bắt đầu tư vấn qua WhatsApp",
+    "interest": "Dịch vụ quan tâm",
+    "timing": "Thời gian dự kiến đến Hàn Quốc",
+    "language": "Ngôn ngữ giao tiếp mong muốn",
+    "cta": "Tiếp tục qua WhatsApp",
+    "sendNote": "Không cần tài khoản. Các lựa chọn sẽ tạo sẵn tin nhắn; hãy gửi trong WhatsApp để bắt đầu tư vấn. Bạn có thể để lại tin nhắn bất cứ lúc nào.",
+    "online": "Hoặc gửi yêu cầu qua biểu mẫu trực tuyến",
+    "services": {
+      "unsure": "Giúp tôi lựa chọn",
+      "skin": "Chăm sóc da / da liễu",
+      "plastic": "Phẫu thuật thẩm mỹ",
+      "dental": "Nha khoa",
+      "oriental": "Y học cổ truyền Hàn Quốc",
+      "transport": "Đón sân bay / phiên dịch"
+    },
+    "timings": {
+      "undecided": "Chưa quyết định",
+      "month": "Trong vòng 1 tháng",
+      "quarter": "Trong vòng 3 tháng",
+      "later": "Sau này / lên kế hoạch trước"
+    },
+    "journey": {
+      "consult": {
+        "title": "Chia sẻ nhu cầu",
+        "desc": "Cho biết dịch vụ, ngôn ngữ và thời gian dự kiến."
+      },
+      "plan": {
+        "title": "Xem kế hoạch đề xuất",
+        "desc": "Xác nhận lịch tiếp nhận, chi phí và dịch vụ đi kèm."
+      },
+      "visit": {
+        "title": "Đến theo kế hoạch",
+        "desc": "Sắp xếp đón và phiên dịch theo lịch đã xác nhận."
+      }
+    }
+  },
+  "seranplus": {
+    "title": "Dịch vụ tại Seran Plus",
+    "intro": "Khám phá {count} dịch vụ thuộc 8 nhóm theo danh sách chính thức của cơ sở để yêu cầu tư vấn hoặc đặt lịch.",
+    "profile": "Xem thông tin cơ sở",
+    "groupLabel": "Chọn nhóm dịch vụ",
+    "all": "Tất cả",
+    "search": "Tìm dịch vụ: Ultherapy, Botox, phẫu thuật mí mắt",
+    "results": "{count} lựa chọn dịch vụ",
+    "details": "Chi tiết",
+    "book": "Yêu cầu đặt lịch",
+    "empty": "Không có phương pháp điều trị phù hợp. Hãy thử tìm kiếm khác.",
+    "note": "Danh sách dựa trên các dịch vụ chính thức của cơ sở. Mức độ phù hợp, lịch tiếp nhận, chi phí và điều kiện ưu đãi được xác nhận khi tư vấn. Gửi yêu cầu không có nghĩa là lịch hẹn đã được xác nhận.",
+    "profileIntro": "Beautiro hợp tác trực tiếp với Seran Plus Plastic Surgery tại Guwol-dong, Incheon để phối hợp tư vấn, đặt lịch, phiên dịch y tế và đưa đón. Chọn dịch vụ bên dưới để yêu cầu tư vấn và ngày khám."
+  }
+}

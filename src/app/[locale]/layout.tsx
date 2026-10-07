@@ -10,7 +10,7 @@ import "../globals.css";
 
 const sans = Noto_Sans({
   variable: "--font-noto-sans",
-  subsets: ["latin"],
+  subsets: ["latin", "vietnamese"],
   weight: ["400", "500", "600", "700"],
 });
 
@@ -18,6 +18,13 @@ const serif = Noto_Serif({
   variable: "--font-noto-serif",
   subsets: ["latin"],
   weight: ["500", "600", "700"],
+});
+
+const thai = localFont({
+  src: "../fonts/noto-thai/NotoSansThai.ttf",
+  variable: "--font-noto-thai",
+  weight: "100 900",
+  display: "swap",
 });
 
 /** 네이버 나눔스퀘어 (공식 웹폰트, 로컬 호스팅) */
@@ -71,7 +78,7 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={`${sans.variable} ${serif.variable} ${nanumSquare.variable} h-full antialiased`}
+      className={`${sans.variable} ${serif.variable} ${nanumSquare.variable} ${thai.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-white text-beautiro-charcoal">
         <NextIntlClientProvider messages={messages}>

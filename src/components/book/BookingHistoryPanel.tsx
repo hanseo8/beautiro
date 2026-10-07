@@ -1,5 +1,6 @@
 "use client";
 
+import { translatedTreatmentName } from "@/lib/treatment-labels";
 import { useEffect, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { CalendarCheck, MessageCircle } from "lucide-react";
@@ -155,11 +156,11 @@ export function BookingHistoryPanel({ wa }: { wa: string }) {
                 </div>
                 <CalendarCheck size={18} className="shrink-0 text-beautiro-primary" />
               </div>
-              {booking.procedure && <p className="mt-3 break-words text-sm font-semibold text-beautiro-charcoal">{locale === "ko" ? booking.procedure.nameKo : locale === "id" ? booking.procedure.nameId : booking.procedure.nameEn}</p>}
+              {booking.procedure && <p className="mt-3 break-words text-sm font-semibold text-beautiro-charcoal">{translatedTreatmentName(booking.procedure, locale)}</p>}
               {booking.preferredDate && (
                 <p className="mt-3 text-sm text-beautiro-charcoal">
                   {t("preferred")}:{" "}
-                  {new Date(booking.preferredDate).toLocaleDateString(locale === "ko" ? "ko-KR" : locale === "id" ? "id-ID" : "en-US")}
+                  {new Date(booking.preferredDate).toLocaleDateString(locale)}
                 </p>
               )}
               <p className="mt-1 text-xs text-beautiro-muted">

@@ -1,6 +1,8 @@
 import type { Locale } from "@/i18n/routing";
 import type { MedicalCategory } from "@prisma/client";
 import { formatRegionLabel } from "@/lib/regions";
+import { translatedTreatmentName } from "@/lib/treatment-labels";
+import { partnerCopy } from "@/lib/partner-copy";
 
 export type LocalizedHospital = {
   id: string;
@@ -68,17 +70,12 @@ export function localizeHospital(
       ? hospital.descriptionKo
       : locale === "id"
         ? hospital.descriptionId
-        : hospital.descriptionEn;
+        : partnerCopy(hospital.descriptionEn, locale);
 
   const procedures = hospital.procedures.map((p) => ({
     id: p.id,
     category: p.category,
-    name:
-      locale === "ko"
-        ? p.nameKo
-        : locale === "id"
-          ? p.nameId
-          : p.nameEn,
+    name: translatedTreatmentName(p, locale),
     priceFrom: p.priceFrom,
     durationMin: p.durationMin,
   }));
@@ -107,7 +104,7 @@ export function localizeHospital(
 
 export function formatKrw(amount: number, locale: Locale): string {
   return new Intl.NumberFormat(
-    locale === "ko" ? "ko-KR" : locale === "id" ? "id-ID" : "en-US",
+    locale,
     { style: "currency", currency: "KRW", maximumFractionDigits: 0 },
   ).format(amount);
 }

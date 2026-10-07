@@ -54,7 +54,7 @@ function addDays(base: string, offset: number) {
 
 function formatChipLabel(dateStr: string, locale: Locale) {
   const d = new Date(`${dateStr}T12:00:00`);
-  return d.toLocaleDateString(locale === "ko" ? "ko-KR" : locale === "id" ? "id-ID" : "en-US", {
+  return d.toLocaleDateString(locale, {
     month: "short",
     day: "numeric",
     weekday: "short",

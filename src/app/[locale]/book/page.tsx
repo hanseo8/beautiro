@@ -6,6 +6,7 @@ import { prisma } from "@/lib/prisma";
 import { localizeHospital, publicHospitalWhere, prioritizeHospitals } from "@/lib/hospitals";
 import type { Locale } from "@/i18n/routing";
 import catalog from "@/lib/seranplus-catalog.json";
+import { treatmentLabel } from "@/lib/treatment-labels";
 import type { MedicalCategory } from "@prisma/client";
 import { BookPageContent } from "@/components/book/BookPageContent";
 
@@ -38,10 +39,9 @@ export default async function BookPage({ params }: Props) {
   );
 
   const tBook = await getTranslations("book");
-  const nameKey = loc === "ko" ? "nameKo" : loc === "id" ? "nameId" : "nameEn";
   const commonProcedures = catalog.groups.flatMap(group => group.items.map(item => {
-    const existing = existingProcedures.find(p => p.id === item.key || p.name === item[nameKey]);
-    return { id: existing?.id ?? `catalog:${item.key}`, name: item[nameKey], category: item.category as MedicalCategory, hospitalName: tBook("commonHospital"), requestedTreatmentKey: item.key, groupName: group[nameKey] };
+    const existing = existingProcedures.find(p => p.id === item.key || p.name === treatmentLabel(item, loc));
+    return { id: existing?.id ?? `catalog:${item.key}`, name: treatmentLabel(item, loc), category: item.category as MedicalCategory, hospitalName: tBook("commonHospital"), requestedTreatmentKey: item.key, groupName: treatmentLabel(group, loc) };
   }));
   const sharedIds = new Set(commonProcedures.map(p => p.id));
   const procedures = [...commonProcedures, ...existingProcedures.filter(p => !sharedIds.has(p.id))];

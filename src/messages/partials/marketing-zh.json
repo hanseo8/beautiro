@@ -1,0 +1,176 @@
+{
+  "social": {
+    "instagramAria": "Beautiro Instagram @beautiro.official"
+  },
+  "reviews": {
+    "metaTitle": "写评论 — Beautiro",
+    "metaDescription": "分享您的 Beautiro 体验，并在下次访问时获得免费皮肤护理和机场接机服务。",
+    "eyebrow": "审核奖励",
+    "title": "分享您的经验",
+    "subtitle": "告诉我们您的医疗旅游之旅。审核后，我们将指导您领取访问奖励。",
+    "rewardTitle": "查看奖励",
+    "rewardItems": [
+      "下次光临时可享受 1 次免费皮肤护理",
+      "1次免费机场接机"
+    ],
+    "rating": "等级",
+    "name": "姓名",
+    "email": "电子邮件",
+    "phone": "WhatsApp / 电话",
+    "instagram": "Instagram 账号（可选）",
+    "procedure": "程序已收到",
+    "procedurePlaceholder": "例如肉毒杆菌、鼻整形术",
+    "hospital": "参观医院（可选）",
+    "visitMonth": "访问月份（可选）",
+    "reviewText": "您的评论",
+    "reviewPlaceholder": "分享您从咨询到治疗和交通服务的经验。",
+    "privacyNote": "评论可能会出现在我们的网站和社交渠道上。个人资料仅用于咨询目的。",
+    "submit": "提交评论",
+    "submitting": "正在提交...",
+    "reference": "参考编号",
+    "successTitle": "已收到审核",
+    "successBody": "我们的礼宾人员将审核并通过 WhatsApp 与您联系并提供奖励详细信息。",
+    "bookCta": "请求咨询"
+  },
+  "welcome": {
+    "metaTitle": "Beautiro — 韩国医疗旅游礼宾服务",
+    "metaDescription": "接机、合作医院咨询、化妆品礼品。随时通过 WhatsApp 给我们留言。",
+    "eyebrow": "医疗礼宾服务",
+    "title": "与 Beautiro 一起进行韩国医疗旅游",
+    "subtitle": "合作医院·接机·医疗口译·外汇支持 — 一站式服务",
+    "ctaWhatsapp": "免费 WhatsApp 咨询",
+    "ctaBook": "请求咨询",
+    "ctaHospitals": "合作医院",
+    "ctaReview": "撰写评论并领取奖励",
+    "rewardTitle": "查看奖励",
+    "rewardItems": [
+      "就诊时进行 1 次皮肤护理",
+      "1次免费接送"
+    ],
+    "proceduresTitle": "流行的程序指南",
+    "procedures": {
+      "rhinoplasty": "鼻整形术",
+      "double-eyelid": "双眼皮",
+      "botox-filler": "肉毒杆菌和填充剂",
+      "dental-implant": "种植牙",
+      "skin-laser": "皮肤激光"
+    },
+    "instagramHint": "在 Instagram 上关注我们，了解最新活动和评论"
+  },
+  "procedureLandings": {
+    "common": {
+      "breadcrumbHome": "家",
+      "breadcrumbProcedures": "程序指南",
+      "priceLabel": "预估费用（咨询后确认）",
+      "priceNote": "最终价格取决于医院和治疗范围。",
+      "benefitsTitle": "Beautiro 礼宾礼遇",
+      "includesTitle": "可能包括什么",
+      "ctaTitle": "免费咨询",
+      "ctaDesc": "专门的礼宾人员将在 24 小时内与您联系。",
+      "whatsappCta": "WhatsApp 聊天",
+      "bookCta": "预约咨询",
+      "hospitalsCta": "查看合作医院",
+      "reviewReward": "撰写皮肤护理和提货奖励评论"
+    },
+    "rhinoplasty": {
+      "metaTitle": "韩国鼻部整形手术 — Beautiro",
+      "metaDescription": "在首尔和仁川附近经过验证的合作诊所进行鼻整形咨询，并提供接送和口译服务。",
+      "badge": "整形外科",
+      "title": "韩国鼻部整形手术",
+      "subtitle": "咨询经过验证的合作伙伴整形外科医生，并享受从抵达到康复计划的 VIP 礼宾支持。",
+      "priceFrom": "₩3,500,000~",
+      "whatsappMessage": "我想要进行鼻部整形咨询。",
+      "benefits": [
+        "专门的医疗口译员",
+        "机场和医院接送",
+        "合作医院折扣"
+      ],
+      "includes": [
+        "1:1专家咨询",
+        "3D 模拟（取决于诊所）",
+        "术后护理指导",
+        "酒店和交通协调"
+      ]
+    },
+    "double-eyelid": {
+      "metaTitle": "韩国双眼皮手术 — Beautiro",
+      "metaDescription": "与我们的合作医院网络进行双眼皮和眼部轮廓咨询。",
+      "badge": "整形外科",
+      "title": "双眼皮手术",
+      "subtitle": "通过礼宾人员的个性化咨询和恢复安排，打造自然的眼部轮廓。",
+      "priceFrom": "₩2,200,000~",
+      "whatsappMessage": "我想咨询眼睑手术。",
+      "benefits": [
+        "印尼语和英语口译",
+        "当日或短期停留行程",
+        "比较合作诊所"
+      ],
+      "includes": [
+        "眼部轮廓咨询",
+        "麻醉和手术简报",
+        "康复酒店推荐",
+        "口译陪同"
+      ]
+    },
+    "botox-filler": {
+      "metaTitle": "韩国肉毒杆菌和填充剂 — Beautiro",
+      "metaDescription": "皮肤科肉毒杆菌和填充剂套餐，提供当天治疗选项。",
+      "badge": "皮肤科",
+      "title": "肉毒杆菌和填充剂",
+      "subtitle": "在合作诊所提供优质皮肤科治疗，并提供口译和礼宾支持。",
+      "priceFrom": "₩450,000~",
+      "whatsappMessage": "我想要进行肉毒杆菌/填充剂咨询。",
+      "benefits": [
+        "当日治疗诊所",
+        "仅限正品产品合作伙伴",
+        "拾音和外汇支持"
+      ],
+      "includes": [
+        "皮肤咨询",
+        "治疗区设计",
+        "善后指导",
+        "后续安排"
+      ]
+    },
+    "dental-implant": {
+      "metaTitle": "韩国种植牙 — Beautiro",
+      "metaDescription": "种植牙和美容牙科咨询，并配有口译陪同。",
+      "badge": "牙科",
+      "title": "种植牙",
+      "subtitle": "一次咨询即可规划您的种植或美容牙科治疗并保留行程。",
+      "priceFrom": "₩1,800,000~",
+      "whatsappMessage": "我想要进行种植牙咨询。",
+      "benefits": [
+        "牙科解读专家",
+        "CT 和检查安排",
+        "长期住宿套餐指导"
+      ],
+      "includes": [
+        "口试咨询",
+        "种植治疗计划",
+        "恢复时间表简报",
+        "交通和酒店协调"
+      ]
+    },
+    "skin-laser": {
+      "metaTitle": "韩国皮肤激光 — Beautiro",
+      "metaDescription": "激光塑形和提升咨询与 K-beauty 护理。",
+      "badge": "皮肤科",
+      "title": "皮肤激光和调色",
+      "subtitle": "在合作皮肤科诊所进行安全的激光治疗，改善色素沉着、毛孔和弹性。",
+      "priceFrom": "₩280,000~",
+      "whatsappMessage": "我想要进行皮肤激光咨询。",
+      "benefits": [
+        "肤质匹配诊所",
+        "治疗后护理包指导",
+        "审核奖励资格"
+      ],
+      "includes": [
+        "皮肤诊断",
+        "激光治疗计划",
+        "防晒护理和恢复指南",
+        "后续预订"
+      ]
+    }
+  }
+}

@@ -1,0 +1,817 @@
+{
+  "meta": {
+    "title": "Beautiro — 韩国的优质医疗服务",
+    "description": "VIP一站式医疗旅游：私人交通、医疗口译员和换汇优惠。"
+  },
+  "utilBar": {
+    "tagline": "24/7 WhatsApp 查询",
+    "whatsapp": "WhatsApp"
+  },
+  "localeSwitcher": {
+    "label": "语言",
+    "nameEn": "English",
+    "nameKo": "한국어",
+    "nameId": "Bahasa Indonesia"
+  },
+  "nav": {
+    "faceGuide": "面部项目指南",
+    "home": "首页",
+    "brandStory": "品牌故事",
+    "services": "服务介绍",
+    "events": "活动",
+    "hospitals": "合作医疗机构",
+    "book": "咨询",
+    "faq": "常见问题",
+    "cta": "预约咨询",
+    "signIn": "登录",
+    "brandSubtitle": "医疗行程顾问",
+    "login": "登录/注册",
+    "whatsapp": "WhatsApp",
+    "menuOpen": "打开菜单",
+    "menuClose": "关闭菜单",
+    "menuMain": "主菜单",
+    "menuAccount": "帐户",
+    "servicesTitle": "医疗行程服务",
+    "servicesVan": "专属接送服务",
+    "servicesMate": "专业医疗口译",
+    "servicesPay": "医疗付款与换汇支持",
+    "reservations": "预约记录",
+    "mypage": "我的账户",
+    "reviews": "分享体验",
+    "welcome": "开始使用"
+  },
+  "bottomNav": {
+    "ariaLabel": "底部导航",
+    "home": "首页",
+    "search": "项目",
+    "concierge": "服务",
+    "bookings": "预约",
+    "mypage": "我的"
+  },
+  "common": {
+    "whatsappFloat": "WhatsApp 聊天"
+  },
+  "auth": {
+    "signupTitle": "创建您的 Beautiro 帐户",
+    "loginTitle": "欢迎回来",
+    "signupDesc": "注册以保存您的个人资料、跟踪预订并参加会员活动。",
+    "loginDesc": "登录查看您的预订并继续您的咨询请求。",
+    "signupTab": "注册",
+    "loginTab": "登录",
+    "namePlaceholder": "姓名",
+    "emailPlaceholder": "电子邮件",
+    "phonePlaceholder": "电话/WhatsApp（可选）",
+    "passwordPlaceholder": "密码",
+    "passwordHint": "至少使用 8 个字符。",
+    "signupButton": "创建账户",
+    "loginButton": "登录",
+    "submitting": "请稍等…",
+    "logout": "退出",
+    "loggedInTitle": "我的账户",
+    "loggedInAs": "以 {name} 身份登录",
+    "myBookings": "查看我的预订",
+    "emailTaken": "此邮箱号已被注册。尝试登录。",
+    "invalidCredentials": "电子邮件或密码不正确。",
+    "genericError": "出了点问题。请再试一次。",
+    "googleButton": "继续使用谷歌",
+    "orContinueWithEmail": "或者",
+    "forgotLink": "忘记密码？",
+    "forgotTitle": "重置您的密码",
+    "forgotDesc": "输入您的电子邮件，我们将向您发送重置链接。",
+    "forgotButton": "发送重置链接",
+    "forgotSent": "如果该电子邮件的帐户存在，则重置链接已发送。",
+    "resetTitle": "选择新密码",
+    "resetDesc": "输入您的 Beautiro 帐户的新密码。",
+    "resetButton": "更新密码",
+    "resetSuccess": "您的密码已更新。您现在可以登录了。",
+    "confirmPasswordPlaceholder": "确认密码",
+    "passwordMismatch": "密码不匹配。",
+    "invalidResetToken": "此重置链接无效或已过期。",
+    "verifyTitle": "邮箱验证",
+    "verifySuccess": "您的电子邮件已被验证。",
+    "verifyInvalid": "该验证链接无效或已过期。",
+    "verifyPending": "检查您的收件箱中是否有验证电子邮件。",
+    "verifyBanner": "请验证您的电子邮件以保护您的帐户。",
+    "resendVerification": "重新发送验证邮件",
+    "verifyResent": "验证电子邮件已发送。",
+    "signupVerifySent": "帐户已创建。请检查您的电子邮件以验证您的地址。",
+    "backToAccount": "返回帐户",
+    "adminPanel": "管理仪表板"
+  },
+  "promoPopup": {
+    "badge": "即将开业",
+    "imageAlt": "印尼雅加达服务启动暨幸运客户活动",
+    "title": "十月上线活动",
+    "openingNote": "我们的全方位服务将于十月推出。",
+    "body": "报名并完成咨询的三名客户将被选择免费获得以下服务。",
+    "benefits": [
+      {
+        "title": "护肤服务",
+        "desc": "获选客户可享免费专业皮肤护理服务"
+      },
+      {
+        "title": "乘车服务",
+        "desc": "免费机场、酒店和医院接送服务"
+      }
+    ],
+    "note": "活动详情和获奖者通知将单独发送。",
+    "ctaBook": "注册并请求咨询",
+    "dismissToday": "今天不再显示",
+    "close": "关闭"
+  },
+  "home": {
+    "search": {
+      "placeholder": "搜索项目、诊所、区域",
+      "popularLabel": "热门搜索",
+      "tags": [
+        "眼皮",
+        "紧致提升",
+        "肉毒毒素",
+        "东方饮食",
+        "江南",
+        "贵宾接送"
+      ]
+    },
+    "carousel": {
+      "slides": [
+        {
+          "title": "提供专属礼宾服务的优质医疗旅行",
+          "subtitle": "从机场接机到诊所陪同",
+          "cta": "请求咨询",
+          "href": "/book",
+          "tone": "sky"
+        },
+        {
+          "title": "专门的医疗翻译陪同",
+          "subtitle": "塑料·皮肤科·东方·牙科",
+          "cta": "查看服务",
+          "href": "/#services",
+          "tone": "blue"
+        },
+        {
+          "title": "医疗支付和外汇支持",
+          "subtitle": "安全结算指导",
+          "cta": "了解更多",
+          "href": "/#services",
+          "tone": "ice"
+        }
+      ]
+    },
+    "categories": {
+      "plasticTitle": "整形外科活动",
+      "careTitle": "治疗和护理",
+      "more": "查看更多",
+      "plastic": [
+        "眼睛",
+        "鼻子",
+        "轮廓",
+        "胸部",
+        "抽脂术",
+        "紧致提升"
+      ],
+      "care": [
+        "肉毒毒素",
+        "填料",
+        "激光",
+        "超声刀治疗",
+        "东方饮食",
+        "健康"
+      ]
+    },
+    "popular": {
+      "badge": "流行趋势",
+      "title": "当下热门活动",
+      "subtitle": "合作伙伴额外折扣 · WhatsApp 查询",
+      "viewAll": "查看全部",
+      "discountBadge": "额外折扣",
+      "inquiryHint": "折扣条款因医院而异。我们将亲自指导您。",
+      "viewDetail": "细节",
+      "inquire": "查询"
+    },
+    "brandStory": {
+      "badge": "品牌故事",
+      "headline": "引导您安全完成韩国医疗之旅。",
+      "intro": "在国外寻求医疗或美容护理可能会让人感到不知所措。",
+      "questions": [
+        "哪家诊所值得我信赖？",
+        "会有语言障碍吗？",
+        "如何安全地在城市中行驶？"
+      ],
+      "origin": "Beautiro 的创建就是为了解决这些确切的问题。",
+      "paragraphs": [
+        "正如清晰的街道地址可引导您安全到达目的地一样，Beautiro 也是您在韩国广阔的医疗环境中的可靠向导。",
+        "我们不提供空洞的承诺，而是提供精心策划、经过验证的诊所，配有陪伴在您身边的经过认证的医疗口译员，以及确保从抵达到离开的舒适旅行的私人交通。",
+        "Beautiro 不仅仅是一个目录。我们是您的忠实合作伙伴，确保您的注意力完全集中在您的护理和康复上。"
+      ],
+      "closing": "通过 Beautiro 找到您值得信赖的 K-医疗护理途径。",
+      "pillars": [
+        {
+          "title": "经过验证的合作诊所",
+          "desc": "精心策划的医院——绝不做空洞的承诺或夸张的广告。"
+        },
+        {
+          "title": "认证医疗口译员",
+          "desc": "从咨询到康复，专业口译员都会陪伴您。"
+        },
+        {
+          "title": "私人交通",
+          "desc": "从机场抵达到出发，享受舒适、安全的旅行。"
+        }
+      ]
+    },
+    "brandKey": {
+      "badge": "博蒂罗",
+      "title": "跳过复杂性。 Beautiro 是您唯一需要的地址。",
+      "ctaBook": "请求咨询",
+      "ctaServices": "我们的服务"
+    },
+    "reviewPromo": {
+      "badge": "审核奖励",
+      "title": "留下评论，解锁访问福利",
+      "subtitle": "分享您的 Beautiro 体验并在您访问时获得这些免费服务。",
+      "ctaBook": "请求咨询",
+      "ctaEvents": "查看福利详情",
+      "benefits": [
+        {
+          "title": "1次免费护肤课程",
+          "desc": "到访时可获得一次免费高级护肤护理"
+        },
+        {
+          "title": "1次免费接送",
+          "desc": "一次免费机场、酒店或诊所接送服务"
+        }
+      ]
+    },
+    "openPromo": {
+      "badge": "开专场",
+      "title": "Beautiro 推出特别折扣",
+      "subtitle": "通过 Beautiro 预订，即可享受合作医院的额外折扣以及这些独家福利。",
+      "ctaEvents": "查看折扣活动",
+      "ctaBook": "请求咨询",
+      "benefits": [
+        {
+          "title": "首选外汇汇率",
+          "desc": "通过我们的合作伙伴网络提供优惠汇率"
+        },
+        {
+          "title": "仁川机场接机及行李托运",
+          "desc": "抵达时的机场接机和行李搬运服务"
+        },
+        {
+          "title": "医院特定附加服务",
+          "desc": "每个合作医院的定制附加折扣和套餐"
+        }
+      ]
+    },
+    "cosmeticsPromo": {
+      "badge": "会员福利",
+      "title": "免费护肤礼品 — 注册并咨询",
+      "subtitle": "在 Beautiro 注册并提交咨询请求即可获得优质护肤套装。",
+      "note": "对于已完成的咨询请求 · 售完即止。",
+      "cta": "报名并咨询"
+    },
+    "app": {
+      "title": "使用 Beautiro 应用项目更轻松",
+      "description": "预订、日程安排和您的 Mate 联系人信息尽在一处。 （即将推出）",
+      "qrHint": "扫描二维码·下载app"
+    },
+    "faq": {
+      "title": "常问问题",
+      "items": [
+        {
+          "q": "Beautiro 是一家医院吗？",
+          "a": "我们为您联系经过验证的合作伙伴和 VIP 护理服务。"
+        },
+        {
+          "q": "支持哪些语言？",
+          "a": "印度尼西亚语、英语和韩语用于咨询和医疗口译。"
+        },
+        {
+          "q": "付款方式如何？",
+          "a": "确认后，Beautiro Pay 会安全地引导您。"
+        }
+      ]
+    }
+  },
+  "hero": {
+    "badge": "韩国VIP医疗旅游",
+    "title": "优质医疗，无缝衔接",
+    "subtitle": "从机场到诊所 — 私人货车、专业医疗口译员和外汇支持均在一个平台上提供。",
+    "primaryCta": "请求咨询",
+    "secondaryCta": "浏览合作医院",
+    "concierge": "24小时内礼宾服务",
+    "visualCaption": "首尔·韩国"
+  },
+  "services": {
+    "badge": "服务",
+    "title": "Beautiro 医疗旅游礼宾服务",
+    "subtitle": "我们将咨询、交通、口译和付款整合为一个专业护理系统，为您的韩国之旅提供服务。",
+    "introTitle": "什么是美蒂罗？",
+    "intro": [
+      "Beautiro 是面向国际游客（尤其是东南亚游客）的韩国优质医疗旅游礼宾平台。我们将您与整形外科、皮肤科、牙科和传统医学领域经过验证的合作医院联系起来，并为从咨询和安排到交通、口译和付款指导的整个过程提供支持。",
+      "Beautiro 与医院和诊所直接合作运营其医疗旅游服务。通过这些关系，我们协调咨询、预约、医疗口译和交通，并帮助您探索有竞争力的价格和可用的促销活动。预订前会解释费用和促销条件。 24/7 接受印度尼西亚语、英语和韩语 WhatsApp 询问。"
+    ],
+    "highlights": [
+      "经过验证的合作医院咨询和预约",
+      "仁川机场接送和私人诊所接送",
+      "专业医疗翻译陪同",
+      "外汇和医疗支付指南"
+    ],
+    "servicesHeading": "我们提供的核心服务",
+    "van": {
+      "title": "私人医疗运输",
+      "desc": "机场、诊所和住宿之间的专用接送服务，在手术前后提供完全的隐私。"
+    },
+    "mate": {
+      "title": "医疗翻译陪同",
+      "desc": "从咨询到药物指导，专业医疗口译员都会全程陪伴您。"
+    },
+    "pay": {
+      "title": "医疗支付和外汇支持",
+      "desc": "通过我们的合作伙伴交换和支付网络确保医疗账单指导。"
+    }
+  },
+  "steps": {
+    "title": "只需3步",
+    "step1": "请求咨询",
+    "step2": "确认日程",
+    "step3": "选择服务"
+  },
+  "hospitals": {
+    "title": "经过验证的合作医院",
+    "subtitle": "按地区（省、市、区）和专业浏览 Beautiro 合作伙伴。",
+    "from": "从",
+    "viewAll": "所有医院",
+    "filterTitle": "寻找医院",
+    "searchLabel": "关键词",
+    "searchPlaceholder": "医院、治疗或区域",
+    "filterCategory": "专业",
+    "filterProvince": "省份/地铁",
+    "filterDistrict": "区",
+    "filterAll": "所有专科",
+    "filterAllRegions": "全国",
+    "filterAllDistricts": "所有地区",
+    "selectProvinceFirst": "首先选择省份",
+    "applyFilters": "搜索",
+    "activeFilters": "已选条件",
+    "clearFilters": "清除过滤器",
+    "filterHint": "有源滤波器",
+    "partnerCount": "{count} 合作医院",
+    "resultCount": "显示 {count}",
+    "regionSectionLabel": "地区",
+    "regionHospitalCount": "{count} 合作伙伴",
+    "empty": "没有医院符合您的筛选条件。",
+    "whatsappConsult": "WhatsApp咨询",
+    "viewEvent": "查看活动详情",
+    "inquireDiscount": "询问折扣",
+    "categories": {
+      "PLASTIC": "整形外科",
+      "DERMATOLOGY": "皮肤科",
+      "ORIENTAL": "韩国传统医学",
+      "DENTAL": "牙科"
+    },
+    "regions": {
+      "provinces": {
+        "incheon": "仁川广域市",
+        "gyeonggi": "京畿道",
+        "daejeon": "大田广域市"
+      },
+      "cities": {
+        "ansan": "安山市"
+      },
+      "districts": {
+        "yeonsu": "延寿区",
+        "namdong": "南洞区",
+        "sangnok": "常绿区",
+        "donggu": "东区"
+      },
+      "neighborhoods": {
+        "guwol": "九月洞"
+      }
+    },
+    "viewTreatments": "所有 {count} 治疗"
+  },
+  "event": {
+    "breadcrumbHome": "家",
+    "breadcrumbEvents": "活动",
+    "discountBadge": "合作伙伴额外折扣",
+    "summary": "这家 Beautiro 合作诊所的治疗和套餐额外折扣活动。",
+    "inquiryNote": "折扣率、包含内容和时间表因诊所而异。通过 WhatsApp 给我们留言以获取个性化详细信息。",
+    "whatsappCta": "询问折扣",
+    "responseHint": "一般 24 小时内回复 · ID / EN / KO",
+    "moreHospitals": "浏览更多合作伙伴",
+    "galleryTitle": "诊所内",
+    "galleryLabels": {
+      "lobby": "大堂及等候区",
+      "consultationRooms": "咨询室",
+      "corridor": "诊所走廊"
+    },
+    "bookOnline": "选择日期并请求预订",
+    "allTreatments": "探索所有 Seran Plus 护理"
+  },
+  "book": {
+    "title": "请求咨询",
+    "eyebrow": "医疗礼宾服务",
+    "asideTitle": "你的旅程，一个团队",
+    "asideHint": "我们的专职礼宾人员通常会在 24 小时内审核每个请求。",
+    "trustTitle": "会发生什么",
+    "trustResponse": "24 小时内专属礼宾响应",
+    "trustPrivate": "您的信息仅用于咨询",
+    "stepLabel": "{total} 的步骤 {current}",
+    "step1Title": "选择您的治疗方法",
+    "step1Desc": "还不确定吗？从一般咨询开始——我们将为您提供指导。",
+    "step2Title": "联系方式及日程安排",
+    "step2Desc": "请分享您的详细信息，以便我们的礼宾人员能够联系到您。",
+    "step3Title": "礼宾服务",
+    "step3Desc": "选择附加服务。您可以稍后调整这些。",
+    "preview": "请求摘要",
+    "servicesLabel": "精选服务",
+    "selectProcedure": "共享治疗和针对诊所的咨询",
+    "partnerHospitals": "合作医院",
+    "partnerHospitalsDesc": "请从以下合作医院选择手术，如果尚未决定，也可以申请综合咨询。",
+    "viewAllHospitals": "查看所有医院",
+    "recommended": "受到推崇的",
+    "noProcedure": "还不确定——一般咨询",
+    "noProcedureDesc": "我们的礼宾人员将为您推荐合适的医院和时间表。",
+    "searchProcedure": "搜寻项目或医院",
+    "filterAll": "全部",
+    "noResults": "没有符合您搜索条件的项目。",
+    "contactSection": "联系信息",
+    "contactSectionDesc": "我们将通过 WhatsApp 或电子邮件与您联系。",
+    "scheduleSection": "行程安排（可选）",
+    "scheduleSectionDesc": "大致日期有助于我们计划您的咨询。",
+    "name": "姓名",
+    "namePlaceholder": "约翰·史密斯",
+    "email": "电子邮件",
+    "emailPlaceholder": "name@email.com",
+    "phone": "WhatsApp / 电话",
+    "phonePlaceholder": "+62 812 3456 7890",
+    "arrival": "抵达日期",
+    "preferred": "首选咨询日期",
+    "notes": "额外要求",
+    "notesPlaceholder": "感兴趣的项目、过敏、其他问题",
+    "van": "私人医疗运输",
+    "vanDesc": "机场、诊所和酒店之间的专用接送服务",
+    "interpreter": "医疗翻译陪同",
+    "interpreterDesc": "从咨询到善后护理的专业口译员",
+    "fx": "医疗支付和外汇支持",
+    "fxDesc": "安全的计费指导和外汇支持",
+    "back": "后退",
+    "next": "下一个",
+    "submit": "提交请求",
+    "submitting": "正在发送...",
+    "successTitle": "收到请求",
+    "successBody": "您的专属礼宾人员将在 24 小时内与您联系。",
+    "reference": "参考",
+    "another": "提交另一个",
+    "whatsappFollowUp": "在 WhatsApp 上留言",
+    "accountTitle": "我的账户",
+    "accountDesc": "创建帐户或登录以管理您的个人资料和预订历史记录。",
+    "accountCta": "与礼宾人员联系",
+    "accountBack": "返回咨询",
+    "historyTitle": "预订",
+    "historyDesc": "您的咨询历史记录由我们的礼宾人员通过 WhatsApp 管理。",
+    "historyLookupDesc": "使用您申请时使用的电子邮件和电话号码查找预订。",
+    "historyLoggedInDesc": "与此帐户关联的您的预订如下所示。",
+    "historyRefresh": "刷新",
+    "historyAccountLink": "账户设置",
+    "historyLookup": "查询预订情况",
+    "historyLoading": "加载中…",
+    "historyEmpty": "尚无可显示的预订。",
+    "historyContact": "联系礼宾部",
+    "status": {
+      "PENDING": "已收到",
+      "CONFIRMED": "确认的",
+      "IN_PROGRESS": "进行中",
+      "COMPLETED": "完全的",
+      "CANCELLED": "取消"
+    },
+    "serviceType": {
+      "VAN": "私人交通",
+      "INTERPRETER": "医疗翻译",
+      "FX_CARE": "支付与外汇"
+    },
+    "onlineBooking": {
+      "eyebrow": "在线预约",
+      "title": "在线预约",
+      "subtitle": "选择日期和服务，然后提交预订。",
+      "tabNew": "新预约",
+      "tabHistory": "我的预约",
+      "step1Label": "日期",
+      "step2Label": "服务",
+      "step3Label": "确认",
+      "step1Title": "选择日期",
+      "step1Desc": "选择您首选的咨询日期。到达日期是可选的。",
+      "step2Title": "选择服务",
+      "step2Desc": "选择您需要的任何礼宾服务，或仅继续处理请求。",
+      "step3Title": "联系并确认",
+      "step3Desc": "填写联系方式，提交在线预约申请。",
+      "preferredDateTitle": "首选咨询日期",
+      "preferredDateDesc": "在下面选择一个日期或手动输入一个日期。",
+      "arrivalDesc": "如果您已经知道抵达韩国的日期，请在此处添加。",
+      "today": "今天",
+      "serviceRequired": "请至少选择一项服务。",
+      "procedureOptional": "感兴趣的项目（可选）",
+      "submit": "提交预约申请",
+      "successTitle": "已收到预约申请",
+      "successBody": "我们的礼宾人员将审核您的日期和服务，并在 24 小时内与您联系。",
+      "serviceOptional": "礼宾服务是可选的。仅继续请求治疗。"
+    },
+    "commonHospital": "共同治疗请求·会诊后指定诊所",
+    "sharedTreatmentHint": "从 65 个共享治疗请求中进行选择。可用性、费用和诊所分配在咨询期间确认。",
+    "treatmentGroup": "治疗组"
+  },
+  "faq": {
+    "title": "常问问题",
+    "items": [
+      {
+        "q": "Beautiro 是一家医院吗？",
+        "a": "不会。我们会为您联系经过验证的合作医院和支持服务。"
+      },
+      {
+        "q": "支持哪些语言？",
+        "a": "提供印尼语、英语和韩语咨询和医疗口译服务。"
+      },
+      {
+        "q": "付款方式如何？",
+        "a": "确认您的日程后，我们的团队将指导您安全地完成存款和付款。"
+      }
+    ]
+  },
+  "terms": {
+    "metaTitle": "服务条款",
+    "title": "服务条款",
+    "effectiveDate": "生效日期：2026 年 8 月 4 日",
+    "intro": "这些条款适用于 Beautiro（“公司”）运营的 Beautiro 医疗旅游礼宾服务（“服务”）的使用。",
+    "contactNote": "有关这些条款的问题：Beautiro 客户服务 (WhatsApp) 或privacy@beautiro.com",
+    "sections": [
+      {
+        "title": "1. 目的",
+        "paragraphs": [
+          "本条款规定了使用本公司提供的在线咨询、预约便利、交通、口译及相关医疗旅游信息服务的条件和项目。"
+        ]
+      },
+      {
+        "title": "2. 定义",
+        "paragraphs": [
+          "“用户”是指根据本条款使用服务的任何会员或非会员。",
+          "“合作诊所”是指根据与公司签订的单独协议提供医疗服务的医院、诊所或医疗服务提供者。",
+          "“礼宾服务”是指医疗旅行期间的问诊、预约、交通、口译、付款指导等支持。"
+        ]
+      },
+      {
+        "title": "3. 发布及修改",
+        "paragraphs": [
+          "公司在服务上发布这些条款。",
+          "本公司可在适用法律允许的范围内修改本条款，并将提前公告生效日期和理由。",
+          "生效日期后继续使用即表示接受修订后的条款。"
+        ]
+      },
+      {
+        "title": "4. 提供的服务",
+        "paragraphs": [
+          "该公司提供医疗旅游信息、咨询和预订、合作诊所匹配以及礼宾支持。",
+          "公司不进行医疗行为；诊断、治疗和手术由合作诊所负责。",
+          "由于维护、不可抗力或技术问题，服务可能会暂时停止。"
+        ]
+      },
+      {
+        "title": "5、用户义务",
+        "paragraphs": [
+          "用户不得提供虚假信息或滥用他人身份。",
+          "用户必须遵守适用的法律、本条款和服务通知。",
+          "用户在预订时必须准确披露健康状况和旅行要求（护照、签证等）。"
+        ]
+      },
+      {
+        "title": "6. 公司义务",
+        "paragraphs": [
+          "公司致力于以稳定、持续的方式提供服务。",
+          "公司根据其隐私政策保护个人数据。",
+          "公司将立即处理合法投诉。"
+        ]
+      },
+      {
+        "title": "7. 预订和取消",
+        "paragraphs": [
+          "通过网站、WhatsApp以及公司提供的其他渠道接受咨询和预订。",
+          "确认、时间表和费用取决于合作诊所政策和双方协议。",
+          "取消、变更和退款遵循合作诊所规则和套餐通知；公司充当促进者的角色。"
+        ]
+      },
+      {
+        "title": "8. 费用及付款",
+        "paragraphs": [
+          "服务、项目和附加服务的费用以事先通知为准。",
+          "付款方式、货币、汇率和费用遵循个人指导和适用法律。",
+          "未经用户事先同意，本公司不会收取任何费用。"
+        ]
+      },
+      {
+        "title": "9. 免责声明",
+        "paragraphs": [
+          "公司对合作诊所的医疗结果、功效或副作用不承担任何责任。",
+          "公司对超出合理控制范围的损害不承担责任，包括自然灾害、战争或合作伙伴中断。",
+          "本服务的医疗和定价信息仅供参考；合作诊所提供最终确认。"
+        ]
+      },
+      {
+        "title": "10. 知识产权",
+        "paragraphs": [
+          "服务上的内容、徽标和设计属于公司或合法所有者。",
+          "未经事先书面同意，用户不得复制、分发或将此类材料用于商业用途。"
+        ]
+      },
+      {
+        "title": "11. 争议解决",
+        "paragraphs": [
+          "争议首先应通过友好协商解决。",
+          "如果未解决，争议应适用适用的法律；公司主要营业地的法院有管辖权。"
+        ]
+      },
+      {
+        "title": "补充规定",
+        "paragraphs": [
+          "这些条款于 2026 年 8 月 4 日生效。"
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "metaTitle": "隐私政策",
+    "title": "隐私政策",
+    "effectiveDate": "生效日期：2026 年 8 月 4 日",
+    "intro": "Beautiro（“公司”）重视您的隐私并遵守适用的数据保护法。",
+    "contactNote": "隐私查询：privacy@beautiro.com · Beautiro 客户服务 (WhatsApp)",
+    "sections": [
+      {
+        "title": "1. 收集的个人数据",
+        "paragraphs": [
+          "公司可能会收集以下数据来提供服务。",
+          "必填：姓名、联系方式（电话/WhatsApp）、电子邮件、咨询/预订详细信息、首选日期",
+          "可选：国籍、语言偏好、护照/签证信息、交通/口译员请求",
+          "自动：访问日志、IP 地址、cookie、设备信息、使用记录"
+        ]
+      },
+      {
+        "title": "2. 使用目的",
+        "paragraphs": [
+          "医疗旅游咨询、预订和安排",
+          "合作诊所匹配和礼宾服务（交通、口译、付款指导）",
+          "客户支持、投诉和通知",
+          "服务改进、分析和欺诈预防",
+          "遵守法律义务"
+        ]
+      },
+      {
+        "title": "3. 保存期限",
+        "paragraphs": [
+          "当目的达到时，数据将被立即删除。",
+          "如果法律要求，数据可以保留法定期限。",
+          "示例：合同记录 5 年，投诉 3 年，访问日志 3 个月（如果适用）。"
+        ]
+      },
+      {
+        "title": "4. 第三方提供",
+        "paragraphs": [
+          "除法律要求外，未经同意，公司不会向第三方提供个人数据。",
+          "经同意，可以根据需要与合作诊所和运输/口译合作伙伴共享数据以完成预订。",
+          "提前公开收件人、目的、项目和保留期限。"
+        ]
+      },
+      {
+        "title": "5. 处理委托",
+        "paragraphs": [
+          "公司可以将任务委托给专业供应商（例如托管、消息传递、支付）。",
+          "代表和任务在本政策中披露并根据适用法律进行管理。"
+        ]
+      },
+      {
+        "title": "6. 您的权利",
+        "paragraphs": [
+          "您可以请求访问、更正、删除或限制您的个人数据。",
+          "联系privacy@beautiro.com 或客户服务部；公司将毫不拖延地做出回应。",
+          "法定代表人可以在法律允许的情况下行使权利。"
+        ]
+      },
+      {
+        "title": "7. 饼干",
+        "paragraphs": [
+          "公司可能会使用cookies来改进服务。",
+          "您可以通过浏览器设置拒绝cookies；某些功能可能会受到限制。"
+        ]
+      },
+      {
+        "title": "八、安全措施",
+        "paragraphs": [
+          "公司实施技术和组织保障措施，例如访问控制、加密和安全项目。",
+          "拥有数据访问权的员工被最小化并定期接受培训。"
+        ]
+      },
+      {
+        "title": "9. 隐私官",
+        "paragraphs": [
+          "隐私官：Beautiro",
+          "电子邮件：privacy@beautiro.com",
+          "客户服务：Beautiro WhatsApp 渠道"
+        ]
+      },
+      {
+        "title": "10. 政策变化",
+        "paragraphs": [
+          "重大变更将公布，并附上生效日期和原因。",
+          "更新后的政策自公布日期起生效。"
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "SEA VIP优质医疗旅游，一站式",
+    "whatsappCta": "WhatsApp 客户服务",
+    "whatsappHours": "欢迎 WhatsApp 询问 24/7 · 英语/印尼语/韩语",
+    "badgePrivacy": "隐私",
+    "badgePartner": "经过验证的合作伙伴",
+    "contact": "通过 WhatsApp 联系我们",
+    "company": "Beautiro·医疗旅游礼宾服务",
+    "rights": "© Beautiro. 医疗信息仅供参考，不构成诊断。",
+    "links": [
+      {
+        "label": "条款",
+        "href": "/terms"
+      },
+      {
+        "label": "隐私",
+        "href": "/privacy"
+      },
+      {
+        "label": "写评论",
+        "href": "/reviews"
+      },
+      {
+        "label": "开始使用",
+        "href": "/welcome"
+      },
+      {
+        "label": "合作伙伴",
+        "href": "/book"
+      }
+    ]
+  },
+  "language": "语言",
+  "consultationEntry": {
+    "eyebrow": "您的韩国医疗之旅",
+    "title": "医疗机构选择、医疗口译与机场接送，一站式协调。",
+    "description": "告诉我们您关注的项目和预计赴韩时间。Beautiro 协助安排合作医疗机构的咨询、预约及出行支持。",
+    "hospitals": "了解合作医疗机构",
+    "costNote": "医疗费用与接送、口译费用分开计算。预约前会确认服务内容及费用。",
+    "startTitle": "通过 WhatsApp 开始咨询",
+    "interest": "感兴趣的服务",
+    "timing": "预计赴韩时间",
+    "language": "首选沟通语言",
+    "cta": "前往 WhatsApp 咨询",
+    "sendNote": "无需注册。选择后会生成消息，请在 WhatsApp 中发送以开始咨询。可随时留言。",
+    "online": "也可填写在线咨询表单",
+    "services": {
+      "unsure": "请帮我选择",
+      "skin": "皮肤护理与皮肤科",
+      "plastic": "整形外科",
+      "dental": "牙科",
+      "oriental": "韩国传统医学",
+      "transport": "接送与口译"
+    },
+    "timings": {
+      "undecided": "尚未确定",
+      "month": "一个月内",
+      "quarter": "三个月内",
+      "later": "之后／提前规划"
+    },
+    "journey": {
+      "consult": {
+        "title": "告知您的需求",
+        "desc": "分享关注的项目、沟通语言及赴韩时间。"
+      },
+      "plan": {
+        "title": "确认建议方案",
+        "desc": "确认机构接诊安排、费用及配套服务。"
+      },
+      "visit": {
+        "title": "按计划赴韩",
+        "desc": "根据确认的预约安排接送与口译。"
+      }
+    }
+  },
+  "seranplus": {
+    "title": "Seran Plus 诊疗项目",
+    "intro": "浏览 8 个类别的 {count} 个官方项目，申请咨询或预约。",
+    "profile": "查看诊所简介",
+    "groupLabel": "选择项目类别",
+    "all": "全部",
+    "search": "搜索治疗： Ultherapy、Botox、眼睑手术",
+    "results": "{count} 个项目",
+    "details": "查看详情",
+    "book": "请求预订",
+    "empty": "没有匹配的治疗方法。尝试另一个搜索。",
+    "note": "项目依据医疗机构官方目录。适用性、接诊安排、费用及优惠条件需经机构咨询确认。提交申请不代表预约已确认。",
+    "profileIntro": "Beautiro 与位于仁川九月洞的 Seran Plus 整形外科直接合作，协调咨询、预约、医疗口译及接送。选择项目后可申请咨询及就诊日期。"
+  }
+}

@@ -69,7 +69,7 @@ export function SiteHeader() {
               >
                 Beautiro
               </span>
-              <span className="hidden border-l border-beautiro-border pl-2.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-beautiro-muted xl:block">
+              <span className="hidden max-w-[6rem] border-l border-beautiro-border pl-2.5 text-[10px] font-semibold leading-4 text-beautiro-muted xl:block">
                 {t("brandSubtitle")}
               </span>
             </Link>
@@ -105,7 +105,7 @@ export function SiteHeader() {
                   href="/book?tab=account"
                   className="whitespace-nowrap px-1 text-xs font-medium leading-none text-beautiro-muted transition-colors hover:text-beautiro-primary"
                 >
-                  {t("login")}
+                  {t("signIn")}
                 </Link>
                 <ButtonLink
                   href="/book"

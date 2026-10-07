@@ -14,7 +14,7 @@ const dateSchema = z.string().refine(value => {
 }, "Invalid date").optional();
 
 const bodySchema = z.object({
-  locale: z.enum(["id", "en", "ko"]),
+  locale: z.enum(["id", "en", "ko", "zh", "th", "vi"]),
   procedureId: z.string().optional(),
   requestedTreatmentKey: z.string().optional(),
   guestName: z.string().trim().min(2),

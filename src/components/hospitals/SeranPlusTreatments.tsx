@@ -5,6 +5,7 @@ import { useMemo, useState } from "react";
 import { ArrowUpRight, Search } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import catalog from "@/lib/seranplus-catalog.json";
+import { treatmentLabel } from "@/lib/treatment-labels";
 import type { LocalizedHospital } from "@/lib/hospitals";
 
 export function SeranPlusTreatments({ procedures }: { procedures: LocalizedHospital["procedures"] }) {
@@ -12,12 +13,11 @@ export function SeranPlusTreatments({ procedures }: { procedures: LocalizedHospi
   const locale = useLocale();
   const [group, setGroup] = useState("lifting");
   const [query, setQuery] = useState("");
-  const nameKey = locale === "ko" ? "nameKo" : locale === "id" ? "nameId" : "nameEn";
   const groups = useMemo(() => catalog.groups.map(g => ({ ...g, treatments: g.items.flatMap(item => {
-    const saved = procedures.find(p => p.id === item.key || [item.nameKo, item.nameEn, item.nameId].includes(p.name));
+    const saved = procedures.find(p => p.id === item.key || [item.nameKo, item.nameEn, item.nameId, treatmentLabel(item, locale)].includes(p.name));
     return saved ? [{ id: saved.id, name: saved.name }] : [];
-  }) })), [procedures]);
-  const visible = groups.filter(g => group === "all" || g.key === group).flatMap(g => g.treatments.map(p => ({ ...p, groupName: g[nameKey] }))).filter(p => `${p.name} ${p.groupName}`.toLocaleLowerCase().includes(query.trim().toLocaleLowerCase()));
+  }) })), [procedures, locale]);
+  const visible = groups.filter(g => group === "all" || g.key === group).flatMap(g => g.treatments.map(p => ({ ...p, groupName: treatmentLabel(g, locale) }))).filter(p => `${p.name} ${p.groupName}`.toLocaleLowerCase().includes(query.trim().toLocaleLowerCase()));
   const count = groups.reduce((total, g) => total + g.treatments.length, 0);
   if (!count) return null;
   return (
@@ -31,7 +31,7 @@ export function SeranPlusTreatments({ procedures }: { procedures: LocalizedHospi
         <Link href="/hospitals/seran-plus" className="inline-flex items-center gap-1 text-sm font-semibold text-beautiro-primary">{t("profile")}<ArrowUpRight size={16} aria-hidden /></Link>
       </div>
       <div className="mt-5 flex flex-wrap gap-2" aria-label={t("groupLabel")}>
-        {[{ key: "all", label: t("all"), count }, ...groups.map(g => ({ key: g.key, label: g[nameKey], count: g.treatments.length }))].map(item => (
+        {[{ key: "all", label: t("all"), count }, ...groups.map(g => ({ key: g.key, label: treatmentLabel(g, locale), count: g.treatments.length }))].map(item => (
           <button key={item.key} type="button" aria-pressed={group === item.key} onClick={() => setGroup(item.key)} className={`max-w-full rounded-md border px-3 py-2 text-left text-xs font-medium transition-colors ${group === item.key ? "border-beautiro-primary bg-beautiro-primary text-white" : "border-beautiro-border text-beautiro-muted hover:border-beautiro-primary"}`}>
             {item.label} <span className="ml-1 opacity-70">{item.count}</span>
           </button>

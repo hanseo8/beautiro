@@ -7,18 +7,24 @@ import { Check, ChevronDown, Globe } from "lucide-react";
 import type { Locale } from "@/i18n/routing";
 import { setLocaleCookie } from "@/lib/locale-cookie";
 
-const localeOrder: Locale[] = ["en", "ko", "id"];
+const localeOrder: Locale[] = ["en", "ko", "id", "zh", "th", "vi"];
 
 const localeCodes: Record<Locale, string> = {
   en: "EN",
   ko: "KO",
   id: "ID",
+  zh: "ZH",
+  th: "TH",
+  vi: "VI",
 };
 
-const localeNameKeys: Record<Locale, "nameEn" | "nameKo" | "nameId"> = {
-  en: "nameEn",
-  ko: "nameKo",
-  id: "nameId",
+const localeNames: Record<Locale, string> = {
+  en: "English",
+  ko: "한국어",
+  id: "Bahasa Indonesia",
+  zh: "中文（简体）",
+  th: "ไทย",
+  vi: "Tiếng Việt",
 };
 
 export function LanguageSwitcher({ compact = false }: { compact?: boolean }) {
@@ -49,7 +55,9 @@ export function LanguageSwitcher({ compact = false }: { compact?: boolean }) {
     setOpen(false);
     if (next !== locale) {
       setLocaleCookie(next);
-      router.replace(pathname, { locale: next });
+      const query = window.location.search;
+      const hash = window.location.hash;
+      router.replace(`${pathname}${query}${hash}`, { locale: next });
     }
   }
 
@@ -68,7 +76,7 @@ export function LanguageSwitcher({ compact = false }: { compact?: boolean }) {
           <span className="hidden text-beautiro-muted lg:inline">{t("label")}</span>
         )}
         <span className="font-semibold text-beautiro-primary">
-          {compact ? localeCodes[locale] : t(localeNameKeys[locale])}
+          {compact ? localeCodes[locale] : localeNames[locale]}
         </span>
         <ChevronDown
           size={14}
@@ -96,7 +104,7 @@ export function LanguageSwitcher({ compact = false }: { compact?: boolean }) {
                       : "text-beautiro-charcoal hover:bg-beautiro-surface/70"
                   }`}
                 >
-                  <span>{t(localeNameKeys[loc])}</span>
+                  <span>{localeNames[loc]}</span>
                   {selected && (
                     <Check size={14} strokeWidth={2} className="shrink-0" />
                   )}

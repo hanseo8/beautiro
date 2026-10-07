@@ -3,6 +3,7 @@ export const dynamic = "force-dynamic";
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { MapPin, Sparkles } from "lucide-react";
+import { translatedTreatmentName } from "@/lib/treatment-labels";
 import { prisma } from "@/lib/prisma";
 import { localizeHospital } from "@/lib/hospitals";
 import type { Locale } from "@/i18n/routing";
@@ -35,12 +36,7 @@ export default async function EventDetailPage({ params }: Props) {
     loc,
     (key) => tHospitals(key),
   );
-  const procName =
-    loc === "ko"
-      ? procedure.nameKo
-      : loc === "id"
-        ? procedure.nameId
-        : procedure.nameEn;
+  const procName = translatedTreatmentName(procedure, loc);
 
   const coverImage = resolveHospitalImage(
     procedure.hospital.slug,

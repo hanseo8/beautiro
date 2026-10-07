@@ -6,7 +6,7 @@ import { resetPasswordEmailHtml, sendEmail } from "@/lib/email";
 
 const bodySchema = z.object({
   email: z.string().email(),
-  locale: z.enum(["id", "en", "ko"]).optional(),
+  locale: z.enum(["id", "en", "ko", "zh", "th", "vi"]).optional(),
 });
 
 export async function POST(request: Request) {

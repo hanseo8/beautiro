@@ -19,6 +19,13 @@ export function consultMessage(params: {
     base = `[Beautiro] 상담 문의${procedureName ? `\n시술: ${procedureName}` : ""}${hospitalName ? `\n병원: ${hospitalName}` : ""}`;
   } else if (locale === "id") {
     base = `[Beautiro] Konsultasi${procedureName ? `\nProsedur: ${procedureName}` : ""}${hospitalName ? `\nKlinik: ${hospitalName}` : ""}`;
+  } else if (["zh", "th", "vi"].includes(locale)) {
+    const labels = {
+      zh: ["咨询请求", "项目", "医疗机构"],
+      th: ["ขอคำปรึกษา", "หัตถการ", "คลินิก"],
+      vi: ["Yêu cầu tư vấn", "Dịch vụ", "Cơ sở y tế"],
+    }[locale]!;
+    base = `[Beautiro] ${labels[0]}${procedureName ? `\n${labels[1]}: ${procedureName}` : ""}${hospitalName ? `\n${labels[2]}: ${hospitalName}` : ""}`;
   } else {
     base = `[Beautiro] Consultation request${procedureName ? `\nProcedure: ${procedureName}` : ""}${hospitalName ? `\nClinic: ${hospitalName}` : ""}`;
   }
@@ -36,6 +43,14 @@ export function eventInquiryMessage(params: {
   }
   if (locale === "id") {
     return `[Beautiro] Diskon tambahan mitra\nKlinik: ${hospitalName}\nProsedur: ${procedureName}\n\nMohon info diskon dan paket.`;
+  }
+  if (["zh", "th", "vi"].includes(locale)) {
+    const labels = {
+      zh: ["合作医疗机构优惠咨询", "医疗机构", "项目", "请告知优惠条件及套餐详情。"],
+      th: ["สอบถามโปรโมชั่นคลินิกพันธมิตร", "คลินิก", "หัตถการ", "กรุณาแจ้งเงื่อนไขส่วนลดและรายละเอียดแพ็กเกจ"],
+      vi: ["Hỏi ưu đãi tại cơ sở đối tác", "Cơ sở y tế", "Dịch vụ", "Vui lòng cho biết điều kiện ưu đãi và chi tiết gói dịch vụ."],
+    }[locale]!;
+    return `[Beautiro] ${labels[0]}\n${labels[1]}: ${hospitalName}\n${labels[2]}: ${procedureName}\n\n${labels[3]}`;
   }
   return `[Beautiro] Partner hospital discount inquiry\nClinic: ${hospitalName}\nProcedure: ${procedureName}\n\nPlease share discount details and packages.`;
 }

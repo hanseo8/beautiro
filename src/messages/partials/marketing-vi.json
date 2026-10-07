@@ -1,0 +1,176 @@
+{
+  "social": {
+    "instagramAria": "Instagram của Beautiro @beautiro.official"
+  },
+  "reviews": {
+    "metaTitle": "Viết đánh giá — Beautiro",
+    "metaDescription": "Chia sẻ trải nghiệm Beautiro để nhận chăm sóc da và đón sân bay miễn phí vào lần đến tiếp theo.",
+    "eyebrow": "Quà tặng khi đánh giá",
+    "title": "Chia sẻ trải nghiệm",
+    "subtitle": "Kể về hành trình du lịch y tế của bạn. Sau khi xem xét, chúng tôi sẽ hướng dẫn nhận quyền lợi.",
+    "rewardTitle": "Quà tặng khi đánh giá",
+    "rewardItems": [
+      "Tặng 1 liệu trình chăm sóc da cho lần khám tiếp theo",
+      "1 lần đón sân bay miễn phí"
+    ],
+    "rating": "Đánh giá",
+    "name": "Tên",
+    "email": "E-mail",
+    "phone": "WhatsApp / điện thoại",
+    "instagram": "Tay cầm Instagram (tùy chọn)",
+    "procedure": "Thủ tục nhận được",
+    "procedurePlaceholder": "Ví dụ: Botox, phẫu thuật mũi",
+    "hospital": "Đến bệnh viện (tùy chọn)",
+    "visitMonth": "Tháng đến (không bắt buộc)",
+    "reviewText": "Đánh giá của bạn",
+    "reviewPlaceholder": "Chia sẻ trải nghiệm từ tư vấn đến điều trị và di chuyển.",
+    "privacyNote": "Đánh giá có thể được đăng trên website và mạng xã hội. Dữ liệu cá nhân chỉ dùng cho mục đích tư vấn.",
+    "submit": "Gửi đánh giá",
+    "submitting": "Đang gửi…",
+    "reference": "Mã tham chiếu",
+    "successTitle": "Đã nhận đánh giá",
+    "successBody": "Nhân viên trợ giúp của chúng tôi sẽ xem xét và liên hệ với bạn trên WhatsApp để cung cấp thông tin chi tiết về phần thưởng.",
+    "bookCta": "Yêu cầu tư vấn"
+  },
+  "welcome": {
+    "metaTitle": "Beautiro — Hướng dẫn viên Du lịch Y tế Hàn Quốc",
+    "metaDescription": "Đón tại sân bay, tư vấn bệnh viện đối tác và quà tặng thẩm mỹ. Nhắn tin cho chúng tôi trên WhatsApp bất cứ lúc nào.",
+    "eyebrow": "Hướng dẫn viên y tế",
+    "title": "Du lịch y tế Hàn Quốc cùng Beautiro",
+    "subtitle": "Bệnh viện đối tác · đón tại sân bay · phiên dịch y tế · Hỗ trợ ngoại hối - tất cả trong một",
+    "ctaWhatsapp": "Tư vấn WhatsApp miễn phí",
+    "ctaBook": "Yêu cầu tư vấn",
+    "ctaHospitals": "Bệnh viện đối tác",
+    "ctaReview": "Viết đánh giá và nhận quyền lợi",
+    "rewardTitle": "Quà tặng khi đánh giá",
+    "rewardItems": [
+      "1 lần điều trị da khi đến thăm",
+      "1 lượt đón miễn phí"
+    ],
+    "proceduresTitle": "Hướng dẫn thủ tục phổ biến",
+    "procedures": {
+      "rhinoplasty": "Phẫu thuật mũi",
+      "double-eyelid": "Mắt hai mí",
+      "botox-filler": "Botox & chất làm đầy",
+      "dental-implant": "cấy ghép nha khoa",
+      "skin-laser": "Laser da"
+    },
+    "instagramHint": "Theo dõi chúng tôi trên Instagram để biết các sự kiện và đánh giá mới nhất"
+  },
+  "procedureLandings": {
+    "common": {
+      "breadcrumbHome": "Trang chủ",
+      "breadcrumbProcedures": "Hướng dẫn thủ tục",
+      "priceLabel": "Chi phí ước tính (xác nhận sau khi tư vấn)",
+      "priceNote": "Giá cuối cùng phụ thuộc vào bệnh viện và phạm vi điều trị.",
+      "benefitsTitle": "Lợi ích hướng dẫn khách của Beautiro",
+      "includesTitle": "Dịch vụ có thể bao gồm",
+      "ctaTitle": "Tư vấn miễn phí",
+      "ctaDesc": "Nhân viên trợ giúp tận tình sẽ liên hệ với bạn trong vòng 24 giờ.",
+      "whatsappCta": "Trò chuyện qua WhatsApp",
+      "bookCta": "Tư vấn sách",
+      "hospitalsCta": "Xem cơ sở y tế đối tác",
+      "reviewReward": "Viết đánh giá để nhận quyền lợi chăm sóc da và đưa đón"
+    },
+    "rhinoplasty": {
+      "metaTitle": "Nâng mũi Hàn Quốc — Beautiro",
+      "metaDescription": "Tư vấn phẫu thuật mũi tại cơ sở đối tác gần Seoul và Incheon, kèm hỗ trợ đón và phiên dịch.",
+      "badge": "Phẫu thuật thẩm mỹ",
+      "title": "Nâng mũi hàn quốc",
+      "subtitle": "Tham khảo ý kiến ​​của các bác sĩ phẫu thuật thẩm mỹ đối tác đã được xác minh với sự hỗ trợ của nhân viên hướng dẫn VIP từ khi đến cho đến khi lập kế hoạch phục hồi.",
+      "priceFrom": "₩3,500,000~",
+      "whatsappMessage": "Tôi muốn được tư vấn nâng mũi.",
+      "benefits": [
+        "Phiên dịch viên y tế chuyên dụng",
+        "Đưa đón sân bay và bệnh viện",
+        "Giảm giá bệnh viện đối tác"
+      ],
+      "includes": [
+        "Tư vấn chuyên môn 1:1",
+        "Mô phỏng 3D (phụ thuộc vào phòng khám)",
+        "Hướng dẫn chăm sóc sau phẫu thuật",
+        "Điều phối khách sạn & vận tải"
+      ]
+    },
+    "double-eyelid": {
+      "metaTitle": "Phẫu thuật mắt hai mí Hàn Quốc — Beautiro",
+      "metaDescription": "Tư vấn về mắt hai mí và đường viền mắt với mạng lưới bệnh viện đối tác của chúng tôi.",
+      "badge": "Phẫu thuật thẩm mỹ",
+      "title": "Phẫu thuật mắt hai mí",
+      "subtitle": "Đường viền mắt trông tự nhiên với sự tư vấn cá nhân và lập kế hoạch phục hồi từ nhân viên hướng dẫn của bạn.",
+      "priceFrom": "₩2,200,000~",
+      "whatsappMessage": "Tôi muốn được tư vấn phẫu thuật cắt mí mắt.",
+      "benefits": [
+        "Phiên dịch tiếng Indonesia và tiếng Anh",
+        "Lịch trình trong ngày hoặc lưu trú ngắn",
+        "So sánh các phòng khám đối tác"
+      ],
+      "includes": [
+        "Tư vấn đường viền mắt",
+        "Tóm tắt về gây mê và phẫu thuật",
+        "Gợi ý khách sạn để nghỉ dưỡng sau điều trị",
+        "Phiên dịch hộ tống"
+      ]
+    },
+    "botox-filler": {
+      "metaTitle": "Hàn Quốc Botox & Filler — Beautiro",
+      "metaDescription": "Gói tiêm botox và chất làm đầy da liễu với các lựa chọn điều trị trong ngày.",
+      "badge": "Da liễu",
+      "title": "Botox & chất làm đầy",
+      "subtitle": "Các phương pháp điều trị da liễu cao cấp tại các phòng khám đối tác có hỗ trợ phiên dịch và hướng dẫn viên.",
+      "priceFrom": "₩450,000~",
+      "whatsappMessage": "Tôi muốn được tư vấn về botox/filler.",
+      "benefits": [
+        "Cơ sở có dịch vụ điều trị trong ngày",
+        "Chỉ đối tác sản phẩm đích thực",
+        "Hỗ trợ nhận hàng & FX"
+      ],
+      "includes": [
+        "Tư vấn da",
+        "Lập kế hoạch vùng điều trị",
+        "Hướng dẫn chăm sóc sau điều trị",
+        "Lập kế hoạch theo dõi"
+      ]
+    },
+    "dental-implant": {
+      "metaTitle": "Cấy ghép Implant Hàn Quốc — Beautiro",
+      "metaDescription": "Tư vấn cấy ghép implant và nha khoa thẩm mỹ có phiên dịch hộ tống.",
+      "badge": "nha khoa",
+      "title": "Cấy ghép nha khoa",
+      "subtitle": "Lập kế hoạch điều trị cấy ghép hoặc nha khoa thẩm mỹ của bạn và duy trì hành trình trong một lần tư vấn.",
+      "priceFrom": "₩1,800,000~",
+      "whatsappMessage": "Tôi muốn được tư vấn về cấy ghép implant.",
+      "benefits": [
+        "Chuyên gia phiên dịch nha khoa",
+        "CT & lịch thi",
+        "Hướng dẫn gói lưu trú dài hạn"
+      ],
+      "includes": [
+        "Tư vấn thi vấn đáp",
+        "Kế hoạch điều trị cấy ghép",
+        "Hướng dẫn thời gian hồi phục",
+        "Phối hợp di chuyển và khách sạn"
+      ]
+    },
+    "skin-laser": {
+      "metaTitle": "Laser Trị Liệu Da Hàn Quốc — Beautiro",
+      "metaDescription": "Tư vấn nâng cơ và săn chắc da bằng laser với K-beauty care.",
+      "badge": "Da liễu",
+      "title": "Laser da và toning",
+      "subtitle": "Cải thiện sắc tố, lỗ chân lông và độ đàn hồi bằng phương pháp điều trị bằng laser an toàn tại các phòng khám da liễu đối tác.",
+      "priceFrom": "₩280,000~",
+      "whatsappMessage": "Tôi muốn được tư vấn về da bằng laser.",
+      "benefits": [
+        "Cơ sở phù hợp với loại da",
+        "Hướng dẫn sử dụng bộ chăm sóc sau điều trị",
+        "Điều kiện nhận quyền lợi khi đánh giá"
+      ],
+      "includes": [
+        "Đánh giá tình trạng da",
+        "Kế hoạch điều trị bằng laser",
+        "Hướng dẫn chống nắng và hồi phục",
+        "Đặt phòng theo dõi"
+      ]
+    }
+  }
+}

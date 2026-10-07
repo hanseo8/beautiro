@@ -11,7 +11,7 @@ const bodySchema = z.object({
   password: z.string().min(8),
   name: z.string().min(2),
   phone: z.string().min(6).optional(),
-  locale: z.enum(["id", "en", "ko"]).default("en"),
+  locale: z.enum(["id", "en", "ko", "zh", "th", "vi"]).default("id"),
 });
 
 export async function POST(request: Request) {
